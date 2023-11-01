@@ -20,7 +20,9 @@ const Navber = () => {
           </div>
 
           <div className="hidden lg:ml-8 lg:flex">
-            <button className="btn btn-secondary">Pc Builder</button>
+            <Link to='pcbuild'>
+              <button className="btn btn-secondary">Pc Builder</button>
+            </Link>
           </div>
 
           {/* Cart */}

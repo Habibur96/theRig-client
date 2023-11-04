@@ -14,6 +14,7 @@ import keyboard from '../../../assets/icon/keyboard.jpg'
 import mouse from '../../../assets/icon/mouse.jpg'
 import antiVirus from '../../../assets/icon/anti-virus.jpg'
 import headphone from '../../../assets/icon/headphone.jpg'
+import ups from '../../../assets/icon/ups.jpg'
 
 const Pcbuild = () => {
   return (
@@ -400,7 +401,7 @@ const Pcbuild = () => {
                 <div className="avatar">
                   <div className=" w-12 h-12">
                     <img
-                      src=""
+                      src={ups}
                       alt="Avatar Tailwind CSS Component"
                     />
                   </div>

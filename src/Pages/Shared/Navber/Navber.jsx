@@ -7,7 +7,7 @@ const Navber = () => {
       <li>
         <div className="ml-auto flex items-center">
           <div className=" lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-            <Link to="" className="text-sm font-medium text-gray-200 ">
+            <Link to="/navber2" className="text-sm font-medium text-gray-200 ">
               Sign in
             </Link>
 

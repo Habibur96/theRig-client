@@ -7,13 +7,13 @@ const Navber = () => {
       <li>
         <div className="ml-auto flex items-center">
           <div className=" lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-            <Link to="/navber2" className="text-sm font-medium text-gray-200 ">
+            <Link to="/login" className="text-sm font-medium text-gray-200 ">
               Sign in
             </Link>
 
             <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
             <div>
-              <Link to="" className="text-sm font-medium text-gray-200 ">
+              <Link to="signUp" className="text-sm font-medium text-gray-200 ">
                 Create account
               </Link>
             </div>

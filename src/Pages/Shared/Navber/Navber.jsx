@@ -69,7 +69,7 @@ const Navber = () => {
             {navOptions}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl mx-auto">TheRig</a>
+        <Link to='/' className="btn btn-ghost normal-case text-xl mx-auto">TheRig</Link>
 
         <div>
           <input

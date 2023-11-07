@@ -1,26 +1,62 @@
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { FaUserAlt } from "react-icons/fa";
 const Navber = () => {
+  const { user, logOut } = useContext(AuthContext);
+  // console.log(user.displayName)
+  const handleLogOut = () => {
+    logOut()
+      .then((reult) => {})
+      .catch((error) => {
+        console.error();
+      });
+  };
   const navOptions = (
     <>
       <li>
         <div className="ml-auto flex items-center">
           <div className=" lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-            <Link to="/login" className="text-sm font-medium text-gray-200 ">
-              Sign in
-            </Link>
+            {user ? (
+              <Link
+                onClick={handleLogOut}
+                className="text-sm font-medium text-gray-200 "
+              >
+                Signout
+              </Link>
+            ) : (
+              <Link to="/login" className="text-sm font-medium text-gray-200 ">
+                Sign in
+              </Link>
+            )}
 
             <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+
             <div>
-              <Link to="signUp" className="text-sm font-medium text-gray-200 ">
-                Create account
-              </Link>
+              {user ? (
+                <Link to="userProfile">
+                  <FaUserAlt style={{ fontSize: "1.25rem" }}></FaUserAlt>
+                </Link>
+              ) : (
+                <Link
+                  to="signUp"
+                  className="text-sm font-medium text-gray-200 "
+                >
+                  Create account
+                </Link>
+              )}
             </div>
+            {user && (
+              //  <small className="text-sm font-medium text-gray-200"> {user.displayName}</small> &&
+              <Link to="userProfile" className="text-sm font-medium text-gray-200">
+                Profile
+              </Link>
+            )}
           </div>
 
           <div className="hidden lg:ml-8 lg:flex">
-            <Link to='pcbuild'>
+            <Link to="pcbuild">
               <button className="btn btn-secondary">Pc Builder</button>
             </Link>
           </div>
@@ -69,7 +105,9 @@ const Navber = () => {
             {navOptions}
           </ul>
         </div>
-        <Link to='/' className="btn btn-ghost normal-case text-xl mx-auto">TheRig</Link>
+        <Link to="/" className="btn btn-ghost normal-case text-xl mx-auto">
+          TheRig
+        </Link>
 
         <div>
           <input

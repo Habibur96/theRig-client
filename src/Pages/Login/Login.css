@@ -1,5 +1,32 @@
-.custom-form {
+ .custom-form {
   width: 22%;
   margin: 0 auto;
+}  
+
+ /* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}   */
+
+.input-field {
+  width: 425px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  box-shadow: #181717 0px 0px 2px;
 }
 
+.input-field input {
+  width: 100%;
+
+  outline: none;
+}
+
+.input-field span {
+  cursor: pointer;
+}

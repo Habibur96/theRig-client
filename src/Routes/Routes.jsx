@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home/Home";
 import Pcbuild from "../Pages/Home/Pcbuild/Pcbuild";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import UserProfile from "../Pages/Profile/UserProfile";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "pcbuild",
         element: <Pcbuild></Pcbuild>,
+      },
+      {
+        path: "userProfile",
+        element: <UserProfile></UserProfile>,
       },
     ],
   },

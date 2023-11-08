@@ -1,0 +1,18 @@
+.icon {
+  /* background-color: blue; */
+
+  /* border-radius: 40px;
+  border-width: 40px; */
+  /* height: 44px; */
+  /* background-color: gray; */
+  /* border-radius: 20px; */
+
+  color: brown;
+}
+
+.stack:hover {
+  border-width: 3px;
+  border-radius: 18px;
+  border-color: rgb(252, 105, 52);
+ 
+}

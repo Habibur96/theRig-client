@@ -7,6 +7,7 @@ import { Icon } from "react-icons-kit";
 import { eye } from "react-icons-kit/feather/eye";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { AuthContext } from "../../Provider/AuthProvider";
+// import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [type, setType] = useState("password");
@@ -71,47 +72,52 @@ const Login = () => {
   //   });
   // };
   return (
-    <div className="mt-5 pt-5">
-      <h2 className="custom-form text-bold text-xl mt-5 mb-4 font-bold">
-        Account Login
-      </h2>
-      <Form onSubmit={handleLogin} className="custom-form">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>E-Mail</Form.Label>
-          <Form.Control type="email" name="email" placeholder="E-mail" />
-        </Form.Group>
+    <>
+      {/* <Helmet>
+        <title>TheRig | Login</title>
+      </Helmet> */}
+      <div className="mt-5 pt-5">
+        <h2 className="custom-form text-bold text-xl mt-5 mb-4 font-bold">
+          Account Login
+        </h2>
+        <Form onSubmit={handleLogin} className="custom-form">
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>E-Mail</Form.Label>
+            <Form.Control type="email" name="email" placeholder="E-mail" />
+          </Form.Group>
 
-        <Form.Label>Password</Form.Label>
+          <Form.Label>Password</Form.Label>
 
-        <div className="input-field mb-2 ">
-          <input type={type} name="password" placeholder="Password" />
-          <span onClick={handleToggle}>
-            <Icon icon={icon} size={20} />
-          </span>
-        </div>
+          <div className="input-field mb-2 ">
+            <input type={type} name="password" placeholder="Password" />
+            <span onClick={handleToggle}>
+              <Icon icon={icon} size={20} />
+            </span>
+          </div>
 
-        {/* <Form.Label>
+          {/* <Form.Label>
           <button onClick={handleResetPassword}>Forgotten Password?</button>
         </Form.Label> */}
 
-        <Form.Label>
-          <Link onClick={handleResetPassword}>Forgotten Password?</Link>{" "}
-        </Form.Label>
+          <Form.Label>
+            <Link onClick={handleResetPassword}>Forgotten Password?</Link>{" "}
+          </Form.Label>
 
-        <div className="d-grid gap-2 mt-3">
-          <Button variant="info" type="submit" value="signIn" size="lg">
-            Login
-          </Button>
-        </div>
-        <div className="divider">Don't have an account</div>
-      </Form>
+          <div className="d-grid gap-2 mt-3">
+            <Button variant="info" type="submit" value="signIn" size="lg">
+              Login
+            </Button>
+          </div>
+          <div className="divider">Don't have an account</div>
+        </Form>
 
-      <Link to="/signUp" className="d-grid gap-2 custom-form button">
-        <button className="btn btn-outline btn-warning">
-          <div className="text-sm">Create Your account</div>
-        </button>
-      </Link>
-    </div>
+        <Link to="/signUp" className="d-grid gap-2 custom-form button">
+          <button className="btn btn-outline btn-warning">
+            <div className="text-sm">Create Your account</div>
+          </button>
+        </Link>
+      </div>
+    </>
   );
 };
 

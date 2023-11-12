@@ -17,60 +17,318 @@
 
 // export default Navbar2;mdb-react-ui-kit
 
- import { Dropdown } from "react-nested-dropdown";
+import { Dropdown } from "react-nested-dropdown";
 import "react-nested-dropdown/dist/styles.css";
- const Navber2 = () => {
+const Navber2 = () => {
+  const items = [
+    {
+      label: "Option 1",
+      onSelect: () => console.log("Option 1 selected"),
+    },
+    {
+      label: "Option 2",
+      items: [
+        {
+          label: "Option 2.1",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
 
-   const items = [
+   
+  ];
 
-     {
 
-       label: "Option 1",
-     onSelect: () => console.log("Option 1 selected"),
-   },
-   {
-     label: "Option 2",
-     items: [
-       {
-         label: "Option 2.1",
-         onSelect: () => console.log("Option 2.1 selected"),
-       },
-       {
-         label: "Option 2.2",
-         onSelect: () => console.log("Option 2.2 selected"),
-       },
-     ],
-   },
-   {
-     label: "Gamming Pc",
-     items: [
-       {
-         label: "Intel pc",
-         onSelect: () => console.log("Option 2.1 selected"),
-       },
-       {
-         label: "Ryzen pc",
-         onSelect: () => console.log("Option 2.2 selected"),
-       },
-     ],
-   },
-   ];
-   return (
-     <Dropdown items={items} containerWidth="300px">
-       {({ isOpen, onClick }) => (
-         <button type="button" onClick={onClick}>
-           {isOpen ? "Close dropdown" : "Open dropdown"}
-         </button>
-       )}
-     </Dropdown>
-   );
- }
- export default Navber2;
+  // =====================Laptop=============================
+  const items2 = [
+    
+    {
+      label: "Option 2",
+      items: [
+        {
+          label: "Option 2.1",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Option 2.2",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Gamming Pc",
+      items: [
+        {
+          label: "Intel pc",
+          onSelect: () => console.log("Option 2.1 selected"),
+        },
+        {
+          label: "Ryzen pc",
+          onSelect: () => console.log("Option 2.2 selected"),
+        },
+      ],
+    },
+    {
+      label: "Option 1",
+      onSelect: () => console.log("Option 1 selected"),
+    }
+    
+   
+  ];
+  return (
+    <div className="flex">
+      <Dropdown items={items} containerWidth="200px" className="mr-5">
+        {({ isOpen, onClick }) => (
+          <button type="button" onClick={onClick}>
+            {isOpen ? "Close dropdown" : "Open dropdown"}
+          </button>
+        )}
+      </Dropdown>
+      <Dropdown items={items2} containerWidth="190px">
+        {({ isOpen, onClick }) => (
+          <button type="button" onClick={onClick}>
+            {isOpen ? "Close dropdown" : "Open dropdown"}
+          </button>
+        )}
+      </Dropdown>
+    </div>
+  );
+};
+export default Navber2;
 
-// import React from "react";
+// import React, { useState } from "react";
 // import DropDownMenuSelect from "react-nested-menu-selector";
 
-// const Navber2 = () => {
+// const Navbar2 = () => {
+//   const [selectedValue, setSelectedValue] = useState(null);
+
+//   const handleOnClick = (value) => {
+//     console.log(`Selected value: ${value}`);
+//     // Add your logic here
+//     setSelectedValue(value);
+//   };
+
 //   const option = {
 //     placeholder: "Master",
 //     options: [
@@ -107,10 +365,11 @@ import "react-nested-dropdown/dist/styles.css";
 
 //   return (
 //     <div>
-//       <DropDownMenuSelect values={option}  />
+//       <DropDownMenuSelect values={option} handleOnClick={handleOnClick} />
 //       <div>Test Application</div>
+//       {selectedValue && <div>Selected Value: {selectedValue}</div>}
 //     </div>
 //   );
 // };
 
-//export default Navber2;
+// export default Navbar2;

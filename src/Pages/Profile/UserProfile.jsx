@@ -13,16 +13,20 @@ import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import StarsIcon from "@mui/icons-material/Stars";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import ProfileHeader from "./ProfileHeader/ProfileHeader";
+import ProfileNavber from "./ProfileHeader/ProfileNavber";
 
 const UserProfile = () => {
   const { logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleLogOut = () => {
     logOut()
-      .then((reult) => {})
+      .then((reult) => {
+        navigate("/");
+      })
       .catch((error) => {
         console.error();
       });
@@ -32,6 +36,10 @@ const UserProfile = () => {
       <div className="max-w-screen-md mx-auto mt-44">
         <ProfileHeader></ProfileHeader>
       </div>
+      <div className="max-w-screen-lg mx-auto mt-10">
+        <ProfileNavber></ProfileNavber>
+      </div>
+    
       {/* <div
          style={{ height: '1.75px' }}
         className="divider max-w-screen-md mx-auto mt-4 bg-red-500 "

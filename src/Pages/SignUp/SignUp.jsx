@@ -160,7 +160,7 @@ const SignUp = () => {
         )}
         {/* ============================================= */}
         <div className="d-grid gap-2 mt-4">
-          <Button variant="info" type="submit" value="Sign Up" size="lg">
+          <Button variant="info" type="submit" value="Sign Up" size="">
             Continue
           </Button>
         </div>

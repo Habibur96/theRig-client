@@ -1,0 +1,72 @@
+[
+  {
+    "img": "https://www.startech.com.bd/image/cache/catalog/processor/intel/intel-12th-gen-pentium-gold-g7400/intel-pentium-gold-g7400-12th-gen-alder-lake-01-228x228.jpg",
+    "name": "Intel Pentium Gold G7400",
+    "coreCount": "2",
+    "performanceCoreCount": "3.7GHz",
+    "performanceBoostClock": "--",
+    "TDP": "46W",
+    "integratedGraphics": "Intel UHD Graphics 710",
+    "warranty": "3y",
+    "price": "6990",
+    "sategory": "cpu",
+    "type": "Intel",
+    "shoplogo": ""
+  },
+  {
+    "img": "https://www.startech.com.bd/image/cache/catalog/processor/AMD/athlon-3000g/athlon-3000g-1-500x500.jpg",
+    "name": "AMD Athlon 3000G",
+    "coreCount": "2",
+    "performanceCoreCount": "3.5GHz",
+    "performanceBoostClock": "--",
+    "TDP": "35W",
+    "integratedGraphics": "Redeon Vega 3",
+    "warranty": "3y",
+    "price": "7500",
+    "category": "cpu",
+    "type": "Amd",
+    "shoplogo": ""
+  },
+  {
+    "img": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/pentium-gold-g6405/pentium-gold-g6405-01-228x228.webp",
+    "name": "Intel Pentium Gold G6405",
+    "coreCount": "2",
+    "performanceCoreCount": "4.1GHz",
+    "performanceBoostClock": "--",
+    "TDP": "58W",
+    "integratedGraphics": "Intel UHD Graphics 610",
+    "warranty": "3y",
+    "price": "8000",
+    "category": "cpu",
+    "type": "intel",
+    "shoplogo": ""
+  },
+  {
+    "img": "https://www.startech.com.bd/image/cache/catalog/processor/amd/2400g/ryzen-5-2400g-500x500.jpg",
+    "name": "AMD Ryzen 5 2400G",
+    "coreCount": "4",
+    "performanceCoreCount": "3.6GHz",
+    "performanceBoostClock": "3.9Hz",
+    "TDP": "65W",
+    "integratedGraphics": "Radeon Vega 11",
+    "warranty": "3y",
+    "price": "8800",
+    "category": "cpu",
+    "type": "Amd",
+    "shoplogo": ""
+  },
+  {
+    "img": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/i3-10100/i3-10100-500x500.jpg",
+    "name": "Intel 10th Gen Core i3",
+    "coreCount": "4",
+    "performanceCoreCount": "3.6GHz",
+    "performanceBoostClock": "4.3GHz",
+    "TDP": "65W",
+    "integratedGraphics": "None",
+    "warranty": "3y",
+    "Price": "9000",
+    "category": "cpu",
+    "type": "intel",
+    "shoplogo": ""
+  }
+]

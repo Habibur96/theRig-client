@@ -1,22 +1,26 @@
-
 import { Link } from "react-router-dom";
-import cpu from '../../../assets/icon/cpu.jpg'
-import cpuCooler from '../../../assets/icon/cpuCooler.jpg'
-import motherboard from '../../../assets/icon/motherboard.jpg'
-import ram from '../../../assets/icon/Ram.jpg'
-import storage from '../../../assets/icon/storage.jpg'
-import gpu from '../../../assets/icon/gpu.jpg'
-import psu from '../../../assets/icon/powerSupply.jpg'
-import casing from '../../../assets/icon/cassing.jpg'
-import monitor from '../../../assets/icon/monitor.jpg'
-import casingCooler from '../../../assets/icon/casing-cooler.jpg'
-import keyboard from '../../../assets/icon/keyboard.jpg'
-import mouse from '../../../assets/icon/mouse.jpg'
-import antiVirus from '../../../assets/icon/anti-virus.jpg'
-import headphone from '../../../assets/icon/headphone.jpg'
-import ups from '../../../assets/icon/ups.jpg'
+import cpu from "../../../assets/icon/cpu.jpg";
+import cpuCooler from "../../../assets/icon/cpuCooler.jpg";
+import motherboard from "../../../assets/icon/motherboard.jpg";
+import ram from "../../../assets/icon/Ram.jpg";
+import storage from "../../../assets/icon/storage.jpg";
+import gpu from "../../../assets/icon/gpu.jpg";
+import psu from "../../../assets/icon/powerSupply.jpg";
+import casing from "../../../assets/icon/cassing.jpg";
+import monitor from "../../../assets/icon/monitor.jpg";
+import casingCooler from "../../../assets/icon/casing-cooler.jpg";
+import keyboard from "../../../assets/icon/keyboard.jpg";
+import mouse from "../../../assets/icon/mouse.jpg";
+import antiVirus from "../../../assets/icon/anti-virus.jpg";
+import headphone from "../../../assets/icon/headphone.jpg";
+import ups from "../../../assets/icon/ups.jpg";
 
 const Pcbuild = () => {
+  const product = {
+    CPU: "cpu",
+    motherboard: "motherboard",
+  };
+
   return (
     <div className="max-w-screen-xl mx-auto mt-20 pl-40">
       <table className="table">
@@ -42,10 +46,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className="w-12 h-12">
-                    <img
-                      src={cpu}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={cpu} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -56,7 +57,7 @@ const Pcbuild = () => {
             <td></td>
 
             <th>
-              <Link>
+              <Link to={`/product/${product.CPU}/${product.CPU}`}>
                 <button className=" btn btn-outline btn-info">Choose</button>
               </Link>
             </th>
@@ -67,10 +68,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={cpuCooler}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={cpuCooler} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -105,7 +103,7 @@ const Pcbuild = () => {
             </td>
             <td></td>
             <th>
-              <Link>
+              <Link to={`/product/${product.CPU}/${product.motherboard}`}>
                 <button className=" btn btn-outline btn-info">Choose</button>
               </Link>
             </th>
@@ -116,10 +114,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={ram}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={ram} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -141,10 +136,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={storage}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={storage} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -166,10 +158,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={gpu}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={gpu} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -191,10 +180,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={psu}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={psu} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -216,10 +202,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className="mask mask-squircle w-12 h-12">
-                    <img
-                      src={casing}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={casing} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -249,10 +232,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className="w-12 h-12">
-                    <img
-                      src={monitor}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={monitor} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -300,10 +280,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={keyboard}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={keyboard} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -325,10 +302,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={mouse}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={mouse} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -350,10 +324,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={antiVirus}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={antiVirus} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -375,10 +346,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={headphone}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={headphone} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>
@@ -400,10 +368,7 @@ const Pcbuild = () => {
               <div className="flex items-center space-x-10">
                 <div className="avatar">
                   <div className=" w-12 h-12">
-                    <img
-                      src={ups}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                    <img src={ups} alt="Avatar Tailwind CSS Component" />
                   </div>
                 </div>
                 <div>

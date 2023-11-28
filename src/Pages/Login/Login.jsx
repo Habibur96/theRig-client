@@ -106,7 +106,7 @@ const Login = () => {
           </Form.Label>
 
           <div className="d-grid gap-2 mt-3">
-            <Button variant="info" type="submit" value="signIn" size="lg">
+            <Button variant="info" type="submit" value="signIn" size="">
               Login
             </Button>
           </div>

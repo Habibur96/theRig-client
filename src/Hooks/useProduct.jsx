@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const useProduct = () => {
+const UseProduct = () => {
   const { pcbuilderProductName, category } = useParams();
   console.log({ pcbuilderProductName, category });
 
@@ -21,4 +21,4 @@ const useProduct = () => {
   return { product };
 };
 
-export default useProduct;
+export default UseProduct;

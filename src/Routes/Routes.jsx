@@ -5,8 +5,9 @@ import Pcbuild from "../Pages/Home/Pcbuild/Pcbuild";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import UserProfile from "../Pages/Profile/UserProfile";
-//  import useProduct from "../Hooks/useProduct";
-import ProductCard from "../Pages/Home/Pcbuild/ProductCard";
+
+import Motherboard from "../Pages/Home/Pcbuild/Motherboard";
+import Cpu from "../Pages/Home/Pcbuild/Cpu";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -35,10 +36,14 @@ export const router = createBrowserRouter([
         element: <Pcbuild></Pcbuild>,
       },
       {
-        path: "product/:pcbuilderProductName/:category",
-        element: <ProductCard></ProductCard>
+        path: "cpu/:pcbuilderProductName/:category",
+        element: <Cpu></Cpu>,
       },
-      
+      {
+        path: "motherboard/:pcbuilderProductName/:category",
+        element: <Motherboard></Motherboard>,
+      },
+
       {
         path: "userProfile",
         element: <UserProfile></UserProfile>,

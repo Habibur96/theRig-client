@@ -57,7 +57,7 @@ const Pcbuild = () => {
             <td></td>
 
             <th>
-              <Link to={`/product/${product.CPU}/${product.CPU}`}>
+              <Link to={`/cpu/${product.CPU}/${product.CPU}`}>
                 <button className=" btn btn-outline btn-info">Choose</button>
               </Link>
             </th>
@@ -103,7 +103,7 @@ const Pcbuild = () => {
             </td>
             <td></td>
             <th>
-              <Link to={`/product/${product.CPU}/${product.motherboard}`}>
+              <Link to={`/motherboard/${product.CPU}/${product.motherboard}`}>
                 <button className=" btn btn-outline btn-info">Choose</button>
               </Link>
             </th>

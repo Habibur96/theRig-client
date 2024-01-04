@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 import { Col, Container, Row } from "react-bootstrap";
+// import { useContext } from "react";
+// import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Motherboard = () => {
   const { product } = UseProduct();
+  // const { loading } = useContext(AuthContext);
+  // if (loading) {
+  //   return <progress className="progress w-56 mt-10"></progress>;
+  // }
   return (
     <Container>
       <Row>

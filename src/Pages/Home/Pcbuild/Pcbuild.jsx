@@ -57,6 +57,8 @@ const Pcbuild = () => {
             <td></td>
 
             <th>
+
+              {/* /routeName/$apiName/$productCategory */}
               <Link to={`/cpu/${product.CPU}/${product.CPU}`}>
                 <button className=" btn btn-outline btn-info">Choose</button>
               </Link>
@@ -103,6 +105,7 @@ const Pcbuild = () => {
             </td>
             <td></td>
             <th>
+               {/* /routeName/$apiName/$productCategory */}
               <Link to={`/motherboard/${product.CPU}/${product.motherboard}`}>
                 <button className=" btn btn-outline btn-info">Choose</button>
               </Link>

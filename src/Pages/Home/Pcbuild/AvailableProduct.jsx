@@ -1,58 +1,39 @@
-import { Col, Container, Row } from "react-bootstrap";
-// import UseProduct from "../../../Hooks/UseProduct";
-import Pages from "../Pcbuild/Pages";
-import { Link } from "react-router-dom";
-import UseProduct from "../../../Hooks/useProduct";
-// import { useState } from "react";
-// import AvailableProduct from "./AvailableProduct";
-// import { useContext } from "react";
-// import { AuthContext } from "../../../Provider/AuthProvider";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
-const Cpu = () => {
-  const { product } = UseProduct();
-  // const { loading } = useContext(AuthContext);
-  // if (loading) {
-  //   return <progress className="progress w-56"></progress>;
-  // }
 
-  // console.log({ product });
+const AvailableProduct = () => {
 
-  const Component = {
-    CPU: "cpu",
-    motherboard: "motherboard",
-  };
-
-  return (
-    <Container>
-      <Row>
-        <Col lg={2}>
-          {/* <LeftNav></LeftNav> */}
-          <h1>option</h1>
-        </Col>
-
-        <Col lg={10}>
-          <div className="overflow-x-auto">
-            <h3 className="text-2xl font-semibold">
-              {product.length} Compatible Products
-            </h3>
+    const { collectionName, name } = useParams();
+    const [component, setComponent] = useState([]);
+    fetch(`http://localhost:3000/cpu/${collectionName}/${name}`, {
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setComponent(data);
+        //    console.log(data);
+        });
+    return (
+        <div>
             <table className="table">
               {/* head */}
 
               <thead>
-                <tr>
+                <tr> 
                   <th></th>
                   <th>Name</th>
 
-                  <th>Core Count</th>
+                  {/* <th>Core Count</th>
 
                   <th>Performance Core Clock</th>
                   <th>Performance Boost Clock</th>
                   <th>TDP</th>
-                  <th>Integrated Graphics</th>
+                  <th>Integrated Graphics</th> */}
 
-                  <th>
+                  {/* <th>
                     <div className="pl-4">Warranty</div>
-                  </th>
+                  </th> */}
                   <th>
                     <div className="pl-4">Price</div>
                   </th>
@@ -60,7 +41,7 @@ const Cpu = () => {
               </thead>
 
               <tbody>
-                {product.map((item) => (
+                {component.map((item) => (
                   <tr key={item._id}>
                     <td>
                       <label>
@@ -81,25 +62,23 @@ const Cpu = () => {
                           </div>
                         </div>
                         <div>
-                          <Link
-                            to={`/availableProduct/${Component.CPU}/${item.name}`}
-                          >
+                          <td>
                             <div className="font-bold">{item.name}</div>
-                          </Link>
+                          </td>
                         </div>
                       </div>
                     </td>
 
-                    <td className=" text-center">{item.coreCount}</td>
+                    {/* <td className=" text-center">{item.coreCount}</td>
                     <td className=" text-center">
                       {item.performanceCoreCount}
-                    </td>
-                    <td className=" text-center">
+                    </td> */}
+                    {/* <td className=" text-center">
                       {item.performanceBoostClock}
-                    </td>
-                    <td className=" text-center">{item.TDP}</td>
+                    </td> */}
+                    {/* <td className=" text-center">{item.TDP}</td>
                     <td className=" text-center">{item.integratedGraphics}</td>
-                    <td className=" text-center">{item.warranty}</td>
+                    <td className=" text-center">{item.warranty}</td> */}
 
                     <td className="text-right">{item.price}tk</td>
                     <td>
@@ -109,12 +88,8 @@ const Cpu = () => {
                 ))}
               </tbody>
             </table>
-          </div>
-          <Pages></Pages>
-        </Col>
-      </Row>
-    </Container>
-  );
+        </div>
+    );
 };
 
-export default Cpu;
+export default AvailableProduct;

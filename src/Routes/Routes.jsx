@@ -9,6 +9,7 @@ import UserProfile from "../Pages/Profile/UserProfile";
 import Motherboard from "../Pages/Home/Pcbuild/Motherboard";
 import Cpu from "../Pages/Home/Pcbuild/Cpu";
 import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
+import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -36,19 +37,25 @@ export const router = createBrowserRouter([
         path: "pcbuild",
         element: <Pcbuild></Pcbuild>,
       },
-      {
+       {
+         path: "replaceProduct/:_id",
+         element: <ReplaceProduct></ReplaceProduct>,
+       },
+       {
         path: "cpu/:pcbuilderProductName/:category",
         element: <Cpu></Cpu>,
       },
+     
       {
         path: "motherboard/:pcbuilderProductName/:category",
         element: <Motherboard></Motherboard>,
       },
+     
       {
         path: "availableProduct/:collectionName/:name",
         element: <AvailableProduct></AvailableProduct>,
       },
-
+    
       {
         path: "userProfile",
         element: <UserProfile></UserProfile>,

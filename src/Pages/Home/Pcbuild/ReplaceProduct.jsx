@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import cpu from "../../../assets/icon/cpu.jpg";
 import cpuCooler from "../../../assets/icon/cpuCooler.jpg";
 import motherboard from "../../../assets/icon/motherboard.jpg";
@@ -14,13 +14,43 @@ import mouse from "../../../assets/icon/mouse.jpg";
 import antiVirus from "../../../assets/icon/anti-virus.jpg";
 import headphone from "../../../assets/icon/headphone.jpg";
 import ups from "../../../assets/icon/ups.jpg";
+import { useEffect, useState } from "react";
 
+import ClearIcon from "@mui/icons-material/Clear";
+import AutorenewIcon from "@mui/icons-material/Autorenew";
 
-const Pcbuild = () => {
+const ReplaceProduct = () => {
   const product = {
     CPU: "cpu",
     motherboard: "motherboard",
   };
+
+  const { _id } = useParams();
+  console.log({ _id });
+
+  const [replace, setReplace] = useState(false);
+
+  const [select, setSelect] = useState();
+
+  const handleRemoveReplaceProduct = () => {
+    setReplace(false);
+    setSelect(null);
+  };
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/${product.CPU}/replace/${_id}`, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setReplace(true);
+        setSelect(data);
+        console.log(data);
+      });
+  }, []);
+
+  console.log({ replace });
+  console.log({ select });
 
   return (
     <div className="max-w-screen-xl mx-auto mt-20 pl-40">
@@ -42,7 +72,47 @@ const Pcbuild = () => {
         </thead>
         <tbody>
           {/* row 1 */}
-         
+          {replace ? (
+            <tr>
+              <td>
+                <div className="flex items-center space-x-10">
+                  <div className="avatar">
+                    <div className="w-12 h-12">
+                      <img
+                        src={select.img}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">{select.name}</div>
+                  </div>
+                </div>
+              </td>
+              <td> </td>
+
+              <th>
+                <div className="flex space-x-6 items-center  ">
+                  <div>{select.price} tk</div>
+                  <div className="ml-4">
+                    <Link>
+                      <ClearIcon
+                        onClick={handleRemoveReplaceProduct}
+                        className="mr-4"
+                      ></ClearIcon>
+                    </Link>
+
+                    {/* path: "cpu/:pcbuilderProductName/:category", */}
+                    <Link to={`/cpu/${select.name}/${select.category}`}>
+                      <AutorenewIcon></AutorenewIcon>
+                    </Link>
+
+                    {/* <button ></button> */}
+                  </div>
+                </div>
+              </th>
+            </tr>
+          ) : (
             <tr>
               <td>
                 <div className="flex items-center space-x-10">
@@ -57,7 +127,7 @@ const Pcbuild = () => {
                 </div>
               </td>
               <td></td>
-              
+              {/* {show ? <span>Hide Password</span> : <span>Show Password</span>} */}
 
               <th>
                 {/* /routeName/$apiName/$productCategory */}
@@ -66,7 +136,7 @@ const Pcbuild = () => {
                 </Link>
               </th>
             </tr>
-        
+          )}
 
           {/* row 2 */}
           <tr>
@@ -397,4 +467,4 @@ const Pcbuild = () => {
   );
 };
 
-export default Pcbuild;
+export default ReplaceProduct;

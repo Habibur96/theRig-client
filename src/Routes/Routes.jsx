@@ -10,6 +10,7 @@ import Motherboard from "../Pages/Home/Pcbuild/Motherboard";
 import Cpu from "../Pages/Home/Pcbuild/Cpu";
 import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
 import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
+import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
        {
          path: "replaceProduct/:_id",
          element: <ReplaceProduct></ReplaceProduct>,
+       },
+       {
+         path: "searchCpu",
+         element: <SearchCpu></SearchCpu>,
        },
        {
         path: "cpu/:pcbuilderProductName/:category",

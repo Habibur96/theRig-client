@@ -9,7 +9,7 @@
     "integratedGraphics": "Intel UHD Graphics 710",
     "warranty": "3y",
     "price": "6990",
-    "sategory": "cpu",
+    "category": "cpu",
     "type": "Intel",
     "shoplogo": ""
   },
@@ -1157,25 +1157,10 @@
   "type": "Amd",
   "shoplogo": ""
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ]
+
+
+
+
+
+

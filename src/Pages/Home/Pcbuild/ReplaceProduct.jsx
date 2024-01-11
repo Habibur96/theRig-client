@@ -15,11 +15,12 @@ import antiVirus from "../../../assets/icon/anti-virus.jpg";
 import headphone from "../../../assets/icon/headphone.jpg";
 import ups from "../../../assets/icon/ups.jpg";
 import { useEffect, useState } from "react";
-
 import ClearIcon from "@mui/icons-material/Clear";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 
-const ReplaceProduct = () => {
+
+
+const ReplaceProduct = () => {  
   const product = {
     CPU: "cpu",
     motherboard: "motherboard",
@@ -27,17 +28,18 @@ const ReplaceProduct = () => {
 
   const { _id } = useParams();
   console.log({ _id });
-
+  const [removedIds, setRemovedIds] = useState([]);
   const [replace, setReplace] = useState(false);
-
   const [select, setSelect] = useState();
 
   const handleRemoveReplaceProduct = () => {
     setReplace(false);
     setSelect(null);
+    setRemovedIds(prevIds => [...prevIds, _id]);
   };
 
   useEffect(() => {
+    if(removedIds.includes(_id)) return;
     fetch(`http://localhost:3000/${product.CPU}/replace/${_id}`, {
       method: "GET",
     })
@@ -47,12 +49,15 @@ const ReplaceProduct = () => {
         setSelect(data);
         console.log(data);
       });
-  }, []);
+  }, [_id, removedIds]);
 
+  
   console.log({ replace });
   console.log({ select });
 
   return (
+
+
     <div className="max-w-screen-xl mx-auto mt-20 pl-40">
       <table className="table">
         {/* head */}
@@ -95,12 +100,12 @@ const ReplaceProduct = () => {
                 <div className="flex space-x-6 items-center  ">
                   <div>{select.price} tk</div>
                   <div className="ml-4">
-                    <Link>
+                    <button type='button' title="Remove"> 
                       <ClearIcon
                         onClick={handleRemoveReplaceProduct}
                         className="mr-4"
                       ></ClearIcon>
-                    </Link>
+                    </button>
 
                     {/* path: "cpu/:pcbuilderProductName/:category", */}
                     <Link to={`/cpu/${select.name}/${select.category}`}>

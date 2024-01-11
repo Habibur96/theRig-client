@@ -43,12 +43,12 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="mt-5 pt-5">
+    <div className="mt-5 pt-5 ">
       <h2 className="custom-form text-bold text-xl mt-5 mb-4 font-bold">
         Register Account
       </h2>
 
-      <Form onSubmit={handleSubmit(onSubmit)} className="custom-form">
+      <Form onSubmit={handleSubmit(onSubmit)} className="custom-form ">
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>
             Name <span className="text-red-600 font-extrabold">*</span>
@@ -124,7 +124,7 @@ const SignUp = () => {
             Password<span className="text-red-600 font-extrabold"> *</span>
           </Form.Label>
 
-          <div className="input-field mb-3 ">
+          <div className="input-field mb-3">
             <input
               type={type}
               placeholder="Password"

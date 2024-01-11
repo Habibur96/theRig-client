@@ -9,6 +9,7 @@
         "TDP":"117W",
         "warranty":"3y",
         "price":"8400",
+        "category": "motherboard",
         "shoplogo":""
     },
     {
@@ -21,6 +22,7 @@
         "TDP":"70W",
         "warranty":"3y",
         "price":"10500",
+        "category": "motherboard",
         "shoplogo":""
     }
 

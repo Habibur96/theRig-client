@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 import { Col, Container, Row } from "react-bootstrap";
-// import { useContext } from "react";
-// import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Motherboard = () => {
-  const { product } = UseProduct();
-  // const { loading } = useContext(AuthContext);
-  // if (loading) {
-  //   return <progress className="progress w-56 mt-10"></progress>;
-  // }
+ 
+  const [product] = UseProduct();
+  
+  const Motherboard = product.filter((item) => item.category === "motherboard");
+  //console.log({Motherboard})
+  const Component = {
+    motherboard: "motherboard",
+  };
+
   return (
     <Container>
       <Row>
@@ -45,7 +47,7 @@ const Motherboard = () => {
                 </tr>
               </thead>
               <tbody>
-                {product.map((item) => (
+                {Motherboard.map((item) => (
                   <tr key={item._id}>
                     <td>
                       <label>
@@ -66,7 +68,9 @@ const Motherboard = () => {
                           </div>
                         </div>
                         <div>
-                          <Link>
+                          <Link
+                            to={`/availableProduct/${Component.motherboard}/${item.name}`}
+                          >
                             <div className="font-bold">{item.name}</div>
                           </Link>
                         </div>

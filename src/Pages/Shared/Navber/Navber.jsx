@@ -3,11 +3,13 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaUserAlt } from "react-icons/fa";
-import SearchCpu from "../../Home/Pcbuild/SearchCpu";
-import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
+// import { Category } from "@mui/icons-material";
+// import SearchCpu from "../../Home/Pcbuild/SearchCpu";
+// import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
+
   // console.log(user.displayName)
   const searchRef = useRef(null);
   const [search, setSearch] = useState("");
@@ -30,11 +32,15 @@ const Navber = () => {
       .then((data) => {
         setSearchProduct(data);
         console.log({ data });
+        if (data?.[0]?.category === "cpu") {
+          console.log( "cpu" );
+          
+        }
       });
   }, [search]);
 
   // Check if any product has a category of 'motherboard'
-  const hasCpu = searchProduct.some((product) => product.category === "cpu");
+  // const hasCpu = searchProduct.some((product) => product.category === "cpu");
 
   const handleSearch = () => {
     console.log(searchRef.current.value);
@@ -206,7 +212,7 @@ const Navber = () => {
         ))}
       </div> */}
 
-      <div>
+      {/* <div>
         {searchProduct
           .filter((searchedProduct) => searchedProduct.category === "cpu")
           .map((filteredProduct) => (
@@ -228,7 +234,7 @@ const Navber = () => {
               searchedProduct={filteredProduct}
             />
           ))}
-      </div>
+      </div> */}
     </div>
   );
 };

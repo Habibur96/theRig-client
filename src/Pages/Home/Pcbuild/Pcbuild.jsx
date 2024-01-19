@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import cpu from "../../../assets/icon/cpu.jpg";
 import cpuCooler from "../../../assets/icon/cpuCooler.jpg";
-import motherboard from "../../../assets/icon/motherboard.jpg";
+import Motherboard from "../../../assets/icon/motherboard.jpg";
 import ram from "../../../assets/icon/Ram.jpg";
 import storage from "../../../assets/icon/storage.jpg";
 import gpu from "../../../assets/icon/gpu.jpg";
@@ -14,13 +14,58 @@ import mouse from "../../../assets/icon/mouse.jpg";
 import antiVirus from "../../../assets/icon/anti-virus.jpg";
 import headphone from "../../../assets/icon/headphone.jpg";
 import ups from "../../../assets/icon/ups.jpg";
-
+import ClearIcon from "@mui/icons-material/Clear";
+import AutorenewIcon from "@mui/icons-material/Autorenew";
+import { useEffect, useState } from "react";
+import UsepcbuilderCart from "../../../Hooks/UsepcbuilderCart";
 
 const Pcbuild = () => {
-  const product = {
-    CPU: "cpu",
-    motherboard: "motherboard",
-  };
+  const { _id } = useParams();
+  const [pcbuilderCart] = UsepcbuilderCart();
+  console.log(pcbuilderCart);
+  const [replaceCpu, setReplaceCpu] = useState(false);
+  const [replaceMotherboard, setReplaceMotherboard] = useState(false);
+
+  const [selectCpu, setSelectCpu] = useState([]);
+  const [selectMotherboard, setSelectMotherboard] = useState([]);
+  console.log({ _id });
+
+  useEffect(() => {
+    const data = pcbuilderCart.filter((item) => item.cartItemId === _id);
+    console.log(data);
+const mappeData = data.map((item) =>{
+console.log({item})
+if (item.category === "cpu") {
+  console.log("cpu");
+  setSelectCpu(item);
+  setReplaceCpu(true);
+}
+
+if (item.category === "motherboard") {
+  console.log(item.img);
+  setSelectMotherboard(item);
+  setReplaceMotherboard(true);
+}
+  return item
+})
+   
+    // if (data.length > 0) {
+    //   const firstItem = data[0];
+    //   console.log({ firstItem });
+
+    //   if (firstItem.category === "cpu") {
+    //     console.log("cpu");
+    //     setSelectCpu(data);
+    //     setReplaceCpu(true);
+    //   }
+
+    //   if (firstItem.category === "motherboard") {
+    //     console.log("motherboard");
+    //     setSelectMotherboard(data);
+    //     setReplaceMotherboard(true);
+    //   }
+    // }
+  }, [_id, pcbuilderCart]);
 
   return (
     <div className="max-w-screen-xl mx-auto mt-20 pl-40">
@@ -42,7 +87,47 @@ const Pcbuild = () => {
         </thead>
         <tbody>
           {/* row 1 */}
-         
+
+          {replaceCpu ? (
+            <tr>
+              <td>
+                <div className="flex items-center space-x-10">
+                  <div className="avatar">
+                    <div className="w-12 h-12">
+                      <img
+                        src={selectCpu.img}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">{selectCpu.name}</div>
+                  </div>
+                </div>
+              </td>
+              <td> </td>
+
+              <th>
+                <div className="flex space-x-6 items-center  ">
+                  <div>{selectCpu.price} tk</div>
+                  <div className="ml-4">
+                    <button type="button" title="Remove">
+                      <ClearIcon
+                        // onClick={() => handleRemoveReplaceCpu(selectCpu._id)}
+                        className="mr-4"
+                      ></ClearIcon>
+                    </button>
+
+                    <Link to="/cpu">
+                      <AutorenewIcon></AutorenewIcon>
+                    </Link>
+
+                    {/* <button ></button> */}
+                  </div>
+                </div>
+              </th>
+            </tr>
+          ) : (
             <tr>
               <td>
                 <div className="flex items-center space-x-10">
@@ -57,16 +142,16 @@ const Pcbuild = () => {
                 </div>
               </td>
               <td></td>
-              
+              {/* {show ? <span>Hide Password</span> : <span>Show Password</span>} */}
 
               <th>
                 {/* /routeName/$apiName/$productCategory */}
-                <Link to={`/cpu/${product.CPU}/${product.CPU}`}>
+                <Link to="/cpu">
                   <button className=" btn btn-outline btn-info">Choose</button>
                 </Link>
               </th>
             </tr>
-        
+          )}
 
           {/* row 2 */}
           <tr>
@@ -91,30 +176,73 @@ const Pcbuild = () => {
             </th>
           </tr>
           {/* row 3 */}
-          <tr>
-            <td>
-              <div className="flex items-center space-x-10">
-                <div className="avatar">
-                  <div className=" w-12 h-12">
-                    <img
-                      src={motherboard}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+          {replaceMotherboard ? (
+            <tr>
+              <td>
+                <div className="flex items-center space-x-10">
+                  <div className="avatar">
+                    <div className=" w-12 h-12">
+                      <img
+                        src={selectMotherboard.img}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold">
+                      {selectMotherboard.name}
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div className="text-sm font-bold">Motherboard</div>
+              </td>
+              <td></td>
+              <th>
+                <div className="flex space-x-6 items-center  ">
+                  <div>{selectMotherboard.price} tk</div>
+                  <div className="ml-4">
+                    <button type="button" title="Remove">
+                      <ClearIcon
+                        // onClick={handleRemoveReplaceMotherboard}
+                        className="mr-4"
+                      ></ClearIcon>
+                    </button>
+
+                    {/* path: "cpu/:pcbuilderProductName/:category", */}
+                    <Link to="/motherboard">
+                      <AutorenewIcon></AutorenewIcon>
+                    </Link>
+
+                    {/* <button ></button> */}
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td></td>
-            <th>
-              {/* /routeName/$apiName/$productCategory */}
-              <Link to={`/motherboard/${product.CPU}/${product.motherboard}`}>
-                <button className=" btn btn-outline btn-info">Choose</button>
-              </Link>
-            </th>
-          </tr>
+              </th>
+            </tr>
+          ) : (
+            <tr>
+              <td>
+                <div className="flex items-center space-x-10">
+                  <div className="avatar">
+                    <div className=" w-12 h-12">
+                      <img
+                        src={Motherboard}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold">Motherboard</div>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+              <th>
+                {/* /routeName/$apiName/$productCategory */}
+                <Link to="/motherboard">
+                  <button className=" btn btn-outline btn-info">Choose</button>
+                </Link>
+              </th>
+            </tr>
+          )}
           {/* row 4 */}
           <tr>
             <td>

@@ -1,12 +1,12 @@
 
 
-const SearchMotherboard = ({ searchedProduct }) => {
-    console.log({searchedProduct});
-    return (
-        <div>
+// const SearchMotherboard = ({ searchedProduct }) => {
+//     console.log({searchedProduct});
+//     return (
+//         <div>
             
-        </div>
-    );
-};
+//         </div>
+//     );
+// };
 
-export default SearchMotherboard;
+// export default SearchMotherboard;

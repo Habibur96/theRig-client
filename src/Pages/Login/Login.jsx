@@ -1,6 +1,6 @@
 import { Button, Form } from "react-bootstrap";
 import "./Login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useRef, useState } from "react";
 // import { useForm } from "react-hook-form";
 import { Icon } from "react-icons-kit";
@@ -12,9 +12,13 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const location = useLocation()
   const { signIn, resetPassword } = useContext(AuthContext);
   const emailRef = useRef();
+
+  const from = location.state?.from?.pathname || "/";
+  console.log({ location });
   const handleToggle = () => {
     if (type === "password") {
       setIcon(eye);
@@ -29,13 +33,15 @@ const Login = () => {
     event.preventDefault();
     const Form = event.target;
     const email = Form.email.value;
+
     const password = Form.password.value;
     console.log(email, password);
     signIn(email, password)
       .then((result) => {
         const user = result.user;
         Form.reset(" ");
-        navigate('/userProfile')
+        navigate(from, { replace: true });
+        // navigate('/userProfile')
         console.log(user);
       })
       .catch((error) => {
@@ -119,6 +125,8 @@ const Login = () => {
           </button>
         </Link>
       </div>
+
+      <div></div>
     </>
   );
 };

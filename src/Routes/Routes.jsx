@@ -9,8 +9,9 @@ import UserProfile from "../Pages/Profile/UserProfile";
 import Motherboard from "../Pages/Home/Pcbuild/Motherboard";
 import Cpu from "../Pages/Home/Pcbuild/Cpu";
 import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
-import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
-import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
+// import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
+// import PrivateRoute from "./PrivateRoute/PrivateRoute";
+// import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -38,29 +39,46 @@ export const router = createBrowserRouter([
         path: "pcbuild",
         element: <Pcbuild></Pcbuild>,
       },
-       {
-         path: "replaceProduct/:_id",
-         element: <ReplaceProduct></ReplaceProduct>,
-       },
-       {
-         path: "searchCpu",
-         element: <SearchCpu></SearchCpu>,
-       },
-       {
-        path: "cpu/:pcbuilderProductName/:category",
+      {
+        path: "pcbuild/:_id",
+        element: <Pcbuild></Pcbuild>,
+      },
+      // {
+      //   path: "replaceProduct/:_id",
+      //   element: <ReplaceProduct></ReplaceProduct>,
+      //   loader: ({ params }) => fetch(`http://localhost:3000/products/${params._id}`),
+      // },
+      //  {
+      //    path: "searchCpu",
+      //    element: <SearchCpu></SearchCpu>,
+      //  },
+      // {
+      //   path: "cpu/:pcbuilderProductName/:category",
+      //   element: <Cpu></Cpu>,
+      // },
+      {
+        path: "cpu",
         element: <Cpu></Cpu>,
       },
-     
+
+      // {
+      //   path: "motherboard/:pcbuilderProductName/:category",
+      //   element: <Motherboard></Motherboard>,
+      // },
       {
-        path: "motherboard/:pcbuilderProductName/:category",
+        path: "motherboard",
         element: <Motherboard></Motherboard>,
       },
-     
+
       {
         path: "availableProduct/:collectionName/:name",
-        element: <AvailableProduct></AvailableProduct>,
+        element: (
+          // <PrivateRoute>
+            <AvailableProduct></AvailableProduct>
+          // </PrivateRoute>
+        ),
       },
-    
+
       {
         path: "userProfile",
         element: <UserProfile></UserProfile>,

@@ -1,15 +1,21 @@
 import { Col, Container, Row } from "react-bootstrap";
-// import UseProduct from "../../../Hooks/UseProduct";
+ import UseProduct from "../../../Hooks/UseProduct";
 import Pages from "../Pcbuild/Pages";
 import { Link } from "react-router-dom";
-import UseProduct from "../../../Hooks/useProduct";
+// import UseProduct from "../../../Hooks/useProduct";
+
 // import { useState } from "react";
 // import AvailableProduct from "./AvailableProduct";
 // import { useContext } from "react";
 // import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Cpu = () => {
-  const { product } = UseProduct();
+ 
+  const [product] = UseProduct();
+  // console.log({ product });
+
+  const cpu = product.filter((item) => item.category === "cpu");
+ // console.log({cpu})
   // const { loading } = useContext(AuthContext);
   // if (loading) {
   //   return <progress className="progress w-56"></progress>;
@@ -19,7 +25,6 @@ const Cpu = () => {
 
   const Component = {
     CPU: "cpu",
-    motherboard: "motherboard",
   };
 
   return (
@@ -33,7 +38,7 @@ const Cpu = () => {
         <Col lg={10}>
           <div className="overflow-x-auto">
             <h3 className="text-2xl font-semibold">
-              {product.length} Compatible Products
+              {cpu.length} Compatible Products
             </h3>
             <table className="table">
               {/* head */}
@@ -60,7 +65,7 @@ const Cpu = () => {
               </thead>
 
               <tbody>
-                {product.map((item) => (
+                {cpu.map((item) => (
                   <tr key={item._id}>
                     <td>
                       <label>
@@ -110,6 +115,7 @@ const Cpu = () => {
               </tbody>
             </table>
           </div>
+
           <Pages></Pages>
         </Col>
       </Row>

@@ -3,7 +3,8 @@ import Usepagination from "../../../Hooks/Usepagination";
 import UseProduct from "../../../Hooks/useProduct";
 
 const Pages = () => {
-  const {product} = UseProduct()
+  // const {product} = UseProduct()
+  const [product] = UseProduct()
   const [
     totalPages,
     startPageIndex,

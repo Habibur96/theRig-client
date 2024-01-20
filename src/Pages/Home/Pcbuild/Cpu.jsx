@@ -1,5 +1,5 @@
-import { Col, Container, Row } from "react-bootstrap";
- import UseProduct from "../../../Hooks/UseProduct";
+
+import UseProduct from "../../../Hooks/UseProduct";
 import Pages from "../Pcbuild/Pages";
 import { Link } from "react-router-dom";
 // import UseProduct from "../../../Hooks/useProduct";
@@ -10,12 +10,11 @@ import { Link } from "react-router-dom";
 // import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Cpu = () => {
- 
   const [product] = UseProduct();
   // console.log({ product });
 
   const cpu = product.filter((item) => item.category === "cpu");
- // console.log({cpu})
+  // console.log({cpu})
   // const { loading } = useContext(AuthContext);
   // if (loading) {
   //   return <progress className="progress w-56"></progress>;
@@ -28,98 +27,92 @@ const Cpu = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col lg={2}>
-          {/* <LeftNav></LeftNav> */}
-          <h1>option</h1>
-        </Col>
+    <div className="flex column-gap-5">
+      <div className=" flex-[1] bg-red-300 ">
+        {/* <LeftNav></LeftNav> */}
+        <h1 className="text-center">option</h1>
+      </div>
 
-        <Col lg={10}>
-          <div className="overflow-x-auto">
-            <h3 className="text-2xl font-semibold">
-              {cpu.length} Compatible Products
-            </h3>
-            <table className="table">
-              {/* head */}
+      <div className="flex-[4] mr-5 ">
+        <div className="overflow-x-auto ">
+          <h3 className="text-2xl font-semibold">
+            {cpu.length} Compatible Products
+          </h3>
+          <table className="table ">
+            {/* head */}
 
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Name</th>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
 
-                  <th>Core Count</th>
+                <th>Core Count</th>
 
-                  <th>Performance Core Clock</th>
-                  <th>Performance Boost Clock</th>
-                  <th>TDP</th>
-                  <th>Integrated Graphics</th>
+                <th>Performance Core Clock</th>
+                <th>Performance Boost Clock</th>
+                <th>TDP</th>
+                <th>Integrated Graphics</th>
 
-                  <th>
-                    <div className="pl-4">Warranty</div>
-                  </th>
-                  <th>
-                    <div className="pl-4">Price</div>
-                  </th>
-                </tr>
-              </thead>
+                <th>
+                  <div className="pl-4">Warranty</div>
+                </th>
+                <th>
+                  <div className="pl-4">Price</div>
+                </th>
+              </tr>
+            </thead>
 
-              <tbody>
-                {cpu.map((item) => (
-                  <tr key={item._id}>
-                    <td>
-                      <label>
-                        <input
-                          type="checkbox"
-                          className="checkbox checkbox-success"
-                        />
-                      </label>
-                    </td>
-                    <td>
-                      <div className="flex items-center space-x-3">
-                        <div className="avatar">
-                          <div className=" w-12 h-12">
-                            <img
-                              src={item.img}
-                              alt="Avatar Tailwind CSS Component"
-                            />
-                          </div>
-                        </div>
-                        <div>
-                          <Link
-                            to={`/availableProduct/${Component.CPU}/${item.name}`}
-                          >
-                            <div className="font-bold">{item.name}</div>
-                          </Link>
+            <tbody>
+              {cpu.map((item) => (
+                <tr key={item._id}>
+                  <td>
+                    <label>
+                      <input
+                        type="checkbox"
+                        className="checkbox checkbox-success"
+                      />
+                    </label>
+                  </td>
+                  <td>
+                    <div className="flex items-center space-x-3">
+                      <div className="avatar">
+                        <div className=" w-12 h-12">
+                          <img
+                            src={item.img}
+                            alt="Avatar Tailwind CSS Component"
+                          />
                         </div>
                       </div>
-                    </td>
+                      <div>
+                        <Link
+                          to={`/availableProduct/${Component.CPU}/${item.name}`}
+                        >
+                          <div className="font-bold">{item.name}</div>
+                        </Link>
+                      </div>
+                    </div>
+                  </td>
 
-                    <td className=" text-center">{item.coreCount}</td>
-                    <td className=" text-center">
-                      {item.performanceCoreCount}
-                    </td>
-                    <td className=" text-center">
-                      {item.performanceBoostClock}
-                    </td>
-                    <td className=" text-center">{item.TDP}</td>
-                    <td className=" text-center">{item.integratedGraphics}</td>
-                    <td className=" text-center">{item.warranty}</td>
+                  <td className=" text-center">{item.coreCount}</td>
+                  <td className=" text-center">{item.performanceCoreCount}</td>
+                  <td className=" text-center">{item.performanceBoostClock}</td>
+                  <td className=" text-center">{item.TDP}</td>
+                  <td className=" text-center">{item.integratedGraphics}</td>
+                  <td className=" text-center">{item.warranty}</td>
 
-                    <td className="text-right">{item.price}tk</td>
-                    <td>
-                      <button className="btn btn-sm btn-success ">Add</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                  <td className="text-right">{item.price}tk</td>
+                  <td>
+                    <button className="btn btn-sm btn-success ">Add</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-          <Pages></Pages>
-        </Col>
-      </Row>
-    </Container>
+        <Pages></Pages>
+      </div>
+    </div>
   );
 };
 

@@ -26,10 +26,10 @@ const AvailableProduct = () => {
     if (user && user.email) {
       const cartItem = {
         email: user?.email,
-cartItemId: item?._id,
+        cartItemId: item?._id,
         category: item?.category,
         name: item?.name,
-       img: item?.img,
+        img: item?.img,
         price: item?.price,
       };
       console.log({ cartItem, item });
@@ -149,7 +149,7 @@ cartItemId: item?._id,
 
                       <Link
                         onClick={() => pcbuilderCartGet(item)}
-                         to={`/pcbuild/${item._id}`}
+                        to={`/pcbuild/${item._id}`}
                         className="btn btn-sm btn-success "
                       >
                         Add

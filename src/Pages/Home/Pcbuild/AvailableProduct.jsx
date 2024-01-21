@@ -28,6 +28,7 @@ const AvailableProduct = () => {
         email: user?.email,
         cartItemId: item?._id,
         category: item?.category,
+        model:item?.model,
         name: item?.name,
         img: item?.img,
         price: item?.price,

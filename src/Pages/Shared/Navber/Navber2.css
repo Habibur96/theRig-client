@@ -127,7 +127,7 @@
 }
 .accordion-header {
   width: 8%;
-  background-color: #26293b;
+  /* background-color: #26293b; */
 }
 .browseProducts__wrapper {
   display: grid;

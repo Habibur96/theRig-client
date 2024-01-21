@@ -9,6 +9,7 @@ import UserProfile from "../Pages/Profile/UserProfile";
 import Motherboard from "../Pages/Home/Pcbuild/Motherboard";
 import Cpu from "../Pages/Home/Pcbuild/Cpu";
 import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
+import MyCart from "../Pages/MyCart/MyCart";
 // import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
 // import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
@@ -74,7 +75,7 @@ export const router = createBrowserRouter([
         path: "availableProduct/:collectionName/:name",
         element: (
           // <PrivateRoute>
-            <AvailableProduct></AvailableProduct>
+          <AvailableProduct></AvailableProduct>
           // </PrivateRoute>
         ),
       },
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
       {
         path: "userProfile",
         element: <UserProfile></UserProfile>,
+      },
+      {
+        path: "mycart",
+        element: <MyCart></MyCart>,
       },
     ],
   },

@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import cpu from "../../../assets/icon/cpu.jpg";
 import cpuCooler from "../../../assets/icon/cpuCooler.jpg";
 import Motherboard from "../../../assets/icon/motherboard.jpg";
@@ -21,6 +21,7 @@ import UsepcbuilderCart from "../../../Hooks/UsepcbuilderCart";
 
 const Pcbuild = () => {
   const { _id } = useParams();
+ 
   const [pcbuilderCart] = UsepcbuilderCart();
   console.log(pcbuilderCart);
   const [replaceCpu, setReplaceCpu] = useState(false);
@@ -33,22 +34,22 @@ const Pcbuild = () => {
   useEffect(() => {
     const data = pcbuilderCart.filter((item) => item.cartItemId === _id);
     console.log(data);
-const mappeData = data.map((item) =>{
-console.log({item})
-if (item.category === "cpu") {
-  console.log("cpu");
-  setSelectCpu(item);
-  setReplaceCpu(true);
-}
+    const mappeData = data.map((item) => {
+      console.log({ item });
+      if (item.category === "cpu") {
+        console.log("cpu");
+        setSelectCpu(item);
+        setReplaceCpu(true);
+      }
 
-if (item.category === "motherboard") {
-  console.log(item.img);
-  setSelectMotherboard(item);
-  setReplaceMotherboard(true);
-}
-  return item
-})
-   
+      if (item.category === "motherboard") {
+        console.log(item.img);
+        setSelectMotherboard(item);
+        setReplaceMotherboard(true);
+      }
+      return item;
+    });
+
     // if (data.length > 0) {
     //   const firstItem = data[0];
     //   console.log({ firstItem });
@@ -146,7 +147,7 @@ if (item.category === "motherboard") {
 
               <th>
                 {/* /routeName/$apiName/$productCategory */}
-                <Link to="/cpu">
+                <Link to="/cpu"  >
                   <button className=" btn btn-outline btn-info">Choose</button>
                 </Link>
               </th>

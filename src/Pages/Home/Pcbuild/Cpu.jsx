@@ -1,7 +1,6 @@
-
 import UseProduct from "../../../Hooks/UseProduct";
 import Pages from "../Pcbuild/Pages";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import UseProduct from "../../../Hooks/useProduct";
 
 // import { useState } from "react";
@@ -11,8 +10,11 @@ import { Link } from "react-router-dom";
 
 const Cpu = () => {
   const [product] = UseProduct();
-  // console.log({ product });
+  
 
+  const location = useLocation()
+  
+  // console.log(location)
   const cpu = product.filter((item) => item.category === "cpu");
   // console.log({cpu})
   // const { loading } = useContext(AuthContext);
@@ -84,8 +86,10 @@ const Cpu = () => {
                         </div>
                       </div>
                       <div>
+                        {/* <Link to="/login" state={{ from: location }} replace> */}
                         <Link
                           to={`/availableProduct/${Component.CPU}/${item.name}`}
+                        state={{from: location}} replace
                         >
                           <div className="font-bold">{item.name}</div>
                         </Link>

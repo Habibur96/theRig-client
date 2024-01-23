@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
-// import UseCart from "../../Hooks/UseCart";
+ import UseCart from "../../Hooks/UseCart";
 import ClearIcon from "@mui/icons-material/Clear";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
-import UsepcbuilderCart from "../../Hooks/UsepcbuilderCart";
-import { Button } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
+
+
 const MyCart = () => {
-  //   const [cart] = UseCart();
-  const [cart] = UsepcbuilderCart();
+     const [cart] = UseCart();
+  
   return (
     <div className=" max-w-screen-xl mx-auto">
       <h3 className="text-3xl mt-5 mb-4">Shopping Cart</h3>

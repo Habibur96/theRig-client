@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 
 const Motherboard = () => {
   const [product] = UseProduct();
-
+  const location = useLocation()
   const Motherboard = product.filter((item) => item.category === "motherboard");
   //console.log({Motherboard})
   const Component = {
@@ -66,7 +66,8 @@ const Motherboard = () => {
                       </div>
                       <div>
                         <Link
-                          to={`/availableProduct/${Component.motherboard}/${item.name}`}
+                          to={`/availableProduct/${Component.motherboard}/${item.name} ` }
+                          state={{from: location}} replace
                         >
                           <div className="font-bold">{item.name}</div>
                         </Link>

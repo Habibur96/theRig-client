@@ -1,13 +1,22 @@
 import { useContext, useEffect, useState } from "react";
 import { Card, Col, Container, ListGroup, Row } from "react-bootstrap";
 import { Link, useLocation, useParams } from "react-router-dom";
+
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
   const location = useLocation();
-  //console.log({location})
-  //console.log({ user });
+  console.log(location);
+
+  const from = location.state?.from?.pathname;
+  console.log(from);
+  const cartLocation =
+    from.includes("product/cpu") || from.includes("product/motherboard");
+  console.log({ cartLocation });
+
+  console.log({ user });
+
   const { collectionName, name } = useParams();
   const [component, setComponent] = useState([]);
   useEffect(() => {
@@ -17,7 +26,6 @@ const AvailableProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         setComponent(data);
-        // console.log(data);
       });
   }, []);
 
@@ -28,13 +36,12 @@ const AvailableProduct = () => {
         email: user?.email,
         cartItemId: item?._id,
         category: item?.category,
-        model:item?.model,
+        model: item?.model,
         name: item?.name,
         img: item?.img,
         price: item?.price,
       };
       console.log({ cartItem, item });
-      // console.log({ _id });
 
       fetch("http://localhost:3000/pcbuilderCart", {
         method: "post",
@@ -42,17 +49,32 @@ const AvailableProduct = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(cartItem),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
-        .then((data) => console.log(data))
-        .catch((error) =>
-          console.error("There was a problem with the fetch operation:", error)
-        );
+      });
+    }
+  };
+
+  const handleCart = (item) => {
+    console.log({ item });
+    if (user && user.email) {
+      const cartItem = {
+        email: user?.email,
+        cartItemId: item?._id,
+        category: item?.category,
+        model: item?.model,
+        name: item?.name,
+        img: item?.img,
+        price: item?.price,
+      };
+      console.log({ cartItem, item });
+      // console.log({ _id });
+
+      fetch("http://localhost:3000/cart", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartItem),
+      });
     }
   };
 
@@ -145,16 +167,24 @@ const AvailableProduct = () => {
                <td className=" text-center">{item.warranty}</td> */}
 
                     <td className="text-right">{item.price}tk</td>
-                    <td>
-                      {/* <button  className="btn btn-sm btn-success ">Add</button> */}
 
-                      <Link
-                        onClick={() => pcbuilderCartGet(item)}
-                        to={`/pcbuild/${item._id}`}
-                        className="btn btn-sm btn-success "
-                      >
-                        Add
-                      </Link>
+                    <td>
+                      {cartLocation ? (
+                        <button
+                          onClick={() => handleCart(item)}
+                          className="btn btn-sm btn-success "
+                        >
+                          Add
+                        </button>
+                      ) : (
+                        <Link
+                          onClick={() => pcbuilderCartGet(item)}
+                          to={`/pcbuild/${item._id}`}
+                          className="btn btn-sm btn-success "
+                        >
+                          Add
+                        </Link>
+                      )}
                     </td>
                   </tr>
                 </tbody>

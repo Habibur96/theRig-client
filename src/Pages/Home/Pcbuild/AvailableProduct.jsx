@@ -1,24 +1,23 @@
 import { useContext, useEffect, useState } from "react";
 import { Card, Col, Container, ListGroup, Row } from "react-bootstrap";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
   const location = useLocation();
-  console.log(location);
-
-  const from = location.state?.from?.pathname;
-  console.log(from);
-  const cartLocation =
-    from.includes("product/cpu") || from.includes("product/motherboard");
-  console.log({ cartLocation });
-
-  console.log({ user });
+  const navigate = useNavigate();
 
   const { collectionName, name } = useParams();
   const [component, setComponent] = useState([]);
+  // console.log(location);
+
+  const from = location.state?.from?.pathname;
+  console.log(from);
+  const cartLocation = from?.includes("cpus") || from?.includes("motherboards");
+  // console.log({ cartLocation });
+
   useEffect(() => {
     fetch(`http://localhost:3000/cpu/${collectionName}/${name}`, {
       method: "GET",
@@ -75,6 +74,8 @@ const AvailableProduct = () => {
         },
         body: JSON.stringify(cartItem),
       });
+    } else {
+      navigate("/login", { state: { from: location }, replace: true });
     }
   };
 
@@ -92,18 +93,19 @@ const AvailableProduct = () => {
                   the bulk of the card's content.
                 </Card.Text>
               </Card.Body>
-
-              <ListGroup className="list-group-flush">
-                {user ? (
-                  <Link>+Save to wish list</Link>
-                ) : (
-                  <Link to="/login" state={{ from: location }} replace>
-                    <ListGroup.Item className="text-center font-semibold text-green-700">
-                      Login to save wish list
-                    </ListGroup.Item>
-                  </Link>
-                )}
-              </ListGroup>
+              {cartLocation ? null : (
+                <ListGroup className="list-group-flush">
+                  {user ? (
+                    <Link>+Save to wish list</Link>
+                  ) : (
+                    <Link to="/login" state={{ from: location }} replace>
+                      <ListGroup.Item className="text-center font-semibold text-green-700">
+                        Login to save wish list
+                      </ListGroup.Item>
+                    </Link>
+                  )}
+                </ListGroup>
+              )}
 
               <Card.Body>
                 <Card.Link href="#">Card Link</Card.Link>
@@ -170,13 +172,6 @@ const AvailableProduct = () => {
 
                     <td>
                       {cartLocation ? (
-                        <button
-                          onClick={() => handleCart(item)}
-                          className="btn btn-sm btn-success "
-                        >
-                          Add
-                        </button>
-                      ) : (
                         <Link
                           onClick={() => pcbuilderCartGet(item)}
                           to={`/pcbuild/${item._id}`}
@@ -184,6 +179,13 @@ const AvailableProduct = () => {
                         >
                           Add
                         </Link>
+                      ) : (
+                        <button
+                          onClick={() => handleCart(item)}
+                          className="btn btn-sm btn-success "
+                        >
+                          Add
+                        </button>
                       )}
                     </td>
                   </tr>

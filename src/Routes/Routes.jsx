@@ -58,7 +58,7 @@ export const router = createBrowserRouter([
       //   element: <Cpu></Cpu>,
       // },
       {
-        path: "cpu",
+        path: "cpus",
         element: <Cpu></Cpu>,
       },
 
@@ -67,10 +67,10 @@ export const router = createBrowserRouter([
       //   element: <Motherboard></Motherboard>,
       // },
       {
-        path: "motherboard",
+        path: "motherboards",
         element: <Motherboard></Motherboard>,
       },
-      
+
       {
         path: "product/cpu",
         element: <Cpu></Cpu>,
@@ -79,8 +79,6 @@ export const router = createBrowserRouter([
         path: "product/motherboard",
         element: <Motherboard></Motherboard>,
       },
-
-
 
       {
         path: "availableProduct/:collectionName/:name",

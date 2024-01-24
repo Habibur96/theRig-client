@@ -1,4 +1,4 @@
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import cpu from "../../../assets/icon/cpu.jpg";
 import cpuCooler from "../../../assets/icon/cpuCooler.jpg";
 import Motherboard from "../../../assets/icon/motherboard.jpg";
@@ -21,7 +21,7 @@ import UsepcbuilderCart from "../../../Hooks/UsepcbuilderCart";
 
 const Pcbuild = () => {
   const { _id } = useParams();
- 
+
   const [pcbuilderCart] = UsepcbuilderCart();
   console.log(pcbuilderCart);
   const [replaceCpu, setReplaceCpu] = useState(false);
@@ -119,7 +119,7 @@ const Pcbuild = () => {
                       ></ClearIcon>
                     </button>
 
-                    <Link to="/cpu">
+                    <Link to="/cpus" >
                       <AutorenewIcon></AutorenewIcon>
                     </Link>
 
@@ -147,7 +147,7 @@ const Pcbuild = () => {
 
               <th>
                 {/* /routeName/$apiName/$productCategory */}
-                <Link to="/cpu"  >
+                <Link to="/cpus" >
                   <button className=" btn btn-outline btn-info">Choose</button>
                 </Link>
               </th>
@@ -209,7 +209,7 @@ const Pcbuild = () => {
                     </button>
 
                     {/* path: "cpu/:pcbuilderProductName/:category", */}
-                    <Link to="/motherboard">
+                    <Link to="/motherboards" >
                       <AutorenewIcon></AutorenewIcon>
                     </Link>
 
@@ -238,7 +238,7 @@ const Pcbuild = () => {
               <td></td>
               <th>
                 {/* /routeName/$apiName/$productCategory */}
-                <Link to="/motherboard">
+                <Link to="/motherboards" >
                   <button className=" btn btn-outline btn-info">Choose</button>
                 </Link>
               </th>

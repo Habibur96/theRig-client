@@ -3,7 +3,7 @@ import UseProduct from "../../../Hooks/UseProduct";
 
 const Motherboard = () => {
   const [product] = UseProduct();
-  const location = useLocation()
+ const location = useLocation()
   const Motherboard = product.filter((item) => item.category === "motherboard");
   //console.log({Motherboard})
   const Component = {
@@ -67,7 +67,7 @@ const Motherboard = () => {
                       <div>
                         <Link
                           to={`/availableProduct/${Component.motherboard}/${item.name} ` }
-                          state={{from: location}} replace
+                          state={{ from: location }} replace
                         >
                           <div className="font-bold">{item.name}</div>
                         </Link>

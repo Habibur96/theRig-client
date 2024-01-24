@@ -10,10 +10,9 @@ import { Link, useLocation } from "react-router-dom";
 
 const Cpu = () => {
   const [product] = UseProduct();
-  
 
-  const location = useLocation()
-  
+  const location = useLocation();
+
   // console.log(location)
   const cpu = product.filter((item) => item.category === "cpu");
   // console.log({cpu})
@@ -89,7 +88,8 @@ const Cpu = () => {
                         {/* <Link to="/login" state={{ from: location }} replace> */}
                         <Link
                           to={`/availableProduct/${Component.CPU}/${item.name}`}
-                        state={{from: location}} replace
+                          state={{ from: location }}
+                          replace
                         >
                           <div className="font-bold">{item.name}</div>
                         </Link>

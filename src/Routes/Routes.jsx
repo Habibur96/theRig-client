@@ -9,7 +9,8 @@ import UserProfile from "../Pages/Profile/UserProfile";
 import Motherboard from "../Pages/Home/Pcbuild/Motherboard";
 import Cpu from "../Pages/Home/Pcbuild/Cpu";
 import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
-import MyCart from "../Pages/MyCart/MyCart";
+import MyCart from "../Pages/Dashboard/MyCart/MyCart";
+
 // import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
 // import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
@@ -79,6 +80,10 @@ export const router = createBrowserRouter([
         path: "product/motherboard",
         element: <Motherboard></Motherboard>,
       },
+      {
+        path: "mycart",
+        element: <MyCart></MyCart>,
+      },
 
       {
         path: "availableProduct/:collectionName/:name",
@@ -93,10 +98,64 @@ export const router = createBrowserRouter([
         path: "userProfile",
         element: <UserProfile></UserProfile>,
       },
-      {
-        path: "mycart",
-        element: <MyCart></MyCart>,
-      },
     ],
   },
+
+  // {
+  //   path: "dashboard",
+  //   element: (
+  //     <PrivateRoute>
+  //       <Dashboard></Dashboard>
+  //     </PrivateRoute>
+  //   ),
+  //   children: [
+  //     {
+  //       path: "userhome",
+  //       element: <UserHome></UserHome>,
+  //     },
+  //     {
+  //       path: "mycart",
+  //       element: <MyCart></MyCart>,
+  //     },
+  //     {
+  //       path: "payment",
+  //       element: <Payment></Payment>,
+  //     },
+
+  //     // =================admin===============
+  //     {
+  //       path: "adminhome",
+  //       element: (
+  //         <AdminRoute>
+  //           <AdminHome></AdminHome>
+  //         </AdminRoute>
+  //       ),
+  //     },
+  //     {
+  //       path: "allusers",
+  //       element: (
+  //         <AdminRoute>
+  //           <AllUsers></AllUsers>
+  //         </AdminRoute>
+  //         // <AllUsers></AllUsers>
+  //       ),
+  //     },
+  //     {
+  //       path: "addItem",
+  //       element: (
+  //         <AdminRoute>
+  //           <AddItem></AddItem>
+  //         </AdminRoute>
+  //       ),
+  //     },
+  //     {
+  //       path: "manageItem",
+  //       element: (
+  //         <AdminRoute>
+  //           <ManageItem></ManageItem>
+  //         </AdminRoute>
+  //       ),
+  //     },
+  //   ],
+  // },
 ]);

@@ -1,9 +1,8 @@
-
 import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaUserAlt } from "react-icons/fa";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
 // import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
@@ -19,7 +18,9 @@ const Navber = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then((reult) => {})
+      .then((result) => {
+        localStorage.removeItem("theRig-access-token");
+      })
       .catch((error) => {
         console.error();
       });
@@ -34,8 +35,7 @@ const Navber = () => {
         setSearchProduct(data);
         console.log({ data });
         if (data?.[0]?.category === "cpu") {
-          console.log( "cpu" );
-          
+          console.log("cpu");
         }
       });
   }, [search]);
@@ -66,7 +66,6 @@ const Navber = () => {
   //  color: #191b2a;
   const navOptions = (
     <>
-      
       <li>
         <div className="ml-auto flex items-center">
           <div className=" lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
@@ -118,7 +117,7 @@ const Navber = () => {
 
           {/* Cart */}
           <div className="ml-4 flow-root lg:ml-6">
-            <Link to='/mycart' className="group -m-2 flex items-center p-2">
+            <Link to="/mycart" className="group -m-2 flex items-center p-2">
               <ShoppingCartOutlinedIcon
                 className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
                 aria-hidden="true"
@@ -134,7 +133,10 @@ const Navber = () => {
     </>
   );
   return (
-    <div className="navber navbar  text-slate-200 h-20 pl-32" style={{ backgroundColor: '#11131d' }}>
+    <div
+      className="navber navbar  text-slate-200 h-20 pl-32"
+      style={{ backgroundColor: "#11131d" }}
+    >
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -5,18 +5,23 @@ import { useEffect, useState } from "react";
 const UseProduct = () => {
   // const { pcbuilderProductName, category } = useParams();
   // console.log({ pcbuilderProductName, category });
-  
+
   // const [data, setData] = useState([]);
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
     // fetch(`http://localhost:3000/${pcbuilderProductName}/${category}`, {
-    //   method: "GET",
-    // })
-
-    fetch(`http://localhost:3000/cpu`, {
-      method: "GET",
-    })
+      //   method: "GET",
+      // })
+      
+     
+      
+      fetch(`http://localhost:3000/cpu`, {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("theRig-access-token")}`,
+        },
+      })
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -25,8 +30,8 @@ const UseProduct = () => {
       });
   }, []);
 
-  return [product]
-//  (<>{data && data.length > 0 ? <Cpu data={data} /> : <p>Loading...</p>}</>)
+  return [product];
+  //  (<>{data && data.length > 0 ? <Cpu data={data} /> : <p>Loading...</p>}</>)
 };
 
 export default UseProduct;

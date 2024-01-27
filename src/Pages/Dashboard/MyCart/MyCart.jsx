@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
- import UseCart from "../../Hooks/UseCart";
+import UseCart from "../../../Hooks/UseCart";
 import ClearIcon from "@mui/icons-material/Clear";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 
-
 const MyCart = () => {
-     const [cart] = UseCart();
-  
+
+  const [cart] = UseCart();
   return (
     <div className=" max-w-screen-xl mx-auto">
       <h3 className="text-3xl mt-5 mb-4">Shopping Cart</h3>
@@ -62,8 +61,8 @@ const MyCart = () => {
 
               <td className="">{item.price}</td>
               {/* TODO: 
-             Total Price
-            */}
+               Total Price
+              */}
               <td className="text-end"></td>
             </tr>
           ))}

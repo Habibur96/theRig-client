@@ -3,9 +3,12 @@ import { Card, Col, Container, ListGroup, Row } from "react-bootstrap";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
 import { AuthContext } from "../../../Provider/AuthProvider";
+import Swal from "sweetalert2";
+import UseCart from "../../../Hooks/UseCart";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
+  const [, refetch] = UseCart();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -73,9 +76,36 @@ const AvailableProduct = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(cartItem),
-      });
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            refetch(); // refetch cart to update the number of items in the cart
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Product added on the cart",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        });
     } else {
-      navigate("/login", { state: { from: location }, replace: true });
+      Swal.fire({
+        title: "Please login to add product",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Login",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            navigate("/login", { state: { from: location }, replace: true })
+          );
+        }
+      });
     }
   };
 

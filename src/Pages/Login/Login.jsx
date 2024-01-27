@@ -41,22 +41,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         Form.reset(" ");
-        const loggedUser = {
-          email: user.email,
-        };
-        fetch("http://localhost:3000/jwt", {
-          method: "POST",
-          headers: {
-            "content-Type": "application/json",
-          },
-          body: JSON.stringify(loggedUser),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log({ data });
-            localStorage.setItem("theRig-access-token", data.token);
-             navigate(from, { replace: true });
-          });
+        navigate(from, { replace: true });
 
         // navigate('/userProfile')
         console.log(user);

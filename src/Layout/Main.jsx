@@ -3,6 +3,7 @@ import Navber from "../Pages/Shared/Navber/Navber";
 import Footer from "../Pages/Shared/Footer/Footer";
 import Navber2 from "../Pages/Shared/Navber/Navber2";
 
+
 const Main = () => {
   return (
     <div>

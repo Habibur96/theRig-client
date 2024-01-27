@@ -11,17 +11,12 @@ const UseProduct = () => {
 
   useEffect(() => {
     // fetch(`http://localhost:3000/${pcbuilderProductName}/${category}`, {
-      //   method: "GET",
-      // })
-      
-     
-      
-      fetch(`http://localhost:3000/cpu`, {
-        method: "GET",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("theRig-access-token")}`,
-        },
-      })
+    //   method: "GET",
+    // })
+
+    fetch(`http://localhost:3000/cpu`, {
+      method: "GET",
+    })
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

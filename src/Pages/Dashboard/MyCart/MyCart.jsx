@@ -2,10 +2,42 @@ import { Link } from "react-router-dom";
 import UseCart from "../../../Hooks/UseCart";
 import ClearIcon from "@mui/icons-material/Clear";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
+import Swal from "sweetalert2";
 
 const MyCart = () => {
-
-  const [cart] = UseCart();
+  const [cart, refetch] = UseCart();
+  const total = cart.reduce((sum, item) => parseFloat(item.price) + sum, 0);
+  console.log(total);
+  const handleDelete = (id) => {
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:3000/cart/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              console.log(data.deletedCount);
+              refetch();
+              // Swal.fire(
+              //   "Deleted!",
+              //   "Your product has been deleted.",
+              //   "success"
+              // );
+            }
+          });
+      }
+    });
+  };
   return (
     <div className=" max-w-screen-xl mx-auto">
       <h3 className="text-3xl mt-5 mb-4">Shopping Cart</h3>
@@ -25,6 +57,7 @@ const MyCart = () => {
 
         <tbody>
           {cart.map((item, index) => (
+            
             <tr key={item._id}>
               <td>{index + 1}</td>
               <td>
@@ -44,8 +77,10 @@ const MyCart = () => {
                   />
                   <div>
                     <button type="button" title="Remove">
+                      
                       <ClearIcon
-                        // onClick={() => handleRemoveReplaceCpu(selectCpu._id)}
+                 
+                        onClick={() => handleDelete(item._id)}
                         className="mr-4"
                       ></ClearIcon>
                     </button>
@@ -77,7 +112,7 @@ const MyCart = () => {
         <tr>
           <td colSpan="5"></td>
           <td className="text-center">
-            <div className="font-bold">Total :</div>
+            <div className="font-bold">Total :{total}tk</div>
           </td>
         </tr>
       </table>

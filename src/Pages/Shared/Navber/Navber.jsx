@@ -3,12 +3,16 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaUserAlt } from "react-icons/fa";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import UseCart from "../../../Hooks/UseCart";
+
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
 // import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
+
+  const [cart] = UseCart();
 
   // console.log(user.displayName)
   const searchRef = useRef(null);
@@ -18,9 +22,7 @@ const Navber = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then((result) => {
-        localStorage.removeItem("theRig-access-token");
-      })
+      .then((result) => {})
       .catch((error) => {
         console.error();
       });
@@ -117,15 +119,12 @@ const Navber = () => {
 
           {/* Cart */}
           <div className="ml-4 flow-root lg:ml-6">
-            <Link to="/mycart" className="group -m-2 flex items-center p-2">
+            <Link to="/mycart" className="btn">
               <ShoppingCartOutlinedIcon
                 className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
                 aria-hidden="true"
               />
-              <span className="ml-2 text-sm font-medium text-gray-400 group-hover:text-gray-600">
-                0
-              </span>
-              <span className="sr-only">items in cart, view bag</span>
+              <div className="badge badge-secondary">+{cart?.length || 0}</div>
             </Link>
           </div>
         </div>
@@ -134,7 +133,7 @@ const Navber = () => {
   );
   return (
     <div
-      className="navber navbar  text-slate-200 h-20 pl-32"
+      className="navber navbar  text-slate-200 h-20 pl-32 "
       style={{ backgroundColor: "#11131d" }}
     >
       <div className="navbar-start ">
@@ -205,41 +204,6 @@ const Navber = () => {
       <div className=" mx-auto hidden  lg:flex">
         <ul className="">{navOptions}</ul>
       </div>
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {searchProduct.map((searchedProduct) => (
-       
-
-          <SearchCpu
-            key={searchedProduct._id}
-            searchedProduct={searchedProduct}
-          ></SearchCpu>
-        ))}
-      </div> */}
-
-      {/* <div>
-        {searchProduct
-          .filter((searchedProduct) => searchedProduct.category === "cpu")
-          .map((filteredProduct) => (
-            <SearchCpu
-              key={filteredProduct._id}
-              searchedProduct={filteredProduct}
-            />
-          ))}
-
-        {hasCpu && <Link to="/searchCpu">Go to Search CPU</Link>}
-
-        {searchProduct
-          .filter(
-            (searchedProduct) => searchedProduct.category === "motherboard"
-          )
-          .map((filteredProduct) => (
-            <SearchMotherboard
-              key={filteredProduct._id}
-              searchedProduct={filteredProduct}
-            />
-          ))}
-      </div> */}
     </div>
   );
 };

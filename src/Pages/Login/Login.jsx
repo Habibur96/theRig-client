@@ -8,6 +8,9 @@ import { Icon } from "react-icons-kit";
 import { eye } from "react-icons-kit/feather/eye";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 // import { Helmet } from "react-helmet-async";
 
 const Login = () => {
@@ -40,6 +43,15 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
+        Swal.fire({
+          title: "User Login Successful.",
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+        });
         Form.reset(" ");
         navigate(from, { replace: true });
 
@@ -117,6 +129,7 @@ const Login = () => {
             <Button variant="info" type="submit" value="signIn" size="">
               Login
             </Button>
+          
           </div>
           <div className="divider">Don't have an account</div>
         </Form>
@@ -126,9 +139,14 @@ const Login = () => {
             <div className="text-sm">Create Your account</div>
           </button>
         </Link>
+
+        
+    
       </div>
 
-      <div></div>
+      <div>
+      <SocialLogin></SocialLogin>
+      </div>
     </>
   );
 };

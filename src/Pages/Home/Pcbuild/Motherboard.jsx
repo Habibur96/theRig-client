@@ -5,7 +5,7 @@ const Motherboard = () => {
   const [product] = UseProduct();
  const location = useLocation()
   const Motherboard = product.filter((item) => item.category === "motherboard");
-  //console.log({Motherboard})
+  console.log(Motherboard)
   const Component = {
     motherboard: "motherboard",
   };
@@ -20,7 +20,7 @@ const Motherboard = () => {
       <div className="flex-[4] mr-5 ">
         <div className="overflow-x-auto ">
           <h3 className="text-2xl font-semibold">
-            {product.length} Compatible Products
+            {Motherboard.length} Compatible Products
           </h3>
           <table className="table">
             {/* head */}

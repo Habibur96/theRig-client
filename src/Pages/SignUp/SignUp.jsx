@@ -1,31 +1,56 @@
 import { Button, Form } from "react-bootstrap";
 import "../Login/Login.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { Icon } from "react-icons-kit";
 import { eye } from "react-icons-kit/feather/eye";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 const SignUp = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-  const { createUser, updateUser } = useContext(AuthContext);//mailVarify
+  const { createUser, updateUser } = useContext(AuthContext); //mailVarify
 
   const onSubmit = (data) => {
     console.log(data);
     createUser(data.email, data.password)
-    // mailVarify()
-   
+      // mailVarify()
+
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
         updateUser(data.name, data.photoURL).then(() => {
           const saveUser = { name: data.name, email: data.email };
           console.log(saveUser);
+          fetch("http://localhost:3000/users", {
+            method: "POST",
+            headers: {
+              "content-Type": "application/json",
+            },
+            body: JSON.stringify(saveUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                reset();
+                Swal.fire({
+                  position: "top-end",
+                  icon: "success",
+                  title: "User created successfully.",
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                navigate("/");
+              }
+            });
         });
       })
       .catch((error) => console.log(error));
@@ -163,9 +188,12 @@ const SignUp = () => {
             Continue
           </Button>
         </div>
+
+      
+
         <div className="divider">Already have an account?</div>
       </Form>
-
+      <SocialLogin></SocialLogin>
       <div className="custom-form">
         <p>
           If you already have an account with us, please login at the

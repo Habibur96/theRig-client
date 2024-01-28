@@ -8,11 +8,16 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   updateProfile,
+  signInWithPopup,
+  GoogleAuthProvider,
 } from "firebase/auth";
 
 import { app } from "../firebase/firebase.config";
+
 export const AuthContext = createContext(null);
+
 const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -28,6 +33,12 @@ const AuthProvider = ({ children }) => {
   const signIn = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
+  };
+
+  //GoogleLogin
+  const googleSignIn = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
   };
 
   //LogOut
@@ -52,7 +63,6 @@ const AuthProvider = ({ children }) => {
   };
 
   //Email verification sent
-
   const mailVarify = () => {
     setLoading(true);
     return sendEmailVerification(auth.currentUser);
@@ -77,6 +87,7 @@ const AuthProvider = ({ children }) => {
         })
           .then((res) => res.json())
           .then((data) => {
+         
             console.log({ data });
             localStorage.setItem("theRig-access-token", data.token);
           });
@@ -84,6 +95,7 @@ const AuthProvider = ({ children }) => {
         localStorage.removeItem("theRig-access-token");
       }
     });
+
     //stop observing while unmounting
     return () => {
       return unsubscribe();
@@ -95,6 +107,7 @@ const AuthProvider = ({ children }) => {
     loading,
     createUser,
     signIn,
+    googleSignIn,
     logOut,
     updateUser,
     mailVarify,

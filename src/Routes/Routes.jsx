@@ -8,9 +8,10 @@ import UserProfile from "../Pages/Profile/UserProfile";
 
 import Motherboard from "../Pages/Home/Pcbuild/Motherboard";
 import Cpu from "../Pages/Home/Pcbuild/Cpu";
-import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
+
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 
+import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
 
 // import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
@@ -83,11 +84,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "mycart",
-        element: (
-         
-            <MyCart></MyCart>
-   
-        ),
+        element: <MyCart></MyCart>,
       },
 
       {
@@ -95,6 +92,7 @@ export const router = createBrowserRouter([
         element: (
           // <PrivateRoute>
           <AvailableProduct></AvailableProduct>
+          //  <Test></Test>
           // </PrivateRoute>
         ),
       },

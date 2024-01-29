@@ -6,6 +6,21 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import UseCart from "../../../Hooks/UseCart";
 
+// ======================
+
+import {
+  ButtonBack,
+  ButtonFirst,
+  ButtonLast,
+  ButtonNext,
+  CarouselProvider,
+  DotGroup,
+  ImageWithZoom,
+  Slide,
+  Slider,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
   const [, refetch] = UseCart();
@@ -113,116 +128,105 @@ const AvailableProduct = () => {
     <Container className="mt-5">
       {component.map((item) => (
         <Row key={item._id}>
-          <Col lg={2}>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={item.img} />
-              <Card.Body>
-                <Card.Title className="text-blue-700">{item.name}</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-              {cartLocation ? null : (
-                <ListGroup className="list-group-flush">
-                  {user ? (
-                    <Link>+Save to wish list</Link>
-                  ) : (
-                    <Link to="/login" state={{ from: location }} replace>
-                      <ListGroup.Item className="text-center font-semibold text-green-700">
-                        Login to save wish list
-                      </ListGroup.Item>
-                    </Link>
-                  )}
-                </ListGroup>
-              )}
+          <div className="flex column-gap-1">
+            <div className="flex-[1] bg-red-200">
+              <CarouselProvider
+                visibleSlides={2}
+                totalSlides={1}
+                step={2}
+                naturalSlideWidth={600}
+                naturalSlideHeight={1000}
+              >
+                <Slider>
+                  <Slide tag="a" index={0}>
+                    <ImageWithZoom src={item.img} />
+                  </Slide>
+                </Slider>
 
-              <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col lg={10}>
-            <div>
-              <table className="table ml-28 ">
-                {/* head */}
+                <DotGroup />
+              </CarouselProvider>
+            </div>
+            <div className="flex-[3]">
+              <div>
+                <table className="table ml-28 ">
+                  {/* head */}
 
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Name</th>
-                    {/* <th>Core Count</th>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Name</th>
+                      {/* <th>Core Count</th>
              <th>Performance Core Clock</th>
              <th>Performance Boost Clock</th>
              <th>TDP</th>
              <th>Integrated Graphics</th> */}
-                    {/* <th>
+                      {/* <th>
                <div className="pl-4">Warranty</div>
              </th> */}
 
-                    <th>
-                      <div className="pl-4">Price</div>
-                    </th>
-                  </tr>
-                </thead>
+                      <th>
+                        <div className="pl-4">Price</div>
+                      </th>
+                    </tr>
+                  </thead>
 
-                <tbody>
-                  <tr>
-                    <td>
-                      <div className="flex items-center space-x-3">
-                        <div className="avatar">
-                          <div className=" w-12 h-12">
-                            <img
-                              src={item.img}
-                              alt="Avatar Tailwind CSS Component"
-                            />
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div className="flex items-center space-x-3">
+                          <div className="avatar">
+                            <div className=" w-12 h-12">
+                              <img
+                                src={item.img}
+                                alt="Avatar Tailwind CSS Component"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <td>
+                              <div className="font-bold">{item.name}</div>
+                            </td>
                           </div>
                         </div>
-                        <div>
-                          <td>
-                            <div className="font-bold">{item.name}</div>
-                          </td>
-                        </div>
-                      </div>
-                    </td>
+                      </td>
 
-                    {/* <td className=" text-center">{item.coreCount}</td>
+                      {/* <td className=" text-center">{item.coreCount}</td>
                <td className=" text-center">
                  {item.performanceCoreCount}
                </td> */}
-                    {/* <td className=" text-center">
+                      {/* <td className=" text-center">
                  {item.performanceBoostClock}
                </td> */}
-                    {/* <td className=" text-center">{item.TDP}</td>
+                      {/* <td className=" text-center">{item.TDP}</td>
                <td className=" text-center">{item.integratedGraphics}</td>
                <td className=" text-center">{item.warranty}</td> */}
 
-                    <td className="text-right">{item.price}tk</td>
+                      <td className="text-right">{item.price}tk</td>
 
-                    <td>
-                      {cartLocation ? (
-                        <Link
-                          onClick={() => pcbuilderCartGet(item)}
-                          to={`/pcbuild/${item._id}`}
-                          className="btn btn-sm btn-success "
-                        >
-                          Add
-                        </Link>
-                      ) : (
-                        <button
-                          onClick={() => handleCart(item)}
-                          className="btn btn-sm btn-success "
-                        >
-                          Add
-                        </button>
-                      )}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      <td>
+                        {cartLocation ? (
+                          <Link
+                            onClick={() => pcbuilderCartGet(item)}
+                            to={`/pcbuild/${item._id}`}
+                            className="btn btn-sm btn-success "
+                          >
+                            Add
+                          </Link>
+                        ) : (
+                          <button
+                            onClick={() => handleCart(item)}
+                            className="btn btn-sm btn-success "
+                          >
+                            Add
+                          </button>
+                        )}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </Col>
+          </div>
         </Row>
       ))}
     </Container>
@@ -230,3 +234,34 @@ const AvailableProduct = () => {
 };
 
 export default AvailableProduct;
+
+
+
+{/* <Card style={{ width: "18rem" }}>
+<Card.Img variant="top" src={item.img} />
+<Card.Body>
+  <Card.Title className="text-blue-700">{item.name}</Card.Title>
+  <Card.Text>
+    Some quick example text to build on the card title and make up
+    the bulk of the card's content.
+  </Card.Text>
+</Card.Body>
+{cartLocation ? null : (
+  <ListGroup className="list-group-flush">
+    {user ? (
+      <Link>+Save to wish list</Link>
+    ) : (
+      <Link to="/login" state={{ from: location }} replace>
+        <ListGroup.Item className="text-center font-semibold text-green-700">
+          Login to save wish list
+        </ListGroup.Item>
+      </Link>
+    )}
+  </ListGroup>
+)}
+
+<Card.Body>
+  <Card.Link href="#">Card Link</Card.Link>
+  <Card.Link href="#">Another Link</Card.Link>
+</Card.Body>
+</Card> */}

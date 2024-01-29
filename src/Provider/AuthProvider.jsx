@@ -13,6 +13,7 @@ import {
 } from "firebase/auth";
 
 import { app } from "../firebase/firebase.config";
+import axios from "axios";
 
 export const AuthContext = createContext(null);
 
@@ -73,23 +74,16 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       console.log("current user", currentUser);
-      setLoading(false);
-      if (currentUser && currentUser.email) {
-        const loggedUser = {
-          email: currentUser.email,
-        };
-        fetch("http://localhost:3000/jwt", {
-          method: "POST",
-          headers: {
-            "content-Type": "application/json",
-          },
-          body: JSON.stringify(loggedUser),
-        })
-          .then((res) => res.json())
+
+      if (currentUser) {
+        axios
+          .post("http://localhost:3000/jwt", {
+            email: currentUser.email,
+          })
           .then((data) => {
-         
             console.log({ data });
-            localStorage.setItem("theRig-access-token", data.token);
+            localStorage.setItem("theRig-access-token", data.data.token);
+            setLoading(false);
           });
       } else {
         localStorage.removeItem("theRig-access-token");

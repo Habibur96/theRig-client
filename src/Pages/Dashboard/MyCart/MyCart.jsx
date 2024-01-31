@@ -3,11 +3,31 @@ import UseCart from "../../../Hooks/UseCart";
 import ClearIcon from "@mui/icons-material/Clear";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import Swal from "sweetalert2";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import { useContext } from "react";
+import { CartContext } from "../../../Provider/CartProvider";
 
 const MyCart = () => {
   const [cart, refetch] = UseCart();
-  const total = cart.reduce((sum, item) => parseFloat(item.price) + sum, 0);
-  console.log(total);
+  const { quantities, updateQuantity } = useContext(CartContext);
+
+  // Calculate the total based on the quantities and item prices
+  const total = cart.reduce(
+    (sum, item, index) => parseFloat(item.price) * quantities[index] + sum,
+    0
+  );
+
+  const handleQuantity = (index, newQuantity) => {
+    if (isNaN(newQuantity)) {
+      newQuantity = 1; // or any default value you want
+    }
+    newQuantity = Math.max(0, Math.floor(newQuantity));
+    console.log(newQuantity)
+    updateQuantity(index, newQuantity);
+    refetch(); // Call refetch to update the cart data
+  };
+
   const handleDelete = (id) => {
     console.log(id);
     Swal.fire({
@@ -28,16 +48,12 @@ const MyCart = () => {
             if (data.deletedCount > 0) {
               console.log(data.deletedCount);
               refetch();
-              // Swal.fire(
-              //   "Deleted!",
-              //   "Your product has been deleted.",
-              //   "success"
-              // );
             }
           });
       }
     });
   };
+
   return (
     <div className=" max-w-screen-xl mx-auto">
       <h3 className="text-3xl mt-5 mb-4">Shopping Cart</h3>
@@ -57,7 +73,6 @@ const MyCart = () => {
 
         <tbody>
           {cart.map((item, index) => (
-            
             <tr key={item._id}>
               <td>{index + 1}</td>
               <td>
@@ -71,15 +86,24 @@ const MyCart = () => {
               <td>{item.model}</td>
               <td>
                 <div className="flex space-x-6 items-center">
+                  <button
+                    onClick={() => handleQuantity(index, quantities[index] - 1)}
+                  >
+                    <RemoveIcon />
+                  </button>
                   <input
                     type="text"
+                    value={quantities[index]}
                     className="input input-bordered input-info w-1/6 max-w-xs rounded-sm"
                   />
+                  <button
+                    onClick={() => handleQuantity(index, quantities[index] + 1)}
+                  >
+                    <AddIcon />
+                  </button>
                   <div>
                     <button type="button" title="Remove">
-                      
                       <ClearIcon
-                 
                         onClick={() => handleDelete(item._id)}
                         className="mr-4"
                       ></ClearIcon>
@@ -88,17 +112,15 @@ const MyCart = () => {
                     <Link to="">
                       <AutorenewIcon></AutorenewIcon>
                     </Link>
-
-                    {/* <button ></button> */}
                   </div>
                 </div>
               </td>
 
               <td className="">{item.price}</td>
-              {/* TODO: 
-               Total Price
-              */}
-              <td className="text-end"></td>
+              {/* Display the total for the current item */}
+              <td className="text-end">
+                {(parseFloat(item.price) * quantities[index]).toFixed(2)}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -112,43 +134,10 @@ const MyCart = () => {
         <tr>
           <td colSpan="5"></td>
           <td className="text-center">
-            <div className="font-bold">Total :{total}tk</div>
+            <div className="font-bold">Total :{total.toFixed(2)}tk</div>
           </td>
         </tr>
       </table>
-      <h1 className="text-2xl font-semibold">
-        What would you like to do next?
-      </h1>{" "}
-      <br />
-      <p className="text-md font-semibold">
-        Choose if you have a discount code or reward points you watnt to use or
-        would like to estimate your delivery cost
-      </p>{" "}
-      <br />
-      <div className="flex ">
-        <div className="flex mr-12">
-          <input
-            type="text"
-            placeholder="Promo / Coupon Code"
-            className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
-          />
-          <button className="btn btn-secondary">Apply Coupon</button>
-        </div>
-        <div className="flex ml-16">
-          <input
-            type="text"
-            placeholder="Enter your gift voucher code here"
-            className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
-          />
-          <button className="btn btn-secondary">Apply Voucher</button>
-        </div>
-      </div>
-      <div className="flex mt-5">
-        <Link to="/" className="btn btn-success mr-[900px]">
-          Continue Shopping
-        </Link>
-        <Link className="btn btn-error">Confirm Order</Link>
-      </div>
     </div>
   );
 };

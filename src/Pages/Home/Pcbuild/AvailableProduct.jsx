@@ -1,18 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import { Card, Col, Container, ListGroup, Row } from "react-bootstrap";
+import { Card, Container, ListGroup, Row } from "react-bootstrap";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import UseCart from "../../../Hooks/UseCart";
 
-// ======================
-
 import {
-  ButtonBack,
-  ButtonFirst,
-  ButtonLast,
-  ButtonNext,
   CarouselProvider,
   DotGroup,
   ImageWithZoom,
@@ -128,23 +122,77 @@ const AvailableProduct = () => {
     <Container className="mt-5">
       {component.map((item) => (
         <Row key={item._id}>
-          <div className="flex column-gap-1">
-            <div className="flex-[1] bg-red-200">
-              <CarouselProvider
-                visibleSlides={2}
-                totalSlides={1}
-                step={2}
-                naturalSlideWidth={600}
-                naturalSlideHeight={1000}
+          <div className="flex column-gap-2">
+            <div className="flex-[1] ">
+              <Card
+                className="bg-base-100 shadow-xl"
+                style={{ width: "22rem" }}
               >
-                <Slider>
-                  <Slide tag="a" index={0}>
-                    <ImageWithZoom src={item.img} />
-                  </Slide>
-                </Slider>
+                <button
+                  className=""
+                  onClick={() =>
+                    document.getElementById("my_modal_3").showModal()
+                  }
+                >
+                  <CarouselProvider
+                    visibleSlides={1}
+                    totalSlides={1}
+                    naturalSlideWidth={1400}
+                    naturalSlideHeight={1400}
+                  >
+                    <Slider>
+                      <Slide tag="a" index={2}>
+                        <ImageWithZoom src={item.img} />
+                      </Slide>
+                    </Slider>
 
-                <DotGroup />
-              </CarouselProvider>
+                    <DotGroup />
+                  </CarouselProvider>
+                </button>
+                <h1 className="text-center text-fuchsia-700 font-medium">
+                  Roll over image to zoom in or click to open expanded view
+                </h1>
+
+                <dialog id="my_modal_3" className="modal">
+                  <div className="modal-box">
+                    <form method="dialog">
+                      {/* if there is a button in form, it will close the modal */}
+                      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                        ✕
+                      </button>
+                    </form>
+
+                    <img src={item.img} />
+                  </div>
+                </dialog>
+                <Card.Body>
+                  <Card.Title className="text-blue-700 ">
+                    {item.name}
+                  </Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the cards content.
+                  </Card.Text>
+                </Card.Body>
+                {cartLocation ? null : (
+                  <ListGroup className="list-group-flush">
+                    {user ? (
+                      <Link>+Save to wish list</Link>
+                    ) : (
+                      <Link to="/login" state={{ from: location }} replace>
+                        <ListGroup.Item className="text-center font-semibold text-green-700">
+                          Login to save wish list
+                        </ListGroup.Item>
+                      </Link>
+                    )}
+                  </ListGroup>
+                )}
+
+                <Card.Body>
+                  <Card.Link href="#">Card Link</Card.Link>
+                  <Card.Link href="#">Another Link</Card.Link>
+                </Card.Body>
+              </Card>
             </div>
             <div className="flex-[3]">
               <div>
@@ -234,34 +282,3 @@ const AvailableProduct = () => {
 };
 
 export default AvailableProduct;
-
-
-
-{/* <Card style={{ width: "18rem" }}>
-<Card.Img variant="top" src={item.img} />
-<Card.Body>
-  <Card.Title className="text-blue-700">{item.name}</Card.Title>
-  <Card.Text>
-    Some quick example text to build on the card title and make up
-    the bulk of the card's content.
-  </Card.Text>
-</Card.Body>
-{cartLocation ? null : (
-  <ListGroup className="list-group-flush">
-    {user ? (
-      <Link>+Save to wish list</Link>
-    ) : (
-      <Link to="/login" state={{ from: location }} replace>
-        <ListGroup.Item className="text-center font-semibold text-green-700">
-          Login to save wish list
-        </ListGroup.Item>
-      </Link>
-    )}
-  </ListGroup>
-)}
-
-<Card.Body>
-  <Card.Link href="#">Card Link</Card.Link>
-  <Card.Link href="#">Another Link</Card.Link>
-</Card.Body>
-</Card> */}

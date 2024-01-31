@@ -11,6 +11,7 @@ import Cpu from "../Pages/Home/Pcbuild/Cpu";
 
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 
+
 import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
 
 // import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
@@ -92,7 +93,7 @@ export const router = createBrowserRouter([
         element: (
           // <PrivateRoute>
           <AvailableProduct></AvailableProduct>
-          //  <Test></Test>
+         
           // </PrivateRoute>
         ),
       },

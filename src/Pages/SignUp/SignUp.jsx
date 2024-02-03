@@ -27,7 +27,8 @@ const SignUp = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        updateUser(data.name, data.photoURL).then(() => {
+        updateUser(data.name, data.photoURL)
+        .then(() => {
           const saveUser = { name: data.name, email: data.email };
           console.log(saveUser);
           fetch("http://localhost:3000/users", {

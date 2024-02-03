@@ -8,11 +8,18 @@ import UserProfile from "../Pages/Profile/UserProfile";
 
 import Motherboard from "../Pages/Home/Pcbuild/Motherboard";
 import Cpu from "../Pages/Home/Pcbuild/Cpu";
-
-import MyCart from "../Pages/Dashboard/MyCart/MyCart";
-
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
+import AdminRoute from "./AdminRoutes";
+import ManageItem from "../Pages/Dashboard/ManageItem/ManageItem";
+import AddItem from "../Pages/Dashboard/AddItem/AddItem";
+import AllUsers from "../Layout/AllUsers/AllUsers";
+import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import MyCart from "../Pages/Dashboard/MyCart/MyCart";
+import Payment from "../Pages/Dashboard/Payment/Payment";
+import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import Dashboard from "../Layout/Dashboard";
 
 // import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
@@ -83,17 +90,14 @@ export const router = createBrowserRouter([
         path: "product/motherboard",
         element: <Motherboard></Motherboard>,
       },
-      {
-        path: "mycart",
-        element: <MyCart></MyCart>,
-      },
+     
 
       {
         path: "availableProduct/:collectionName/:name",
         element: (
           // <PrivateRoute>
           <AvailableProduct></AvailableProduct>
-         
+
           // </PrivateRoute>
         ),
       },
@@ -105,61 +109,61 @@ export const router = createBrowserRouter([
     ],
   },
 
-  // {
-  //   path: "dashboard",
-  //   element: (
-  //     <PrivateRoute>
-  //       <Dashboard></Dashboard>
-  //     </PrivateRoute>
-  //   ),
-  //   children: [
-  //     {
-  //       path: "userhome",
-  //       element: <UserHome></UserHome>,
-  //     },
-  //     {
-  //       path: "mycart",
-  //       element: <MyCart></MyCart>,
-  //     },
-  //     {
-  //       path: "payment",
-  //       element: <Payment></Payment>,
-  //     },
+  {
+    path: "dashboard",
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: "userhome",
+        element: <UserHome></UserHome>,
+      },
+      {
+        path: "mycart",
+        element: <MyCart></MyCart>,
+      },
+      {
+        path: "payment",
+        element: <PrivateRoute><Payment></Payment></PrivateRoute>,
+      },
 
-  //     // =================admin===============
-  //     {
-  //       path: "adminhome",
-  //       element: (
-  //         <AdminRoute>
-  //           <AdminHome></AdminHome>
-  //         </AdminRoute>
-  //       ),
-  //     },
-  //     {
-  //       path: "allusers",
-  //       element: (
-  //         <AdminRoute>
-  //           <AllUsers></AllUsers>
-  //         </AdminRoute>
-  //         // <AllUsers></AllUsers>
-  //       ),
-  //     },
-  //     {
-  //       path: "addItem",
-  //       element: (
-  //         <AdminRoute>
-  //           <AddItem></AddItem>
-  //         </AdminRoute>
-  //       ),
-  //     },
-  //     {
-  //       path: "manageItem",
-  //       element: (
-  //         <AdminRoute>
-  //           <ManageItem></ManageItem>
-  //         </AdminRoute>
-  //       ),
-  //     },
-  //   ],
-  // },
+      // =================admin===============
+      {
+        path: "adminhome",
+        element: (
+          <AdminRoute>
+            <AdminHome></AdminHome>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "allusers",
+        element: (
+           <AdminRoute>
+            <AllUsers></AllUsers>
+           </AdminRoute>
+          
+        ),
+      },
+      {
+        path: "addItem",
+        element: (
+          <AdminRoute>
+            <AddItem></AddItem>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "manageItem",
+        element: (
+          <AdminRoute>
+            <ManageItem></ManageItem>
+          </AdminRoute>
+        ),
+      },
+    ],
+  },
 ]);

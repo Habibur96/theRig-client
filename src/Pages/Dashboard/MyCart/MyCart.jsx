@@ -19,6 +19,8 @@ const MyCart = () => {
   );
 
   const handleQuantity = (index, newQuantity) => {
+    console.log("index:", index);
+    console.log("newQuantity:", newQuantity);
     if (isNaN(newQuantity)) {
       newQuantity = 1; // or any default value you want
     }
@@ -91,11 +93,14 @@ const MyCart = () => {
                   >
                     <RemoveIcon />
                   </button>
-                  <input
-                    type="text"
-                    value={quantities[index]}
+                  <div>
+                  </div>
+                   <input
+                    // type="text"
+                  value=  {quantities[index]} 
+                   
                     className="input input-bordered input-info w-1/6 max-w-xs rounded-sm"
-                  />
+                  /> 
                   <button
                     onClick={() => handleQuantity(index, quantities[index] + 1)}
                   >
@@ -138,7 +143,41 @@ const MyCart = () => {
           </td>
         </tr>
       </table>
+      <h1 className="text-2xl font-semibold">
+        What would you like to do next?
+      </h1>{" "}
+      <br />
+      <p className="text-md font-semibold">
+        Choose if you have a discount code or reward points you watnt to use or
+        would like to estimate your delivery cost
+      </p>{" "}
+      <br />
+      <div className="flex ">
+        <div className="flex mr-12">
+          <input
+            type="text"
+            placeholder="Promo / Coupon Code"
+            className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
+          />
+          <button className="btn btn-secondary">Apply Coupon</button>
+        </div>
+        <div className="flex ml-16">
+          <input
+            type="text"
+            placeholder="Enter your gift voucher code here"
+            className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
+          />
+          <button className="btn btn-secondary">Apply Voucher</button>
+        </div>
+      </div>
+      <div className="flex mt-5">
+        <Link to="/" className="btn btn-success mr-[900px]">
+          Continue Shopping
+        </Link>
+        <Link className="btn btn-error">Confirm Order</Link>
+      </div>
     </div>
+   
   );
 };
 

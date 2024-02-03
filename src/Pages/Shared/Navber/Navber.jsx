@@ -4,7 +4,8 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaUserAlt } from "react-icons/fa";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import UseCart from "../../../Hooks/UseCart";
-
+import useAdmin from "../../../Hooks/useAdmin";
+// import theRig from '../../../assets/logo/theRig.png'
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
 // import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
@@ -13,7 +14,7 @@ const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const [cart] = UseCart();
-
+  const [isAdmin] = useAdmin();
   // console.log(user.displayName)
   const searchRef = useRef(null);
   const [search, setSearch] = useState("");
@@ -110,7 +111,19 @@ const Navber = () => {
               </Link>
             )}
           </div>
+          <div className="ml-3">
+          {isAdmin ? (
+        <li>
+          <Link to="/dashboard/adminhome" >Dashboard</Link>
+        </li>
+      ) : (
+        <li>
+          <Link to="/dashboard/userhome">Dashboard</Link>
+        </li>
+      )}
 
+          </div>
+      
           <div className="hidden lg:ml-8 lg:flex">
             <Link to="pcbuild">
               <button className="btn btn-secondary">Pc Builder</button>
@@ -119,7 +132,7 @@ const Navber = () => {
 
           {/* Cart */}
           <div className="ml-4 flow-root lg:ml-6">
-            <Link to="/mycart" className="btn">
+            <Link to="dashboard/mycart" className="btn">
               <ShoppingCartOutlinedIcon
                 className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
                 aria-hidden="true"
@@ -163,7 +176,8 @@ const Navber = () => {
         </div>
 
         <Link to="/" className="btn btn-ghost normal-case text-xl mx-auto ">
-          TheRig
+     <h1>theRig</h1>
+       {/* <img src={theRig} style={{height: 150}} className="pb-9" alt="" /> */}
         </Link>
 
         <div className="flex items-start border-3 pr-3  rounded-lg mx-auto bg-cyan-700">

@@ -1,4 +1,5 @@
-import  { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
 export const CartContext = createContext(null);
 
@@ -6,11 +7,18 @@ const CartProvider = ({ children }) => {
   const [carts, setCarts] = useState([]);
   const [quantities, setQuantities] = useState([]);
 
+  // Load data from cookies on component mount
+  useEffect(() => {
+    const savedCarts = JSON.parse(decodeURIComponent(Cookies.get("carts"))) || [];
+    const savedQuantities = JSON.parse(decodeURIComponent(Cookies.get("quantities"))) || [];
+    setCarts(savedCarts);
+    setQuantities(savedQuantities);
+  }, []);
+
   const updateQuantity = (index, newQuantity) => {
     // Ensure the new quantity is not less than 0
     newQuantity = Math.max(newQuantity, 0);
 
-    // If the quantities array is not yet initialized for this index, initialize it
     const newQuantities = [...quantities];
     if (newQuantities[index] === undefined) {
       newQuantities[index] = 1; // or any default value you want
@@ -25,6 +33,10 @@ const CartProvider = ({ children }) => {
       quantity: newQuantity,
     };
     setCarts(newCarts);
+
+    // Save updated data to cookies
+    Cookies.set("carts", encodeURIComponent(JSON.stringify(newCarts)), { expires: 7 });
+    Cookies.set("quantities", encodeURIComponent(JSON.stringify(newQuantities)), { expires: 7 });
   };
 
   const valueInfo = {
@@ -40,3 +52,26 @@ const CartProvider = ({ children }) => {
 };
 
 export default CartProvider;
+
+
+
+// const addToDb = id =>{
+//   let shoppingCart = {};
+
+//   //get the shopping cart from local storage
+//   const storedCart = localStorage.getItem('shopping-cart');
+//   if(storedCart){
+//       shoppingCart = JSON.parse(storedCart);
+//   }
+
+//   // add quantity
+//   const quantity = shoppingCart[id];
+//   if(quantity){
+//       const newQuantity = quantity + 1;
+//       shoppingCart[id] = newQuantity;
+//   }
+//   else{
+//       shoppingCart[id] = 1;
+//   }
+//   localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+// }

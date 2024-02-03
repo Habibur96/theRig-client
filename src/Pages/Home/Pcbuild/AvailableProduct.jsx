@@ -14,21 +14,20 @@ import {
   Slider,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import { CartContext } from "../../../Provider/CartProvider";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
+  const { quantities, updateQuantity } = useContext(CartContext);
   const [, refetch] = UseCart();
   const location = useLocation();
   const navigate = useNavigate();
 
   const { collectionName, name } = useParams();
   const [component, setComponent] = useState([]);
-  // console.log(location);
 
   const from = location.state?.from?.pathname;
-  console.log(from);
   const cartLocation = from?.includes("cpus") || from?.includes("motherboards");
-  // console.log({ cartLocation });
 
   useEffect(() => {
     fetch(`http://localhost:3000/cpu/${collectionName}/${name}`, {
@@ -41,7 +40,6 @@ const AvailableProduct = () => {
   }, []);
 
   const pcbuilderCartGet = (item) => {
-    console.log({ item });
     if (user && user.email) {
       const cartItem = {
         email: user?.email,
@@ -52,7 +50,6 @@ const AvailableProduct = () => {
         img: item?.img,
         price: item?.price,
       };
-      console.log({ cartItem, item });
 
       fetch("http://localhost:3000/pcbuilderCart", {
         method: "post",
@@ -64,8 +61,9 @@ const AvailableProduct = () => {
     }
   };
 
-  const handleCart = (item) => {
-    console.log({ item });
+  const handleCart = (item, index) => {
+    updateQuantity(index, quantities[index] + 1);
+
     if (user && user.email) {
       const cartItem = {
         email: user?.email,
@@ -76,8 +74,6 @@ const AvailableProduct = () => {
         img: item?.img,
         price: item?.price,
       };
-      console.log({ cartItem, item });
-      // console.log({ _id });
 
       fetch("http://localhost:3000/cart", {
         method: "post",
@@ -89,11 +85,11 @@ const AvailableProduct = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.insertedId) {
-            refetch(); // refetch cart to update the number of items in the cart
+            refetch();
             Swal.fire({
               position: "top-end",
               icon: "success",
-              title: "Product added on the cart",
+              title: "Product added to the cart",
               showConfirmButton: false,
               timer: 1500,
             });
@@ -120,14 +116,11 @@ const AvailableProduct = () => {
 
   return (
     <Container className="mt-5">
-      {component.map((item) => (
+      {component.map((item, index) => (
         <Row key={item._id}>
           <div className="flex column-gap-2">
             <div className="flex-[1] ">
-              <Card
-                className="bg-base-100 shadow-xl"
-                style={{ width: "22rem" }}
-              >
+              <Card className="bg-base-100 shadow-xl" style={{ width: "22rem" }}>
                 <button
                   className=""
                   onClick={() =>
@@ -156,19 +149,16 @@ const AvailableProduct = () => {
                 <dialog id="my_modal_3" className="modal">
                   <div className="modal-box">
                     <form method="dialog">
-                      {/* if there is a button in form, it will close the modal */}
                       <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                         ✕
                       </button>
                     </form>
 
-                    <img src={item.img} />
+                    <img src={item.img} alt="Expanded View" />
                   </div>
                 </dialog>
                 <Card.Body>
-                  <Card.Title className="text-blue-700 ">
-                    {item.name}
-                  </Card.Title>
+                  <Card.Title className="text-blue-700 ">{item.name}</Card.Title>
                   <Card.Text>
                     Some quick example text to build on the card title and make
                     up the bulk of the cards content.
@@ -197,21 +187,10 @@ const AvailableProduct = () => {
             <div className="flex-[3]">
               <div>
                 <table className="table ml-28 ">
-                  {/* head */}
-
                   <thead>
                     <tr>
                       <th></th>
                       <th>Name</th>
-                      {/* <th>Core Count</th>
-             <th>Performance Core Clock</th>
-             <th>Performance Boost Clock</th>
-             <th>TDP</th>
-             <th>Integrated Graphics</th> */}
-                      {/* <th>
-               <div className="pl-4">Warranty</div>
-             </th> */}
-
                       <th>
                         <div className="pl-4">Price</div>
                       </th>
@@ -224,10 +203,7 @@ const AvailableProduct = () => {
                         <div className="flex items-center space-x-3">
                           <div className="avatar">
                             <div className=" w-12 h-12">
-                              <img
-                                src={item.img}
-                                alt="Avatar Tailwind CSS Component"
-                              />
+                              <img src={item.img} alt="Avatar" />
                             </div>
                           </div>
                           <div>
@@ -237,17 +213,6 @@ const AvailableProduct = () => {
                           </div>
                         </div>
                       </td>
-
-                      {/* <td className=" text-center">{item.coreCount}</td>
-               <td className=" text-center">
-                 {item.performanceCoreCount}
-               </td> */}
-                      {/* <td className=" text-center">
-                 {item.performanceBoostClock}
-               </td> */}
-                      {/* <td className=" text-center">{item.TDP}</td>
-               <td className=" text-center">{item.integratedGraphics}</td>
-               <td className=" text-center">{item.warranty}</td> */}
 
                       <td className="text-right">{item.price}tk</td>
 
@@ -262,7 +227,7 @@ const AvailableProduct = () => {
                           </Link>
                         ) : (
                           <button
-                            onClick={() => handleCart(item)}
+                            onClick={() => handleCart(item, index)}
                             className="btn btn-sm btn-success "
                           >
                             Add

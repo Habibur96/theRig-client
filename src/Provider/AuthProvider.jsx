@@ -55,11 +55,11 @@ const AuthProvider = ({ children }) => {
   };
 
   //Update User
-  const updateUser = (name, photo) => {
+  const updateUserProfile = (name, photoUrl) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
 
-      photoURL: photo,
+      photoURL: photoUrl,
     });
   };
 
@@ -103,7 +103,7 @@ const AuthProvider = ({ children }) => {
     signIn,
     googleSignIn,
     logOut,
-    updateUser,
+    updateUserProfile,
     mailVarify,
     resetPassword,
   };

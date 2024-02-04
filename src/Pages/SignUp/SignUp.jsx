@@ -17,7 +17,7 @@ const SignUp = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const { createUser, updateUser } = useContext(AuthContext); //mailVarify
+  const { createUser, updateUserProfile } = useContext(AuthContext); //mailVarify
 
   const onSubmit = (data) => {
     console.log(data);
@@ -27,9 +27,12 @@ const SignUp = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        updateUser(data.name, data.photoURL)
-        .then(() => {
-          const saveUser = { name: data.name, email: data.email };
+        updateUserProfile(data.name, data.photoURL).then(() => {
+          const saveUser = {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+          };
           console.log(saveUser);
           fetch("http://localhost:3000/users", {
             method: "POST",
@@ -40,6 +43,7 @@ const SignUp = () => {
           })
             .then((res) => res.json())
             .then((data) => {
+              console.log(data)
               if (data.insertedId) {
                 reset();
                 Swal.fire({
@@ -131,18 +135,6 @@ const SignUp = () => {
           )}
         </Form.Group>
 
-        {/* <Form.Group className="mb-3 " controlId="formBasicPassword">
-          <Form.Label>
-            Password<span className="text-red-600 font-extrabold"> *</span>
-          </Form.Label>
-
-          <Form.Control
-            type="password"
-            name="password"
-            placeholder="Password"
-          />
-        </Form.Group> */}
-
         {/* =========================== */}
         <Form.Group controlId="formBasicPassword">
           <Form.Label>
@@ -165,6 +157,21 @@ const SignUp = () => {
               <Icon icon={icon} size={20} />
             </span>
           </div>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicMobile">
+          <Form.Label>
+            Mobile <span className="text-red-600 font-extrabold">*</span>
+          </Form.Label>
+          <Form.Control
+            type="tel"
+            name="phone"
+            {...register("phone", { required: true })}
+            placeholder="Mobile"
+          />
+          {errors.phone && (
+            <span className="text-red-600">Mobile num is required</span>
+          )}
         </Form.Group>
         {errors.password?.type === "required" && (
           <p className="text-red-600">Password is required</p>
@@ -189,8 +196,6 @@ const SignUp = () => {
             Continue
           </Button>
         </div>
-
-      
 
         <div className="divider">Already have an account?</div>
       </Form>

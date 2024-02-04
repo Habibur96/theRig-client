@@ -20,6 +20,7 @@ import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import Dashboard from "../Layout/Dashboard";
+import Order from "../Pages/Order/Order";
 
 // import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
@@ -114,7 +115,7 @@ export const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Dashboard></Dashboard>
-      </PrivateRoute>
+       </PrivateRoute>
     ),
     children: [
       {
@@ -126,6 +127,10 @@ export const router = createBrowserRouter([
         element: <MyCart></MyCart>,
       },
       {
+        path: "order/:email",
+        element: <Order></Order>,
+      },
+      {
         path: "payment",
         element: <PrivateRoute><Payment></Payment></PrivateRoute>,
       },
@@ -134,17 +139,17 @@ export const router = createBrowserRouter([
       {
         path: "adminhome",
         element: (
-          <AdminRoute>
+           <AdminRoute>
             <AdminHome></AdminHome>
-          </AdminRoute>
+           </AdminRoute>
         ),
       },
       {
         path: "allusers",
         element: (
-           <AdminRoute>
+            <AdminRoute>
             <AllUsers></AllUsers>
-           </AdminRoute>
+            </AdminRoute>
           
         ),
       },

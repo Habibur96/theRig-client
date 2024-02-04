@@ -86,6 +86,7 @@ const AvailableProduct = () => {
         .then((data) => {
           if (data.insertedId) {
             refetch();
+
             Swal.fire({
               position: "top-end",
               icon: "success",
@@ -120,7 +121,10 @@ const AvailableProduct = () => {
         <Row key={item._id}>
           <div className="flex column-gap-2">
             <div className="flex-[1] ">
-              <Card className="bg-base-100 shadow-xl" style={{ width: "22rem" }}>
+              <Card
+                className="bg-base-100 shadow-xl"
+                style={{ width: "22rem" }}
+              >
                 <button
                   className=""
                   onClick={() =>
@@ -158,7 +162,9 @@ const AvailableProduct = () => {
                   </div>
                 </dialog>
                 <Card.Body>
-                  <Card.Title className="text-blue-700 ">{item.name}</Card.Title>
+                  <Card.Title className="text-blue-700 ">
+                    {item.name}
+                  </Card.Title>
                   <Card.Text>
                     Some quick example text to build on the card title and make
                     up the bulk of the cards content.
@@ -247,3 +253,24 @@ const AvailableProduct = () => {
 };
 
 export default AvailableProduct;
+
+// const addToDb = id =>{
+//   let shoppingCart = {};
+
+//   //get the shopping cart from local storage
+//   const storedCart = localStorage.getItem('shopping-cart');
+//   if(storedCart){
+//       shoppingCart = JSON.parse(storedCart);
+//   }
+
+//   // add quantity
+//   const quantity = shoppingCart[id];
+//   if(quantity){
+//       const newQuantity = quantity + 1;
+//       shoppingCart[id] = newQuantity;
+//   }
+//   else{
+//       shoppingCart[id] = 1;
+//   }
+//   localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+// }

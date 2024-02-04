@@ -69,6 +69,7 @@ const AllUsers = () => {
       }
     });
   };
+  console.log(users.name)
   return (
    
     <div className=" max-w-screen-xl mx-auto ">
@@ -79,6 +80,7 @@ const AllUsers = () => {
       
 Total Users:{users.length}
       </h3>
+      
       <div className="overflow-x-auto">
         <table className="table table-zebra mt-4">
           {/* head */}
@@ -93,9 +95,10 @@ Total Users:{users.length}
           </thead>
           <tbody>
             {users.map((user, index) => (
+
               <tr key={user._id}>
                 <th>{index + 1}</th>
-                <td>{user.name}</td>
+                <td>{user.displayName}</td>
                 <td>{user.email}</td>
                 <td>
                   {user.role === "admin" ? (

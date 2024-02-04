@@ -176,7 +176,7 @@ const Navber = () => {
         </div>
 
         <Link to="/" className="btn btn-ghost normal-case text-xl mx-auto ">
-     <h1>theRig</h1>
+     <h1>TheRig</h1>
        {/* <img src={theRig} style={{height: 150}} className="pb-9" alt="" /> */}
         </Link>
 

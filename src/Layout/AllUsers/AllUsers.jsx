@@ -72,11 +72,11 @@ const AllUsers = () => {
   console.log(users.name)
   return (
    
-    <div className=" max-w-screen-xl mx-auto ">
+    <div className=" max-w-screen-lg ml-32">
       {/* <Helmet>
         <title>Bistro Boss | All users</title>
       </Helmet> */}
-      <h3 className="text-3xl font-semibold my-4">
+      <h3 className="text-3xl font-semibold my-8">
       
 Total Users:{users.length}
       </h3>

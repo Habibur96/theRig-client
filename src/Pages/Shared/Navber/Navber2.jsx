@@ -98,7 +98,7 @@ const Navber2 = () => {
                       </li>
                       <li>
                         {" "}
-                        <Link onClick={handleLinkClick}>
+                        <Link to="product/memory"  onClick={handleLinkClick}>
                           <img
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-memory-2023.png"
                             alt=""
@@ -152,7 +152,7 @@ const Navber2 = () => {
                     <ul className="Peripherals text-center;">
                       {/* <li>Peripherals</li> */}
                       <li>
-                        <Link onClick={handleLinkClick}>
+                        <Link to="product/monitor" onClick={handleLinkClick}>
                           <img style={{ height: 190 }} src={monitor} alt="" />{" "}
                           Monitor
                         </Link>

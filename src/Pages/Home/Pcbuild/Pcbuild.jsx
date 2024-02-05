@@ -26,9 +26,13 @@ const Pcbuild = () => {
   console.log(pcbuilderCart);
   const [replaceCpu, setReplaceCpu] = useState(false);
   const [replaceMotherboard, setReplaceMotherboard] = useState(false);
+  const [replaceMonitor, setReplaceMonitor] = useState(false);
+  const [replaceMemory, setReplaceMemory] = useState(false);
 
   const [selectCpu, setSelectCpu] = useState([]);
   const [selectMotherboard, setSelectMotherboard] = useState([]);
+  const [selectMonitor, setSelectMonitor] = useState([]);
+  const [selectMemory, setSelectMemory] = useState([]);
   console.log({ _id });
 
   useEffect(() => {
@@ -46,6 +50,16 @@ const Pcbuild = () => {
         console.log(item.img);
         setSelectMotherboard(item);
         setReplaceMotherboard(true);
+      }
+      if (item.category === "monitor") {
+        console.log(item.img);
+        setSelectMonitor(item);
+        setReplaceMonitor(true);
+      }
+      if (item.category === "memory") {
+        console.log(item.img);
+        setSelectMemory(item);
+        setReplaceMemory(true);
       }
       return item;
     });
@@ -119,7 +133,7 @@ const Pcbuild = () => {
                       ></ClearIcon>
                     </button>
 
-                    <Link to="/cpus" >
+                    <Link to="/cpus">
                       <AutorenewIcon></AutorenewIcon>
                     </Link>
 
@@ -147,7 +161,7 @@ const Pcbuild = () => {
 
               <th>
                 {/* /routeName/$apiName/$productCategory */}
-                <Link to="/cpus" >
+                <Link to="/cpus">
                   <button className=" btn btn-outline btn-info">Choose</button>
                 </Link>
               </th>
@@ -209,7 +223,7 @@ const Pcbuild = () => {
                     </button>
 
                     {/* path: "cpu/:pcbuilderProductName/:category", */}
-                    <Link to="/motherboards" >
+                    <Link to="/motherboards">
                       <AutorenewIcon></AutorenewIcon>
                     </Link>
 
@@ -238,34 +252,75 @@ const Pcbuild = () => {
               <td></td>
               <th>
                 {/* /routeName/$apiName/$productCategory */}
-                <Link to="/motherboards" >
+                <Link to="/motherboards">
                   <button className=" btn btn-outline btn-info">Choose</button>
                 </Link>
               </th>
             </tr>
           )}
           {/* row 4 */}
-          <tr>
-            <td>
-              <div className="flex items-center space-x-10">
-                <div className="avatar">
-                  <div className=" w-12 h-12">
-                    <img src={ram} alt="Avatar Tailwind CSS Component" />
+          {replaceMemory ? (
+            <tr>
+              <td>
+                <div className="flex items-center space-x-10">
+                  <div className="avatar">
+                    <div className=" w-12 h-12">
+                      <img
+                        src={selectMemory.img}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold">{selectMemory.name}</div>
                   </div>
                 </div>
-                <div>
-                  <div className="font-bold">RAM</div>
-                </div>
-              </div>
-            </td>
-            <td></td>
+              </td>
+              <td></td>
+              <th>
+                <div className="flex space-x-6 items-center  ">
+                  <div>{selectMemory.price} tk</div>
+                  <div className="ml-4">
+                    <button type="button" title="Remove">
+                      <ClearIcon
+                        // onClick={handleRemoveReplaceMotherboard}
+                        className="mr-4"
+                      ></ClearIcon>
+                    </button>
 
-            <th>
-              <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
-              </Link>
-            </th>
-          </tr>
+                    {/* path: "cpu/:pcbuilderProductName/:category", */}
+                    <Link to="/memoryes">
+                      <AutorenewIcon></AutorenewIcon>
+                    </Link>
+
+                    {/* <button ></button> */}
+                  </div>
+                </div>
+              </th>
+            </tr>
+          ) : (
+            <tr>
+              <td>
+                <div className="flex items-center space-x-10">
+                  <div className="avatar">
+                    <div className=" w-12 h-12">
+                      <img src={ram} alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">RAM</div>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+
+              <th>
+                <Link to="/memoryes">
+                  <button className=" btn btn-outline btn-info">Choose</button>
+                </Link>
+              </th>
+            </tr>
+          )}
           {/* row 5 */}
           <tr>
             <td>
@@ -363,27 +418,70 @@ const Pcbuild = () => {
           </tr>
 
           {/* row 9*/}
-          <tr>
-            <td>
-              <div className="flex items-center space-x-10">
-                <div className="avatar">
-                  <div className="w-12 h-12">
-                    <img src={monitor} alt="Avatar Tailwind CSS Component" />
+          {replaceMonitor ? (
+            <tr>
+              <td>
+                <div className="flex items-center space-x-10">
+                  <div className="avatar">
+                    <div className=" w-12 h-12">
+                      <img
+                        src={selectMonitor.img}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold">
+                      {selectMonitor.name}
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div className="text-sm font-bold">Monitor</div>
-                </div>
-              </div>
-            </td>
-            <td></td>
+              </td>
+              <td></td>
+              <th>
+                <div className="flex space-x-6 items-center  ">
+                  <div>{selectMonitor.price} tk</div>
+                  <div className="ml-4">
+                    <button type="button" title="Remove">
+                      <ClearIcon
+                        // onClick={handleRemoveReplaceMotherboard}
+                        className="mr-4"
+                      ></ClearIcon>
+                    </button>
 
-            <th>
-              <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
-              </Link>
-            </th>
-          </tr>
+                    {/* path: "cpu/:pcbuilderProductName/:category", */}
+                    <Link to="/monitors">
+                      <AutorenewIcon></AutorenewIcon>
+                    </Link>
+
+                    {/* <button ></button> */}
+                  </div>
+                </div>
+              </th>
+            </tr>
+          ) : (
+            <tr>
+              <td>
+                <div className="flex items-center space-x-10">
+                  <div className="avatar">
+                    <div className="w-12 h-12">
+                      <img src={monitor} alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold">Monitor</div>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+
+              <th>
+                <Link to="/monitors">
+                  <button className=" btn btn-outline btn-info">Choose</button>
+                </Link>
+              </th>
+            </tr>
+          )}
 
           {/* row 10 */}
           <tr>

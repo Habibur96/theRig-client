@@ -1,30 +1,21 @@
 [
     {
-        "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/biostar/h610mhp/h610mhp-01-500x500.webp",
-        "name":"BIOSTAR H610MHP 14th 13th and 12th GenX",
-        "socket":"LGA 1700",
-        "formFactor":"Micro ATX",
-        "memoryMax":"64 GB",
-        "memorySlots":"2",
-        "TDP":"117W",
-        "warranty":"3y",
-        "price":"8400",
+        "img": "",
+        "name":"X",
+        "socket":"",
+        "formFactor":"",
+        "memoryMax":"",
+        "memorySlots":"",
+        "TDP":"",
+        "warranty":"",
+        "price":"",
+        "model":"",
+        "brand":"",
+        "RamType":"",
         "category": "motherboard",
         "shoplogo":""
     },
-    {
-        "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/colorful/battle-ax-h610m-e-wifi-v20/battle-ax-h610m-e-wifi-v20-01-500x500.webp",
-        "name":"Colorful BATTLE-AX H610M-E WIFI V20",
-        "socket":"LGA 1700",
-        "formFactor":"Micro ATX",
-        "memoryMax":"64 GB",
-        "memorySlots":"2",
-        "TDP":"70W",
-        "warranty":"3y",
-        "price":"10500",
-        "category": "motherboard",
-        "shoplogo":""
-    }
+    
 
-    //========================================
+    
 ]

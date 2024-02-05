@@ -21,6 +21,9 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import Dashboard from "../Layout/Dashboard";
 import Order from "../Pages/Order/Order";
+import Monitor from "../Pages/Home/Pcbuild/monitor";
+import Memory from "../Pages/Home/Pcbuild/Memory";
+
 
 // import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
@@ -82,6 +85,14 @@ export const router = createBrowserRouter([
         path: "motherboards",
         element: <Motherboard></Motherboard>,
       },
+      {
+        path: "monitors",
+        element: <Monitor></Monitor>,
+      },
+      {
+        path: "memoryes",
+        element: <Memory></Memory>,
+      },
 
       {
         path: "product/cpu",
@@ -90,6 +101,14 @@ export const router = createBrowserRouter([
       {
         path: "product/motherboard",
         element: <Motherboard></Motherboard>,
+      },
+      {
+        path: "product/monitor",
+        element: <Monitor></Monitor>,
+      },
+      {
+        path: "product/memory",
+        element: <Memory></Memory>,
       },
      
 

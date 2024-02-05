@@ -25,9 +25,14 @@ const AvailableProduct = () => {
 
   const { collectionName, name } = useParams();
   const [component, setComponent] = useState([]);
-
+  // console.log(component[0].img)
+  console.log(component);
   const from = location.state?.from?.pathname;
-  const cartLocation = from?.includes("cpus") || from?.includes("motherboards");
+  const cartLocation =
+    from?.includes("cpus") ||
+    from?.includes("motherboards") ||
+    from?.includes("monitors") ||
+    from?.includes("memoryes");
 
   useEffect(() => {
     fetch(`http://localhost:3000/cpu/${collectionName}/${name}`, {
@@ -117,110 +122,106 @@ const AvailableProduct = () => {
 
   return (
     <Container className="mt-5">
-      {component.map((item, index) => (
-        <Row key={item._id}>
-          <div className="flex column-gap-2">
-            <div className="flex-[1] ">
-              <Card
-                className="bg-base-100 shadow-xl"
-                style={{ width: "22rem" }}
+      <Row>
+        <div className="flex column-gap-2">
+          <div className="flex-[1] ">
+            <Card className="bg-base-100 shadow-xl" style={{ width: "22rem" }}>
+              <button
+                className=""
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
               >
-                <button
-                  className=""
-                  onClick={() =>
-                    document.getElementById("my_modal_3").showModal()
-                  }
+                <CarouselProvider
+                  visibleSlides={1}
+                  totalSlides={1}
+                  naturalSlideWidth={1400}
+                  naturalSlideHeight={1400}
                 >
-                  <CarouselProvider
-                    visibleSlides={1}
-                    totalSlides={1}
-                    naturalSlideWidth={1400}
-                    naturalSlideHeight={1400}
-                  >
-                    <Slider>
-                      <Slide tag="a" index={2}>
-                        <ImageWithZoom src={item.img} />
-                      </Slide>
-                    </Slider>
+                  <Slider>
+                    <Slide tag="a" index={2}>
+                      <ImageWithZoom src={component[0]?.img} />
+                    </Slide>
+                  </Slider>
 
-                    <DotGroup />
-                  </CarouselProvider>
-                </button>
-                <h1 className="text-center text-fuchsia-700 font-medium">
-                  Roll over image to zoom in or click to open expanded view
-                </h1>
+                  <DotGroup />
+                </CarouselProvider>
+              </button>
+              <h1 className="text-center text-fuchsia-700 font-medium">
+                Roll over image to zoom in or click to open expanded view
+              </h1>
 
-                <dialog id="my_modal_3" className="modal">
-                  <div className="modal-box">
-                    <form method="dialog">
-                      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                        ✕
-                      </button>
-                    </form>
+              <dialog id="my_modal_3" className="modal">
+                <div className="modal-box">
+                  <form method="dialog">
+                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                      ✕
+                    </button>
+                  </form>
 
-                    <img src={item.img} alt="Expanded View" />
-                  </div>
-                </dialog>
-                <Card.Body>
-                  <Card.Title className="text-blue-700 ">
-                    {item.name}
-                  </Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the cards content.
-                  </Card.Text>
-                </Card.Body>
-                {cartLocation ? null : (
-                  <ListGroup className="list-group-flush">
-                    {user ? (
-                      <Link>+Save to wish list</Link>
-                    ) : (
-                      <Link to="/login" state={{ from: location }} replace>
-                        <ListGroup.Item className="text-center font-semibold text-green-700">
-                          Login to save wish list
-                        </ListGroup.Item>
-                      </Link>
-                    )}
-                  </ListGroup>
-                )}
+                  <img src={component[0]?.img} alt="Expanded View" />
+                </div>
+              </dialog>
+              <Card.Body>
+                <Card.Title className="text-blue-700 ">
+                  {component[0]?.name}
+                </Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the cards content.
+                </Card.Text>
+              </Card.Body>
+              {cartLocation ? null : (
+                <ListGroup className="list-group-flush">
+                  {user ? (
+                    <Link>+Save to wish list</Link>
+                  ) : (
+                    <Link to="/login" state={{ from: location }} replace>
+                      <ListGroup.Item className="text-center font-semibold text-green-700">
+                        Login to save wish list
+                      </ListGroup.Item>
+                    </Link>
+                  )}
+                </ListGroup>
+              )}
 
-                <Card.Body>
-                  <Card.Link href="#">Card Link</Card.Link>
-                  <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
-              </Card>
-            </div>
-            <div className="flex-[3]">
-              <div>
-                <table className="table ml-28 ">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Name</th>
-                      <th>
-                        <div className="pl-4">Price</div>
-                      </th>
-                    </tr>
-                  </thead>
+              <Card.Body>
+                <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Another Link</Card.Link>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="flex-[3]">
+            <div>
+              <table className="table ml-28 ">
+                <thead>
+                  <tr>
+                    <th>Marchant</th>
+                    <th>Name</th>
+                    <th>Availability</th>
+                    <th>
+                      <div>Price</div>
+                    </th>
+                  </tr>
+                </thead>
 
-                  <tbody>
-                    <tr>
+                <tbody>
+                  {component.map((item, index) => (
+                    <tr key={item._id}>
                       <td>
-                        <div className="flex items-center space-x-3">
-                          <div className="avatar">
-                            <div className=" w-12 h-12">
-                              <img src={item.img} alt="Avatar" />
-                            </div>
-                          </div>
-                          <div>
-                            <td>
-                              <div className="font-bold">{item.name}</div>
-                            </td>
+                        <div className="avatar">
+                          <div className="w-24 h-5 ml-2">
+                            <img src={item.shoplogo} alt="Avatar" />
                           </div>
                         </div>
                       </td>
 
-                      <td className="text-right">{item.price}tk</td>
+                      <td>
+                        <div className="font-bold">{item.name}</div>
+                      </td>
+                      <td>In stock</td>
+
+                      <td className="">{item.price}tk</td>
 
                       <td>
                         {cartLocation ? (
@@ -241,13 +242,13 @@ const AvailableProduct = () => {
                         )}
                       </td>
                     </tr>
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
-        </Row>
-      ))}
+        </div>
+      </Row>
     </Container>
   );
 };

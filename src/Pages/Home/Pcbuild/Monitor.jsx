@@ -37,7 +37,7 @@ const Monitor = () => {
                   <th>Resolution</th>
                   <th>Refresh Rate</th>
                   <th>Panel Type</th>
-                  <th>Integrated Graphics</th>
+               
   
                  
                   <th>

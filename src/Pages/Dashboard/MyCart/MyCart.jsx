@@ -61,7 +61,7 @@ const MyCart = () => {
   };
 
   return (
-    <div className=" max-w-screen-lg mx-auto ">
+    <div className="max-w-screen-xl mx-auto ">
       <h3 className="text-3xl mt-5 mb-4">Shopping Cart</h3>
       <table className="table w-full max-w-screen-xl mx-auto">
         {/* head */}
@@ -173,11 +173,11 @@ const MyCart = () => {
         </div>
       </div>
       <div className="flex mt-5">
-        <Link to="/" className="btn btn-success mr-[815px]">
+        <Link to="/" className="btn btn-success mr-[902px]">
           Continue Shopping
         </Link>
         <Link
-          to={`/dashboard/order/${user.email}`}
+          to={`/dashboard/payment/${user.email}`}
           className="btn btn-error mr-5"
         >
           Confirm Order

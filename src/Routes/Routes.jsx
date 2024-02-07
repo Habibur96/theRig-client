@@ -20,7 +20,7 @@ import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import Dashboard from "../Layout/Dashboard";
-import Order from "../Pages/Order/Order";
+
 import Monitor from "../Pages/Home/Pcbuild/monitor";
 import Memory from "../Pages/Home/Pcbuild/Memory";
 
@@ -146,13 +146,10 @@ export const router = createBrowserRouter([
         element: <MyCart></MyCart>,
       },
       {
-        path: "order/:email",
-        element: <Order></Order>,
+        path: "payment/:email",
+        element: <Payment></Payment>,
       },
-      {
-        path: "payment",
-        element: <PrivateRoute><Payment></Payment></PrivateRoute>,
-      },
+     
 
       // =================admin===============
       {

@@ -12,7 +12,7 @@ import CartProvider from "./Provider/CartProvider.jsx";
 
 const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
+  //  <React.StrictMode>
   <AuthProvider>
     <QueryClientProvider client={queryClient}>
       <CartProvider>
@@ -20,5 +20,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </CartProvider>
     </QueryClientProvider>
   </AuthProvider>
-  // </React.StrictMode>
+    // </React.StrictMode>
 );

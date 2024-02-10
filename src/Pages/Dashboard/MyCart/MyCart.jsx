@@ -176,8 +176,9 @@ const MyCart = () => {
         <Link to="/" className="btn btn-success mr-[902px]">
           Continue Shopping
         </Link>
-        <Link
+        <Link 
           to={`/dashboard/payment/${user.email}`}
+          disabled={!cart.length}
           className="btn btn-error mr-5"
         >
           Confirm Order

@@ -88,7 +88,10 @@ const Navber2 = () => {
                       </li>
                       <li>
                         {" "}
-                        <Link to="product/motherboard" onClick={handleLinkClick}>
+                        <Link
+                          to="product/motherboard"
+                          onClick={handleLinkClick}
+                        >
                           <img
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-motherboard-2023.png"
                             alt=""
@@ -98,7 +101,7 @@ const Navber2 = () => {
                       </li>
                       <li>
                         {" "}
-                        <Link to="product/memory"  onClick={handleLinkClick}>
+                        <Link to="product/memory" onClick={handleLinkClick}>
                           <img
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-memory-2023.png"
                             alt=""
@@ -178,7 +181,6 @@ const Navber2 = () => {
                           <img style={{ height: 190 }} src={mice} alt="" /> Mice
                         </Link>
                       </li>
-
                       <li>
                         <Link>
                           <img style={{ height: 200 }} src={headphone} alt="" />{" "}
@@ -190,6 +192,17 @@ const Navber2 = () => {
                           <img style={{ height: 140 }} src={Ups} alt="" /> UPS
                         </Link>
                       </li>
+                      <li className="mt-3 ml-5 mr-5 bg-green-500">
+                        {" "}
+                        <Link>
+                          <ConstructionIcon />
+                          Builder{" "}
+                        </Link>{" "}
+                      </li>{" "}
+                      <li className="mt-3  bg-green-500">
+                        <DescriptionTwoToneIcon />
+                        Guides{" "}
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -197,8 +210,7 @@ const Navber2 = () => {
             </AccordionItem>
           </Accordion>
         </li>
-       
-     
+
         {/* <li><DescriptionTwoToneIcon/>Guides</li>
         <li><DevicesTwoToneIcon/>Completed Builds</li>
         <li><MemorySharpIcon />Completed Builds</li> */}

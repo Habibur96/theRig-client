@@ -7,6 +7,7 @@ import {
   FaUtensils,
   FaBook,
   FaUsers,
+  FaList,
 } from "react-icons/fa";
 import theRig from "../assets/logo/theRig.png";
 
@@ -17,8 +18,8 @@ const Dashboard = () => {
   const [cart] = UseCart();
 
   // TODO: load data from the server to have dynamic isAdmin based on Data
-    // const isAdmin = true;
-      const [isAdmin] = useAdmin();
+  // const isAdmin = true;
+  const [isAdmin] = useAdmin();
 
   return (
     <div className="drawer drawer-mobile lg:drawer-open md:drawer-open">
@@ -76,22 +77,23 @@ const Dashboard = () => {
                   <FaHome></FaHome> User Home
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/">
-                  <FaCalendarAlt></FaCalendarAlt> Reservations
+              {/* <li>
+                <NavLink to="/dashboard/PaymentHistory">
+                  <FaCalendarAlt></FaCalendarAlt>Payment History
                 </NavLink>
-              </li>
-              <li>
-                <NavLink to="/">
-                  <FaWallet></FaWallet> Payment History
-                </NavLink>
-              </li>
+              </li> */}
+              
               <li>
                 <NavLink to="/dashboard/mycart">
                   <FaShoppingCart></FaShoppingCart> My Cart
                   <span className="badge inl badge-secondary">
                     +{cart?.length || 0}
                   </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/paymentHistory">
+                  <FaList></FaList>Payment  History
                 </NavLink>
               </li>
             </>

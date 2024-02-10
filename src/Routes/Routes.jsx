@@ -24,10 +24,10 @@ import Dashboard from "../Layout/Dashboard";
 import Monitor from "../Pages/Home/Pcbuild/monitor";
 import Memory from "../Pages/Home/Pcbuild/Memory";
 
-
 // import ReplaceProduct from "../Pages/Home/Pcbuild/ReplaceProduct";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
-// import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
+import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -64,10 +64,11 @@ export const router = createBrowserRouter([
       //   element: <ReplaceProduct></ReplaceProduct>,
       //   loader: ({ params }) => fetch(`http://localhost:3000/products/${params._id}`),
       // },
-      //  {
-      //    path: "searchCpu",
-      //    element: <SearchCpu></SearchCpu>,
-      //  },
+      {
+        path: "searchCpu",
+        element: <SearchCpu></SearchCpu>,
+        //  loader:({params}) =>fetch(`http://localhost:3000/products?search=${search}`)
+      },
       // {
       //   path: "cpu/:pcbuilderProductName/:category",
       //   element: <Cpu></Cpu>,
@@ -110,7 +111,6 @@ export const router = createBrowserRouter([
         path: "product/memory",
         element: <Memory></Memory>,
       },
-     
 
       {
         path: "availableProduct/:collectionName/:name",
@@ -134,7 +134,7 @@ export const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Dashboard></Dashboard>
-       </PrivateRoute>
+      </PrivateRoute>
     ),
     children: [
       {
@@ -145,28 +145,31 @@ export const router = createBrowserRouter([
         path: "mycart",
         element: <MyCart></MyCart>,
       },
+
       {
         path: "payment/:email",
         element: <Payment></Payment>,
       },
-     
+      {
+        path: "PaymentHistory",
+        element: <PaymentHistory></PaymentHistory>,
+      },
 
       // =================admin===============
       {
         path: "adminhome",
         element: (
-           <AdminRoute>
+          <AdminRoute>
             <AdminHome></AdminHome>
-           </AdminRoute>
+          </AdminRoute>
         ),
       },
       {
         path: "allusers",
         element: (
-            <AdminRoute>
+          <AdminRoute>
             <AllUsers></AllUsers>
-            </AdminRoute>
-          
+          </AdminRoute>
         ),
       },
       {

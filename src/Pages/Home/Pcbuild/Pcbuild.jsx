@@ -552,29 +552,8 @@ const Pcbuild = () => {
               </Link>
             </th>
           </tr>
-          {/* row 12 */}
-          <tr>
-            <td>
-              <div className="flex items-center space-x-10">
-                <div className="avatar">
-                  <div className=" w-12 h-12">
-                    <img src={antiVirus} alt="Avatar Tailwind CSS Component" />
-                  </div>
-                </div>
-                <div>
-                  <div className="text-sm font-bold">Anti Virus</div>
-                </div>
-              </div>
-            </td>
-            <td></td>
 
-            <th>
-              <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
-              </Link>
-            </th>
-          </tr>
-          {/* row 13 */}
+          {/* row 12 */}
           <tr>
             <td>
               <div className="flex items-center space-x-10">

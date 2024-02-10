@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaUserAlt } from "react-icons/fa";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -16,6 +16,7 @@ const Navber = () => {
   const [cart] = UseCart();
   const [isAdmin] = useAdmin();
   // console.log(user.displayName)
+  const navigate = useNavigate();
   const searchRef = useRef(null);
   const [search, setSearch] = useState("");
   const [searchProduct, setSearchProduct] = useState([]);
@@ -35,14 +36,21 @@ const Navber = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         setSearchProduct(data);
-        console.log({ data });
-        if (data?.[0]?.category === "cpu") {
-          console.log("cpu");
-        }
       });
   }, [search]);
+  const cpu = searchProduct.filter((item) => item.category === "cpu");
 
+  console.log(cpu);
+   useEffect(() => {
+    if (searchProduct?.[0]?.category === "cpu") {
+      console.log(cpu);
+      // <Link to={{pathname:'searchCpu', state:{cpuArray: cpu}}}></Link>
+       localStorage.setItem('cpuArray', JSON.stringify(cpu))
+        navigate('searchCpu');
+    }
+ }, []);
   // Check if any product has a category of 'motherboard'
   // const hasCpu = searchProduct.some((product) => product.category === "cpu");
 
@@ -112,18 +120,17 @@ const Navber = () => {
             )}
           </div>
           <div className="ml-3">
-          {isAdmin ? (
-        <li>
-          <Link to="/dashboard/adminhome" >Dashboard</Link>
-        </li>
-      ) : (
-        <li>
-          <Link to="/dashboard/userhome">Dashboard</Link>
-        </li>
-      )}
-
+            {isAdmin ? (
+              <li>
+                <Link to="/dashboard/adminhome">Dashboard</Link>
+              </li>
+            ) : (
+              <li>
+                <Link to="/dashboard/userhome">Dashboard</Link>
+              </li>
+            )}
           </div>
-      
+
           <div className="hidden lg:ml-8 lg:flex">
             <Link to="pcbuild">
               <button className="btn btn-secondary">Pc Builder</button>
@@ -176,8 +183,8 @@ const Navber = () => {
         </div>
 
         <Link to="/" className="btn btn-ghost normal-case text-xl mx-auto ">
-     <h1>TheRig</h1>
-       {/* <img src={theRig} style={{height: 150}} className="pb-9" alt="" /> */}
+          <h1>TheRig</h1>
+          {/* <img src={theRig} style={{height: 150}} className="pb-9" alt="" /> */}
         </Link>
 
         <div className="flex items-start border-3 pr-3  rounded-lg mx-auto bg-cyan-700">

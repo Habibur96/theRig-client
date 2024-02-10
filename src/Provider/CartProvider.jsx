@@ -9,11 +9,16 @@ const CartProvider = ({ children }) => {
 
   // Load data from cookies on component mount
   useEffect(() => {
-    const savedCarts = JSON.parse(decodeURIComponent(Cookies.get("carts"))) || [];
-    const savedQuantities = JSON.parse(decodeURIComponent(Cookies.get("quantities"))) || [];
-    setCarts(savedCarts);
-    setQuantities(savedQuantities);
-  }, []);
+    const cartsCookie = Cookies.get("carts");
+    const quantitiesCookie = Cookies.get("quantities");
+
+    if (cartsCookie && quantitiesCookie) {
+        const savedCarts = JSON.parse(decodeURIComponent(cartsCookie));
+        const savedQuantities = JSON.parse(decodeURIComponent(quantitiesCookie));
+        setCarts(savedCarts);
+        setQuantities(savedQuantities);
+    }
+}, []);
 
   const updateQuantity = (index, newQuantity) => {
     // Ensure the new quantity is not less than 0

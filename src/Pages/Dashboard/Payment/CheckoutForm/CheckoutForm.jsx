@@ -4,42 +4,48 @@ import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 
 import Swal from "sweetalert2";
 import useUsers from "../../../../Hooks/useUsers";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 // import { Form } from "react-router-dom";
-import { Form, FormGroup, FormLabel, FormControl } from "react-bootstrap";
+// import { Form, FormGroup, FormLabel, FormControl } from "react-bootstrap";
+import UseCart from "../../../../Hooks/UseCart";
+import { useNavigate } from "react-router-dom";
 // import "./CheckoutForm.css";
 
-const CheckoutForm = ({ cart, price, email }) => {
+const CheckoutForm = ({ email ,  cart, price }) => {
   console.log(email);
-  console.log(cart);
-  console.log(price);
   const [user] = useUsers();
+  console.log(user);
   //   const { user } = UseAuth();
 
-  console.log(user);
   const userInfo = user.filter((item) => item.email === email);
   console.log(userInfo);
 
   const stripe = useStripe();
   const elements = useElements();
-  const [cardError, setCardError] = useState("");
+  const [error, setError] = useState("");
   const [axiosSecure] = useAxiosSecure();
   const [clientSecret, setClientSecret] = useState("");
-  const [processing, setProcessing] = useState(false);
   const [transactionid, setTransactionid] = useState("");
 
-  const { register, handleSubmit, reset } = useForm();
+  const [cart, refetch] = UseCart();
+  const navigate = useNavigate();
+
+  console.log(cart);
+ 
 
   useEffect(() => {
-    if (price > 0) {
-      axiosSecure.post("/create-payment-intent", { price }).then((res) => {
-        setClientSecret(res.data.clientSecret);
-      });
+    if (totalPrice > 0) {
+      axiosSecure
+        .post("/create-payment-intent", { price })
+        .then((res) => {
+          console.log(res.data.clientSecret);
+          setClientSecret(res.data.clientSecret);
+        });
     }
-  }, [price, axiosSecure]);
-
-  const onSubmit = async (data) => {
-    console.log(data);
+  }, [axiosSecure, totalPrice]);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(event);
 
     if (!stripe || !elements) {
       // Stripe.js has not loaded yet. Make sure to disable
@@ -58,53 +64,54 @@ const CheckoutForm = ({ cart, price, email }) => {
     console.log("card", card);
 
     // Use your card Element with other Stripe.js APIs
-    const { error } = await stripe.createPaymentMethod({
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card,
     });
 
     if (error) {
-      setCardError(error.message);
+      setError(error.message);
       console.log("error", error);
     } else {
-      setCardError("");
-      // console.log("PaymentMethod", paymentMethod);
+      setError("");
+      console.log("PaymentMethod", paymentMethod);
     }
-    setProcessing(true);
+
     const { paymentIntent, error: confirmError } =
       await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
           card: card,
           billing_details: {
-            email: user?.email || "unknown",
+            email: user?.email || "anonymous",
             name: user?.displayName || "anonymous",
           },
         },
       });
     if (confirmError) {
       console.log(confirmError);
-    }
-    console.log("Payment intent", paymentIntent);
-    setProcessing(false);
-    if (paymentIntent.status === "succeeded") {
-      setTransactionid(paymentIntent.id);
+    }else{
 
-      //save payment information to the server
-      const payment = {
-        email: user?.email,
-        transactionId: paymentIntent.id,
-        price,
-        date: new Date(),
-        quantity: cart.length,
-        cartItems: cart.map((item) => item._id),
-        menuItems: cart.map((item) => item.menuItemId),
-        status: "Service pending",
-        itemName: cart.map((item) => item.name),
-      };
-      axiosSecure.post("/payments", payment).then((res) => {
+      console.log("Payment intent", paymentIntent);
+      if (paymentIntent.status === "succeeded") {
+        console.log('transaction id', paymentIntent.id);
+        setTransactionid(paymentIntent.id);
+  
+        //save payment information to the server
+        const payment = {
+           email: userInfo?.email,
+          transactionId: paymentIntent.id,
+          price: totalPrice,
+          date: new Date(), //utc date convert....use moment js to convert
+          quantity: cart.length,
+          cartId: cart.map((item) => item._id),
+          menuItemId: cart.map((item) => item.cartItemId),
+          status: "pending",
+          itemName: cart.map((item) => item.name),
+        };
+        const res = await axiosSecure.post("/payments", payment);
         console.log("data", res.data);
-
-        if (res.data?.result?.insertedId) {
+        refetch();
+        if (res.data?.paymentResult?.insertedId) {
           Swal.fire({
             position: "top-end",
             icon: "success",
@@ -112,113 +119,19 @@ const CheckoutForm = ({ cart, price, email }) => {
             showConfirmButton: false,
             timer: 1500,
           });
+          navigate("/dashboard/paymentHistory");
         }
-      });
+      }
     }
+
   };
-  //
-  //
+ 
+
   return (
     <div className="">
-      <Form
-        onSubmit={handleSubmit(onSubmit)}
-        action=""
-        className=" flex column-gap-5  px-4 py-16"
-      >
-        <div className="flex-[2] bg-gray-100 rounded-lg">
-          <div className=" px-4 py-16 sm:px-6 lg:px-8">
-            <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-              <h1 className="text-center font-bold ">
-                1. Cubtomer Information
-              </h1>
-              <div className="mt-3">
-                <Form.Group controlId="formBasicName" htmlFor="phone">
-                  <Form.Label className="" htmlFor="name">
-                    Name
-                  </Form.Label>
-                  <Form.Control
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    type=""
-                    id="name"
-                    value={userInfo[0]?.name}
-                    {...register("name")}
-                  />
-                </Form.Group>
-              </div>
-
-              <div className="mt-3">
-                <Form.Group controlId="formBasicName" htmlFor="phone">
-                  <Form.Label className="" htmlFor="email">
-                    Email
-                  </Form.Label>
-                  <Form.Control
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    type=""
-                    id="email"
-                    value={userInfo[0]?.email}
-                    {...register("email")}
-                  />
-                </Form.Group>
-              </div>
-
-              {/*  */}
-              <div className="mt-3">
-                <Form.Group controlId="formBasicName" htmlFor="phone">
-                  <Form.Label>Phone</Form.Label>
-                  <Form.Control
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    type=""
-                    id="phone"
-                    value={userInfo[0]?.phone}
-                    {...register("phone")}
-                  />
-                </Form.Group>
-              </div>
-
-              <div className="mt-3">
-                <Form.Group controlId="formBasicName">
-                  <Form.Label>
-                    Address <span className="font-extrabold">*</span>
-                  </Form.Label>
-                  <Form.Control
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    type="text"
-                    id="address"
-                    {...register("address", { required: true })}
-                    placeholder="Address"
-                  />
-                </Form.Group>
-              </div>
-
-              <div className="mt-3">
-                <label className="sr-only" htmlFor="message">
-                  Message
-                </label>
-
-                <textarea
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Message"
-                  rows="8"
-                  id="message"
-                  {...register("message")}
-                ></textarea>
-              </div>
-
-
-              {/* <div className="mt-4">
-                <button
-                  type="submit"
-                  className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
-                >
-                  Send Enquiry
-                </button>
-              </div> */}
-              {/* </Form> */}
-            </div>
-          </div>
-        </div>
-        <div className="flex-[4] bg-red-300  px-4 py-16">
-          {/* <Form onSubmit={handleSubmit(onSubmit)} className=" w-3/4 m-8"> */}
+      <div className="flex-[4] bg-red-300  px-4 py-16">
+        {/* <Form onSubmit={handleSubmit(onSubmit)} className=" w-3/4 m-8"> */}
+        <form onSubmit={handleSubmit}>
           <CardElement
             options={{
               style: {
@@ -236,23 +149,149 @@ const CheckoutForm = ({ cart, price, email }) => {
             }}
           />
           <button
-            className="btn btn-success mt-5"
+            className="btn btn-sm btn-primary my-4"
             type="submit"
-            //  disabled={!stripe || !clientSecret || processing}
+            disabled={!stripe || !clientSecret}
           >
             Pay
           </button>
-
-          {cardError && <p className="text-red-600">{cardError}</p>}
+          <p className="text-red-600">{error}</p>
           {transactionid && (
-            <p className="text-green-500">
-              Transaction complete with transactionid: {transactionid}
+            <p className="text-green-600">
+              {" "}
+              Your transaction id: {transactionid}
             </p>
           )}
-        </div>
-      </Form>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default CheckoutForm;
+
+
+
+
+
+
+// import { useEffect, useState } from "react";
+// import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+// import { toast } from 'react-toastify';
+// import useAxiosSecure from '../../../../Hooks/useAxiosSecure';
+// import UseAuth from "../../../../Hooks/UseAuth";
+
+// const CheckOutForm = ({ price,cart }) => {
+//   console.log({price, cart})
+//   const { user } = UseAuth()
+//   const stripe = useStripe()
+//   const elements = useElements()
+//   const [cardError, setCardError] = useState('')
+// const [axiosSecure] = useAxiosSecure()
+//   const [clientSecret, setClientSecret] = useState('')
+//   const [processing, setProcessing] = useState(false)
+//   const [transectionId, setTransectionId] = useState('')
+//   useEffect(() => {
+//     if (price > 0) {
+//       axiosSecure.post('/create-payment-intent', { price })
+//       .then(res => {
+//         // console.log('paymentData', res.data.clientSecret);
+//         setClientSecret(res.data.clientSecret)
+//       })
+//     }
+//   }, [price, axiosSecure])
+
+
+
+//   const handleSubmit = async (event) => {
+//     event.preventDefault()
+//     if (!stripe || !elements) {
+//       return
+//     }
+//     const card = elements.getElement(CardElement)
+//     if (card === null) {
+//       return
+//     }
+//     const { error, paymentMethod } = await stripe.createPaymentMethod({
+//       type: 'card',
+//       card
+//     })
+//     if (error) {
+//       setCardError(error.message)
+//       console.log(error, 'error');
+//     }
+//     else {
+//       setCardError('')
+//       // console.log('paymentMethod', paymentMethod);
+//     }
+//     setProcessing(true)
+//     // console.log('card', card);
+//     const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(clientSecret, {
+//       payment_method: {
+//         card: card,
+//         billing_details: {
+//           name: user?.displayName || 'anonymous user',
+//           email: user?.email || 'unknown'
+//         }
+
+//       }
+//     })
+//     if (confirmError) {
+//       setCardError(confirmError)
+//     }
+//     // console.log('paymentIntent', paymentIntent);
+//     setProcessing(false)
+//     if (paymentIntent.status === 'succeeded') {
+//       setTransectionId(paymentIntent.id)
+//       // save payment information to the server
+//       const payment = {
+//         email: user?.email,
+//         name: user?.displayName,
+//         transectionId: paymentIntent.id,
+//         price,
+//         date: new Date(),
+//         status:'service pending',
+//         quantity: cart.length,
+//         cartItems: cart.map(item => item._id),
+//         menuItems:cart.map(item=>item.menuItemId),
+//         itemsName:cart.map(item=>item.name)
+//       }
+//       axiosSecure.post('/payments',{payment})
+//         .then(res => {
+//           if (res.data.insertResult.insertedId) {
+//             // console.log(res.data);
+//             toast('Pay The Payment Successfully !!!',{autoClose:2000})
+//           }
+//       })
+//     }
+//   }
+//   return (
+//     <div>
+//       <form onSubmit={handleSubmit}>
+//         <CardElement
+//           options={{
+//             style: {
+//               base: {
+//                 fontSize: '16px',
+//                 color: '#424770',
+//                 '::placeholder': {
+//                   color: '#aab7c4',
+//                 },
+//               },
+//               invalid: {
+//                 color: '#9e2146',
+//               },
+//             },
+//           }}
+//         />
+//         <button type="submit" className="btn mt-5 px-10 text-3xl" disabled={!stripe || !clientSecret || processing}>
+//           Pay
+//         </button>
+//       </form>
+//       {cardError && <p className='text-2xl text-red-600'>{cardError}</p>}
+//       {transectionId && <p className='text-2xl text-green-600'>Transection Complete with transectionId: {transectionId}</p>}
+//     </div>
+//   )
+// }
+
+// export default CheckOutForm

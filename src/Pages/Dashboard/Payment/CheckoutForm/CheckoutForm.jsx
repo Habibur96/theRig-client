@@ -1,17 +1,12 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
-
-import Swal from "sweetalert2";
-import useUsers from "../../../../Hooks/useUsers";
-// import { useForm } from "react-hook-form";
-// import { Form } from "react-router-dom";
-// import { Form, FormGroup, FormLabel, FormControl } from "react-bootstrap";
-import UseCart from "../../../../Hooks/UseCart";
 import { useNavigate } from "react-router-dom";
-// import "./CheckoutForm.css";
+import UseCart from "../../../../Hooks/UseCart";
+import useUsers from '../../../../Hooks/useUsers'
 
-const CheckoutForm = ({ email ,  cart, price }) => {
+
+const CheckoutForm = ({email}) => {
   console.log(email);
   const [user] = useUsers();
   console.log(user);
@@ -26,21 +21,21 @@ const CheckoutForm = ({ email ,  cart, price }) => {
   const [axiosSecure] = useAxiosSecure();
   const [clientSecret, setClientSecret] = useState("");
   const [transactionid, setTransactionid] = useState("");
-
-  const [cart, refetch] = UseCart();
   const navigate = useNavigate();
 
+
+  const [cart,refetch] = UseCart();
+  const totalPrice = cart.reduce((sum, item) => sum + parseInt(item.price), 0);
+  console.log({totalPrice})
   console.log(cart);
- 
 
   useEffect(() => {
     if (totalPrice > 0) {
-      axiosSecure
-        .post("/create-payment-intent", { price })
-        .then((res) => {
-          console.log(res.data.clientSecret);
-          setClientSecret(res.data.clientSecret);
-        });
+  const totalPrice = cart.reduce((sum, item) => sum + parseInt(item.price), 0);
+      axiosSecure.post("/create-payment-intent", { price: totalPrice }).then((res) => {
+        console.log(res.data.clientSecret);
+        setClientSecret(res.data.clientSecret);
+      });
     }
   }, [axiosSecure, totalPrice]);
   const handleSubmit = async (event) => {
@@ -89,16 +84,15 @@ const CheckoutForm = ({ email ,  cart, price }) => {
       });
     if (confirmError) {
       console.log(confirmError);
-    }else{
-
+    } else {
       console.log("Payment intent", paymentIntent);
       if (paymentIntent.status === "succeeded") {
-        console.log('transaction id', paymentIntent.id);
+        console.log("transaction id", paymentIntent.id);
         setTransactionid(paymentIntent.id);
-  
+
         //save payment information to the server
         const payment = {
-           email: userInfo?.email,
+          email: userInfo?.email,
           transactionId: paymentIntent.id,
           price: totalPrice,
           date: new Date(), //utc date convert....use moment js to convert
@@ -123,9 +117,7 @@ const CheckoutForm = ({ email ,  cart, price }) => {
         }
       }
     }
-
   };
- 
 
   return (
     <div className="">
@@ -170,11 +162,6 @@ const CheckoutForm = ({ email ,  cart, price }) => {
 
 export default CheckoutForm;
 
-
-
-
-
-
 // import { useEffect, useState } from "react";
 // import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 // import { toast } from 'react-toastify';
@@ -200,8 +187,6 @@ export default CheckoutForm;
 //       })
 //     }
 //   }, [price, axiosSecure])
-
-
 
 //   const handleSubmit = async (event) => {
 //     event.preventDefault()

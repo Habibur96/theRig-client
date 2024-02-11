@@ -125,7 +125,8 @@ const AvailableProduct = () => {
       <Row>
         <div className="flex column-gap-2">
           <div className="flex-[1] ">
-            <Card className="bg-base-100 shadow-xl" style={{ width: "22rem" }}>
+           
+             <Card className="bg-base-100 shadow-xl" style={{ width: "22rem" }}>
               <button
                 className=""
                 onClick={() =>
@@ -186,7 +187,7 @@ const AvailableProduct = () => {
               )}
 
               <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Card Link Card Link</Card.Link>
                 <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
             </Card>

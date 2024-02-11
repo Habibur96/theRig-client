@@ -11,9 +11,8 @@ import UseCart from "../../../Hooks/UseCart";
 
 const stripePromise = loadStripe(import.meta.env.VITE_payment_getway_pk);
 const Payment = () => {
-  const [cart] = UseCart();
-  const total = cart.reduce((sum, item) => sum + parseInt(item.price), 0);
-  console.log({total})
+ 
+  
    const { email } = useParams();
 
   return (
@@ -24,7 +23,7 @@ const Payment = () => {
 
       <h1 className="text-3xl">payment here..............</h1>
       <Elements stripe={stripePromise}>
-        <CheckoutForm cart={cart} price={total} email={email}></CheckoutForm>
+        <CheckoutForm  email={email}></CheckoutForm>
       </Elements>
     </div>
   );

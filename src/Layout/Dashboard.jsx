@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 import {
   FaShoppingCart,
   FaWallet,
@@ -13,9 +13,14 @@ import theRig from "../assets/logo/theRig.png";
 
 import useAdmin from "../Hooks/useAdmin";
 import UseCart from "../Hooks/UseCart";
+import useUsers from "../Hooks/useUsers";
+import UseAuth from "../Hooks/UseAuth";
 
 const Dashboard = () => {
   const [cart] = UseCart();
+
+
+const {user} = UseAuth();
 
   // TODO: load data from the server to have dynamic isAdmin based on Data
   // const isAdmin = true;
@@ -92,7 +97,7 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/paymentHistory">
+                <NavLink to={`/dashboard/paymentHistory/${user?.email}`}>
                   <FaList></FaList>Payment  History
                 </NavLink>
               </li>

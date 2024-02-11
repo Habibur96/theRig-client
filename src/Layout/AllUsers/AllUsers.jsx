@@ -69,22 +69,20 @@ const AllUsers = () => {
       }
     });
   };
-  console.log(users.name)
+  console.log(users.name);
   return (
-   
     <div className=" max-w-screen-lg ml-32">
       {/* <Helmet>
         <title>Bistro Boss | All users</title>
       </Helmet> */}
       <h3 className="text-3xl font-semibold my-8">
-      
-Total Users:{users.length}
+        Total Users:{users.length}
       </h3>
-      
+
       <div className="overflow-x-auto">
         <table className="table table-zebra mt-4">
           {/* head */}
-          <thead>
+          <thead className="bg-[#AAE3E2]">
             <tr>
               <th>#</th>
               <th>Name</th>
@@ -95,7 +93,6 @@ Total Users:{users.length}
           </thead>
           <tbody>
             {users.map((user, index) => (
-
               <tr key={user._id}>
                 <th>{index + 1}</th>
                 <td>{user.displayName}</td>

@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 import Pages from "./Pages";
+import ScrollToTop from "react-scroll-to-top";
 
 
 const Monitor = () => {
@@ -21,6 +22,7 @@ const Monitor = () => {
   
         <div className="flex-[4] mr-5 ">
           <div className="overflow-x-auto ">
+          <ScrollToTop smooth top="20" color="#464EAF" width="40" height="30" style={{ backgroundColor: '#FF8080' }}/>
             <h3 className="text-2xl font-semibold">
               {monitor.length} Compatible Products
             </h3>

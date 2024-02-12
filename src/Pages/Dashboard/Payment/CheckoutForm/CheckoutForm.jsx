@@ -6,8 +6,17 @@ import UseCart from "../../../../Hooks/UseCart";
 import useUsers from "../../../../Hooks/useUsers";
 
 import Swal from "sweetalert2";
+import { useForm } from "react-hook-form";
+import { Form } from "react-bootstrap";
 
 const CheckoutForm = ({ email }) => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
   const [user] = useUsers();
   const userInfo = user.filter((item) => item.email === email);
 
@@ -32,8 +41,8 @@ const CheckoutForm = ({ email }) => {
     }
   }, [axiosSecure, totalPrice]);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const onSubmit = async (data) => {
+    const address = data.address;
 
     if (!stripe || !elements) {
       return;
@@ -76,7 +85,7 @@ const CheckoutForm = ({ email }) => {
 
           const payment = {
             email,
-
+            address,
             price: totalPrice,
             transactionId: paymentIntent.id,
             date: new Date(),
@@ -109,8 +118,93 @@ const CheckoutForm = ({ email }) => {
 
   return (
     <div className="">
-      <div className="flex-[4] bg-red-300  px-4 py-16">
-        <form onSubmit={handleSubmit}>
+      <Form
+        onSubmit={handleSubmit(onSubmit)}
+        action=""
+        className=" flex column-gap-5  px-4 py-16"
+      >
+        <div className="flex-[2]  bg-[#AAE3E2]  rounded-lg">
+          <div className=" px-4 py-16 sm:px-6 lg:px-8">
+            <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+              <h1 className="text-center font-bold ">
+                1. Customer Information
+              </h1>
+              <div className="mt-3">
+                <Form.Group controlId="formBasicName" htmlFor="phone">
+                  <Form.Label className="" htmlFor="name">
+                    Name
+                  </Form.Label>
+                  <Form.Control
+                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    type=""
+                    id="name"
+                    value={userInfo[0]?.name}
+                    {...register("name")}
+                  />
+                </Form.Group>
+              </div>
+
+              <div className="mt-3">
+                <Form.Group controlId="formBasicName" htmlFor="phone">
+                  <Form.Label className="" htmlFor="email">
+                    Email
+                  </Form.Label>
+                  <Form.Control
+                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    type=""
+                    id="email"
+                    value={userInfo[0]?.email}
+                    {...register("email")}
+                  />
+                </Form.Group>
+              </div>
+
+              {/*  */}
+              <div className="mt-3">
+                <Form.Group controlId="formBasicName" htmlFor="phone">
+                  <Form.Label>Phone</Form.Label>
+                  <Form.Control
+                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    type=""
+                    id="phone"
+                    value={userInfo[0]?.phone}
+                    {...register("phone")}
+                  />
+                </Form.Group>
+              </div>
+
+              <div className="mt-3">
+                <Form.Group controlId="formBasicName">
+                  <Form.Label>
+                    Address <span className="font-extrabold">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    type="text"
+                    id="address"
+                    {...register("address", { required: true })}
+                    placeholder="Address"
+                  />
+                </Form.Group>
+              </div>
+
+              <div className="mt-3">
+                <label className="sr-only" htmlFor="message">
+                  Message
+                </label>
+
+                <textarea
+                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                  placeholder="Message"
+                  rows="8"
+                  id="message"
+                  {...register("message")}
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex-[2] bg-red-300 rounded-lg px-4 py-16">
           <CardElement
             options={{
               style: {
@@ -140,8 +234,8 @@ const CheckoutForm = ({ email }) => {
               Your transaction id: {transactionid}
             </p>
           )}
-        </form>
-      </div>
+        </div>
+      </Form>
     </div>
   );
 };

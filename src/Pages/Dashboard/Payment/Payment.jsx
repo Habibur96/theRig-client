@@ -21,7 +21,7 @@ const Payment = () => {
         <title>TheRig | Payment</title>
       </Helmet> */}
 
-      <h1 className="text-3xl">payment here..............</h1>
+      <h1 className="text-3xl text-center  mt-2">Payment here..............</h1>
       <Elements stripe={stripePromise}>
         <CheckoutForm  email={email}></CheckoutForm>
       </Elements>

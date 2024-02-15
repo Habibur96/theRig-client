@@ -19,8 +19,7 @@ import UseAuth from "../Hooks/UseAuth";
 const Dashboard = () => {
   const [cart] = UseCart();
 
-
-const {user} = UseAuth();
+  const { user } = UseAuth();
 
   // TODO: load data from the server to have dynamic isAdmin based on Data
   // const isAdmin = true;
@@ -30,12 +29,7 @@ const {user} = UseAuth();
     <div className="drawer drawer-mobile lg:drawer-open md:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        {/* <label
-          htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
-        >
-          Open drawer
-        </label> */}
+      
         <Outlet></Outlet>
       </div>
 
@@ -70,6 +64,36 @@ const {user} = UseAuth();
                 </NavLink>
               </li>
               <li>
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
+                    <span className="text-sm font-medium"> Orders </span>
+                  </summary>
+
+                  <ul className="mt-2 space-y-1 px-4">
+                    <li>
+                    
+                      <NavLink to='/dashboard/allorders'
+                       
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        All Orders
+                      </NavLink>
+                    </li>
+                    
+
+                    <li>
+                      <NavLink to="/dashboard/shopwiseorders"
+                       
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Shop wise orders
+                      </NavLink>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+
+              <li>
                 <NavLink to="/dashboard/allusers">
                   <FaUsers></FaUsers> All Users
                 </NavLink>
@@ -87,7 +111,7 @@ const {user} = UseAuth();
                   <FaCalendarAlt></FaCalendarAlt>Payment History
                 </NavLink>
               </li> */}
-              
+
               <li>
                 <NavLink to="/dashboard/mycart">
                   <FaShoppingCart></FaShoppingCart> My Cart
@@ -98,7 +122,7 @@ const {user} = UseAuth();
               </li>
               <li>
                 <NavLink to={`/dashboard/paymentHistory/${user?.email}`}>
-                  <FaList></FaList>Payment  History
+                  <FaList></FaList>Payment History
                 </NavLink>
               </li>
             </>

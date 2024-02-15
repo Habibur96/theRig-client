@@ -19,6 +19,7 @@ const CheckoutForm = ({ email }) => {
 
   const [user] = useUsers();
   const userInfo = user.filter((item) => item.email === email);
+  console.log(userInfo[0]?.name)
 
   const stripe = useStripe();
   const elements = useElements();
@@ -72,7 +73,7 @@ const CheckoutForm = ({ email }) => {
               // email: user?.email || "anonymous",
               // name: user?.displayName || "anonymous",
               email: userInfo?.email || "example@example.com", // Use a default or placeholder email
-              name: user?.displayName || "Anonymous", // Use a default or placeholder name
+              name: userInfo?.displayName || "Anonymous", // Use a default or placeholder name
             },
           },
         });
@@ -85,6 +86,8 @@ const CheckoutForm = ({ email }) => {
 
           const payment = {
             email,
+            name: userInfo[0]?.name,
+            phone:userInfo[0]?.phone,
             address,
             price: totalPrice,
             transactionId: paymentIntent.id,
@@ -92,7 +95,8 @@ const CheckoutForm = ({ email }) => {
             cartIds: cart.map((item) => item._id),
             menuItemIds: cart.map((item) => item.cartItemId),
             quantity: cart.length,
-            status: "success",
+            paymentStatus: "success",
+            orderStatus:"pending",
             itemName: cart.map((item) => item.name),
           };
 

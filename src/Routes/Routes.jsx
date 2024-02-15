@@ -28,6 +28,8 @@ import Memory from "../Pages/Home/Pcbuild/Memory";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import AllOrders from "../Pages/Dashboard/Orders/AllOrders";
+import ShopwiseOrders from "../Pages/Dashboard/Orders/ShopwiseOrders";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -161,6 +163,22 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <AdminHome></AdminHome>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "allorders",
+        element: (
+          <AdminRoute>
+            <AllOrders></AllOrders>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "shopwiseorders",
+        element: (
+          <AdminRoute>
+            <ShopwiseOrders></ShopwiseOrders>
           </AdminRoute>
         ),
       },

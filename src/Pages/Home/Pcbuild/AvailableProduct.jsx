@@ -77,6 +77,7 @@ const AvailableProduct = () => {
         model: item?.model,
         name: item?.name,
         img: item?.img,
+        shoplogo:item?.shoplogo,
         price: item?.price,
       };
 

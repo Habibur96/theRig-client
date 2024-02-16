@@ -30,6 +30,8 @@ import SearchCpu from "../Pages/Home/Pcbuild/SearchCpu";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import AllOrders from "../Pages/Dashboard/Orders/AllOrders";
 import ShopwiseOrders from "../Pages/Dashboard/Orders/ShopwiseOrders";
+
+import OrderHistory from "../Pages/Dashboard/Orders/OrdersHistory";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -146,6 +148,10 @@ export const router = createBrowserRouter([
       {
         path: "mycart",
         element: <MyCart></MyCart>,
+      },
+      {
+        path: "orderHistory/:email",
+        element: <OrderHistory></OrderHistory>,
       },
 
       {

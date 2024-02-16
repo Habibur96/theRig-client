@@ -1,29 +1,29 @@
 import useOrders from "../../../Hooks/useOrders";
-import ModeEditOutlinedIcon from "@mui/icons-material/ModeEditOutlined";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+// import ModeEditOutlinedIcon from "@mui/icons-material/ModeEditOutlined";
+// import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-import { Form, Modal, Button, DropdownButton, Dropdown } from "react-bootstrap";
+// import { Form, Modal, Button, DropdownButton, Dropdown } from "react-bootstrap";
 
-import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+// import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const AllOrders = () => {
-  const [orders, refetch] = useOrders();
-  const [axiosSecure] = useAxiosSecure();
+  const [orders] = useOrders();
+  // const [axiosSecure] = useAxiosSecure();
   console.log(orders);
-  const orderStatus = ["processing", "cancelled"];
+  // const orderStatus = ["processing", "cancelled"];
 
-  const handleUpdate = async (_id, orderStatus) => {
-    console.log(_id, orderStatus);
-    const res = await axiosSecure.patch(`/payments/${_id}`, { orderStatus });
-    console.log("Order Status updated", res.data);
-    if (res?.data?.modifiedCount) {
-      refetch();
-    }
-  };
+  // const handleUpdate = async (_id, orderStatus) => {
+  //   console.log(_id, orderStatus);
+  //   const res = await axiosSecure.patch(`/payments/${_id}`, { orderStatus });
+  //   console.log("Order Status updated", res.data);
+  //   if (res?.data?.modifiedCount) {
+  //     refetch();
+  //   }
+  // };
 
-  const handleDelete = (_id) => {
-    console.log(_id);
-  };
+  // const handleDelete = (_id) => {
+  //   console.log(_id);
+  // };
 
   return (
     <div>
@@ -67,7 +67,7 @@ const AllOrders = () => {
             </thead>
 
             <tbody className="divide-y divide-gray-200">
-              {orders.map((order, index) => (
+             {orders.map((order, index) => (
                 <tr key={order._id}>
                   <th className="pl-3">{index + 1}</th>
                   <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
@@ -95,7 +95,7 @@ const AllOrders = () => {
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     {order.price}
                   </td>
-                   {/* <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                  {/* <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     <button
                       className="btn btn-sm mr-2 "
                       onClick={() =>
@@ -137,7 +137,7 @@ const AllOrders = () => {
                     <button onClick={() => handleDelete(order._id)}>
                       <DeleteForeverIcon />
                     </button>
-                  </td>  */}
+                  </td> */}
                 </tr>
               ))} 
             </tbody>

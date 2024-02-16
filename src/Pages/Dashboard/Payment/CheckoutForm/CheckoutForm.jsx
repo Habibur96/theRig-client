@@ -98,6 +98,8 @@ const CheckoutForm = ({ email }) => {
             paymentStatus: "success",
             orderStatus:"pending",
             itemName: cart.map((item) => item.name),
+            itemPhoto: cart.map((item) => item.img),
+            shoplogo: cart.map((item) => item.shoplogo),
           };
 
           const res = await axiosSecure.post("/payments", payment);

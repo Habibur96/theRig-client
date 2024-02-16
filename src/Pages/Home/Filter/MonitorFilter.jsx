@@ -408,7 +408,7 @@ const MonitorFilter = () => {
                   </div>
 
                   <div>
-                    <strong className="font-medium text-gray-900"> 100 </strong>
+                    <strong className="font-medium text-gray-900"> 100Hz </strong>
                   </div>
                 </label>
                 <label
@@ -425,7 +425,7 @@ const MonitorFilter = () => {
                   </div>
 
                   <div>
-                    <strong className="font-medium text-gray-900"> 165 </strong>
+                    <strong className="font-medium text-gray-900"> 165Hz </strong>
                   </div>
                 </label>
                 <label
@@ -442,7 +442,7 @@ const MonitorFilter = () => {
                   </div>
 
                   <div>
-                    <strong className="font-medium text-gray-900"> 180 </strong>
+                    <strong className="font-medium text-gray-900"> 180Hz </strong>
                   </div>
                 </label>
               </div>

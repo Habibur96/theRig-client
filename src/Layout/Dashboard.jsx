@@ -8,6 +8,8 @@ import {
   FaBook,
   FaUsers,
   FaList,
+  FaCalendarWeek,
+  FaCalendarTimes,
 } from "react-icons/fa";
 import theRig from "../assets/logo/theRig.png";
 
@@ -15,6 +17,7 @@ import useAdmin from "../Hooks/useAdmin";
 import UseCart from "../Hooks/UseCart";
 import useUsers from "../Hooks/useUsers";
 import UseAuth from "../Hooks/UseAuth";
+import FilterFramesOutlinedIcon from "@mui/icons-material/FilterFramesOutlined";
 
 const Dashboard = () => {
   const [cart] = UseCart();
@@ -29,7 +32,6 @@ const Dashboard = () => {
     <div className="drawer drawer-mobile lg:drawer-open md:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-      
         <Outlet></Outlet>
       </div>
 
@@ -66,24 +68,23 @@ const Dashboard = () => {
               <li>
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
-                    <span className="text-sm font-medium"> Orders </span>
+                    <FaCalendarWeek />
+                    <span className="text-sm font-medium">Orders Details </span>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4">
                     <li>
-                    
-                      <NavLink to='/dashboard/allorders'
-                       
+                      <NavLink
+                        to="/dashboard/allorders"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
                         All Orders
                       </NavLink>
                     </li>
-                    
 
                     <li>
-                      <NavLink to="/dashboard/shopwiseorders"
-                       
+                      <NavLink
+                        to="/dashboard/shopwiseorders"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
                         Shop wise orders
@@ -118,6 +119,11 @@ const Dashboard = () => {
                   <span className="badge inl badge-secondary">
                     +{cart?.length || 0}
                   </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={`/dashboard/orderHistory/${user?.email}`}>
+                  <FaCalendarAlt />Orders History
                 </NavLink>
               </li>
               <li>

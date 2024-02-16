@@ -25,7 +25,7 @@ const PaymentHistory = () => {
       <div className="max-w-screen-xl mx-auto  border-gray-200 mt-5">
         <div className="overflow-x-auto ">
           <table className="min-w-full divide-gray-200 bg-white text-sm">
-            <thead className="ltr:text-left rtl:text-right  bg-[#AAE3E2] h-12">
+            <thead className="ltr:text-left rtl:text-right  bg-[#65B741] h-12">
               <tr>
                 <th className="pl-3">#</th>
                 <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">

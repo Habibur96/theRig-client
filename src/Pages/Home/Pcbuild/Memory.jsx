@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 import Pages from "./Pages";
 import ScrollToTop from "react-scroll-to-top";
+import MemoryFilter from "../Filter/MemoryFilter";
 
 
 const Memory = () => {
@@ -14,9 +15,9 @@ const Memory = () => {
       };
     return (
         <div className="flex column-gap-5">
-        <div className=" flex-[1] bg-red-300 ">
+        <div className=" flex-[1] ">
           {/* <LeftNav></LeftNav> */}
-          <h1 className="text-center">option</h1>
+          <MemoryFilter></MemoryFilter>
         </div>
   
         <div className="flex-[4] mr-5 ">

@@ -1,8 +1,8 @@
-
 import ScrollToTop from "react-scroll-to-top";
 import UseProduct from "../../../Hooks/UseProduct";
 import Pages from "../Pcbuild/Pages";
 import { Link, useLocation } from "react-router-dom";
+import CpuFilter from "../Filter/CpuFilter";
 // import UseProduct from "../../../Hooks/useProduct";
 
 // import { useState } from "react";
@@ -31,17 +31,20 @@ const Cpu = () => {
 
   return (
     <div className="flex column-gap-5">
-    
-       
-     
-      <div className=" flex-[1] bg-red-300 ">
-        {/* <LeftNav></LeftNav> */}
-        <h1 className="text-center">option</h1>
+      <div className=" flex-[1]">
+        <CpuFilter></CpuFilter>
       </div>
 
       <div className="flex-[4] mr-5 ">
         <div className="overflow-x-auto ">
-        <ScrollToTop smooth top="20" color="#464EAF" width="40" height="30" style={{ backgroundColor: '#FF8080' }}/>
+          <ScrollToTop
+            smooth
+            top="20"
+            color="#464EAF"
+            width="40"
+            height="30"
+            style={{ backgroundColor: "#FF8080" }}
+          />
           <h3 className="text-2xl font-semibold">
             {cpu.length} Compatible Products
           </h3>

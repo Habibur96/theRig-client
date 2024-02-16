@@ -8,13 +8,13 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const AllOrders = () => {
   const [orders, refetch] = useOrders();
-  const axiosSecure = useAxiosSecure();
+  const [axiosSecure] = useAxiosSecure();
   console.log(orders);
   const orderStatus = ["processing", "cancelled"];
 
-  const handleUpdate = async (_id, orderStatusValue) => {
+  const handleUpdate = async (_id, orderStatus) => {
     console.log(_id, orderStatus);
-    const res = await axiosSecure.patch(`/payments/${_id}`, {orderStatus: orderStatusValue });
+    const res = await axiosSecure.patch(`/payments/${_id}`, { orderStatus });
     console.log("Order Status updated", res.data);
     if (res?.data?.modifiedCount) {
       refetch();
@@ -95,7 +95,7 @@ const AllOrders = () => {
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     {order.price}
                   </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                   {/* <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     <button
                       className="btn btn-sm mr-2 "
                       onClick={() =>
@@ -137,9 +137,9 @@ const AllOrders = () => {
                     <button onClick={() => handleDelete(order._id)}>
                       <DeleteForeverIcon />
                     </button>
-                  </td>
+                  </td>  */}
                 </tr>
-              ))}
+              ))} 
             </tbody>
           </table>
         </div>
@@ -149,16 +149,3 @@ const AllOrders = () => {
 };
 
 export default AllOrders;
-
-//   fetch(`http://localhost:3000/payments/${_id}`, {
-//     method: "PATCH",
-
-//     body: JSON.stringify({orderStatus}),
-//   })
-//     .then((res) => res.json())
-//     .then((data) => {
-//       console.log("Order Status updated", data);
-//       if (data.modifiedCount) {
-//         refetch();
-//       }
-//     });

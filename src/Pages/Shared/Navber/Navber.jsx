@@ -5,13 +5,14 @@ import { FaUserAlt } from "react-icons/fa";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import UseCart from "../../../Hooks/UseCart";
 import useAdmin from "../../../Hooks/useAdmin";
+import UseAuth from "../../../Hooks/UseAuth";
 // import theRig from '../../../assets/logo/theRig.png'
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
 // import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
 
 const Navber = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = UseAuth();
 
   const [cart] = UseCart();
   const [isAdmin] = useAdmin();

@@ -67,9 +67,9 @@ const Dashboard = () => {
               </li>
               <li>
                 <details className="group">
-                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <FaCalendarWeek />
-                    <span className="text-sm font-medium">Orders Details </span>
+                    <span className="text-sm font-medium mr-28">Orders Details </span>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4">

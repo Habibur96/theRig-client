@@ -1,6 +1,6 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../Provider/AuthProvider";
+
 import { FaUserAlt } from "react-icons/fa";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import UseCart from "../../../Hooks/UseCart";
@@ -37,21 +37,21 @@ const Navber = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         setSearchProduct(data);
       });
   }, [search]);
   const cpu = searchProduct.filter((item) => item.category === "cpu");
 
   console.log(cpu);
-   useEffect(() => {
+  useEffect(() => {
     if (searchProduct?.[0]?.category === "cpu") {
       console.log(cpu);
       // <Link to={{pathname:'searchCpu', state:{cpuArray: cpu}}}></Link>
-       localStorage.setItem('cpuArray', JSON.stringify(cpu))
-        navigate('searchCpu');
+      localStorage.setItem("cpuArray", JSON.stringify(cpu));
+      navigate("searchCpu");
     }
- }, []);
+  }, []);
   // Check if any product has a category of 'motherboard'
   // const hasCpu = searchProduct.some((product) => product.category === "cpu");
 

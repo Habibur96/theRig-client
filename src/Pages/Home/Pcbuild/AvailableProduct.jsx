@@ -122,14 +122,14 @@ const AvailableProduct = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5  ">
       <Row>
         <div className="flex column-gap-2">
           <div className="flex-[1] ">
            
              <Card className="bg-base-100 shadow-xl" style={{ width: "22rem" }}>
               <button
-                className=""
+                className="" 
                 onClick={() =>
                   document.getElementById("my_modal_3").showModal()
                 }

@@ -43,7 +43,7 @@ const SignUp = () => {
           })
             .then((res) => res.json())
             .then((data) => {
-              console.log(data)
+              console.log(data);
               if (data.insertedId) {
                 reset();
                 Swal.fire({
@@ -208,6 +208,15 @@ const SignUp = () => {
           </Link>
         </p>
       </div>
+      <script
+        src="https://static.elfsight.com/platform/platform.js"
+        data-use-service-core
+        defer
+      ></script>
+      <div
+        class="elfsight-app-deb8cb53-9683-466e-ac49-c0554b5fb1e2"
+        data-elfsight-app-lazy
+      ></div>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import {
   updateProfile,
   signInWithPopup,
   GoogleAuthProvider,
+  deleteUser,
 } from "firebase/auth";
 
 import { app } from "../firebase/firebase.config";
@@ -52,6 +53,12 @@ const AuthProvider = ({ children }) => {
   const resetPassword = (email) => {
     setLoading(true);
     return sendPasswordResetEmail(auth, email);
+  };
+
+  //Delete User
+  const deleteCreatedUser = (user) => {
+    setLoading(true);
+    return deleteUser(auth, user);
   };
 
   //Update User
@@ -106,6 +113,7 @@ const AuthProvider = ({ children }) => {
     updateUserProfile,
     mailVarify,
     resetPassword,
+    deleteCreatedUser,
   };
   return (
     <div>

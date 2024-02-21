@@ -22,25 +22,28 @@ const OrderHistory = () => {
     },
   });
   return (
-    <div className="max-w-screen-3xl mx-auto border-gray-200 mt-4 pl-2">
+    <div className="max-w-screen-3xl mx-auto border-gray-200 mt-2 ">
       <div className="overflow-x-auto ">
-        <table className="min-w-full divide-gray-200 bg-white text-sm">
+        <table className="min-w-full divide-gray-200 bg-white text-sm ">
           <thead className="ltr:text-left rtl:text-right bg-[#65B741] h-12">
             <tr>
               <th className="pl-3">#</th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Image
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Product Name
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              <div className="">
+                <th className="whitespace-nowrap px-12 py-2 font-medium text-gray-900">
+                  Image
+                </th>
+                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  Product Name
+                </th>
+              </div>
+
+              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-center">
                 Order Id
               </th>
               <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                 Quantity
               </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              <th className="whitespace-nowrap px-4 py-2 font-medium text-center text-gray-900">
                 Placed On
               </th>
 
@@ -54,20 +57,31 @@ const OrderHistory = () => {
             </tr>
           </thead>
 
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 ">
             {orderHistories.map((orderHistory, index) => (
-              <tr key={orderHistory._id}>
-                <th className="pl-3">{index + 1}</th>
-                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  {}
+              <tr className="divide-x divide-gray-200" key={orderHistory._id}>
+                <th className=" pl-3 pr-3 font-medium">{index + 1}</th>
+                <td className=" whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  {orderHistory.itemPhoto.map((photo, index) => (
+                    <tr key={orderHistory._id + index}>
+                      <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        <img
+                          src={photo}
+                          alt="Product Image"
+                          className="h-12 w-12"
+                        />
+                      </td>
+                      <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                        {orderHistory.itemName[index]}
+                      </td>
+                    </tr>
+                  ))}
                 </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  {orderHistory.itemName}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+
+                <td className="whitespace-nowrap px-4 py-2 text-gray-700 ">
                   {orderHistory._id}
                 </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                <td className="whitespace-nowrap text-center py-2 text-gray-700">
                   {orderHistory.quantity}
                 </td>
 
@@ -75,7 +89,19 @@ const OrderHistory = () => {
                   {orderHistory.date}
                 </td>
 
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                <td
+                  className={`whitespace-nowrap px-4 py-2 font-semibold text-lg ${
+                    orderHistory.orderStatus === "cancelled"
+                      ? "text-red-600"
+                      : orderHistory.orderStatus === "processing"
+                      ? "text-sky-600"
+                      : orderHistory.orderStatus === "shipped"
+                      ? "text-yellow-600"
+                      : orderHistory.orderStatus === "delivered"
+                      ? "text-green-600"
+                      : ""
+                  }`}
+                >
                   {orderHistory.orderStatus}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700">

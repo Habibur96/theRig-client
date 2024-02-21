@@ -3,9 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import UseAuth from "../../Hooks/UseAuth";
 
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
+  const { deleteCreatedUser} = UseAuth()
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
@@ -13,7 +15,7 @@ const AllUsers = () => {
       return res.data;
     },
   });
-
+// console.log(users[0].email)
   const handleMakeAdmin = (user) => {
     Swal.fire({
       title: "Are you sure?",
@@ -25,6 +27,7 @@ const AllUsers = () => {
       confirmButtonText: "Yes, create him admin",
     }).then((result) => {
       if (result.isConfirmed) {
+       
         fetch(`http://localhost:3000/users/admin/${user._id}`, {
           method: "PATCH",
         })
@@ -56,6 +59,8 @@ const AllUsers = () => {
       confirmButtonText: "Yes, delete him!",
     }).then((result) => {
       if (result.isConfirmed) {
+        deleteCreatedUser(user.email)
+        console.log(user.email)
         fetch(`http://localhost:3000/users/${user._id}`, {
           method: "DELETE",
         })

@@ -96,7 +96,7 @@ const CheckoutForm = ({ email }) => {
             menuItemIds: cart.map((item) => item.cartItemId),
             quantity: cart.length,
             paymentStatus: "success",
-            orderStatus:"pending",
+            orderStatus: "pending",
             itemName: cart.map((item) => item.name),
             itemPhoto: cart.map((item) => item.img),
             shoplogo: cart.map((item) => item.shoplogo),

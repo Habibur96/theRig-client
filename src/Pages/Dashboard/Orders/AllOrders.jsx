@@ -38,6 +38,7 @@ const AllOrders = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await axiosSecure.delete(`/payments/${_id}`);
+        
         console.log("Order cancelled", res.data);
         if (res?.data?.deletedCount > 0) {
           refetch();
@@ -57,7 +58,7 @@ const AllOrders = () => {
               <tr>
                 <th className="pl-3 px-2">#</th>
                 <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900 text-center">
-                  Name
+                  Customer Name
                 </th>
                 <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-center">
                   Order Id

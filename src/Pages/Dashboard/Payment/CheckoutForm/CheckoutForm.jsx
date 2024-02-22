@@ -170,7 +170,7 @@ const CheckoutForm = ({ email }) => {
                 <Form.Group controlId="formBasicName" htmlFor="phone">
                   <Form.Label>Phone</Form.Label>
                   <Form.Control
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    className="w-full rounded-lg border-gray-200 p-3 text-sm "
                     type=""
                     id="phone"
                     value={userInfo[0]?.phone}

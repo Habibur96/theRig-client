@@ -12,8 +12,8 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 import AvailableProduct from "../Pages/Home/Pcbuild/AvailableProduct";
 import AdminRoute from "./AdminRoutes";
-import ManageItem from "../Pages/Dashboard/ManageItem/ManageItem";
-import AddItem from "../Pages/Dashboard/AddItem/AddItem";
+import ManageProducts from "../Pages/Dashboard/ManageProducts/ManageProducts";
+
 import AllUsers from "../Layout/AllUsers/AllUsers";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
@@ -32,6 +32,19 @@ import AllOrders from "../Pages/Dashboard/Orders/AllOrders";
 import ShopwiseOrders from "../Pages/Dashboard/Orders/ShopwiseOrders";
 
 import OrderHistory from "../Pages/Dashboard/Orders/OrdersHistory";
+import CreateItem from "../Pages/Dashboard/CreateItem/CreateMemory";
+import CreateCpu from "../Pages/Dashboard/CreateItem/CreateCpu";
+import CreateMotherboard from "../Pages/Dashboard/CreateItem/CreateMotherboard";
+import CreateMonitor from "../Pages/Dashboard/CreateItem/CreateMonitor";
+import CreateMemory from "../Pages/Dashboard/CreateItem/CreateMemory";
+import CreateStorage from "../Pages/Dashboard/CreateItem/CreateStorage";
+import Createpsu from "../Pages/Dashboard/CreateItem/Createpsu";
+import CreateGpu from "../Pages/Dashboard/CreateItem/CreateGpu";
+import CreateKeyboard from "../Pages/Dashboard/CreateItem/CreateKeyboard";
+import CreateCasingCooler from "../Pages/Dashboard/CreateItem/CreateCasingCooler";
+import CreateCpucooler from "../Pages/Dashboard/CreateItem/CreateCpucooler";
+import CreateUps from "../Pages/Dashboard/CreateItem/CreateUps";
+import CreateMice from "../Pages/Dashboard/CreateItem/CreateMice";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -197,18 +210,124 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "addItem",
+        path: "createItem",
         element: (
           <AdminRoute>
-            <AddItem></AddItem>
+            <CreateItem></CreateItem>
           </AdminRoute>
         ),
       },
       {
-        path: "manageItem",
+        path: "manageProducts",
         element: (
           <AdminRoute>
-            <ManageItem></ManageItem>
+            <ManageProducts></ManageProducts>
+          </AdminRoute>
+        ),
+      },
+
+      // ========================Created Products==============
+      {
+        path: "createProducts/cpu",
+        element: (
+          <AdminRoute>
+            <CreateCpu></CreateCpu>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/motherboard",
+        element: (
+          <AdminRoute>
+         <CreateMotherboard/>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/monitor",
+        element: (
+          <AdminRoute>
+            <CreateMonitor></CreateMonitor>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/memory",
+        element: (
+          <AdminRoute>
+            <CreateMemory></CreateMemory>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/storage",
+        element: (
+          <AdminRoute>
+            <CreateStorage></CreateStorage>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/psu",
+        element: (
+          <AdminRoute>
+            <Createpsu></Createpsu>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/gpu",
+        element: (
+          <AdminRoute>
+            <CreateGpu></CreateGpu>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/keyboard",
+        element: (
+          <AdminRoute>
+            <CreateKeyboard></CreateKeyboard>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/monitor",
+        element: (
+          <AdminRoute>
+            <CreateMonitor></CreateMonitor>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/casingcooler",
+        element: (
+          <AdminRoute>
+            <CreateCasingCooler></CreateCasingCooler>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/cpucooler",
+        element: (
+          <AdminRoute>
+            <CreateCpucooler></CreateCpucooler>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/ups",
+        element: (
+          <AdminRoute>
+            <CreateUps></CreateUps>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "createProducts/mice",
+        element: (
+          <AdminRoute>
+            <CreateMice></CreateMice>
           </AdminRoute>
         ),
       },

@@ -4,7 +4,7 @@
 {
     "name":"ASUS VZ22EHE 22-inch Full HD IPS Eye Care Monitor",
     "price": "14600",
-    "brand":"Asus",
+    "Brand":"Asus",
     "model":"VZ22EHE",
     "Panel":"IPS",
     "ScreenSize":"21.45 inch",
@@ -18,7 +18,7 @@
 {
     "name":"ASUS TUF Gaming VG246H1A 24 inch 100Hz IPS Full HD Gaming Monitor",
     "price": "23000",
-    "brand":"Asus",
+    "Brand":"Asus",
     "model":"TUF Gaming VG246H1A",
     "Panel":"IPS",
     "ScreenSize":"24 inch",
@@ -33,7 +33,7 @@
 {
     "name":"HP M22f 21.5 Inch FHD IPS Monitor",
     "price": "14800",
-    "brand":"HP",
+    "Brand":"HP",
     "model":"M22f",
     "Panel":"IPS",
     "ScreenSize":"21.5 inch",
@@ -47,7 +47,7 @@
 {
     "name":"HP M24fw 23.8 inch FHD IPS Monitor",
     "price": "22500",
-    "brand":"HP",
+    "Brand":"HP",
     "model":"M24fw",
     "Panel":"IPS",
     "ScreenSize":"23.8 inch",
@@ -62,7 +62,7 @@
 {
     "name":"MSI PRO MP223 21.45 inch Full HD Business Monitor",
     "price": "10200",
-    "brand":"MSI",
+    "Brand":"MSI",
     "model":"PRO MP223",
     "Panel":"VA",
     "ScreenSize":"21.45 inch",
@@ -76,7 +76,7 @@
 {
     "name":"MSI G24C4 E2 23.6 inch 180Hz FHD Gaming Monitor",
     "price": "22900",
-    "brand":"MSI",
+    "Brand":"MSI",
     "model":"G24C4 E2",
     "Panel":"VA",
     "ScreenSize":"23.6 inch",
@@ -91,7 +91,7 @@
 {
     "name":"Xiaomi Redmi RMMNT27NQ 27-inch 2K IPS Monitor",
     "price": "19500",
-    "brand":"Xiaomi",
+    "Brand":"Xiaomi",
     "model":"RMMNT27NQ",
     "Panel":"IPS",
     "ScreenSize":"27-inch",
@@ -105,7 +105,7 @@
 {
     "name":"Xiaomi Redmi Display X27GQ 165Hz QHD Gaming Monitor",
     "price": "33500",
-    "brand":"Xiaomi",
+    "Brand":"Xiaomi",
     "model":"X27GQ",
     "Panel":"IPS",
     "ScreenSize":"27 Inch",
@@ -122,7 +122,7 @@
 {
     "name":"ASUS VZ22EHE 22-inch Full HD IPS Eye Care Monitor",
     "price": "14700",
-    "brand":"Asus",
+    "Brand":"Asus",
     "model":"VZ22EHE",
     "Panel":"IPS",
     "ScreenSize":"21.45 inch",
@@ -136,7 +136,7 @@
 {
     "name":"ASUS TUF Gaming VG246H1A 24 inch 100Hz IPS Full HD Gaming Monitor",
     "price": "23200",
-    "brand":"Asus",
+    "Brand":"Asus",
     "model":"TUF Gaming VG246H1A",
     "Panel":"IPS",
     "ScreenSize":"24 inch",
@@ -151,7 +151,7 @@
 {   
     "name":"HP M22f 21.5 Inch FHD IPS Monitor",
     "price": "15950",
-    "brand":"HP",
+    "Brand":"HP",
     "model":"M22f",
     "Panel":"IPS",
     "ScreenSize":"21.5 Inch",
@@ -165,7 +165,7 @@
 {   
     "name":"HP M24fw 23.8 inch FHD IPS Monitor",
     "price": "22500",
-    "brand":"HP",
+    "Brand":"HP",
     "model":"M24fw",
     "Panel":"IPS",
     "ScreenSize":"23.8 Inch",
@@ -180,7 +180,7 @@
 {
     "name":"MSI PRO MP223 21.45 inch Full HD Business Monitor",
     "price": "10200",
-    "brand":"MSI",
+    "Brand":"MSI",
     "model":"PRO MP223",
     "Panel":"VA",
     "ScreenSize":"21.45 inch",
@@ -194,7 +194,7 @@
 {
     "name":"MSI G24C4 E2 23.6 inch 180Hz FHD Gaming Monitor",
     "price": "22900",
-    "brand":"MSI",
+    "Brand":"MSI",
     "model":"G24C4 E2",
     "Panel":"VA",
     "ScreenSize":"23.6 inch",
@@ -209,7 +209,7 @@
 {
     "name":"Xiaomi Redmi RMMNT27NQ 27-inch 2K IPS Monitor",
     "price": "20000",
-    "brand":"Xiaomi",
+    "Brand":"Xiaomi",
     "model":"RMMNT27NQ",
     "Panel":"IPS",
     "ScreenSize":"27-inch",
@@ -223,7 +223,7 @@
 {
     "name":"Xiaomi Redmi Display X27GQ 165Hz QHD Gaming Monitor",
     "price": "36350",
-    "brand":"Xiaomi",
+    "Brand":"Xiaomi",
     "model":"X27GQ",
     "Panel":"IPS",
     "ScreenSize":"27 Inch",
@@ -239,7 +239,7 @@
 {
     "name":"ASUS VZ22EHE 22-inch Full HD IPS Eye Care Monitor",
     "price": "14500",
-    "brand":"Asus",
+    "Brand":"Asus",
     "model":"model: VZ22EHE",
     "Panel":"IPS",
     "ScreenSize":"21.45 inch",
@@ -253,7 +253,7 @@
 {
     "name":"ASUS TUF Gaming VG246H1A 24 inch 100Hz IPS Full HD Gaming Monitor",
     "price": "22800",
-    "brand":"Asus",
+    "Brand":"Asus",
     "model":"TUF Gaming VG246H1A",
     "Panel":"IPS",
     "ScreenSize":"24 inch",
@@ -268,7 +268,7 @@
 {
     "name":"HP M22f 21.5 Inch FHD IPS Monitor",
     "price": "14500",
-    "brand":"HP",
+    "Brand":"HP",
     "model":"M22f",
     "Panel":"IPS",
     "ScreenSize":"21.5 inch",
@@ -282,7 +282,7 @@
 {
     "name":"HP M24fw 23.8 inch FHD IPS Monitor",
     "price": "22500",
-    "brand":"HP",
+    "Brand":"HP",
     "model":"M24fw",
     "Panel":"IPS",
     "ScreenSize":"23.8 inch",
@@ -297,7 +297,7 @@
 {
     "name":"MSI PRO MP223 21.45 inch Full HD Business Monitor",
     "price": "10200",
-    "brand":"MSI",
+    "Brand":"MSI",
     "model":"PRO MP223",
     "Panel":"VA",
     "ScreenSize":"21.45 inch",
@@ -311,7 +311,7 @@
 {
     "name":"MSI G24C4 E2 23.6 inch 180Hz FHD Gaming Monitor",
     "price": "22900",
-    "brand":"MSI",
+    "Brand":"MSI",
     "model":"G24C4 E2",
     "Panel":"VA",
     "ScreenSize":"23.6 inch",
@@ -326,7 +326,7 @@
 {
     "name":"Xiaomi Redmi RMMNT27NQ 27-inch 2K IPS Monitor",
     "price": "19500",
-    "brand":"Xiaomi",
+    "Brand":"Xiaomi",
     "model":"RMMNT27NQ",
     "Panel":"IPS",
     "ScreenSize":"27-inch",
@@ -340,7 +340,7 @@
 {
     "name":"Xiaomi Redmi Display X27GQ 165Hz QHD Gaming Monitor",
     "price": "33500",
-    "brand":"Xiaomi",
+    "Brand":"Xiaomi",
     "model":"X27GQ",
     "Panel":"IPS",
     "ScreenSize":"27 Inch",
@@ -357,7 +357,7 @@
 {
     "name":"ASUS VZ22EHE 22-inch Full HD IPS Eye Care Monitor",
     "price": "16000",
-    "brand":"Asus",
+    "Brand":"Asus",
     "model":"VZ22EHE",
     "Panel":"IPS",
     "ScreenSize":"21.45 inch",
@@ -371,7 +371,7 @@
 {
     "name":"ASUS TUF Gaming VG246H1A 24 inch 100Hz IPS Full HD Gaming Monitor",
     "price": "25000",
-    "brand":"Asus",
+    "Brand":"Asus",
     "model":"TUF Gaming VG246H1A",
     "Panel":"IPS",
     "ScreenSize":"24 inch",
@@ -386,7 +386,7 @@
 {
     "name":"HP M22f 21.5 Inch FHD IPS Monitor",
     "price": "14800",
-    "brand":"HP",
+    "Brand":"HP",
     "model":"M22f",
     "Panel":"IPS",
     "ScreenSize":"21.5 inch",
@@ -400,7 +400,7 @@
 {
     "name":"HP M24fw 23.8 inch FHD IPS Monitor",
     "price": "22800",
-    "brand":"HP",
+    "Brand":"HP",
     "model":"M24fw",
     "Panel":"IPS",
     "ScreenSize":"23.8 inch",
@@ -415,7 +415,7 @@
 {
     "name":"MSI PRO MP223 21.45 inch Full HD Business Monitor",
     "price": "10200",
-    "brand":"MSI",
+    "Brand":"MSI",
     "model":"PRO MP223",
     "Panel":"VA",
     "ScreenSize":"21.45 inch",
@@ -429,7 +429,7 @@
 {
     "name":"MSI G24C4 E2 23.6 inch 180Hz FHD Gaming Monitor",
     "price": "22900",
-    "brand":"MSI",
+    "Brand":"MSI",
     "model":"G24C4 E2",
     "Panel":"VA",
     "ScreenSize":"23.6 inch",
@@ -444,7 +444,7 @@
 {
     "name":"Xiaomi Redmi RMMNT27NQ 27-inch 2K IPS Monitor",
     "price": "19500",
-    "brand":"Xiaomi",
+    "Brand":"Xiaomi",
     "model":"RMMNT27NQ",
     "Panel":"IPS",
     "ScreenSize":"27-inch",
@@ -458,7 +458,7 @@
 {
     "name":"Xiaomi Redmi Display X27GQ 165Hz QHD Gaming Monitor",
     "price": "33500",
-    "brand":"Xiaomi",
+    "Brand":"Xiaomi",
     "model":"X27GQ",
     "Panel":"IPS",
     "ScreenSize":"27 Inch",

@@ -18,6 +18,7 @@ import UseCart from "../Hooks/UseCart";
 import useUsers from "../Hooks/useUsers";
 import UseAuth from "../Hooks/UseAuth";
 import FilterFramesOutlinedIcon from "@mui/icons-material/FilterFramesOutlined";
+import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
 
 const Dashboard = () => {
   const [cart] = UseCart();
@@ -50,16 +51,114 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/addItem">
-                  {" "}
-                  <FaUtensils></FaUtensils> Add an Item
+                <NavLink to="/dashboard/manageProducts">
+                  <FaWallet />
+                  Manage Products
                 </NavLink>
               </li>
+
               <li>
-                <NavLink to="/dashboard/manageItem">
-                  <FaWallet></FaWallet> Manage Items
-                </NavLink>
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
+                    <span>
+                      <CreateNewFolderIcon /> Create Product
+                    </span>
+                  </summary>
+
+                  <ul className="mt-2 space-y-1 px-4">
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/cpu"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Cpu
+                      </NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/motherboard"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Motherboard
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/cpucooler"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Cpu Cooler
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/monitor"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Monitor
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/storage"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Storage
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/gpu"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Gpu
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/psu"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        PSU
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/mice"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Mice
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/casingcooler"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Casing Cooler
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/keyboard"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Keyboard
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/createProducts/ups"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Ups
+                      </NavLink>
+                    </li>
+                  </ul>
+                </details>
               </li>
+
               <li>
                 <NavLink to="/">
                   <FaBook></FaBook> Manage Bookings(not implemented)
@@ -69,7 +168,9 @@ const Dashboard = () => {
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <FaCalendarWeek />
-                    <span className="text-sm font-medium mr-28">Orders Details </span>
+                    <span className="text-sm font-medium mr-28">
+                      Orders Details{" "}
+                    </span>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4">
@@ -123,7 +224,8 @@ const Dashboard = () => {
               </li>
               <li>
                 <NavLink to={`/dashboard/orderHistory/${user?.email}`}>
-                  <FaCalendarAlt />Orders History
+                  <FaCalendarAlt />
+                  Orders History
                 </NavLink>
               </li>
               <li>

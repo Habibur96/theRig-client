@@ -200,7 +200,7 @@ const CheckoutForm = ({ email }) => {
                 </label>
 
                 <textarea
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                  className="w-full textarea textarea-bordered rounded-lg border-gray-200 p-3 text-sm"
                   placeholder="Message"
                   rows="8"
                   id="message"

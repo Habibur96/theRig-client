@@ -10,8 +10,11 @@
     "warranty": "3y",
     "price": "6990",
     "category": "cpu",
-    "type": "Intel",
-    "shoplogo": ""
+    "type": "intel",
+    "shoplogo": "",
+    "Brand":"",
+    "model":""
+
   },
   {
     "img": "https://www.startech.com.bd/image/cache/catalog/processor/AMD/athlon-3000g/athlon-3000g-1-500x500.jpg",

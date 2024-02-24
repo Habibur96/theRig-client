@@ -25,7 +25,7 @@ const CreateCpu = () => {
           const {
             name,
             price,
-            Details,
+            details,
             category,
             coreCount,
             performanceCoreCount,
@@ -35,15 +35,18 @@ const CreateCpu = () => {
             warranty,
             type,
             shoplogo,
-
             model,
+            couponsCode,
+            couponsDiscount,
+            startDate,
+            endDate,
           } = data;
           const newItem = {
             name,
             price: parseFloat(price),
             img: imgURL,
             category,
-            Details,
+            details,
             coreCount,
             performanceCoreCount,
             performanceBoostClock,
@@ -52,8 +55,11 @@ const CreateCpu = () => {
             warranty,
             type,
             shoplogo,
-
             model,
+            couponsCode,
+            couponsDiscount,
+            startDate,
+            endDate,
           };
 
           console.log(newItem);
@@ -266,6 +272,65 @@ const CreateCpu = () => {
           </div>
         </div>
 
+        <div className="flex">
+          <div className=" w-full ml-4">
+            <label className="label">
+              <span className="label-text">Coupons Code</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Coupons Code"
+              {...register("couponsCode", {
+                required: true,
+                maxLength: 15,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+
+          <div className=" w-full  ml-4">
+            <label className="label">
+              <span className="label-text">Discount</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Discount"
+              {...register("couponsDiscount", {
+                required: true,
+                maxLength: 15,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+
+          <div className="form-control mr-3 ml-4">
+            <label className="label">
+              <span className="label-text">Start Date</span>
+            </label>
+            <input
+              type="date"
+              name="date"
+              {...register("startDate", {
+                maxLength: 20,
+              })}
+              className="input input-bordered"
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">End Date</span>
+            </label>
+            <input
+              type="date"
+              name="date"
+              {...register("endDate", {
+                maxLength: 20,
+              })}
+              className="input input-bordered"
+            />
+          </div>
+        </div>
+
         <div className=" w-full">
           <label className="label">
             <span className="label-text">Product Details*</span>
@@ -273,17 +338,17 @@ const CreateCpu = () => {
           <textarea
             className="w-75 textarea textarea-bordered h-36"
             placeholder="Product Details"
-            {...register("Details", {
+            {...register("details", {
               // required: true,
-              maxLength: 550,
+              maxLength: 600,
             })}
           ></textarea>
         </div>
-        
-          <button className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-3 mb-5">
-            Add Item
-          </button>
-          
+
+        <button className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-3 mb-5">
+          Add Item
+        </button>
+
         {/* <input className="btn btn-sm mt-4" type="submit" value="Add Item" /> */}
       </form>
     </div>

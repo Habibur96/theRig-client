@@ -32,6 +32,7 @@ const SignUp = () => {
             name: data.name,
             email: data.email,
             phone: data.phone,
+            starpoints: '0'
           };
           console.log(saveUser);
           fetch("http://localhost:3000/users", {

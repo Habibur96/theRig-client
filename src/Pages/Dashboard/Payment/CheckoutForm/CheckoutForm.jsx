@@ -4,10 +4,11 @@ import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import { useNavigate } from "react-router-dom";
 import UseCart from "../../../../Hooks/UseCart";
 import useUsers from "../../../../Hooks/useUsers";
-
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import { Form } from "react-bootstrap";
+import { useQuery } from "@tanstack/react-query";
+import StarsIcon from "@mui/icons-material/Stars";
 
 const CheckoutForm = ({ email }) => {
   const {
@@ -18,20 +19,137 @@ const CheckoutForm = ({ email }) => {
   } = useForm();
 
   const [user] = useUsers();
-  const userInfo = user.filter((item) => item.email === email);
-  console.log(userInfo[0]?.name)
-
+  console.log(email);
   const stripe = useStripe();
   const elements = useElements();
   const [error, setError] = useState("");
   const [axiosSecure] = useAxiosSecure();
   const [clientSecret, setClientSecret] = useState("");
   const [transactionid, setTransactionid] = useState("");
+  const [point, setPoint] = useState("");
+  const [cart, refetch] = UseCart();
   const navigate = useNavigate();
 
-  const [cart, refetch] = UseCart();
-  const totalPrice = cart.reduce((sum, item) => sum + parseInt(item.price), 0);
+  const userInfo = user.filter((item) => item.email === email);
+  console.log(userInfo);
 
+  // const { data: payments = [] } = useQuery({
+  //   queryKey: ["payments", userInfo[0]?.email],
+  //   queryFn: async () => {
+  //     const res = await axiosSecure.get(`/payments/${userInfo[0]?.email}`);
+  //     console.log(res.data);
+  //     return res.data;
+  //   },
+  // });
+
+  const totalPrice = cart.reduce((sum, item) => sum + parseInt(item.price), 0);
+  console.log(totalPrice);
+  console.log(userInfo[0]?.starpoints);
+
+
+  let points, balancePoints, devidedPoints;
+  if (userInfo[0]?.starpoints > 0) {
+    console.log(totalPrice);
+    console.log(userInfo[0]?.starpoints);
+
+    console.log(totalPrice);
+
+    points = Math.round((totalPrice * 10) / 1000);
+    console.log(points);
+
+    if (points >= totalPrice) {
+      devidedPoints = Math.round((points * 30) / 100);
+      console.log(devidedPoints);
+    } else {
+      devidedPoints = Math.round((points * 70) / 100);
+      console.log(devidedPoints);
+    }
+    console.log(points);
+    // useEffect(() => {
+    const res = axiosSecure
+      .patch(`/users/${userInfo[0]?._id}`, { points })
+      .then((res) => {
+        console.log("Star Points updated", res.data);
+        if (res?.data?.modifiedCount > 0) {
+          refetch();
+        }
+      });
+  } else if (userInfo[0]?.starpoints == 0) {
+    console.log("No");
+
+    if (totalPrice >= 1000) {
+      console.log(totalPrice);
+
+      points = Math.round((totalPrice * 9) / 1000);
+      console.log(points);
+      // useEffect(() => {
+      const res = axiosSecure
+        .patch(`/users/${userInfo[0]?._id}`, { points })
+        .then((res) => {
+          console.log("Star Points updated", res.data);
+          if (res?.data?.modifiedCount > 0) {
+            refetch();
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Starpoints added",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        });
+      // }, [userInfo[0]?._id]);
+    }
+  }
+
+  const handleStarPoints = () => {
+    console.log(point);
+    console.log(devidedPoints);
+    if (point > devidedPoints) {
+      Swal.fire({
+        title: `You are not allowed to more than ${devidedPoints} points`,
+        showClass: {
+          popup: `
+        animate__animated
+        animate__fadeInUp
+        animate__faster
+      `,
+        },
+        hideClass: {
+          popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `,
+        },
+      });
+    } else {
+      balancePoints = points - devidedPoints;
+      console.log(balancePoints);
+
+      const res = axiosSecure
+        .patch(`/users/${userInfo[0]?._id}`, { balancePoints })
+        .then((res) => {
+          console.log("Star Points updated", res.data);
+          if (res?.data?.modifiedCount > 0) {
+            console.log(res.data);
+            refetch();
+          }
+        });
+    }
+  };
+
+  const handleChange = (event) => {
+    console.log(event.target.value);
+    setPoint(event.target.value);
+  };
+
+  console.log(userInfo[0]?.starpoints);
+
+  // if(totalPrice >= 1000){
+
+  // }
+  console.log(totalPrice);
   useEffect(() => {
     if (totalPrice > 0) {
       axiosSecure
@@ -87,7 +205,7 @@ const CheckoutForm = ({ email }) => {
           const payment = {
             email,
             name: userInfo[0]?.name,
-            phone:userInfo[0]?.phone,
+            phone: userInfo[0]?.phone,
             address,
             price: totalPrice,
             transactionId: paymentIntent.id,
@@ -124,6 +242,18 @@ const CheckoutForm = ({ email }) => {
 
   return (
     <div className="">
+      <div className="flex ml-16">
+        <input
+          onChange={handleChange}
+          type="text"
+          placeholder={`Points to use (Max ${devidedPoints})`}
+          className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
+        />
+        <button onClick={handleStarPoints} className="btn btn-secondary">
+          Apply
+        </button>
+      </div>
+
       <Form
         onSubmit={handleSubmit(onSubmit)}
         action=""
@@ -211,6 +341,8 @@ const CheckoutForm = ({ email }) => {
           </div>
         </div>
         <div className="flex-[2] bg-red-300 rounded-lg px-4 py-16">
+          <h1 className="mb-4">Total Price : {totalPrice}</h1>
+          {/* <h1>{points} </h1> */}
           <CardElement
             options={{
               style: {
@@ -228,6 +360,7 @@ const CheckoutForm = ({ email }) => {
             }}
           />
           <button
+            onChange={handleChange}
             className="btn btn-sm btn-primary my-4"
             type="submit"
             disabled={!stripe || !clientSecret}
@@ -240,6 +373,11 @@ const CheckoutForm = ({ email }) => {
               Your transaction id: {transactionid}
             </p>
           )}
+
+          <p>
+            Earn Star Points and use on your next order <StarsIcon />
+            {userInfo[0]?.starpoints} Star Points
+          </p>
         </div>
       </Form>
     </div>

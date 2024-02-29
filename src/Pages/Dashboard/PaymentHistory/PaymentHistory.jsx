@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 
 const PaymentHistory = () => {
   const [user] = useUsers();
+  console.log(user)
   const { email } = useParams();
 
   const userInfo = user.filter((item) => item.email === email);

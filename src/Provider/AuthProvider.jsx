@@ -13,6 +13,7 @@ import {
   deleteUser,
 } from "firebase/auth";
 
+
 import { app } from "../firebase/firebase.config";
 import axios from "axios";
 
@@ -114,6 +115,7 @@ const AuthProvider = ({ children }) => {
     mailVarify,
     resetPassword,
     deleteCreatedUser,
+  
   };
   return (
     <div>

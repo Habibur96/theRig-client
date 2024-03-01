@@ -35,7 +35,7 @@ const Cpu = () => {
         <CpuFilter></CpuFilter>
       </div>
 
-      <div className="flex-[4] mr-5 ">
+      <div className="flex-[4] mr-5">
         <div className="overflow-x-auto ">
           <ScrollToTop
             smooth
@@ -48,7 +48,7 @@ const Cpu = () => {
           <h3 className="text-2xl font-semibold">
             {cpu.length} Compatible Products
           </h3>
-          <table className="table ">
+          <table className="table">
             {/* head */}
 
             <thead>

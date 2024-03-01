@@ -45,6 +45,7 @@ import CreateCasingCooler from "../Pages/Dashboard/CreateItem/CreateCasingCooler
 import CreateCpucooler from "../Pages/Dashboard/CreateItem/CreateCpucooler";
 import CreateUps from "../Pages/Dashboard/CreateItem/CreateUps";
 import CreateMice from "../Pages/Dashboard/CreateItem/CreateMice";
+import Guides from "../Pages/Home/Guides/Guides";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -75,6 +76,10 @@ export const router = createBrowserRouter([
       {
         path: "pcbuild/:_id",
         element: <Pcbuild></Pcbuild>,
+      },
+      {
+        path: "guides",
+        element: <Guides></Guides>,
       },
       // {
       //   path: "replaceProduct/:_id",
@@ -239,7 +244,7 @@ export const router = createBrowserRouter([
         path: "createProducts/motherboard",
         element: (
           <AdminRoute>
-         <CreateMotherboard/>
+            <CreateMotherboard />
           </AdminRoute>
         ),
       },

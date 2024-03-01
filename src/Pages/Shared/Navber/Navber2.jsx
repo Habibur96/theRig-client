@@ -200,8 +200,10 @@ const Navber2 = () => {
                         </Link>{" "}
                       </li>{" "}
                       <li className="mt-3  bg-green-500">
-                        <DescriptionTwoToneIcon />
-                        Guides{" "}
+                        <Link to="guides">
+                          <DescriptionTwoToneIcon />
+                          Guides{" "}
+                        </Link>
                       </li>
                     </ul>
                   </div>

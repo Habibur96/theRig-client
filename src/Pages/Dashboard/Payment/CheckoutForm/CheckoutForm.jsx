@@ -46,14 +46,15 @@ const CheckoutForm = ({ email }) => {
   console.log(totalPrice);
   console.log(userInfo[0]?.starpoints);
 
-
   let points, balancePoints, devidedPoints;
+  
   if (userInfo[0]?.starpoints > 0) {
     console.log(totalPrice);
     console.log(userInfo[0]?.starpoints);
 
     console.log(totalPrice);
-
+    console.log(balancePoints);
+    points = balancePoints;
     points = Math.round((totalPrice * 10) / 1000);
     console.log(points);
 
@@ -72,15 +73,22 @@ const CheckoutForm = ({ email }) => {
         console.log("Star Points updated", res.data);
         if (res?.data?.modifiedCount > 0) {
           refetch();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Starpoints added from again",
+            showConfirmButton: false,
+            timer: 2000,
+          });
         }
       });
-  } else if (userInfo[0]?.starpoints == 0) {
+  } else {
     console.log("No");
 
     if (totalPrice >= 1000) {
       console.log(totalPrice);
 
-      points = Math.round((totalPrice * 9) / 1000);
+      points = Math.round((totalPrice * 10) / 1000);
       console.log(points);
       // useEffect(() => {
       const res = axiosSecure
@@ -134,6 +142,13 @@ const CheckoutForm = ({ email }) => {
           if (res?.data?.modifiedCount > 0) {
             console.log(res.data);
             refetch();
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Starpoints added from handler",
+              showConfirmButton: false,
+              timer: 2000,
+            });
           }
         });
     }

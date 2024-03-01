@@ -36,7 +36,7 @@ const Dashboard = () => {
         <Outlet></Outlet>
       </div>
 
-      <div className="drawer-side bg-[#AAE3E2]  font-semibold">
+      <div className="drawer-side bg-[#00b16a] font-semibold">
         {/* <div>
         <img src={theRig} width="250" height="200" className="pl-20" alt="" />
       </div> */}
@@ -65,11 +65,11 @@ const Dashboard = () => {
                     </span>
                   </summary>
 
-                  <ul className="mt-2 space-y-1 px-4">
+                  <ul className="mt-2 space-y-1 px-4 text-black">
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/cpu"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Cpu
                       </NavLink>
@@ -78,7 +78,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/motherboard"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
                       >
                         Motherboard
                       </NavLink>
@@ -86,7 +86,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/cpucooler"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Cpu Cooler
                       </NavLink>
@@ -94,7 +94,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/monitor"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
                       >
                         Monitor
                       </NavLink>
@@ -102,7 +102,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/storage"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Storage
                       </NavLink>
@@ -110,7 +110,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/gpu"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Gpu
                       </NavLink>
@@ -118,7 +118,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/psu"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         PSU
                       </NavLink>
@@ -126,7 +126,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/mice"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Mice
                       </NavLink>
@@ -134,7 +134,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/casingcooler"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Casing Cooler
                       </NavLink>
@@ -142,7 +142,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/keyboard"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Keyboard
                       </NavLink>
@@ -150,7 +150,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/createProducts/ups"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-900"
                       >
                         Ups
                       </NavLink>

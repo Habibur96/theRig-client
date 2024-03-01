@@ -117,7 +117,7 @@ const ManageProducts = () => {
       </div>
 
       <table className="table">
-        <thead className="ltr:text-left rtl:text-right bg-[#65B741] h-14">
+        <thead className="ltr:text-left rtl:text-right h-14">
           <tr>
             <th className="pl-3 px-4">#</th>
             <th className="whitespace-nowrap px-2 py-2  text-gray-900">
@@ -131,7 +131,7 @@ const ManageProducts = () => {
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-gray-300">
+        <tbody className="divide-y divide-gray-300  ">
           {productArray.map((item, index) => (
             <tr className="" key={item._id}>
               <th className="pl-3 px-4">{index + 1}</th>

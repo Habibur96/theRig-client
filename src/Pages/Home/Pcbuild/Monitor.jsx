@@ -94,7 +94,7 @@ const Monitor = () => {
 
                   <td className="text-right">{item.price}tk</td>
                   <td>
-                    <button className="btn btn-sm btn-success ">Add</button>
+                    <button className="btn btn-sm btn-success " style={{textTransform:"capitalize"}}>Add</button>
                   </td>
                 </tr>
               ))}

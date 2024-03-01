@@ -134,7 +134,12 @@ const Navber = () => {
 
           <div className="hidden lg:ml-8 lg:flex">
             <Link to="pcbuild">
-              <button className="btn btn-secondary">Pc Builder</button>
+              <button
+                className="btn btn-secondary"
+                style={{ textTransform: "capitalize" }}
+              >
+                Pc Builder
+              </button>
             </Link>
           </div>
 

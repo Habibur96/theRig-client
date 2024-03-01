@@ -46,6 +46,7 @@ import CreateCpucooler from "../Pages/Dashboard/CreateItem/CreateCpucooler";
 import CreateUps from "../Pages/Dashboard/CreateItem/CreateUps";
 import CreateMice from "../Pages/Dashboard/CreateItem/CreateMice";
 import Guides from "../Pages/Home/Guides/Guides";
+import WishList from "../Pages/Profile/WishList";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -80,6 +81,11 @@ export const router = createBrowserRouter([
       {
         path: "guides",
         element: <Guides></Guides>,
+      },
+
+      {
+        path: "userProfile/wishlist",
+        element: <WishList></WishList>,
       },
       // {
       //   path: "replaceProduct/:_id",

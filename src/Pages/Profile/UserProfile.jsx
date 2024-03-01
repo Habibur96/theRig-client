@@ -39,7 +39,7 @@ const UserProfile = () => {
       <div className="max-w-screen-lg mx-auto mt-10">
         <ProfileNavber></ProfileNavber>
       </div>
-    
+
       {/* <div
          style={{ height: '1.75px' }}
         className="divider max-w-screen-md mx-auto mt-4 bg-red-500 "
@@ -91,12 +91,14 @@ const UserProfile = () => {
         <Container className="flex gap-5 mt-5">
           <Row className="">
             <Col className="">
-              <div className="stack">
-                <div className="text-bold pt-14 shadow-md w-36 h-40 card bg-green-300">
-                  <FavoriteBorderOutlinedIcon className="icon ml-14"></FavoriteBorderOutlinedIcon>
-                  <div className="text-center font-bold">Wish List</div>
+              <Link to="userProfile/wishlist">
+                <div className="stack">
+                  <div className="text-bold pt-14 shadow-md w-36 h-40 card bg-green-300">
+                    <FavoriteBorderOutlinedIcon className="icon ml-14"></FavoriteBorderOutlinedIcon>
+                    <div className="text-center font-bold">Wish List</div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </Col>
           </Row>
 

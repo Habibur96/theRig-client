@@ -47,7 +47,7 @@ const CheckoutForm = ({ email }) => {
   console.log(userInfo[0]?.starpoints);
 
   let points, balancePoints, devidedPoints;
-  
+
   if (userInfo[0]?.starpoints > 0) {
     console.log(totalPrice);
     console.log(userInfo[0]?.starpoints);
@@ -264,7 +264,11 @@ const CheckoutForm = ({ email }) => {
           placeholder={`Points to use (Max ${devidedPoints})`}
           className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
         />
-        <button onClick={handleStarPoints} className="btn btn-secondary">
+        <button
+          onClick={handleStarPoints}
+          className="btn btn-secondary"
+          style={{ textTransform: "capitalize" }}
+        >
           Apply
         </button>
       </div>
@@ -377,6 +381,7 @@ const CheckoutForm = ({ email }) => {
           <button
             onChange={handleChange}
             className="btn btn-sm btn-primary my-4"
+            style={{ textTransform: "capitalize" }}
             type="submit"
             disabled={!stripe || !clientSecret}
           >

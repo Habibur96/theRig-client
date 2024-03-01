@@ -15,10 +15,12 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { CartContext } from "../../../Provider/CartProvider";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
   const { quantities, updateQuantity } = useContext(CartContext);
+  const [axiosSecure] = useAxiosSecure();
   const [, refetch] = UseCart();
   const location = useLocation();
   const navigate = useNavigate();
@@ -77,7 +79,7 @@ const AvailableProduct = () => {
         model: item?.model,
         name: item?.name,
         img: item?.img,
-        shoplogo:item?.shoplogo,
+        shoplogo: item?.shoplogo,
         price: item?.price,
       };
 
@@ -121,15 +123,38 @@ const AvailableProduct = () => {
     }
   };
 
+  const handleWishList = async (item) => {
+    console.log(item);
+    const wishlistItem = {
+      productId: item?._id,
+      email: user?.email,
+      productName: item?.name,
+      productImg: item?.img,
+      shoplogo: item?.shoplogo,
+      price: item.price,
+    };
+    console.log(wishlistItem);
+    const res = await axiosSecure.post(`/wishlist`, { wishlistItem });
+    console.log(res.data);
+    if (res.data?.insertedId) {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Added to the wishlist",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
+  };
+
   return (
     <Container className="mt-5  ">
       <Row>
         <div className="flex column-gap-2">
           <div className="flex-[1] ">
-           
-             <Card className="bg-base-100 shadow-xl" style={{ width: "22rem" }}>
+            <Card className="bg-base-100 shadow-xl" style={{ width: "22rem" }}>
               <button
-                className="" 
+                className=""
                 onClick={() =>
                   document.getElementById("my_modal_3").showModal()
                 }
@@ -230,17 +255,44 @@ const AvailableProduct = () => {
                           <Link
                             onClick={() => pcbuilderCartGet(item)}
                             to={`/pcbuild/${item._id}`}
-                            className="btn btn-sm btn-success "
+                            className="btn btn-sm btn-success"
+                            style={{ textTransform: "capitalize" }}
                           >
                             Add
                           </Link>
                         ) : (
-                          <button
-                            onClick={() => handleCart(item, index)}
-                            className="btn btn-sm btn-success "
-                          >
-                            Add
-                          </button>
+                          <>
+                            <button
+                              onClick={() => handleCart(item, index)}
+                              className="btn btn-sm btn-success "
+                              style={{ textTransform: "capitalize" }}
+                            >
+                              Add
+                            </button>
+
+                            <button
+                              onClick={() => handleWishList(item)}
+                              className="btn ml-2 bg-[#7FA99B]"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6"
+                                fill="#D71313"
+                                viewBox="0 0 24 24"
+                                stroke="#D71313"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                />
+                              </svg>
+                              <span style={{ textTransform: "capitalize" }}>
+                                Add Wish List
+                              </span>
+                            </button>
+                          </>
                         )}
                       </td>
                     </tr>

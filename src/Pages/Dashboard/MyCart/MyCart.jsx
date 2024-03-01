@@ -162,7 +162,7 @@ const MyCart = () => {
             className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
           />
           
-          <button className="btn btn-secondary">Apply Coupon</button>
+          <button className="btn btn-secondary"style={{textTransform:"capitalize"}}>Apply Coupon</button>
         </div>
         <div className="flex ml-16">
           <input
@@ -170,17 +170,17 @@ const MyCart = () => {
             placeholder="Enter your gift voucher code here"
             className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
           />
-          <button className="btn btn-secondary">Apply Voucher</button>
+          <button className="btn btn-secondary"style={{textTransform:"capitalize"}}>Apply Voucher</button>
         </div>
       </div>
       <div className="flex mt-5">
-        <Link to="/" className="btn btn-success mr-[902px]">
+        <Link to="/" className="btn btn-success mr-[902px]"style={{textTransform:"capitalize"}}>
           Continue Shopping
         </Link>
         <Link
           to={`/dashboard/payment/${user.email}`}
           disabled={!cart.length}
-          className="btn btn-error mr-5"
+          className="btn btn-error mr-5"style={{textTransform:"capitalize"}}
         >
           Confirm Order
         </Link>

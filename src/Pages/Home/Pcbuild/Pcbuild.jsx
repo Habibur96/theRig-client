@@ -162,7 +162,7 @@ const Pcbuild = () => {
               <th>
                 {/* /routeName/$apiName/$productCategory */}
                 <Link to="/cpus">
-                  <button className=" btn btn-outline btn-info">Choose</button>
+                  <button className=" btn btn-outline btn-info font-semibold text-lg" style={{textTransform:"capitalize"}}>Choose</button>
                 </Link>
               </th>
             </tr>
@@ -186,7 +186,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg" style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -253,7 +253,7 @@ const Pcbuild = () => {
               <th>
                 {/* /routeName/$apiName/$productCategory */}
                 <Link to="/motherboards">
-                  <button className=" btn btn-outline btn-info">Choose</button>
+                  <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
                 </Link>
               </th>
             </tr>
@@ -316,7 +316,7 @@ const Pcbuild = () => {
 
               <th>
                 <Link to="/memoryes">
-                  <button className=" btn btn-outline btn-info">Choose</button>
+                  <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
                 </Link>
               </th>
             </tr>
@@ -339,7 +339,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -361,7 +361,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -375,7 +375,7 @@ const Pcbuild = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm font-bold">Power Supply</div>
+                  <div className="text-sm font-bold font-semibold text-lg"style={{textTransform:"capitalize"}}>Power Supply</div>
                 </div>
               </div>
             </td>
@@ -383,7 +383,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -406,7 +406,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -477,7 +477,7 @@ const Pcbuild = () => {
 
               <th>
                 <Link to="/monitors">
-                  <button className=" btn btn-outline btn-info">Choose</button>
+                  <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
                 </Link>
               </th>
             </tr>
@@ -504,7 +504,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -518,7 +518,7 @@ const Pcbuild = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm font-bold">Keyboard</div>
+                  <div className="text-sm font-bold font-semibold text-lg"style={{textTransform:"capitalize"}}>Keyboard</div>
                 </div>
               </div>
             </td>
@@ -526,7 +526,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -548,7 +548,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -571,7 +571,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>
@@ -593,7 +593,7 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info">Choose</button>
+                <button className=" btn btn-outline btn-info font-semibold text-lg" style={{textTransform:"capitalize"}}>Choose</button>
               </Link>
             </th>
           </tr>

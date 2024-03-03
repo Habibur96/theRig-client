@@ -84,8 +84,20 @@ export const router = createBrowserRouter([
       },
 
       {
-        path: "userProfile/wishlist",
-        element: <WishList></WishList>,
+        path: "wishlist",
+        element: (
+          <PrivateRoute>
+            <WishList></WishList>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "wishlist/:tabName",
+        element: (
+          <PrivateRoute>
+            <WishList></WishList>
+          </PrivateRoute>
+        ),
       },
       // {
       //   path: "replaceProduct/:_id",

@@ -36,9 +36,7 @@ const UserProfile = () => {
       <div className="max-w-screen-md mx-auto mt-44">
         <ProfileHeader></ProfileHeader>
       </div>
-      <div className="max-w-screen-lg mx-auto mt-10">
-        <ProfileNavber></ProfileNavber>
-      </div>
+  
 
       {/* <div
          style={{ height: '1.75px' }}
@@ -91,7 +89,7 @@ const UserProfile = () => {
         <Container className="flex gap-5 mt-5">
           <Row className="">
             <Col className="">
-              <Link to="userProfile/wishlist">
+              <Link to="/wishlist/Saved List">
                 <div className="stack">
                   <div className="text-bold pt-14 shadow-md w-36 h-40 card bg-green-300">
                     <FavoriteBorderOutlinedIcon className="icon ml-14"></FavoriteBorderOutlinedIcon>

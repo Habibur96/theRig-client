@@ -2,16 +2,17 @@ import { useContext } from "react";
 import profile from "../../../assets/icon/user.jpg";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
-
 const ProfileHeader = () => {
   const { user } = useContext(AuthContext);
-  
   return (
     <>
       <div className="flex">
-        <div>
-          <img className="mr-10 " src={profile} alt="" />
+        <div className="avatar">
+          <div className="w-24 mr-10  rounded-full">
+            <img src={profile} />
+          </div>
         </div>
+
         <div className="font-semibold ">
           <h1 className="mb-3"> Hello, </h1>
           <h1 className="text-2xl mr-51">{user?.displayName}</h1>
@@ -24,7 +25,7 @@ const ProfileHeader = () => {
 
         <span className="h-15 w-px bg-red-500 mr-7" aria-hidden="true" />
         <div className="font-semibold  text-center">
-          <p >Store Credit</p>
+          <p>Store Credit</p>
           <h1 className="mt-3">++0</h1>
         </div>
       </div>

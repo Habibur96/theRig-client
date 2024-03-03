@@ -44,15 +44,15 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        Swal.fire({
-          title: "User Login Successful.",
-          showClass: {
-            popup: "animate__animated animate__fadeInDown",
-          },
-          hideClass: {
-            popup: "animate__animated animate__fadeOutUp",
-          },
-        });
+        // Swal.fire({
+        //   title: "User Login Successful.",
+        //   showClass: {
+        //     popup: "animate__animated animate__fadeInDown",
+        //   },
+        //   hideClass: {
+        //     popup: "animate__animated animate__fadeOutUp",
+        //   },
+        // });
         Form.reset(" ");
         navigate(from, { replace: true });
 

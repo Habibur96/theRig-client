@@ -11,14 +11,35 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import StarsIcon from "@mui/icons-material/Stars";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-
+import WishList from "../WishList";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const ProfileNavber = () => {
+  const {tabName} = useParams()
+  console.log(tabName)
+  const options = [
+    "Orders",
+    "Edit Profile",
+    "Password",
+    "Address",
+    "Saved List",
+    "Saved Pc",
+    "Star Points",
+    "Store Credit",
+  ];
+  const initialIndex = options.indexOf(tabName);
+   const [tabindex, settabIndex] = useState(initialIndex);
   return (
     <div className="font-semibold ">
-       <Tabs as={CustomLink}>
-        <TabList >
-          <Tab >
+      <Tabs
+        as={CustomLink}
+        defaultIndex={tabindex}
+        onSelect={(index) => settabIndex(index)}
+      
+      >
+        <TabList>
+          <Tab>
             <FilterFramesOutlinedIcon></FilterFramesOutlinedIcon> Orders
           </Tab>
           <Tab>
@@ -57,8 +78,9 @@ const ProfileNavber = () => {
           <h2>Any content 4</h2>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 5</h2>
-        </TabPanel>
+           {/* <WishList></WishList>  */}
+           
+           </TabPanel>
         <TabPanel>
           <h2>Any content 6</h2>
         </TabPanel>
@@ -68,9 +90,7 @@ const ProfileNavber = () => {
         <TabPanel>
           <h2>Any content 8</h2>
         </TabPanel>
-      </Tabs> 
-
-    
+      </Tabs>
     </div>
   );
 };

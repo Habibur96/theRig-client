@@ -16,12 +16,14 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { CartContext } from "../../../Provider/CartProvider";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import useWishList from "../../../Hooks/useWishList";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
   const { quantities, updateQuantity } = useContext(CartContext);
   const [axiosSecure] = useAxiosSecure();
   const [, refetch] = UseCart();
+  const [wishList] = useWishList();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -46,7 +48,7 @@ const AvailableProduct = () => {
       });
   }, []);
 
-  const pcbuilderCartGet = (item) => {
+  const pcbuilderCartGet = async (item) => {
     if (user && user.email) {
       const cartItem = {
         email: user?.email,
@@ -58,17 +60,11 @@ const AvailableProduct = () => {
         price: item?.price,
       };
 
-      fetch("http://localhost:3000/pcbuilderCart", {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cartItem),
-      });
+      const res =await axiosSecure.post(`pcbuilderCart`, cartItem);
     }
   };
 
-  const handleCart = (item, index) => {
+  const handleCart = async (item, index) => {
     updateQuantity(index, quantities[index] + 1);
 
     if (user && user.email) {
@@ -83,27 +79,18 @@ const AvailableProduct = () => {
         price: item?.price,
       };
 
-      fetch("http://localhost:3000/cart", {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cartItem),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.insertedId) {
-            refetch();
+      const res = await axiosSecure.post("cart", cartItem);
 
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "Product added to the cart",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-          }
+      if (res.data?.insertedId) {
+        refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Product added to the cart",
+          showConfirmButton: false,
+          timer: 1500,
         });
+      }
     } else {
       Swal.fire({
         title: "Please login to add product",
@@ -131,12 +118,15 @@ const AvailableProduct = () => {
       productName: item?.name,
       productImg: item?.img,
       shoplogo: item?.shoplogo,
+      category: item?.category,
+      model: item?.model,
       price: item.price,
     };
     console.log(wishlistItem);
-    const res = await axiosSecure.post(`/wishlist`, { wishlistItem });
+    const res = await axiosSecure.post(`/wishlist`, wishlistItem);
     console.log(res.data);
     if (res.data?.insertedId) {
+      refetch();
       Swal.fire({
         position: "top-end",
         icon: "success",
@@ -174,9 +164,9 @@ const AvailableProduct = () => {
                   <DotGroup />
                 </CarouselProvider>
               </button>
-              <h1 className="text-center text-fuchsia-700 font-medium">
+              {/* <h1 className="text-center text-fuchsia-700 font-medium">
                 Roll over image to zoom in or click to open expanded view
-              </h1>
+              </h1> */}
 
               <dialog id="my_modal_3" className="modal">
                 <div className="modal-box">
@@ -198,7 +188,7 @@ const AvailableProduct = () => {
                   the bulk of the cards content.
                 </Card.Text>
               </Card.Body>
-              {cartLocation ? null : (
+              {/* {cartLocation ? null : (
                 <ListGroup className="list-group-flush">
                   {user ? (
                     <Link>+Save to wish list</Link>
@@ -210,12 +200,12 @@ const AvailableProduct = () => {
                     </Link>
                   )}
                 </ListGroup>
-              )}
+              )} */}
 
-              <Card.Body>
+              {/* <Card.Body>
                 <Card.Link href="#">Card Link</Card.Link>
                 <Card.Link href="#">Another Link</Card.Link>
-              </Card.Body>
+              </Card.Body> */}
             </Card>
           </div>
           <div className="flex-[3]">
@@ -223,7 +213,7 @@ const AvailableProduct = () => {
               <table className="table ml-28 ">
                 <thead>
                   <tr>
-                    <th>Marchant</th>
+                    <th>Merchant</th>
                     <th>Name</th>
                     <th>Availability</th>
                     <th>
@@ -269,29 +259,57 @@ const AvailableProduct = () => {
                             >
                               Add
                             </button>
-
-                            <button
-                              onClick={() => handleWishList(item)}
-                              className="btn ml-2 bg-[#7FA99B]"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="#D71313"
-                                viewBox="0 0 24 24"
-                                stroke="#D71313"
+                            {user ? (
+                              <button
+                                onClick={() => handleWishList(item)}
+                                className="btn ml-4 bg-[#7FA99B]"
                               >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth="2"
-                                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                                />
-                              </svg>
-                              <span style={{ textTransform: "capitalize" }}>
-                                Add Wish List
-                              </span>
-                            </button>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-6 w-6"
+                                  fill="#D71313"
+                                  viewBox="0 0 24 24"
+                                  stroke="#D71313"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                  />
+                                </svg>
+                                <span style={{ textTransform: "capitalize" }}>
+                                  Add Wish List
+                                </span>
+                              </button>
+                            ) : (
+                              <Link
+                                to="/login"
+                                state={{ from: location }}
+                                replace
+                              >
+                                <button
+                                  className="btn btn ml-4 bg-[#7FA99B]"
+                                  style={{ textTransform: "capitalize" }}
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6"
+                                    fill="#D71313"
+                                    viewBox="0 0 24 24"
+                                    stroke="#D71313"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth="2"
+                                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                    />
+                                  </svg>
+                                  Login to save wish list
+                                </button>
+                              </Link>
+                            )}
                           </>
                         )}
                       </td>

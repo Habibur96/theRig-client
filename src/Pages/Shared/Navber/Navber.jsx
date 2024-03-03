@@ -6,6 +6,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import UseCart from "../../../Hooks/UseCart";
 import useAdmin from "../../../Hooks/useAdmin";
 import UseAuth from "../../../Hooks/UseAuth";
+import { Badge, Typography } from "@mui/material";
+import useWishList from "../../../Hooks/useWishList";
 // import theRig from '../../../assets/logo/theRig.png'
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
@@ -15,8 +17,18 @@ const Navber = () => {
   const { user, logOut } = UseAuth();
 
   const [cart] = UseCart();
+  console.log(cart.length);
+  const [wishList] = useWishList();
+
+  console.log(wishList);
+  console.log(wishList.length);
+  // console.log(wishList[0]?.wishlistItem?.email);
+  // const userInfo = wishList.filter(
+  //   (item) => item.wishlistItem?.email === email
+  // );
+
   const [isAdmin] = useAdmin();
-  // console.log(user.displayName)
+
   const navigate = useNavigate();
   const searchRef = useRef(null);
   const [search, setSearch] = useState("");
@@ -135,17 +147,22 @@ const Navber = () => {
           <div className="hidden lg:ml-8 lg:flex">
             <Link to="pcbuild">
               <button
-                className="btn btn-secondary"
+                className="btn btn-secondary mr-5"
                 style={{ textTransform: "capitalize" }}
               >
                 Pc Builder
               </button>
             </Link>
           </div>
+          <Link to="/wishlist">
+            <Badge badgeContent={wishList.length || 0} variant="solid">
+              <Typography fontSize="mg">💌</Typography>
+            </Badge>
+          </Link>
 
           {/* Cart */}
-          <div className="ml-4 flow-root lg:ml-6">
-            <Link to="dashboard/mycart" className="btn">
+          <div className="flow-root lg:ml-6">
+            <Link to="dashboard/mycart" className="btn ml-2">
               <ShoppingCartOutlinedIcon
                 className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
                 aria-hidden="true"

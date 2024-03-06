@@ -4,7 +4,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import FilterAltTwoToneIcon from "@mui/icons-material/FilterAltTwoTone";
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-import { Form } from "react-bootstrap";
+import { Form, FormCheck } from "react-bootstrap";
 import { useRef, useState } from "react";
 
 import { useQuery } from "@tanstack/react-query";
@@ -50,10 +50,10 @@ const ManageProducts = () => {
     }
   };
 
-  const onSubmit = (data, e) => {
-    e.preventDefault();
+  const onsubmit = (data) => {
     console.log(data);
-    console.log(_id);
+
+    // console.log(_id);
     const { price, couponsCode, couponsDiscount, startDate, endDate } = data;
     const newItem = {
       price: parseFloat(price),
@@ -63,20 +63,20 @@ const ManageProducts = () => {
       endDate,
     };
 
-    console.log(newItem);
-    axiosSecure.put("/cpu", newItem).then((data) => {
-      console.log("after updating", data.data);
-      if (data.data?.insertedId) {
-        reset();
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Menu item saved",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      }
-    });
+    // console.log(newItem);
+    // const res = await axiosSecure.put("/cpu", newItem);
+
+    // console.log("after updating", res.data);
+    // if (res.data?.insertedId) {
+    //   reset();
+    //   Swal.fire({
+    //     position: "top-end",
+    //     icon: "success",
+    //     title: "Menu item saved",
+    //     showConfirmButton: false,
+    //     timer: 1500,
+    //   });
+    // }
   };
   return (
     <div className="overflow-x-auto">
@@ -165,81 +165,82 @@ const ManageProducts = () => {
                   >
                     <ModeEditOutlinedIcon /> Edit
                   </button>
+
                   <dialog id="my_modal_3" className="modal">
                     <div className="modal-box ">
-                      <Form
-                        onSubmit={(e) => handleSubmit(onSubmit, e)}
-                        method="dialog"
-                      >
+                      <FormCheck method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                           ✕
                         </button>
-                        <div className="flex">
-                          <Form.Group className="w-full">
-                            <Form.Label className="label">
-                              <span className="label-text">Coupon Code</span>
-                            </Form.Label>
-                            <input
-                              type="text"
-                              placeholder="Coupon Code"
-                              className="input input-bordered w-full "
-                              {...register("couponsCode")}
-                            />
-                          </Form.Group>
-                          <Form.Group className=" w-full  ml-4 mr-4">
-                            <Form.Label className="label">
-                              <span className="label-text">Discount</span>
-                            </Form.Label>
-                            <input
-                              type="text"
-                              placeholder="Discount"
-                              className="input input-bordered w-full "
-                              {...register("couponsDiscount")}
-                            />
-                          </Form.Group>
-                          <Form.Group className="w-full">
-                            <Form.Label className="label">
-                              <span className="label-text">Price</span>
-                            </Form.Label>
-                            <input
-                              type="number"
-                              placeholder="Price"
-                              className="input input-bordered w-full "
-                              {...register("price")}
-                            />
-                          </Form.Group>
-                        </div>
-                        <div className="flex">
-                          <Form.Group className=" mr-3 ml-4">
-                            <Form.Label className="label">
-                              <span className="label-text">Start Date</span>
-                            </Form.Label>
-                            <input
-                              type="date"
-                              name="date"
-                              className="input input-bordered"
-                              {...register("startDate")}
-                            />
-                          </Form.Group>
-                          <Form.Group className="">
-                            <Form.Label className="label">
-                              <span className="label-text">End Date</span>
-                            </Form.Label>
-                            <input
-                              type="date"
-                              name="date"
-                              className="input input-bordered"
-                              {...register("endDate")}
-                            />
-                          </Form.Group>
-                        </div>
-                        <button
-                          // onClick={() => onSubmit(item._id)}
-                          className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-3 mb-5"
-                        >
-                          Update Now
-                        </button>
-                      </Form>
+                      
+                        <form onSubmit={handleSubmit(onsubmit)}>
+                          <div className="flex">
+                            <Form.Group className="w-full">
+                              <Form.Label className="label">
+                                <span className="label-text">Coupon Code</span>
+                              </Form.Label>
+                              <input
+                                type="text"
+                                placeholder="Coupon Code"
+                                className="input input-bordered w-full"
+                                {...register("couponsCode")}
+                              />
+                            </Form.Group>
+                            <Form.Group className="w-full ml-4 mr-4">
+                              <Form.Label className="label">
+                                <span className="label-text">Discount</span>
+                              </Form.Label>
+                              <input
+                                type="text"
+                                placeholder="Discount"
+                                className="input input-bordered w-full"
+                                {...register("couponsDiscount")}
+                              />
+                            </Form.Group>
+                            <Form.Group className="w-full">
+                              <Form.Label className="label">
+                                <span className="label-text">Price</span>
+                              </Form.Label>
+                              <input
+                                type="number"
+                                placeholder="Price"
+                                className="input input-bordered w-full"
+                                {...register("price")}
+                              />
+                            </Form.Group>
+                          </div>
+                          <div className="flex">
+                            <Form.Group className="mr-3 ml-4">
+                              <Form.Label className="label">
+                                <span className="label-text">Start Date</span>
+                              </Form.Label>
+                              <input
+                                type="date"
+                                name="date"
+                                className="input input-bordered"
+                                {...register("startDate")}
+                              />
+                            </Form.Group>
+                            <Form.Group className="">
+                              <Form.Label className="label">
+                                <span className="label-text">End Date</span>
+                              </Form.Label>
+                              <input
+                                type="date"
+                                name="date"
+                                className="input input-bordered"
+                                {...register("endDate")}
+                              />
+                            </Form.Group>
+                          </div>
+                          <button
+                            type="submit"
+                            className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-3 mb-5"
+                          >
+                            Update Now
+                          </button>
+                        </form>
+                      </FormCheck>
                     </div>
                   </dialog>
 

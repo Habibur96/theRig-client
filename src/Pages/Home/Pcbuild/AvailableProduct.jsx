@@ -23,7 +23,7 @@ const AvailableProduct = () => {
   const { quantities, updateQuantity } = useContext(CartContext);
   const [axiosSecure] = useAxiosSecure();
   const [, refetch] = UseCart();
-  const [wishList] = useWishList();
+  const [, wishListRefetch] = useWishList();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -80,7 +80,7 @@ const AvailableProduct = () => {
       };
 
       const res = await axiosSecure.post("cart", cartItem);
-
+      console.log(res.data);
       if (res.data?.insertedId) {
         refetch();
         Swal.fire({
@@ -126,14 +126,16 @@ const AvailableProduct = () => {
     const res = await axiosSecure.post(`/wishlist`, wishlistItem);
     console.log(res.data);
     if (res.data?.insertedId) {
-      refetch();
+      wishListRefetch();
       Swal.fire({
         position: "top-end",
         icon: "success",
         title: "Added to the wishlist",
         showConfirmButton: false,
         timer: 1500,
+
       });
+      console.log("test")
     }
   };
 

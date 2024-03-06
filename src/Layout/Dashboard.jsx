@@ -160,6 +160,35 @@ const Dashboard = () => {
               </li>
 
               <li>
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
+                    <span>
+                      <CreateNewFolderIcon /> Create Complete Build
+                    </span>
+                  </summary>
+
+                  <ul className="mt-2 space-y-1 px-4 text-black">
+                    <li>
+                      <NavLink
+                        to="/dashboard/createBuilds"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Build Guides
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to=""
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Complete Build Inventory
+                      </NavLink>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+
+              <li>
                 <NavLink to="/">
                   <FaBook></FaBook> Manage Bookings(not implemented)
                 </NavLink>

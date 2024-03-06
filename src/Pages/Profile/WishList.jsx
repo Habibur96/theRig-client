@@ -6,14 +6,14 @@ import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import UseAuth from "../../Hooks/UseAuth";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import UseCart from "../../Hooks/UseCart";
 const WishList = () => {
-  const [wishList, refetch] = useWishList();
+  const [wishList, wishListRefetch] = useWishList();
+  const [, refetch] = UseCart();
   const [axiosSecure] = useAxiosSecure();
   const { user } = UseAuth();
 
-  const userInfo = wishList.filter(
-    (item) => item.email === user?.email
-  );
+  const userInfo = wishList.filter((item) => item.email === user?.email);
 
   const handleCart = async (item) => {
     if (user && user.email) {
@@ -28,11 +28,11 @@ const WishList = () => {
         price: item?.price,
       };
 
-      const res = await axiosSecure.post("/cart",  cartItem );
+      const res = await axiosSecure.post("/cart", cartItem);
       console.log(res.data);
 
       if (res.data?.insertedId) {
-        refetch();
+      refetch();
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -64,13 +64,12 @@ const WishList = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
-    })
-    .then(async (result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await axiosSecure.delete(`/wishlist/${id}`);
         if (res?.data?.deletedCount > 0) {
           console.log(res.data);
-          refetch();
+          wishListRefetch();
           Swal.fire({
             position: "top-end",
             icon: "success",

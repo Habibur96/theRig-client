@@ -17,15 +17,13 @@ const Navber = () => {
   const { user, logOut } = UseAuth();
 
   const [cart] = UseCart();
-  console.log(cart.length);
+
   const [wishList] = useWishList();
 
-  console.log(wishList);
-  console.log(wishList.length);
-  // console.log(wishList[0]?.wishlistItem?.email);
-  // const userInfo = wishList.filter(
-  //   (item) => item.wishlistItem?.email === email
-  // );
+ console.log(wishList.length)
+  const userInfo = wishList.filter(
+    (item) => item.email === user?.email
+  );
 
   const [isAdmin] = useAdmin();
 
@@ -155,7 +153,7 @@ const Navber = () => {
             </Link>
           </div>
           <Link to="/wishlist">
-            <Badge badgeContent={wishList.length || 0} variant="solid">
+            <Badge badgeContent={userInfo.length || 0} variant="solid">
               <Typography fontSize="mg">💌</Typography>
             </Badge>
           </Link>

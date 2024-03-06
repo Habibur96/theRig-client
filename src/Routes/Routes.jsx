@@ -241,6 +241,14 @@ export const router = createBrowserRouter([
         ),
       },
       {
+        path: "createBuild",
+        element: (
+          <AdminRoute>
+            <CreateBuild></CreateBuild>
+          </AdminRoute>
+        ),
+      },
+      {
         path: "manageProducts",
         element: (
           <AdminRoute>

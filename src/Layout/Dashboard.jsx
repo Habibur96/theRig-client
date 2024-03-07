@@ -19,6 +19,7 @@ import useUsers from "../Hooks/useUsers";
 import UseAuth from "../Hooks/UseAuth";
 import FilterFramesOutlinedIcon from "@mui/icons-material/FilterFramesOutlined";
 import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
+import ImportantDevicesTwoToneIcon from '@mui/icons-material/ImportantDevicesTwoTone';
 
 const Dashboard = () => {
   const [cart] = UseCart();
@@ -163,14 +164,14 @@ const Dashboard = () => {
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <span>
-                      <CreateNewFolderIcon /> Create Complete Build
+                      <ImportantDevicesTwoToneIcon /> Create Complete Build
                     </span>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4 text-black">
                     <li>
                       <NavLink
-                        to="/dashboard/createBuilds"
+                        to="/dashboard/createBuild"
                         className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Build Guides

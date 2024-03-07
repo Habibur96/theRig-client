@@ -47,6 +47,7 @@ import CreateUps from "../Pages/Dashboard/CreateItem/CreateUps";
 import CreateMice from "../Pages/Dashboard/CreateItem/CreateMice";
 import Guides from "../Pages/Home/Guides/Guides";
 import WishList from "../Pages/Profile/WishList";
+import CreateBuild from "../Pages/Dashboard/CreateBuild";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([

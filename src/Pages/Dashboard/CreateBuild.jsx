@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
-import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import SectionTitle from "../Shared/SectionTitle/SectionTitle";
+
 const image_hosting_token = import.meta.env.VITE_Image_hosting_Token;
 const CreateBuild = () => {
   const [axiosSecure] = useAxiosSecure();
@@ -11,8 +12,7 @@ const CreateBuild = () => {
     const formData = new FormData();
     formData.append("image", data.img[0]);
     console.log(data);
-    const image = data.img[0].name;
-    // console.log(img)
+
     fetch(img_hosting_url, {
       method: "POST",
       body: formData,
@@ -23,50 +23,99 @@ const CreateBuild = () => {
           const imgURL = imgeResponse.data.display_url;
 
           const {
-            name,
-            price,
+            cpuName,
+            cpuImg,
+            cpuModel,
+            cpuPrice,
+
+            cpuCoolerName,
+            cpuCoolerImg,
+            cpuCoolerModel,
+            cpuCoolerPrice,
+
+            mbName,
+            mbImg,
+            mbModel,
+            mbPrice,
+
+            memoryName,
+            memoryImg,
+            memoryModel,
+            memoryPrice,
+
+            storageName,
+            storageImg,
+            storageModel,
+            storagePrice,
+
+            gpuName,
+            gpuImg,
+            gpuModel,
+            gpuPrice,
+
+            caseName,
+            caseImg,
+            caseModel,
+            casePrice,
+
+            psuName,
+            psuImg,
+            psuModel,
+            psuPrice,
+
             details,
-            category,
-            coreCount,
-            performanceCoreCount,
-            performanceBoostClock,
-            TDP,
-            integratedGraphics,
-            warranty,
-            type,
-            shoplogo,
-            model,
-            couponsCode,
-            couponsDiscount,
-            startDate,
-            endDate,
           } = data;
           const newItem = {
-            name,
-            price: parseFloat(price),
+            cpuName,
+            cpuImg,
+            cpuModel,
+            cpuPrice,
+
+            cpuCoolerName,
+            cpuCoolerImg,
+            cpuCoolerModel,
+            cpuCoolerPrice,
+
+            mbName,
+            mbImg,
+            mbModel,
+            mbPrice,
+
+            memoryName,
+            memoryImg,
+            memoryModel,
+            memoryPrice,
+
+            storageName,
+            storageImg,
+            storageModel,
+            storagePrice,
+
+            gpuName,
+            gpuImg,
+            gpuModel,
+            gpuPrice,
+
+            caseName,
+            caseImg,
+            caseModel,
+            casePrice,
+
+            psuName,
+            psuImg,
+            psuModel,
+            psuPrice,
+
             img: imgURL,
-            category,
+
             details,
-            coreCount,
-            performanceCoreCount,
-            performanceBoostClock,
-            TDP,
-            integratedGraphics,
-            warranty,
-            type,
-            shoplogo,
-            model,
-            couponsCode,
-            couponsDiscount,
-            startDate,
-            endDate,
           };
 
           console.log(newItem);
           axiosSecure.post("/createBuild", newItem).then((data) => {
             console.log("after posting new menu item", data.data);
             if (data.data?.insertedId) {
-              reset();
+              // reset();
               Swal.fire({
                 position: "top-end",
                 icon: "success",
@@ -80,12 +129,17 @@ const CreateBuild = () => {
       });
   };
   return (
-    <div className="max-w-screen-xl mx-auto mt-5 px-10 bg-body-secondary">
+    <div className="max-w-screen-xl mx-auto mt-5 px-10 bg-[#B8DFD8]">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <SectionTitle subHeading="What's new" heading="Add cpu"></SectionTitle>
+        <SectionTitle
+          subHeading="What's new"
+          heading="Create complete build"
+        ></SectionTitle>
 
-        <div className="flex my-4 bg-green-300">
-          <h3>Cpu</h3>
+        <h3 className="italic text-center font-bold text-2xl text-blue-700">
+          Cpu
+        </h3>
+        <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
               <span className="label-text">Name*</span>
@@ -111,7 +165,7 @@ const CreateBuild = () => {
               className="input input-bordered w-full "
             />
           </div>
-          <div className=" w-full  ml-4">
+          <div className=" w-50  ml-4">
             <label className="label">
               <span className="label-text">Model*</span>
             </label>
@@ -125,7 +179,7 @@ const CreateBuild = () => {
               className="input input-bordered w-full "
             />
           </div>
-          <div className=" w-full  ml-4">
+          <div className=" w-80  ml-4">
             <label className="label">
               <span className="label-text">Price*</span>
             </label>
@@ -140,200 +194,430 @@ const CreateBuild = () => {
             />
           </div>
         </div>
-
+        <h3 className="italic text-center font-bold text-2xl text-green-700">
+          Cpu Cooler
+        </h3>
         <div className="flex my-4">
-          <h3>Cpu Cooler</h3>
-
-          <div className=" w-full  ml-4">
+          <div className="w-full mb-4">
             <label className="label">
               <span className="label-text">Name*</span>
             </label>
             <input
               type="text"
               placeholder="name"
-              {...register("cpuCooler", { required: true, maxLength: 20 })}
+              {...register("cpuCoolerName", { required: true, maxLength: 120 })}
               className="input input-bordered w-full "
             />
           </div>
           <div className=" w-full  ml-4">
             <label className="label">
-              <span className="label-text">Price*</span>
-            </label>
-            <input
-              type="number"
-              placeholder="Price"
-              {...register("price", { required: true, maxLength: 20 })}
-              className="input input-bordered w-full "
-            />
-          </div>
-          <div className=" w-full  ml-4">
-            <label className="label">
-              <span className="label-text">Integrated Graphics*</span>
+              <span className="label-text">Image*</span>
             </label>
             <input
               type="text"
-              placeholder="Integrated Graphics"
-              {...register("integratedGraphics", {
+              placeholder="image"
+              {...register("cpuCoolerImage", {
                 required: true,
-                maxLength: 30,
+                maxLength: 120,
               })}
               className="input input-bordered w-full "
             />
           </div>
-          <div className=" w-full  ml-4">
-            <label className="label">
-              <span className="label-text">Warranty*</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Warranty"
-              {...register("warranty", {
-                required: true,
-                maxLength: 8,
-              })}
-              className="input input-bordered w-full "
-            />
-          </div>
-        </div>
-
-        <div className="flex">
-          <div className=" w-full">
-            <label className="label">
-              <span className="label-text">TDP*</span>
-            </label>
-            <input
-              type="text"
-              placeholder="TDP"
-              {...register("TDP", {
-                required: true,
-                maxLength: 10,
-              })}
-              className="input input-bordered w-full"
-            />
-          </div>
-
-          <div className="w-full">
-            <label className="label">
-              <span className="label-text ml-2.5">Type*</span>
-            </label>
-            <select
-              defaultValue="Pick One"
-              className="select select-bordered w-50 ml-3"
-              {...register("type", { required: true, maxLength: 120 })}
-            >
-              <option disabled>Type</option>
-              <option>intel</option>
-              <option>Amd</option>
-            </select>
-          </div>
-
-          <div className=" w-full  ml-4">
+          <div className=" w-50  ml-4">
             <label className="label">
               <span className="label-text">Model*</span>
             </label>
             <input
               type="text"
-              placeholder="Model"
-              {...register("model", {
+              placeholder="model"
+              {...register("cpuCoolerModel", {
                 required: true,
-                maxLength: 15,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-80  ml-4">
+            <label className="label">
+              <span className="label-text">Price*</span>
+            </label>
+            <input
+              type="number"
+              placeholder="price"
+              {...register("cpuCoolerPrice", {
+                required: true,
+                maxLength: 80,
               })}
               className="input input-bordered w-full "
             />
           </div>
         </div>
-
-        <div className="flex">
-          <div className="w-full my-4">
+        <h3 className="italic text-center font-bold text-2xl text-fuchsia-700">
+          Motherboard
+        </h3>
+        <div className="flex my-4">
+          <div className="w-full mb-4">
             <label className="label">
-              <span className="label-text">Product Image*</span>
-            </label>
-
-            <input
-              {...register("img", { required: true, maxLength: 80 })}
-              type="file"
-              className="file-input file-input-bordered w-full  "
-            />
-          </div>
-
-          <div className=" w-75  ml-4 mt-4">
-            <label className="label">
-              <span className="label-text">ShopLogo*</span>
+              <span className="label-text">Name*</span>
             </label>
             <input
               type="text"
-              placeholder="ShopLogo"
-              {...register("shoplogo", {
-                required: true,
-                maxLength: 405,
-              })}
+              placeholder="name"
+              {...register("mbName", { required: true, maxLength: 120 })}
               className="input input-bordered w-full "
             />
           </div>
-        </div>
-
-        <div className="flex">
-          <div className=" w-full ml-4">
-            <label className="label">
-              <span className="label-text">Coupons Code</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Coupons Code"
-              {...register("couponsCode", {
-                required: true,
-                maxLength: 15,
-              })}
-              className="input input-bordered w-full "
-            />
-          </div>
-
           <div className=" w-full  ml-4">
             <label className="label">
-              <span className="label-text">Discount</span>
+              <span className="label-text">Image*</span>
             </label>
             <input
               type="text"
-              placeholder="Discount"
-              {...register("couponsDiscount", {
+              placeholder="image"
+              {...register("mbImg", {
                 required: true,
-                maxLength: 15,
+                maxLength: 120,
               })}
               className="input input-bordered w-full "
             />
           </div>
+          <div className=" w-50  ml-4">
+            <label className="label">
+              <span className="label-text">Model*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="model"
+              {...register("mbModel", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-80  ml-4">
+            <label className="label">
+              <span className="label-text">Price*</span>
+            </label>
+            <input
+              type="number"
+              placeholder="price"
+              {...register("mbPrice", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+        </div>
 
-          <div className="form-control mr-3 ml-4">
+        <h3 className="italic text-center font-bold text-2xl text-pink-800">
+          Memory
+        </h3>
+        <div className="flex my-4">
+          <div className="w-full mb-4">
             <label className="label">
-              <span className="label-text">Start Date</span>
+              <span className="label-text">Name*</span>
             </label>
             <input
-              type="date"
-              name="date"
-              {...register("startDate", {
-                maxLength: 20,
-              })}
-              className="input input-bordered"
+              type="text"
+              placeholder="name"
+              {...register("memoryName", { required: true, maxLength: 120 })}
+              className="input input-bordered w-full "
             />
           </div>
-          <div className="form-control">
+          <div className=" w-full  ml-4">
             <label className="label">
-              <span className="label-text">End Date</span>
+              <span className="label-text">Image*</span>
             </label>
             <input
-              type="date"
-              name="date"
-              {...register("endDate", {
-                maxLength: 20,
+              type="text"
+              placeholder="image"
+              {...register("memoryImg", {
+                required: true,
+                maxLength: 120,
               })}
-              className="input input-bordered"
+              className="input input-bordered w-full "
             />
           </div>
+          <div className=" w-50  ml-4">
+            <label className="label">
+              <span className="label-text">Model*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="model"
+              {...register("memoryModel", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-80  ml-4">
+            <label className="label">
+              <span className="label-text">Price*</span>
+            </label>
+            <input
+              type="number"
+              placeholder="price"
+              {...register("memoryPrice", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+        </div>
+        <h3 className="italic text-center font-bold text-2xl text-orange-700">
+          Storage
+        </h3>
+        <div className="flex my-4">
+          <div className="w-full mb-4">
+            <label className="label">
+              <span className="label-text">Name*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="name"
+              {...register("storageName", { required: true, maxLength: 120 })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-full  ml-4">
+            <label className="label">
+              <span className="label-text">Image*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="image"
+              {...register("storageImg", {
+                required: true,
+                maxLength: 120,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-50  ml-4">
+            <label className="label">
+              <span className="label-text">Model*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="model"
+              {...register("storageModel", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-80  ml-4">
+            <label className="label">
+              <span className="label-text">Price*</span>
+            </label>
+            <input
+              type="number"
+              placeholder="price"
+              {...register("storagePrice", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+        </div>
+        <h3 className="italic text-center font-bold text-2xl text-blue-700">
+          Gpu
+        </h3>
+        <div className="flex my-4">
+          <div className="w-full mb-4">
+            <label className="label">
+              <span className="label-text">Name*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="name"
+              {...register("gpuName", { required: true, maxLength: 120 })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-full  ml-4">
+            <label className="label">
+              <span className="label-text">Image*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="image"
+              {...register("gpuImg", {
+                required: true,
+                maxLength: 120,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-50  ml-4">
+            <label className="label">
+              <span className="label-text">Model*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="model"
+              {...register("gpuModel", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-80  ml-4">
+            <label className="label">
+              <span className="label-text">Price*</span>
+            </label>
+            <input
+              type="number"
+              placeholder="price"
+              {...register("gpuPrice", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+        </div>
+        <h3 className="italic text-center font-bold text-2xl text-teal-600">
+          Case
+        </h3>
+        <div className="flex my-4">
+          <div className="w-full mb-4">
+            <label className="label">
+              <span className="label-text">Name*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="name"
+              {...register("caseName", { required: true, maxLength: 120 })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-full  ml-4">
+            <label className="label">
+              <span className="label-text">Image*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="image"
+              {...register("caseImg", {
+                required: true,
+                maxLength: 120,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-50  ml-4">
+            <label className="label">
+              <span className="label-text">Model*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="model"
+              {...register("caseModel", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-80  ml-4">
+            <label className="label">
+              <span className="label-text">Price*</span>
+            </label>
+            <input
+              type="number"
+              placeholder="price"
+              {...register("casePrice", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+        </div>
+
+        <h3 className="italic text-center font-bold text-2xl text-lime-500">
+          Power Supplie
+        </h3>
+        <div className="flex my-4">
+          <div className="w-full mb-4">
+            <label className="label">
+              <span className="label-text">Name*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="name"
+              {...register("psuName", { required: true, maxLength: 120 })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-full  ml-4">
+            <label className="label">
+              <span className="label-text">Image*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="image"
+              {...register("psuImg", {
+                required: true,
+                maxLength: 120,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-50  ml-4">
+            <label className="label">
+              <span className="label-text">Model*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="model"
+              {...register("psuModel", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className=" w-80  ml-4">
+            <label className="label">
+              <span className="label-text">Price*</span>
+            </label>
+            <input
+              type="number"
+              placeholder="price"
+              {...register("psuPrice", {
+                required: true,
+                maxLength: 80,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+        </div>
+
+        <div className="w-50 my-4">
+          <label className="label">
+            <span className="label-text">Build Image*</span>
+          </label>
+
+          <input
+            {...register("img", { required: true, maxLength: 80 })}
+            type="file"
+            className="file-input file-input-bordered w-full  "
+          />
         </div>
 
         <div className=" w-full">
           <label className="label">
-            <span className="label-text">Product Details*</span>
+            <span className="label-text">Build Details</span>
           </label>
           <textarea
             className="w-75 textarea textarea-bordered h-36"
@@ -345,11 +629,12 @@ const CreateBuild = () => {
           ></textarea>
         </div>
 
-        <button className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-3 mb-5">
-          Add Item
+        <button
+          className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-3 mb-5"
+          style={{ textTransform: "capitalize" }}
+        >
+          Create Build
         </button>
-
-        {/* <input className="btn btn-sm mt-4" type="submit" value="Add Item" /> */}
       </form>
     </div>
   );

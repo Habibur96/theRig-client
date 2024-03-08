@@ -27,17 +27,7 @@ const Banner = () => {
 
   return (
     <div className="">
-      {/* <Flicking circular={true} plugins={plugins}>
-        <div className="card-panel">
-          <img src={banner1} alt="" style={imageStyle} />
-        </div>
-        <div className="card-panel">
-          <img src={banner2} alt="" style={imageStyle} />
-        </div>
-        <div className="card-panel">
-          <img src={banner3} alt="" style={imageStyle} />
-        </div>
-      </Flicking> */}
+  
       <div className="max-w-screen-xl mx-auto">
         <Carousel>
           <img src={banner1} alt="example-image-1" />

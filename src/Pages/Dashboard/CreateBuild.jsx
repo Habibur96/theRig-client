@@ -63,6 +63,7 @@ const CreateBuild = () => {
             psuModel,
             psuPrice,
 
+            buildName,
             details,
           } = data;
           const newItem = {
@@ -107,6 +108,7 @@ const CreateBuild = () => {
             psuPrice,
 
             img: imgURL,
+            buildName,
 
             details,
           };
@@ -603,16 +605,30 @@ const CreateBuild = () => {
           </div>
         </div>
 
-        <div className="w-50 my-4">
-          <label className="label">
-            <span className="label-text">Build Image*</span>
-          </label>
+        <div className="flex my-4">
+          <div className="w-75 mr-4">
+            <label className="label">
+              <span className="label-text">Build Image*</span>
+            </label>
 
-          <input
-            {...register("img", { required: true, maxLength: 80 })}
-            type="file"
-            className="file-input file-input-bordered w-full  "
-          />
+            <input
+              {...register("img", { required: true, maxLength: 80 })}
+              type="file"
+              className="file-input file-input-bordered w-full  "
+            />
+          </div>
+
+          <div className="w-50 ">
+            <label className="label">
+              <span className="label-text">Build Name*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Build Name"
+              {...register("buildName", { required: true, maxLength: 120 })}
+              className="input input-bordered w-full "
+            />
+          </div>
         </div>
 
         <div className=" w-full">
@@ -621,7 +637,7 @@ const CreateBuild = () => {
           </label>
           <textarea
             className="w-75 textarea textarea-bordered h-36"
-            placeholder="Product Details"
+            placeholder="Build Details"
             {...register("details", {
               // required: true,
               maxLength: 600,

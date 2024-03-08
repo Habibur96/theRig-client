@@ -13,7 +13,6 @@ import {
   deleteUser,
 } from "firebase/auth";
 
-
 import { app } from "../firebase/firebase.config";
 import axios from "axios";
 
@@ -57,9 +56,18 @@ const AuthProvider = ({ children }) => {
   };
 
   //Delete User
-  const deleteCreatedUser = (user) => {
-    setLoading(true);
-    return deleteUser(auth, user);
+
+  const deleteCreatedUser = () => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    deleteUser(user)
+      .then(() => {
+        console.log("User deleted.");
+      })
+      .catch((error) => {
+        
+      });
   };
 
   //Update User
@@ -115,7 +123,6 @@ const AuthProvider = ({ children }) => {
     mailVarify,
     resetPassword,
     deleteCreatedUser,
-  
   };
   return (
     <div>

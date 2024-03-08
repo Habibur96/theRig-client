@@ -4,6 +4,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const ProfileHeader = () => {
   const { user } = useContext(AuthContext);
+  // console.log(user.uid)
   return (
     <>
       <div className="flex">

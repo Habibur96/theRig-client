@@ -7,7 +7,9 @@ import UseAuth from "../../Hooks/UseAuth";
 
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
-  const { deleteCreatedUser } = UseAuth();
+  const {user: currentUser, deleteCreatedUser } = UseAuth();
+// console.log(currentUser.uid)
+// console.log(currentUser)
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
@@ -47,7 +49,7 @@ const AllUsers = () => {
     });
   };
 
-  const handleUserDelete = (user) => {
+  const handleUserDelete = (user, uid) => {
     Swal.fire({
       title: "Are you sure?",
       // text: "You won't be able to revert this!",
@@ -58,22 +60,25 @@ const AllUsers = () => {
       confirmButtonText: "Yes, delete him!",
     }).then((result) => {
       if (result.isConfirmed) {
-        deleteCreatedUser(user.email);
-        console.log(user.email);
+       
+        console.log(uid);
         fetch(`http://localhost:3000/users/${user._id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
+              // deleteCreatedUser(uid)
+              
               refetch();
+              
               Swal.fire("Deleted!", `${user.name} is deleted`, "success");
             }
           });
       }
     });
   };
-  console.log(users.name);
+  // console.log(users.name);
   return (
     <div className=" max-w-screen-lg ml-32">
       {/* <Helmet>
@@ -116,7 +121,7 @@ const AllUsers = () => {
 
                 <td>
                   <button
-                    onClick={() => handleUserDelete(user)}
+                    onClick={() => handleUserDelete(user)}//, currentUser.uid
                     className="btn btn-ghost bg-red-600  text-white"
                   >
                     <FaTrashAlt></FaTrashAlt>

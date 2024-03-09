@@ -55,16 +55,16 @@ const PaymentHistory = () => {
                   <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                     {payment.email}
                   </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-700">
                     {payment.transactionId}
                   </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-700">
                     {payment.date}
                   </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-700">
                     {payment.paymentStatus}
                   </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-700">
                     {payment.price}tk
                   </td>
                 </tr>

@@ -66,54 +66,65 @@ const CreateBuild = () => {
             buildName,
             details,
           } = data;
+
           const newItem = {
             cpuName,
             cpuImg,
             cpuModel,
-            cpuPrice,
+            cpuPrice: parseInt(cpuPrice) || 0,
 
             cpuCoolerName,
             cpuCoolerImg,
             cpuCoolerModel,
-            cpuCoolerPrice,
+            cpuCoolerPrice: parseInt(cpuCoolerPrice) || 0,
 
             mbName,
             mbImg,
             mbModel,
-            mbPrice,
+            mbPrice: parseInt(mbPrice) || 0,
 
             memoryName,
             memoryImg,
             memoryModel,
-            memoryPrice,
+            memoryPrice: parseInt(memoryPrice) || 0,
 
             storageName,
             storageImg,
             storageModel,
-            storagePrice,
+            storagePrice: parseInt(storagePrice) || 0,
 
             gpuName,
             gpuImg,
             gpuModel,
-            gpuPrice,
+            gpuPrice: parseInt(gpuPrice) || 0,
 
             caseName,
             caseImg,
             caseModel,
-            casePrice,
+            casePrice: parseInt(casePrice) || 0,
 
             psuName,
             psuImg,
             psuModel,
-            psuPrice,
+            psuPrice: parseInt(psuPrice) || 0,
 
             img: imgURL,
             buildName,
 
             details,
+
+            totalPrice:
+              cpuPrice +
+              cpuCoolerPrice +
+              mbPrice +
+              memoryPrice +
+              storagePrice +
+              gpuPrice +
+              casePrice +
+              psuPrice,
           };
 
-          console.log(newItem);
+          console.log(newItem.totalPrice);
           axiosSecure.post("/createBuild", newItem).then((data) => {
             console.log("after posting new menu item", data.data);
             if (data.data?.insertedId) {
@@ -125,6 +136,8 @@ const CreateBuild = () => {
                 showConfirmButton: false,
                 timer: 1500,
               });
+            } else {
+              console.log("sorry");
             }
           });
         }
@@ -149,7 +162,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="name"
-              {...register("cpuName", { required: true, maxLength: 120 })}
+              {...register("cpuName", {
+                // required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -161,7 +177,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="image"
               {...register("cpuImg", {
-                required: true,
+                // required: true,
                 maxLength: 120,
               })}
               className="input input-bordered w-full "
@@ -175,7 +191,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="model"
               {...register("cpuModel", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -189,7 +205,7 @@ const CreateBuild = () => {
               type="number"
               placeholder="price"
               {...register("cpuPrice", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -207,7 +223,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="name"
-              {...register("cpuCoolerName", { required: true, maxLength: 120 })}
+              {...register("cpuCoolerName", {
+                // required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -219,7 +238,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="image"
               {...register("cpuCoolerImage", {
-                required: true,
+                // required: true,
                 maxLength: 120,
               })}
               className="input input-bordered w-full "
@@ -233,7 +252,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="model"
               {...register("cpuCoolerModel", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -247,7 +266,7 @@ const CreateBuild = () => {
               type="number"
               placeholder="price"
               {...register("cpuCoolerPrice", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -265,7 +284,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="name"
-              {...register("mbName", { required: true, maxLength: 120 })}
+              {...register("mbName", {
+                // required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -277,7 +299,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="image"
               {...register("mbImg", {
-                required: true,
+                // required: true,
                 maxLength: 120,
               })}
               className="input input-bordered w-full "
@@ -291,7 +313,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="model"
               {...register("mbModel", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -305,7 +327,7 @@ const CreateBuild = () => {
               type="number"
               placeholder="price"
               {...register("mbPrice", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -324,7 +346,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="name"
-              {...register("memoryName", { required: true, maxLength: 120 })}
+              {...register("memoryName", {
+                // required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -336,7 +361,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="image"
               {...register("memoryImg", {
-                required: true,
+                // required: true,
                 maxLength: 120,
               })}
               className="input input-bordered w-full "
@@ -350,7 +375,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="model"
               {...register("memoryModel", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -364,7 +389,7 @@ const CreateBuild = () => {
               type="number"
               placeholder="price"
               {...register("memoryPrice", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -382,7 +407,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="name"
-              {...register("storageName", { required: true, maxLength: 120 })}
+              {...register("storageName", {
+                // required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -394,7 +422,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="image"
               {...register("storageImg", {
-                required: true,
+                // required: true,
                 maxLength: 120,
               })}
               className="input input-bordered w-full "
@@ -408,7 +436,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="model"
               {...register("storageModel", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -422,7 +450,7 @@ const CreateBuild = () => {
               type="number"
               placeholder="price"
               {...register("storagePrice", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -440,7 +468,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="name"
-              {...register("gpuName", { required: true, maxLength: 120 })}
+              {...register("gpuName", {
+                // required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -452,7 +483,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="image"
               {...register("gpuImg", {
-                required: true,
+                // required: true,
                 maxLength: 120,
               })}
               className="input input-bordered w-full "
@@ -466,7 +497,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="model"
               {...register("gpuModel", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -480,7 +511,7 @@ const CreateBuild = () => {
               type="number"
               placeholder="price"
               {...register("gpuPrice", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -498,7 +529,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="name"
-              {...register("caseName", { required: true, maxLength: 120 })}
+              {...register("caseName", {
+                //  required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -510,7 +544,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="image"
               {...register("caseImg", {
-                required: true,
+                // required: true,
                 maxLength: 120,
               })}
               className="input input-bordered w-full "
@@ -524,7 +558,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="model"
               {...register("caseModel", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -538,7 +572,7 @@ const CreateBuild = () => {
               type="number"
               placeholder="price"
               {...register("casePrice", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -557,7 +591,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="name"
-              {...register("psuName", { required: true, maxLength: 120 })}
+              {...register("psuName", {
+                // required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -569,7 +606,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="image"
               {...register("psuImg", {
-                required: true,
+                // required: true,
                 maxLength: 120,
               })}
               className="input input-bordered w-full "
@@ -583,7 +620,7 @@ const CreateBuild = () => {
               type="text"
               placeholder="model"
               {...register("psuModel", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -597,7 +634,7 @@ const CreateBuild = () => {
               type="number"
               placeholder="price"
               {...register("psuPrice", {
-                required: true,
+                // required: true,
                 maxLength: 80,
               })}
               className="input input-bordered w-full "
@@ -612,7 +649,10 @@ const CreateBuild = () => {
             </label>
 
             <input
-              {...register("img", { required: true, maxLength: 80 })}
+              {...register("img", {
+                // required: true,
+                maxLength: 80,
+              })}
               type="file"
               className="file-input file-input-bordered w-full  "
             />
@@ -625,7 +665,10 @@ const CreateBuild = () => {
             <input
               type="text"
               placeholder="Build Name"
-              {...register("buildName", { required: true, maxLength: 120 })}
+              {...register("buildName", {
+                // required: true,
+                maxLength: 120,
+              })}
               className="input input-bordered w-full "
             />
           </div>
@@ -640,7 +683,7 @@ const CreateBuild = () => {
             placeholder="Build Details"
             {...register("details", {
               // required: true,
-              maxLength: 600,
+              maxLength: 6000,
             })}
           ></textarea>
         </div>

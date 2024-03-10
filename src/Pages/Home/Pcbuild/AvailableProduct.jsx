@@ -133,9 +133,7 @@ const AvailableProduct = () => {
         title: "Added to the wishlist",
         showConfirmButton: false,
         timer: 1500,
-
       });
-      console.log("test")
     }
   };
 

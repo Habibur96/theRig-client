@@ -8,7 +8,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { useContext } from "react";
 import { CartContext } from "../../../Provider/CartProvider";
 import UseAuth from "../../../Hooks/UseAuth";
-
+import theRig from "../../../assets/logo/theRig.png";
 const MyCart = () => {
   const [cart, refetch] = UseCart();
 
@@ -82,14 +82,36 @@ const MyCart = () => {
             <tr key={item._id}>
               <td>{index + 1}</td>
               <td>
-                <div className="avatar">
-                  <div className="w-12 h-12">
-                    <img src={item.img} alt="Avatar Tailwind CSS Component" />
+                {item.img ? (
+                  <div className="avatar">
+                    <div className="w-12 h-12">
+                      <img
+                        src={item?.img}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="avatar">
+                    <div className="w-16 h-12">
+                      <img
+                        src={item?.productImg}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                )}
               </td>
-              <td>{item.name}</td>
-              <td>{item.model}</td>
+              <td>
+                {item.name ? (
+                  <span>{item.name}</span>
+                ) : (
+                  <span>{item.productName}</span>
+                )}
+              </td>
+              <td>
+                {item.model ? <spanp>{item.model}</spanp> : <span>-----</span>}
+              </td>
               <td>
                 <div className="flex space-x-6 items-center">
                   <button
@@ -161,8 +183,13 @@ const MyCart = () => {
             placeholder="Promo / Coupon Code"
             className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
           />
-          
-          <button className="btn btn-secondary"style={{textTransform:"capitalize"}}>Apply Coupon</button>
+
+          <button
+            className="btn btn-secondary"
+            style={{ textTransform: "capitalize" }}
+          >
+            Apply Coupon
+          </button>
         </div>
         <div className="flex ml-16">
           <input
@@ -170,17 +197,27 @@ const MyCart = () => {
             placeholder="Enter your gift voucher code here"
             className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
           />
-          <button className="btn btn-secondary"style={{textTransform:"capitalize"}}>Apply Voucher</button>
+          <button
+            className="btn btn-secondary"
+            style={{ textTransform: "capitalize" }}
+          >
+            Apply Voucher
+          </button>
         </div>
       </div>
       <div className="flex mt-5">
-        <Link to="/" className="btn btn-success mr-[902px]"style={{textTransform:"capitalize"}}>
+        <Link
+          to="/"
+          className="btn btn-success mr-[902px]"
+          style={{ textTransform: "capitalize" }}
+        >
           Continue Shopping
         </Link>
         <Link
           to={`/dashboard/payment/${user.email}`}
           disabled={!cart.length}
-          className="btn btn-error mr-5"style={{textTransform:"capitalize"}}
+          className="btn btn-error mr-5"
+          style={{ textTransform: "capitalize" }}
         >
           Confirm Order
         </Link>

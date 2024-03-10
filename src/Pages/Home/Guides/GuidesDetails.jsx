@@ -143,9 +143,36 @@ const GuidesDetails = () => {
         </Slider>
       </div>
 
-      <div className="max-w-screen-2xl mx-auto">
-        <h2 className="font-bold text-xl ml-2 mt-5 ">Part List</h2>
-        <table className="min-w-full divide-gray-200 bg-white text-sm font-medium ml-2 mt-10">
+      <div className="max-w-screen-2xl mx-auto mt-40">
+        <div className="flex gap-2">
+          <a
+            className="inline-block rounded border border-indigo-600 bg-[#ef4a23]  px-12 py-3 text-md font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+            href="#"
+          >
+            Specification
+          </a>
+
+          <a
+            className="inline-block rounded border border-indigo-600 px-12 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+            href="#"
+          >
+            Description
+          </a>
+          <a
+            className="inline-block rounded border border-indigo-600 px-12 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+            href="#"
+          >
+            Questions (0)
+          </a>
+          <a
+            className="inline-block rounded border border-indigo-600 px-12 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+            href="#"
+          >
+            Reviews (0)
+          </a>
+        </div>
+        <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">Specification</h1>
+        <table className="min-w-full divide-gray-200 bg-white text-sm font-medium ml-2 mt-4">
           <thead className="ltr:text-left rtl:text-right bg-[#00b16a] h-12">
             <tr>
               <th className="pl-3 px-2">#</th>
@@ -159,7 +186,6 @@ const GuidesDetails = () => {
               <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
                 Price
               </th>
-            
             </tr>
           </thead>
 

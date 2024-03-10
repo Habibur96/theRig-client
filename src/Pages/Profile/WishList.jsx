@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import UseAuth from "../../Hooks/UseAuth";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import UseCart from "../../Hooks/UseCart";
+import theRig from "../../assets/logo/theRig.png";
 const WishList = () => {
   const [wishList, wishListRefetch] = useWishList();
   const [, refetch] = UseCart();
@@ -32,7 +33,7 @@ const WishList = () => {
       console.log(res.data);
 
       if (res.data?.insertedId) {
-      refetch();
+        refetch();
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -70,13 +71,13 @@ const WishList = () => {
         if (res?.data?.deletedCount > 0) {
           console.log(res.data);
           wishListRefetch();
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: `product is deleted!`,
-            showConfirmButton: false,
-            timer: 1500,
-          });
+          // Swal.fire({
+          //   position: "top-end",
+          //   icon: "success",
+          //   title: `product is deleted!`,
+          //   showConfirmButton: false,
+          //   timer: 1500,
+          // });
         }
       }
     });
@@ -109,14 +110,22 @@ const WishList = () => {
             <tr key={item._id}>
               <td>{index + 1}</td>
               <td>
-                <div className="avatar">
-                  <div className="w-24 h-5">
-                    <img
-                      src={item.shoplogo}
-                      alt="Avatar Tailwind CSS Component"
-                    />
+                {item.shoplogo ? (
+                  <div className="avatar">
+                    <div className="w-24 h-5">
+                      <img
+                        src={item.shoplogo}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="avatar">
+                    <div className="w-24 h-12">
+                      <img src={theRig} alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                )}
               </td>
               <td>
                 <div className="avatar">

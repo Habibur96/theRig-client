@@ -61,7 +61,7 @@ const GuidesDetails = () => {
       <div className="max-w-screen-xl mx-auto slider-container">
         <Slider {...settings}>
           <div>
-            <div className="flex gap-100 mt-2">
+            <div className="flex gap-100 mt-4">
               <h3>
                 {" "}
                 <img
@@ -142,36 +142,46 @@ const GuidesDetails = () => {
           </div>
         </Slider>
       </div>
+<div className="bg-[#f4f4f3]">
 
-      <div className="max-w-screen-2xl mx-auto mt-40">
-        <div className="flex gap-2">
+      <div className="max-w-screen-xl mx-auto mt-12 pt-10">
+        <div className="flex gap-2 ml-2 mt-10">
           <a
-            className="inline-block rounded border border-indigo-600 bg-[#ef4a23]  px-12 py-3 text-md font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
-            href="#"
+            className="btn inline-block rounded border border-indigo-600 bg-[#ef4a23]  px-10 py-3 text-md font-medium text-white  focus:outline-none focus:ring active:text-indigo-500"
+            style={{ textTransform: "capitalize" }}
+            href="#Specification"
           >
             Specification
           </a>
 
           <a
-            className="inline-block rounded border border-indigo-600 px-12 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-            href="#"
+            className="btn inline-block rounded border border-indigo-600 px-10 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+            style={{ textTransform: "capitalize" }}
+            href="#Description"
           >
             Description
           </a>
           <a
-            className="inline-block rounded border border-indigo-600 px-12 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-            href="#"
+            className="btn inline-block rounded border border-indigo-600 px-10 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+            style={{ textTransform: "capitalize" }}
+            href="#Question"
           >
-            Questions (0)
+            Questions
           </a>
           <a
-            className="inline-block rounded border border-indigo-600 px-12 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-            href="#"
+            className="btn inline-block rounded border border-indigo-600 px-10 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+            style={{ textTransform: "capitalize" }}
+            href="#Reviews"
           >
-            Reviews (0)
+            Reviews
           </a>
         </div>
-        <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">Specification</h1>
+        <h1
+          className="mt-5 ml-2 text-xl font-bold text-blue-800"
+          id="Specification"
+        >
+          Specification
+        </h1>
         <table className="min-w-full divide-gray-200 bg-white text-sm font-medium ml-2 mt-4">
           <thead className="ltr:text-left rtl:text-right bg-[#00b16a] h-12">
             <tr>
@@ -207,7 +217,15 @@ const GuidesDetails = () => {
             ))}
           </tbody>
         </table>
+        <div className="max-w-screen-lg" id="Description">
+          <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">
+            Description
+          </h1>
+          <h1 className="mt-5 ml-2 text-xl font-bold">{product[0]?.buildName}</h1>
+          <p className="mt-3 ml-2 text-md font-semibold text-justify">{product[0]?.details}</p>
+        </div>
       </div>
+</div>
     </div>
   );
 };

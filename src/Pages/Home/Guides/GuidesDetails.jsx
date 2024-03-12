@@ -41,10 +41,17 @@ const GuidesDetails = () => {
 
   const onSubmit = async (data) => {
     console.log(data);
+
+    const review = {
+      name: data.name,
+      rating: data.rating,
+      message: data.message,
+      date: new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" }),
+    };
     alert(JSON.stringify(data, undefined, 2));
     reset();
 
-    const res = await axiosSecure.post("/review", data);
+    const res = await axiosSecure.post("/review", review);
     console.log(res.data);
 
     if (res.data?.insertedId) {
@@ -271,19 +278,22 @@ const GuidesDetails = () => {
             </p>
           </div>
 
-          <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">
+          <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800" id="Reviews">
             Customer Reviews
           </h1>
           {review.map((comment) => (
-            <div key={comment._id} id="Reviews">
-              <h1>{comment?.message}</h1>
+            <div key={comment._id} className="ml-2 mt-4">
+              <h1 className="text-xl font-semibold mb-2">{comment?.message}</h1>
 
-              <h1>
+              <h1 className="flex gap-2">
                 <Rating
-                  style={{ maxWidth: 140 }}
+                  style={{ maxWidth: 100 }}
                   value={comment?.rating}
                   readOnly
                 />
+
+                <p>{comment.name}</p>
+                <p>{comment.date}</p>
               </h1>
             </div>
           ))}

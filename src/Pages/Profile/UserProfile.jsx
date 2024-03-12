@@ -24,7 +24,7 @@ const UserProfile = () => {
   const navigate = useNavigate();
   const handleLogOut = () => {
     logOut()
-      .then((reult) => {
+      .then((result) => {
         navigate("/");
       })
       .catch((error) => {

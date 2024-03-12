@@ -12,15 +12,18 @@ import { Form } from "react-bootstrap";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import Swal from "sweetalert2";
+import useReview from "../../../Hooks/useReview";
 
 const GuidesDetails = () => {
   const { id } = useParams();
+  const [review, reviewRefetch] = useReview();
+  console.log(review);
+  const [axiosSecure] = useAxiosSecure();
   const [buildProducts, refetch] = useCompleteBuild();
-  console.log(buildProducts);
-  console.log(id);
 
   const product = buildProducts.filter((item) => item._id === id);
-  console.log(product);
 
   const {
     register,
@@ -36,10 +39,24 @@ const GuidesDetails = () => {
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
     alert(JSON.stringify(data, undefined, 2));
     reset();
+
+    const res = await axiosSecure.post("/review", data);
+    console.log(res.data);
+
+    if (res.data?.insertedId) {
+      reviewRefetch();
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Review added",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
   };
 
   const CustomPrevArrow = (prop) => {
@@ -253,72 +270,88 @@ const GuidesDetails = () => {
               {product[0]?.details}
             </p>
           </div>
-          <div id="Reviews">
-            <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">
-              Reviews
-            </h1>
-            <Form
-              className="max-w-screen-sm ml-2 mt-4"
-              onSubmit={handleSubmit(onSubmit)}
-            >
-              <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Label>
-                  Name <span className="text-red-600 font-extrabold">*</span>
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="name"
-                  {...register("name", { required: true })}
-                  placeholder="Name"
+
+          <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">
+            Customer Reviews
+          </h1>
+          {review.map((comment) => (
+            <div key={comment._id} id="Reviews">
+              <h1>{comment?.message}</h1>
+
+              <h1>
+                <Rating
+                  style={{ maxWidth: 140 }}
+                  value={comment?.rating}
+                  readOnly
                 />
-                {errors.name && (
-                  <span className="text-red-600">Name is required</span>
-                )}
-              </Form.Group>
+              </h1>
+            </div>
+          ))}
 
-              <div className="mt-3">
-                <label className="sr-only" htmlFor="message">
-                  Message
-                </label>
+          <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">
+            Your Review
+          </h1>
+          <Form
+            className="max-w-screen-sm ml-2 mt-4"
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <Form.Group className="mb-3" controlId="formBasicName">
+              <Form.Label>
+                Name <span className="text-red-600 font-extrabold">*</span>
+              </Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                {...register("name", { required: true })}
+                placeholder="Name"
+              />
+              {errors.name && (
+                <span className="text-red-600">Name is required</span>
+              )}
+            </Form.Group>
 
-                <textarea
-                  className="w-full textarea textarea-bordered rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Review"
-                  rows="8"
-                  id="message"
-                  {...register("message")}
-                ></textarea>
+            <div className="mt-3">
+              <label className="sr-only" htmlFor="message">
+                Message
+              </label>
+
+              <textarea
+                className="w-full textarea textarea-bordered rounded-lg border-gray-200 p-3 text-sm"
+                placeholder="Review"
+                rows="8"
+                id="message"
+                {...register("message")}
+              ></textarea>
+            </div>
+
+            <div>
+              <div id="rating_label" className="mt-2 ml-1">
+                Rating <span className="text-red-600 font-extrabold">*</span>
               </div>
-
-              <div>
-                <div id="rating_label" className="mt-2 ml-1">
-                  Rating <span className="text-red-600 font-extrabold">*</span>
-                </div>
-                <Controller
-                  control={control}
-                  name="rating"
-                  rules={{
-                    validate: (rating) => rating > 0,
-                  }}
-                  render={({ field: { onChange, onBlur, value } }) => (
-                    <Rating
-                      className="pl-80 h-9"
-                      value={value}
-                      isRequired
-                      onChange={onChange}
-                      visibleLabelId="rating_label"
-                      onBlur={onBlur}
-                    />
-                  )}
-                />
-                {errors.rating && (
-                  <div className="text-red-600">Rating is required</div>
+              <Controller
+                control={control}
+                name="rating"
+                rules={{
+                  validate: (rating) => rating > 0,
+                }}
+                render={({ field: { onChange, onBlur, value } }) => (
+                  <Rating
+                    style={{ maxWidth: 180 }}
+                    value={value}
+                    isRequired
+                    onChange={onChange}
+                    visibleLabelId="rating_label"
+                    onBlur={onBlur}
+                  />
                 )}
-              </div>
+              />
+              {errors.rating && (
+                <div className="text-red-600">Rating is required</div>
+              )}
+            </div>
 
-              <button type="submit">Submit review</button>
-            </Form>
-          </div>
+            <button type="submit">Submit review</button>
+          </Form>
         </div>
       </div>
     </div>

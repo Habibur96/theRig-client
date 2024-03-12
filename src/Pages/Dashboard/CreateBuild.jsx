@@ -581,7 +581,7 @@ const CreateBuild = () => {
         </div>
 
         <h3 className="italic text-center font-bold text-2xl text-lime-500">
-          Power Supplie
+          Power Supply
         </h3>
         <div className="flex my-4">
           <div className="w-full mb-4">

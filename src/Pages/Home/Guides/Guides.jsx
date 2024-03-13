@@ -201,17 +201,14 @@ const Guides = () => {
             {/* <p className="absolute right-0 mr-4 mt-4 px-4 bg-slate-900 text-white">
               {item?.totalPrice} tk
             </p> */}
-            <div className="card-body flex flex-col items-center">
-              <Link to={`/guideDetails/${item._id}`}>
-                <h4 className="card-title text-lg text-blue-600 italic">
+            <div className="card-body flex flex-col items-center shadow-2xl">
+              <Link to={`/guideDetails/${item.buildName}`}>
+                <h4 className="card-title text-lg text-blue-600">
                   {item.buildName}
                 </h4>
               </Link>
-              {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
+              {/* <small className="text-muted"> {item?.totalPrice} tk</small> */}
             </div>
-            <Card.Footer>
-              <small className="text-muted"> {item?.totalPrice} tk</small>
-            </Card.Footer>
           </div>
         ))}
       </div>

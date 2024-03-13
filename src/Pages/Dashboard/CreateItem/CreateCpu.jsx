@@ -345,9 +345,13 @@ const CreateCpu = () => {
           ></textarea>
         </div>
 
-        <button className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-3 mb-5">
+        <button
+          className="btn btn-md btn btn-outline bg-slate-100 border-b-4 mt-3 mb-5"
+          style={{ textTransform: "capitalize" }}
+        >
           Add Item
         </button>
+
 
         {/* <input className="btn btn-sm mt-4" type="submit" value="Add Item" /> */}
       </form>

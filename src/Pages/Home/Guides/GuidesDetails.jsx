@@ -17,13 +17,16 @@ import Swal from "sweetalert2";
 import useReview from "../../../Hooks/useReview";
 
 const GuidesDetails = () => {
-  const { id } = useParams();
+  const { buildName } = useParams();
+
   const [review, reviewRefetch] = useReview();
-  console.log(review);
   const [axiosSecure] = useAxiosSecure();
   const [buildProducts, refetch] = useCompleteBuild();
-
-  const product = buildProducts.filter((item) => item._id === id);
+  console.log(buildProducts);
+  const product = buildProducts.filter((item) => item.buildName === buildName);
+  const currentBuildReview = review.filter(
+    (item) => item.buildName === buildName
+  );
 
   const {
     register,
@@ -41,8 +44,8 @@ const GuidesDetails = () => {
 
   const onSubmit = async (data) => {
     console.log(data);
-
     const review = {
+      buildName: buildName,
       name: data.name,
       rating: data.rating,
       message: data.message,
@@ -116,7 +119,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="pl-9 ml-16"
-                  src="https://cdna.pcpartpicker.com/static/forever/images/product/f0e0e59d75066ec825667b71c31e3c83.256p.jpg"
+                  src={buildProducts[0]?.cpuImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -125,7 +128,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src="https://cdna.pcpartpicker.com/static/forever/images/product/5b6a5e7f4cf456ccf6415235cf7adc99.256p.jpg"
+                  src={buildProducts[0]?.cpuCoolerImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -134,7 +137,16 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src="https://cdna.pcpartpicker.com/static/forever/images/product/07c31fe938c6e8531c051bc527759992.256p.jpg"
+                  src={buildProducts[0]?.mbImg}
+                  alt=""
+                  style={{ height: 150 }}
+                />
+              </h3>
+              <h3>
+                {" "}
+                <img
+                  className="ml-16"
+                  src={buildProducts[0]?.memoryImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -143,16 +155,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-20"
-                  src="https://cdna.pcpartpicker.com/static/forever/images/product/664aadb9f84d7293d083671b43c1f898.256p.jpg"
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
-              <h3>
-                {" "}
-                <img
-                  className="ml-36"
-                  src="https://cdna.pcpartpicker.com/static/forever/images/product/664aadb9f84d7293d083671b43c1f898.256p.jpg"
+                  src={buildProducts[0]?.monitorImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -165,7 +168,16 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="pl-9 ml-16"
-                  src="https://cdna.pcpartpicker.com/static/forever/images/product/3f73fdd7d802d6d3cf53790a39afe703.256p.jpg"
+                  src={buildProducts[0]?.storageImg}
+                  alt=""
+                  style={{ height: 150 }}
+                />
+              </h3>
+              <h3>
+                {" "}
+                <img
+                  className="pl-9 ml-16"
+                  src={buildProducts[0]?.gpuImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -174,7 +186,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src="https://cdna.pcpartpicker.com/static/forever/images/product/6bd2cbaf780aea720a3b8a53d80ce635.256p.jpg"
+                  src={buildProducts[0]?.caseImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -183,7 +195,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src="https://m.media-amazon.com/images/I/51UGM2bzZ6L.jpg"
+                  src={buildProducts[0]?.psuImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -258,7 +270,7 @@ const GuidesDetails = () => {
                   </td>
 
                   <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                    {item.buildName}
+                    {/* {item.buildName} */}
                   </td>
 
                   <td className="whitespace-nowrap px-2 py-2 text-gray-700"></td>
@@ -278,14 +290,17 @@ const GuidesDetails = () => {
             </p>
           </div>
 
-          <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800" id="Reviews">
+          <h1
+            className="mt-5 ml-2 text-xl font-bold text-blue-800"
+            id="Reviews"
+          >
             Customer Reviews
           </h1>
-          {review.map((comment) => (
-            <div key={comment._id} className="ml-2 mt-4">
+          {currentBuildReview.map((comment) => (
+            <div key={comment._id} className="ml-2 mt-4 bg-white p-3">
               <h1 className="text-xl font-semibold mb-2">{comment?.message}</h1>
 
-              <h1 className="flex gap-2">
+              <h1 className="flex gap-2 ">
                 <Rating
                   style={{ maxWidth: 100 }}
                   value={comment?.rating}
@@ -330,8 +345,12 @@ const GuidesDetails = () => {
                 placeholder="Review"
                 rows="8"
                 id="message"
-                {...register("message")}
+                {...register("message", { required: true })}
               ></textarea>
+
+              {errors.message && (
+                <span className="text-red-600 mt-2">Message is required</span>
+              )}
             </div>
 
             <div>
@@ -360,7 +379,13 @@ const GuidesDetails = () => {
               )}
             </div>
 
-            <button type="submit">Submit review</button>
+            <button
+              type="submit"
+              className="btn btn-md btn btn-outline bg-slate-100 border-b-4 mt-3 mb-5"
+              style={{ textTransform: "capitalize" }}
+            >
+              Submit review
+            </button>
           </Form>
         </div>
       </div>

@@ -224,7 +224,9 @@ const CheckoutForm = ({ email }) => {
             address,
             price: totalPrice,
             transactionId: paymentIntent.id,
-            date: new Date(),
+            date: new Date().toLocaleString("en-US", {
+              timeZone: "Asia/Dhaka",
+            }),
             cartIds: cart.map((item) => item._id),
             menuItemIds: cart.map((item) => item.cartItemId),
             quantity: cart.length,

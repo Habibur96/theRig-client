@@ -102,7 +102,7 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "guideDetails/:id",
+        path: "guideDetails/:buildName",
         element: (
           
             <GuidesDetails></GuidesDetails>

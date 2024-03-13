@@ -755,7 +755,7 @@ const CreateBuild = () => {
             className="w-75 textarea textarea-bordered h-36"
             placeholder="Build Details"
             {...register("details", {
-              // required: true,
+              // required: true,F
               maxLength:  5000,
             })}
           ></textarea>

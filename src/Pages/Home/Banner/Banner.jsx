@@ -26,9 +26,8 @@ const Banner = () => {
   // };
 
   return (
-    <div className="">
-  
-      <div className="max-w-screen-xl mx-auto">
+    <div className=" bg-[#f4f4f3]">
+      <div className="max-w-screen-2xl mx-auto">
         <Carousel>
           <img src={banner1} alt="example-image-1" />
           <img src={banner2} alt="example-image-2" />
@@ -36,8 +35,8 @@ const Banner = () => {
           <img src={banner4} alt="example-image-2" />
         </Carousel>
       </div>
-      <Container>
-        <div className=" d-flex mt-5">
+      <Container >
+        <div className=" d-flex mt-16 ">
           {/* <Button variant="Success">Leatest</Button> */}
           <Button variant="warning">Leatest</Button>{" "}
           <Marquee className="font-semibold text-fuchsia-900" speed={100}>
@@ -46,7 +45,7 @@ const Banner = () => {
             just some text.....
           </Marquee>
         </div>
-        <div className="mt-5">
+        <div className="mt-24 mb-20">
           <Marquee className="mr-2" speed={100}>
             <img className="mr-20" src={startech} alt="" />
             <img className="mr-20" src={Ultratech} alt="" />
@@ -77,7 +76,6 @@ const Banner = () => {
               use-cases and budgets.
             </p>
             <Link to="guides">
-         
               <button
                 className="btn btn-wide bg-[#2c87c3] rounded-1 border-none text-white font-bold text-lg"
                 style={{ textTransform: "capitalize" }}

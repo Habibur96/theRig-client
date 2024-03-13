@@ -24,9 +24,23 @@ const GuidesDetails = () => {
   const [buildProducts, refetch] = useCompleteBuild();
   console.log(buildProducts);
   const product = buildProducts.filter((item) => item.buildName === buildName);
+  console.log(product);
   const currentBuildReview = review.filter(
     (item) => item.buildName === buildName
   );
+
+  const totalPrice =
+    product[0]?.cpuPrice +
+    product[0]?.cpuCoolerPrice +
+    product[0]?.mbPrice +
+    product[0]?.memoryPrice +
+    product[0]?.monitorPrice +
+    product[0]?.storagePrice +
+    product[0]?.gpuPrice +
+    product[0]?.casePrice +
+    product[0]?.psuPrice;
+
+  console.log(totalPrice);
 
   const {
     register,
@@ -106,9 +120,11 @@ const GuidesDetails = () => {
       <div className="bg-[#ffffff]">
         <div className="text-center font-bold bg-[#545578] h-40 mb-4">
           <h3 className="text-[#bfbfbf] text-lg pt-4">GUIDE</h3>
-          <h1 className="text-[#ffffff] text-3xl mt-3">
-            {product[0]?.buildName}
-          </h1>
+          <div className="">
+            <p className="text-[#ffffff] text-2xl mt-3">
+              {product[0]?.buildName}
+            </p>
+          </div>
         </div>
       </div>
       <div className="max-w-screen-xl mx-auto slider-container">
@@ -119,7 +135,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="pl-9 ml-16"
-                  src={buildProducts[0]?.cpuImg}
+                  src={product[0]?.cpuImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -128,7 +144,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src={buildProducts[0]?.cpuCoolerImg}
+                  src={product[0]?.cpuCoolerImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -137,7 +153,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src={buildProducts[0]?.mbImg}
+                  src={product[0]?.mbImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -146,7 +162,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src={buildProducts[0]?.memoryImg}
+                  src={product[0]?.memoryImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -155,7 +171,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-20"
-                  src={buildProducts[0]?.monitorImg}
+                  src={product[0]?.monitorImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -168,7 +184,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="pl-9 ml-16"
-                  src={buildProducts[0]?.storageImg}
+                  src={product[0]?.storageImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -177,7 +193,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="pl-9 ml-16"
-                  src={buildProducts[0]?.gpuImg}
+                  src={product[0]?.gpuImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -186,7 +202,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src={buildProducts[0]?.caseImg}
+                  src={product[0]?.caseImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -195,7 +211,7 @@ const GuidesDetails = () => {
                 {" "}
                 <img
                   className="ml-16"
-                  src={buildProducts[0]?.psuImg}
+                  src={product[0]?.psuImg}
                   alt=""
                   style={{ height: 150 }}
                 />
@@ -234,7 +250,7 @@ const GuidesDetails = () => {
               style={{ textTransform: "capitalize" }}
               href="#Reviews"
             >
-              Reviews
+              Reviews ({currentBuildReview?.length || 0})
             </a>
           </div>
           <h1
@@ -246,12 +262,14 @@ const GuidesDetails = () => {
           <table className="min-w-full divide-gray-200 bg-white text-sm font-medium ml-2 mt-4">
             <thead className="ltr:text-left rtl:text-right bg-[#00b16a] h-12">
               <tr>
-                <th className="pl-3 px-2">#</th>
-                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                <th className="whitespace-nowrap px-8 py-2 font-medium text-gray-900">
                   Image
                 </th>
                 <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
                   Product Name
+                </th>
+                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  Model
                 </th>
 
                 <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
@@ -261,23 +279,215 @@ const GuidesDetails = () => {
             </thead>
 
             <tbody className="divide-y divide-gray-300">
-              {product.map((item, index) => (
-                <tr key={item._id}>
-                  <th className="pl-3 px-2">{index + 1}</th>
+              <tr>
+                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  <img
+                    src={product[0]?.cpuImg}
+                    alt="Product Image"
+                    className="h-18 w-16"
+                  />
+                </td>
 
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.cpuName}
+                </td>
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.cpuModel}
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                  {product[0]?.cpuPrice}
+                </td>
+              </tr>
+
+              {/* =========================== */}
+              {product[0]?.cpuCoolerName ? (
+                <tr>
                   <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                    <img src="" alt="Product Image" className="h-12 w-12" />
+                    <img
+                      src={product[0]?.cpuCoolerImg}
+                      alt="Product Image"
+                      className="h-18 w-16"
+                    />
                   </td>
 
                   <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                    {/* {item.buildName} */}
+                    {product[0]?.cpuCoolerName}
+                  </td>
+                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    {product[0]?.cpuCoolerModel}
                   </td>
 
-                  <td className="whitespace-nowrap px-2 py-2 text-gray-700"></td>
+                  <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                    {product[0]?.cpuCoolerPrice}
+                  </td>
                 </tr>
-              ))}
+              ) : null}
+
+              <tr>
+                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  <img
+                    src={product[0]?.mbImg}
+                    alt="Product Image"
+                    className="h-18 w-16"
+                  />
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.mbName}
+                </td>
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.mbModel}
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                  {product[0]?.mbPrice}
+                </td>
+              </tr>
+              <tr>
+                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  <img
+                    src={product[0]?.memoryImg}
+                    alt="Product Image"
+                    className="h-18 w-16"
+                  />
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.memoryName}
+                </td>
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.memoryModel}
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                  {product[0]?.memoryPrice}
+                </td>
+              </tr>
+
+              {product[0]?.monitorName ? (
+                <tr>
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    <img
+                      src={product[0]?.monitorImg}
+                      alt="Product Image"
+                      className="h-18 w-16"
+                    />
+                  </td>
+
+                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    {product[0]?.monitorName}
+                  </td>
+
+                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    {product[0]?.monitorModel}
+                  </td>
+
+                  <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                    {product[0]?.monitorPrice}
+                  </td>
+                </tr>
+              ) : null}
+
+              <tr>
+                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  <img
+                    src={product[0]?.storageImg}
+                    alt="Product Image"
+                    className="h-18 w-16"
+                  />
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.storageName}
+                </td>
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.storageModel}
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                  {product[0]?.storagePrice}
+                </td>
+              </tr>
+
+              <tr>
+                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  <img
+                    src={product[0]?.gpuImg}
+                    alt="Product Image"
+                    className="h-18 w-16"
+                  />
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.gpuName}
+                </td>
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.gpuModel}
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                  {product[0]?.gpuPrice}
+                </td>
+              </tr>
+
+              <tr>
+                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  <img
+                    src={product[0]?.caseImg}
+                    alt="Product Image"
+                    className="h-18 w-16"
+                  />
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.caseName}
+                </td>
+                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  {product[0]?.caseModel}
+                </td>
+
+                <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                  {product[0]?.casePrice}
+                </td>
+              </tr>
+
+              {product[0]?.psuName ? (
+                <tr>
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    <img
+                      src={product[0]?.psuImg}
+                      alt="Product Image"
+                      className="h-18 w-16"
+                    />
+                  </td>
+
+                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    {product[0]?.psuName}
+                  </td>
+
+                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    {product[0]?.psuModel}
+                  </td>
+
+                  <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                    {product[0]?.psuPrice}
+                  </td>
+                </tr>
+              ) : null}
             </tbody>
           </table>
+          <h1 className="text-end mr-2 mt-3 font-bold text-lg">
+            Total : {totalPrice}tk
+          </h1>
+          <button
+            type="submit"
+            className="btn btn-md btn btn-outline bg-[#00b16a] border-b-4 mt-3 mb-5"
+            style={{ textTransform: "capitalize" }}
+          >
+            Buy From TheRig
+          </button>
+
           <div className="max-w-screen-lg" id="Description">
             <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">
               Description

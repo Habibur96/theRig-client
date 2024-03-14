@@ -35,17 +35,16 @@ const Guides = () => {
   };
   const totalPrice =
     buildProducts[0]?.cpuPrice +
-    buildProducts[0]?.storagePrice +
+    buildProducts[0]?.cpuCoolerPrice +
+    buildProducts[0]?.mbPrice +
     buildProducts[0]?.memoryPrice +
+    buildProducts[0]?.monitorPrice +
+    buildProducts[0]?.storagePrice +
     buildProducts[0]?.gpuPrice +
     buildProducts[0]?.casePrice +
     buildProducts[0]?.psuPrice;
 
   console.log(totalPrice);
-  console.log(buildProducts[0]?.totalPrice);
-  const sum = buildProducts[0]?.totalPrice;
-  console.log(parseFloat(sum));
-  console.log(buildProducts.length);
 
   const handleCart = async (item) => {
     if (user && user.email) {
@@ -207,7 +206,7 @@ const Guides = () => {
                   {item.buildName}
                 </h4>
               </Link>
-              {/* <small className="text-muted"> {item?.totalPrice} tk</small> */}
+              {/* <h1 className=""> {totalPrice} tk</h1> */}
             </div>
           </div>
         ))}

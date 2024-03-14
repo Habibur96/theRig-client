@@ -124,16 +124,6 @@ const CreateBuild = () => {
             buildName,
 
             details,
-
-            totalPrice:
-              cpuPrice +
-              cpuCoolerPrice +
-              mbPrice +
-              memoryPrice +
-              storagePrice +
-              gpuPrice +
-              casePrice +
-              psuPrice,
           };
 
           console.log(newItem.totalPrice);

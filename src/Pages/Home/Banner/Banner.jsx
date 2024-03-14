@@ -17,6 +17,7 @@ import DescriptionTwoToneIcon from "@mui/icons-material/DescriptionTwoTone";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Link } from "react-router-dom";
+import { FeaturedProducts } from "./FeaturedProducts";
 
 const Banner = () => {
   // const imageStyle = {
@@ -35,7 +36,7 @@ const Banner = () => {
           <img src={banner4} alt="example-image-2" />
         </Carousel>
       </div>
-      <Container >
+      <Container>
         <div className=" d-flex mt-16 ">
           {/* <Button variant="Success">Leatest</Button> */}
           <Button variant="warning">Leatest</Button>{" "}
@@ -94,8 +95,10 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title">Ready Build</h2>
+                <p className="font-semibold">
+                  PC-V C3101i Intel Core i3 10105, 8GB RAM, 250GB SSD Desktop PC
+                </p>
               </div>
               <Card.Footer>
                 <small className="text-muted">Last updated 3 mins ago</small>
@@ -109,8 +112,11 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title">Ready Build</h2>
+                <p className="font-semibold">
+                  Ryans PC-G C31012G, Intel Core i3 10105 8GB RAM, 250GB SATAIII
+                  SSD Gaming Desktop PC{" "}
+                </p>
               </div>
               <Card.Footer>
                 <small className="text-muted">Last updated 3 mins ago</small>
@@ -124,12 +130,232 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title">Ready Build</h2>
+                <p className="font-semibold">
+                  PC-G C3101G Intel Core i3 10100F 8GB DDR4, 250GB SSD Heavy
+                  Gaming PC
+                </p>
               </div>
               <Card.Footer>
                 <small className="text-muted">Last updated 3 mins ago</small>
               </Card.Footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mt-20 mb-20">
+        <h1 className="text-center font-semibold text-3xl">
+          Featured Products
+        </h1>
+        <h1 className="text-center font-semibold text-xl">
+          Check & Get Your Desired Product!
+        </h1>
+      </div>
+
+      <div className="flex column-gap-5 bg-[#e5e7eb] pt-5 pb-5">
+        <div className="flex-[2] ml-12">
+          <FeaturedProducts></FeaturedProducts>
+        </div>
+        <div className="flex-[5]">
+          <div className="grid  gap-y-10">
+            <div className="flex gap-4">
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://asset.msi.com/resize/image/global/product/product_16420615993ba39b48719ae53c6866a4c70b126afb.png62405b38c58fe0f07fcef2367d8a9ba1/400.png"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">MSI MYSTIC LIGHT</h2>
+                  <p>
+                    With built-in onboard memory, the user can customize and
+                    store up to 3 profiles, including Settings, RGB Effects,
+                    Macro Keys, while switching profiles via MSI Center.
+                  </p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://asset.msi.com/resize/image/global/product/product_16944174092196ebb00c5e2e81420ed9ba9f4dccc7.png62405b38c58fe0f07fcef2367d8a9ba1/400.png"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">6+N KEY ROLLOVER</h2>
+                  <p>
+                    No more signal conflicts or missed key presses in any
+                    circumstances, VIGOR GK50 LOW PROFILE TKL can automatically
+                    detect the pressed number and immediately switch to 6 key or
+                    N key rollover, allowing you to fight on without the fear of
+                    missing or having unexpected key presses.?
+                  </p>
+                  <div className="flex card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://asset.msi.com/resize/image/global/product/product_16415411303a4f3ad1ddc39e1b18dd3904a62e4767.png62405b38c58fe0f07fcef2367d8a9ba1/400.png"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">ONBOARD PROFILES</h2>
+                  <p>
+                    No more signal conflicts or missed key presses in any
+                    circumstances, VIGOR GK50 LOW PROFILE TKL can automatically
+                    detect the pressed number and immediately switch to 6 key or
+                    N key rollover, allowing you to fight on without the fear of
+                    missing or having unexpected key presses.?
+                  </p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/geforce-rtx-4090-suprim-x-24g/geforce-rtx-4090-suprim-x-24g-01-228x228.webp"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    GeForce RTX™ 4080 SUPER 16G SUPRIM X
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Pariatur aliquam fugiat nulla a molestias sed ullam illo
+                    dignissimos atque iste. Pariatur quibusdam consequuntur
+                    minima, reprehenderit iusto assumenda cum? Eos, accusamus?
+                  </p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.startech.com.bd/image/cache/catalog/monitor/msi/mag241c/mag241c-228x228.jpg"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">MEG 342C QD-OLED</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Porro consequuntur rem amet voluptatem eveniet numquam
+                    temporibus eum maiores praesentium? Ad fugiat sed nisi aut
+                    laudantium est praesentium facilis, aspernatur perferendis.
+                  </p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.startech.com.bd/image/cache/catalog/casing/deepcool/cc560-wh/cc560-wh-01-228x228.jpg"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">MPG SEKIRA 100R | Gaming Case</h2>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Dicta, esse quae. Hic ipsum nam, nesciunt blanditiis maxime
+                    deleniti? Molestiae vel est fuga. Aspernatur cumque nulla
+                    modi id quis vero atque!
+                  </p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.ryans.com/storage/products/small/ryans-pc-g-r777x12g-amd-ryzen-7-16gb-ddr5-gaming-11667302790.webp"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    Aegis R 13NUD-460US Gaming Desktop
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum inventore ipsum voluptate ad minima consequatur
+                    aliquid illo, repellendus quaerat, hic accusantium, autem
+                    sunt praesentium? Id sequi quis nostrum possimus vitae.
+                  </p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.ryans.com/storage/products/small/ryans-pc-e-c5114i-intel-core-i5-10400-8gb-ddr4-11696252498.webp"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    AEGIS Z 7NUE-676US Gaming Desktop
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo quas temporibus maiores dignissimos debitis libero
+                    quisquam! Error minus facilis, esse expedita, harum tempora
+                    exercitationem ipsam unde similique cum quos necessitatibus?
+                  </p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.ryans.com/storage/products/small/ryans-pc-v-c3101i-intel-core-i3-10105-8gb-ram-11704003693.webp"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">MSI Powered PRE BUILT</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit velit aliquid, nisi expedita rerum laborum
+                    voluptatibus dolor quaerat dicta eligendi iste consequuntur
+                    a modi qui, non excepturi cum? Harum, reprehenderit!
+                  </p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

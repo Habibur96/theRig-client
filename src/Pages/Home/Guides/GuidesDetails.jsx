@@ -4,8 +4,6 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import EastIcon from "@mui/icons-material/East";
-import WestIcon from "@mui/icons-material/West";
 import { Controller, useForm } from "react-hook-form";
 import { Form } from "react-bootstrap";
 
@@ -18,6 +16,9 @@ import useReview from "../../../Hooks/useReview";
 import UseAuth from "../../../Hooks/UseAuth";
 import UseCart from "../../../Hooks/UseCart";
 import ShoppingCartTwoToneIcon from "@mui/icons-material/ShoppingCartTwoTone";
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import ScrollToTop from "react-scroll-to-top";
 
 const GuidesDetails = () => {
   const { buildName } = useParams();
@@ -132,10 +133,10 @@ const GuidesDetails = () => {
     const { onClick } = prop;
     return (
       <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white px-2 py-2 rounded-l-md"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white px-2 mx-10  py-2 rounded-l-md"
         onClick={onClick}
       >
-        <WestIcon />
+        <KeyboardDoubleArrowLeftIcon />
       </button>
     );
   };
@@ -143,10 +144,10 @@ const GuidesDetails = () => {
     const { onClick } = props;
     return (
       <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white px-2 py-2 rounded-r-md"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white px-2 px-2 mx-3 py-2 rounded-r-md"
         onClick={onClick}
       >
-        <EastIcon />
+        <KeyboardDoubleArrowRightIcon />
       </button>
     );
   };
@@ -173,94 +174,81 @@ const GuidesDetails = () => {
         </div>
       </div>
       <div className="max-w-screen-xl mx-auto slider-container">
+        <ScrollToTop
+          smooth
+          top="20"
+          color="#00b16a"
+          width="40"
+          height="30"
+          style={{ backgroundColor: "#545578" }}
+        />
         <Slider {...settings}>
-          <div>
-            <div className="flex gap-100 mt-4">
-              <h3>
-                {" "}
-                <img
-                  className="pl-9 ml-16"
-                  src={product[0]?.cpuImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
-              <h3>
-                {" "}
-                <img
-                  className="ml-16"
-                  src={product[0]?.cpuCoolerImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
-              <h3>
-                {" "}
-                <img
-                  className="ml-16"
-                  src={product[0]?.mbImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
-              <h3>
-                {" "}
-                <img
-                  className="ml-16"
-                  src={product[0]?.memoryImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
-              <h3>
-                {" "}
-                <img
-                  className="ml-20"
-                  src={product[0]?.monitorImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
+          <div className="">
+            <div className="flex flex justify-center mt-4">
+              <img
+                className="pl-9"
+                src={product[0]?.cpuImg}
+                alt=""
+                style={{ height: 150 }}
+              />
+
+              <img
+                className="ml-16"
+                src={product[0]?.cpuCoolerImg}
+                alt=""
+                style={{ height: 150 }}
+              />
+
+              <img
+                className="ml-16"
+                src={product[0]?.mbImg}
+                alt=""
+                style={{ height: 150 }}
+              />
+
+              <img
+                className="ml-16"
+                src={product[0]?.memoryImg}
+                alt=""
+                style={{ height: 150 }}
+              />
+
+              <img
+                className="ml-20"
+                src={product[0]?.monitorImg}
+                alt=""
+                style={{ height: 150 }}
+              />
             </div>
           </div>
           <div>
-            <div className="flex">
-              <h3>
-                {" "}
-                <img
-                  className="pl-9 ml-16"
-                  src={product[0]?.storageImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
-              <h3>
-                {" "}
-                <img
-                  className="pl-9 ml-16"
-                  src={product[0]?.gpuImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
-              <h3>
-                {" "}
-                <img
-                  className="ml-16"
-                  src={product[0]?.caseImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
-              <h3>
-                {" "}
-                <img
-                  className="ml-16"
-                  src={product[0]?.psuImg}
-                  alt=""
-                  style={{ height: 150 }}
-                />
-              </h3>
+            <div className="flex justify-center">
+              <img
+                src={product[0]?.storageImg}
+                alt=""
+                style={{ height: 150 }}
+              />
+
+              <img
+                className="pl-9 ml-16"
+                src={product[0]?.gpuImg}
+                alt=""
+                style={{ height: 150 }}
+              />
+
+              <img
+                className="ml-16"
+                src={product[0]?.caseImg}
+                alt=""
+                style={{ height: 150 }}
+              />
+
+              <img
+                className="ml-16"
+                src={product[0]?.psuImg}
+                alt=""
+                style={{ height: 150 }}
+              />
             </div>
           </div>
         </Slider>

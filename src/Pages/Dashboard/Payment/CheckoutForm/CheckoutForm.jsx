@@ -30,7 +30,7 @@ const CheckoutForm = ({ email }) => {
   const [cart, refetch] = UseCart();
   const navigate = useNavigate();
 
-  console.log(cart)
+  console.log(cart);
   const userInfo = user.filter((item) => item.email === email);
   console.log(userInfo);
 
@@ -282,7 +282,7 @@ const CheckoutForm = ({ email }) => {
         action=""
         className=" flex column-gap-5  px-4 py-16"
       >
-        <div className="flex-[2]  bg-[#AAE3E2]  rounded-lg">
+        <div className="flex-[2]  bg-[#545578]  rounded-lg">
           <div className=" px-4 py-16 sm:px-6 lg:px-8">
             <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
               <h1 className="text-center font-bold ">
@@ -363,7 +363,7 @@ const CheckoutForm = ({ email }) => {
             </div>
           </div>
         </div>
-        <div className="flex-[2] bg-red-300 rounded-lg px-4 py-16">
+        <div className="flex-[2] bg-[#DFF5FF] rounded-lg px-4 py-16">
           <h1 className="mb-4">Total Price : {totalPrice}</h1>
           {/* <h1>{points} </h1> */}
           <CardElement

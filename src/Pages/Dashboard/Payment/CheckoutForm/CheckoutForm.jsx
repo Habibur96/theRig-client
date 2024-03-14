@@ -30,6 +30,7 @@ const CheckoutForm = ({ email }) => {
   const [cart, refetch] = UseCart();
   const navigate = useNavigate();
 
+  console.log(cart)
   const userInfo = user.filter((item) => item.email === email);
   console.log(userInfo);
 
@@ -44,71 +45,72 @@ const CheckoutForm = ({ email }) => {
 
   const totalPrice = cart.reduce((sum, item) => sum + parseInt(item.price), 0);
   console.log(totalPrice);
-  console.log(userInfo[0]?.starpoints);
+  // console.log(userInfo[0]?.starpoints);
 
   let points, balancePoints, devidedPoints;
 
-  if (userInfo[0]?.starpoints > 0) {
-    console.log(totalPrice);
-    console.log(userInfo[0]?.starpoints);
+  //note: ae gular kaj asay starpoints ar joono..........
+  // if (userInfo[0]?.starpoints > 0) {
+  //   console.log(totalPrice);
+  //   console.log(userInfo[0]?.starpoints);
 
-    console.log(totalPrice);
-    console.log(balancePoints);
-    points = balancePoints;
-    points = Math.round((totalPrice * 10) / 1000);
-    console.log(points);
+  //   console.log(totalPrice);
+  //   console.log(balancePoints);
+  //   points = balancePoints;
+  //   points = Math.round((totalPrice * 10) / 1000);
+  //   console.log(points);
 
-    if (points >= totalPrice) {
-      devidedPoints = Math.round((points * 30) / 100);
-      console.log(devidedPoints);
-    } else {
-      devidedPoints = Math.round((points * 70) / 100);
-      console.log(devidedPoints);
-    }
-    console.log(points);
-    // useEffect(() => {
-    const res = axiosSecure
-      .patch(`/users/${userInfo[0]?._id}`, { points })
-      .then((res) => {
-        console.log("Star Points updated", res.data);
-        if (res?.data?.modifiedCount > 0) {
-          refetch();
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Starpoints added from again",
-            showConfirmButton: false,
-            timer: 2000,
-          });
-        }
-      });
-  } else {
-    console.log("No");
+  //   if (points >= totalPrice) {
+  //     devidedPoints = Math.round((points * 30) / 100);
+  //     console.log(devidedPoints);
+  //   } else {
+  //     devidedPoints = Math.round((points * 70) / 100);
+  //     console.log(devidedPoints);
+  //   }
+  //   console.log(points);
 
-    if (totalPrice >= 1000) {
-      console.log(totalPrice);
+  //   const res = axiosSecure
+  //     .patch(`/users/${userInfo[0]?._id}`, { points })
+  //     .then((res) => {
+  //       console.log("Star Points updated", res.data);
+  //       if (res?.data?.modifiedCount > 0) {
+  //         refetch();
+  //         Swal.fire({
+  //           position: "top-end",
+  //           icon: "success",
+  //           title: "Starpoints added from again",
+  //           showConfirmButton: false,
+  //           timer: 2000,
+  //         });
+  //       }
+  //     });
+  // } else {
+  //   console.log("No");
 
-      points = Math.round((totalPrice * 10) / 1000);
-      console.log(points);
-      // useEffect(() => {
-      const res = axiosSecure
-        .patch(`/users/${userInfo[0]?._id}`, { points })
-        .then((res) => {
-          console.log("Star Points updated", res.data);
-          if (res?.data?.modifiedCount > 0) {
-            refetch();
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "Starpoints added",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-          }
-        });
-      // }, [userInfo[0]?._id]);
-    }
-  }
+  //   if (totalPrice >= 1000) {
+  //     console.log(totalPrice);
+
+  //     points = Math.round((totalPrice * 10) / 1000);
+  //     console.log(points);
+
+  //     const res = axiosSecure
+  //       .patch(`/users/${userInfo[0]?._id}`,  points )
+  //       .then((res) => {
+  //         console.log("Star Points updated", res.data);
+  //         if (res?.data?.modifiedCount > 0) {
+  //           refetch();
+  //           Swal.fire({
+  //             position: "top-end",
+  //             icon: "success",
+  //             title: "Starpoints added",
+  //             showConfirmButton: false,
+  //             timer: 1500,
+  //           });
+  //         }
+  //       });
+
+  //   }
+  // }
 
   const handleStarPoints = () => {
     console.log(point);
@@ -233,7 +235,7 @@ const CheckoutForm = ({ email }) => {
             paymentStatus: "success",
             orderStatus: "pending",
             itemName: cart.map((item) => item.name),
-            itemPhoto: cart.map((item) => item.img),
+            itemPhoto: cart.map((item) => item.img || item.productImg),
             shoplogo: cart.map((item) => item.shoplogo),
           };
 
@@ -259,7 +261,7 @@ const CheckoutForm = ({ email }) => {
 
   return (
     <div className="">
-      <div className="flex ml-16">
+      {/* <div className="flex ml-16">
         <input
           onChange={handleChange}
           type="text"
@@ -273,7 +275,7 @@ const CheckoutForm = ({ email }) => {
         >
           Apply
         </button>
-      </div>
+      </div> */}
 
       <Form
         onSubmit={handleSubmit(onSubmit)}
@@ -396,10 +398,10 @@ const CheckoutForm = ({ email }) => {
             </p>
           )}
 
-          <p>
+          {/* <p>
             Earn Star Points and use on your next order <StarsIcon />
             {userInfo[0]?.starpoints} Star Points
-          </p>
+          </p> */}
         </div>
       </Form>
     </div>

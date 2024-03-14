@@ -4,7 +4,7 @@ import useAxiosSecure from "./useAxiosSecure";
 const useCompleteBuild = () => {
   const [axiosSecure] = useAxiosSecure();
 
-  const { data: buildProducts = [], refetch } = useQuery({
+  const { data: buildProducts = [], refetch: combuildRefetch } = useQuery({
     queryKey: ["createBuild"],
     queryFn: async () => {
       const res = await axiosSecure.get("/createBuild");
@@ -13,7 +13,7 @@ const useCompleteBuild = () => {
     },
   });
 
-  return [buildProducts, refetch];
+  return [buildProducts, combuildRefetch];
 };
 
 export default useCompleteBuild;

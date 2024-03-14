@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import useCompleteBuild from "../../../Hooks/useCompleteBuild";
 import Slider from "react-slick";
 
@@ -15,13 +15,19 @@ import "@smastrom/react-rating/style.css";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import useReview from "../../../Hooks/useReview";
+import UseAuth from "../../../Hooks/UseAuth";
+import UseCart from "../../../Hooks/UseCart";
+import ShoppingCartTwoToneIcon from "@mui/icons-material/ShoppingCartTwoTone";
 
 const GuidesDetails = () => {
   const { buildName } = useParams();
-
+  const { user } = UseAuth();
+  const [, refetch] = UseCart();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [review, reviewRefetch] = useReview();
   const [axiosSecure] = useAxiosSecure();
-  const [buildProducts, refetch] = useCompleteBuild();
+  const [buildProducts, combuildRefetch] = useCompleteBuild();
   console.log(buildProducts);
   const product = buildProducts.filter((item) => item.buildName === buildName);
   console.log(product);
@@ -55,6 +61,45 @@ const GuidesDetails = () => {
       rating: 0,
     },
   });
+
+  const handleCart = async () => {
+    if (user && user.email) {
+      const cartItem = {
+        email: user?.email,
+        cartItemId: product[0]?._id,
+        productName: product[0]?.buildName,
+        productImg: product[0]?.img,
+        price: totalPrice,
+      };
+
+      const res = await axiosSecure.post("cart", cartItem);
+      console.log(res.data);
+      if (res.data?.insertedId) {
+        refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Product added to the cart",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    } else {
+      Swal.fire({
+        title: "Please login to add product",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Login",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/login", { state: { from: location }, replace: true });
+        }
+      });
+    }
+  };
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -480,13 +525,25 @@ const GuidesDetails = () => {
           <h1 className="text-end mr-2 mt-3 font-bold text-lg">
             Total : {totalPrice}tk
           </h1>
-          <button
-            type="submit"
-            className="btn btn-md btn btn-outline bg-[#00b16a] border-b-4 mt-3 mb-5"
-            style={{ textTransform: "capitalize" }}
-          >
-            Buy From TheRig
-          </button>
+
+          <div className="flex gap-3">
+            <button
+              onClick={handleCart}
+              type="submit"
+              className="btn btn-md btn btn-outline bg-[#00b16a] border-b-4 mt-3 mb-5"
+              style={{ textTransform: "capitalize" }}
+            >
+              <ShoppingCartTwoToneIcon /> Add to cart
+            </button>
+            {/* <button
+              onClick={handleCart}
+              type="submit"
+              className="btn btn-md btn btn-outline bg-[#00b16a] border-b-4 mt-3 mb-5"
+              style={{ textTransform: "capitalize" }}
+            >
+          Save PC
+            </button> */}
+          </div>
 
           <div className="max-w-screen-lg" id="Description">
             <h1 className="mt-5 ml-2 text-xl font-bold text-blue-800">

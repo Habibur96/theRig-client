@@ -18,6 +18,7 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Link } from "react-router-dom";
 import { FeaturedProducts } from "./FeaturedProducts";
+import TechTrends from "./TechTrends";
 
 const Banner = () => {
   // const imageStyle = {
@@ -154,7 +155,11 @@ const Banner = () => {
 
       <div className="flex column-gap-5 bg-[#e5e7eb] pt-5 pb-5">
         <div className="flex-[2] ml-12">
+          <div className="grid gap-5">
           <FeaturedProducts></FeaturedProducts>
+          <TechTrends></TechTrends>
+
+          </div>
         </div>
         <div className="flex-[5]">
           <div className="grid  gap-y-10">

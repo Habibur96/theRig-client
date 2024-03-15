@@ -15,6 +15,7 @@ const CpuFilter = () => {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
+          
         >
           <Typography>Brand</Typography>
         </AccordionSummary>

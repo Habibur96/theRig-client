@@ -8,7 +8,8 @@ import useAdmin from "../../../Hooks/useAdmin";
 import UseAuth from "../../../Hooks/UseAuth";
 import { Badge, Typography } from "@mui/material";
 import useWishList from "../../../Hooks/useWishList";
-// import theRig from '../../../assets/logo/theRig.png'
+import MenuIcon from "@mui/icons-material/Menu";
+import theRig from "../../../assets/logo/theRig.png";
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
 // import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
@@ -20,10 +21,8 @@ const Navber = () => {
 
   const [wishList] = useWishList();
 
- console.log(wishList.length)
-  const userInfo = wishList.filter(
-    (item) => item.email === user?.email
-  );
+  console.log(wishList.length);
+  const userInfo = wishList.filter((item) => item.email === user?.email);
 
   const [isAdmin] = useAdmin();
 
@@ -130,17 +129,6 @@ const Navber = () => {
               </Link>
             )}
           </div>
-          <div className="ml-3">
-            {isAdmin ? (
-              <li>
-                <Link to="/dashboard/adminhome">Dashboard</Link>
-              </li>
-            ) : (
-              <li>
-                <Link to="/dashboard/userhome">Dashboard</Link>
-              </li>
-            )}
-          </div>
 
           <div className="hidden lg:ml-8 lg:flex">
             <Link to="pcbuild">
@@ -203,10 +191,40 @@ const Navber = () => {
           </ul>
         </div>
 
-        <Link to="/" className="btn btn-ghost normal-case text-xl mx-auto ">
-          <h1>TheRig</h1>
-          {/* <img src={theRig} style={{height: 150}} className="pb-9" alt="" /> */}
-        </Link>
+        <div className="flex ml-3 items-center">
+          <div className="mr-4">
+            {isAdmin ? (
+              <li>
+                <Link to="/dashboard/adminhome">
+                  <MenuIcon />
+                </Link>
+              </li>
+            ) : (
+              <li>
+                <Link to="/dashboard/userhome">
+                  <MenuIcon />
+                </Link>
+              </li>
+            )}
+          </div>
+          <Link
+            to="/"
+            className="btn btn-ghost normal-case text-xl"
+            style={{ position: "relative", overflow: "hidden" }}
+          >
+            <img
+              className="mb-3 h-200 w-200"
+              src={theRig}
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                transform: "translateY(-50%)",
+              }}
+              alt=""
+            />
+          </Link>
+        </div>
 
         <div className="flex items-start border-3 pr-3  rounded-lg mx-auto bg-cyan-700">
           <input

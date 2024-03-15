@@ -245,7 +245,7 @@ const AvailableProduct = () => {
                           <Link
                             onClick={() => pcbuilderCartGet(item)}
                             to={`/pcbuild/${item._id}`}
-                            className="btn btn-sm btn-success"
+                            className="ap"
                             style={{ textTransform: "capitalize" }}
                           >
                             Add

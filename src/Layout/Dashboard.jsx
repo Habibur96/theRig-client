@@ -37,7 +37,7 @@ const Dashboard = () => {
         <Outlet></Outlet>
       </div>
 
-      <div className="drawer-side bg-[#00b16a] font-semibold">
+      <div className="drawer-side bg-[#51A3A3] font-semibold">
         {/* <div>
         <img src={theRig} width="250" height="200" className="pl-20" alt="" />
       </div> */}

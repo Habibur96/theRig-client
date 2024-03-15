@@ -36,7 +36,7 @@ const MonitorFilter = () => {
             key={variant}
             text={variant.toLowerCase() === "light" ? "dark" : "white"}
             style={{ width: "24rem" }}
-            className="mb-2 rounded-0"
+            className="mb-2 rounded-0 bg-[#DCDCDC]"
           >
             <Card.Header className="text-black ">Price Range</Card.Header>
             <Card.Body>
@@ -56,6 +56,7 @@ const MonitorFilter = () => {
           </Card>
         ))}
       </>
+
       <Accordion defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -64,7 +65,7 @@ const MonitorFilter = () => {
         >
           <Typography>Brand</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className="bg-[#DCDCDC]">
           <Typography>
             <fieldset>
               <legend className="sr-only">Checkboxes</legend>
@@ -408,7 +409,10 @@ const MonitorFilter = () => {
                   </div>
 
                   <div>
-                    <strong className="font-medium text-gray-900"> 100Hz </strong>
+                    <strong className="font-medium text-gray-900">
+                      {" "}
+                      100Hz{" "}
+                    </strong>
                   </div>
                 </label>
                 <label
@@ -425,7 +429,10 @@ const MonitorFilter = () => {
                   </div>
 
                   <div>
-                    <strong className="font-medium text-gray-900"> 165Hz </strong>
+                    <strong className="font-medium text-gray-900">
+                      {" "}
+                      165Hz{" "}
+                    </strong>
                   </div>
                 </label>
                 <label
@@ -442,7 +449,10 @@ const MonitorFilter = () => {
                   </div>
 
                   <div>
-                    <strong className="font-medium text-gray-900"> 180Hz </strong>
+                    <strong className="font-medium text-gray-900">
+                      {" "}
+                      180Hz{" "}
+                    </strong>
                   </div>
                 </label>
               </div>

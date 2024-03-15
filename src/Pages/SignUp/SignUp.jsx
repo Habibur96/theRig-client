@@ -32,7 +32,7 @@ const SignUp = () => {
             name: data.name,
             email: data.email,
             phone: data.phone,
-            starpoints: "0"
+            starpoints: "0",
           };
           console.log(saveUser);
           fetch("http://localhost:3000/users", {
@@ -209,11 +209,7 @@ const SignUp = () => {
           </Link>
         </p>
       </div>
-      <script
-        src="https://static.elfsight.com/platform/platform.js"
-        data-use-service-core
-        defer
-      ></script>
+
       <div
         class="elfsight-app-deb8cb53-9683-466e-ac49-c0554b5fb1e2"
         data-elfsight-app-lazy

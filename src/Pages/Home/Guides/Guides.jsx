@@ -206,7 +206,6 @@ const Guides = () => {
                   {item.buildName}
                 </h4>
               </Link>
-              {/* <h1 className=""> {totalPrice} tk</h1> */}
             </div>
           </div>
         ))}

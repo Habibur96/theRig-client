@@ -16,10 +16,10 @@ const Monitor = () => {
   return (
     <div className="flex column-gap-5">
       <div className=" flex-[1]">
-        <MonitorFilter></MonitorFilter>
+        <MonitorFilter ></MonitorFilter>
       </div>
 
-      <div className="flex-[4] mr-5 ">
+      <div className="flex-[4] mr-5">
         <div className="overflow-x-auto ">
           <ScrollToTop
             smooth

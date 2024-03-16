@@ -19,7 +19,7 @@ import useUsers from "../Hooks/useUsers";
 import UseAuth from "../Hooks/UseAuth";
 import FilterFramesOutlinedIcon from "@mui/icons-material/FilterFramesOutlined";
 import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
-import ImportantDevicesTwoToneIcon from '@mui/icons-material/ImportantDevicesTwoTone';
+import ImportantDevicesTwoToneIcon from "@mui/icons-material/ImportantDevicesTwoTone";
 
 const Dashboard = () => {
   const [cart] = UseCart();
@@ -51,138 +51,171 @@ const Dashboard = () => {
                   <FaHome></FaHome> Admin Home
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="/dashboard/manageProducts">
                   <FaWallet />
                   Manage Products
                 </NavLink>
-              </li>
+              </li> */}
 
               <li>
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <span>
-                      <CreateNewFolderIcon /> Create Product
+                      <CreateNewFolderIcon /> Manage Products
                     </span>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4 text-black">
                     <li>
                       <NavLink
-                        to="/dashboard/createProducts/cpu"
+                        to="/dashboard/manageProducts"
                         className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Cpu
+                        All Products
                       </NavLink>
                     </li>
 
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/motherboard"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Motherboard
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/cpucooler"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Cpu Cooler
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/monitor"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Monitor
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/storage"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Storage
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/gpu"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Gpu
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/psu"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        PSU
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/mice"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Mice
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/casingcooler"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Casing Cooler
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/keyboard"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Keyboard
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/dashboard/createProducts/ups"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-900"
-                      >
-                        Ups
-                      </NavLink>
-                    </li>
+                    <ul className="mt-2 space-y-1 px-1 text-black">
+                      <li>
+                        <details className="group">
+                          <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2 px-1">
+                            <span className="">
+                              <ImportantDevicesTwoToneIcon /> Create product &
+                              Build
+                            </span>
+                          </summary>
+
+                          <ul className="mt-2 space-y-1 px-4 text-black ">
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/cpu"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Cpu
+                              </NavLink>
+                            </li>
+
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/motherboard"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Motherboard
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/cpucooler"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Cpu Cooler
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/monitor"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Monitor
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/storage"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Storage
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/gpu"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Gpu
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/psu"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                PSU
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/mice"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Mice
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/casingcooler"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Casing Cooler
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/keyboard"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Keyboard
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createProducts/ups"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                Ups
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
+                                to="/dashboard/createBuild"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Build Guides
+                              </NavLink>
+                            </li>
+                          </ul>
+                        </details>
+                      </li>
+                    </ul>
                   </ul>
                 </details>
               </li>
-
               <li>
                 <details className="group">
-                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
-                    <span>
-                      <ImportantDevicesTwoToneIcon /> Create Complete Build
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2 ">
+                    <CreateNewFolderIcon />
+                    <span className="text-sm font-medium mr-8">
+                      Banners & Customization
                     </span>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4 text-black">
                     <li>
                       <NavLink
-                        to="/dashboard/createBuild"
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                        to=""
+                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Build Guides
+                        Shop Collect Product
                       </NavLink>
                     </li>
+
                     <li>
                       <NavLink
                         to=""
                         className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Complete Build Inventory
+                        Delivery product
                       </NavLink>
                     </li>
                   </ul>
@@ -190,10 +223,200 @@ const Dashboard = () => {
               </li>
 
               <li>
-                <NavLink to="/">
-                  <FaBook></FaBook> Manage Bookings(not implemented)
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
+                    <span>
+                      <ImportantDevicesTwoToneIcon /> Inventory Management
+                    </span>
+                  </summary>
+                  <ul className="mt-2 space-y-1 px-1 text-black">
+                    <li>
+                      <details className="group">
+                        <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2 px-1">
+                          <span className="">
+                            <ImportantDevicesTwoToneIcon /> TheRig Inventory
+                          </span>
+                        </summary>
+
+                        <ul className="mt-2 space-y-1 px-4 text-black">
+                          <li>
+                            <NavLink
+                              to="/dashboard/inventory/readyBuild"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Pre/ Complete build
+                            </NavLink>
+                          </li>
+
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/cpu"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Cpu
+                            </NavLink>
+                          </li>
+
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/motherboard"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Motherboard
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/cpucooler"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Cpu Cooler
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/monitor"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Monitor
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/storage"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Storage
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/gpu"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Gpu
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/psu"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              PSU
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/mice"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Mice
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/casingcooler"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Casing Cooler
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/keyboard"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Keyboard
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/ups"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-900"
+                            >
+                              Ups
+                            </NavLink>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                  <ul className="mt-2 space-y-1 px-1 text-black">
+                    <li>
+                      <details className="group">
+                        <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2 px-1">
+                          <span className="">
+                            <ImportantDevicesTwoToneIcon /> kiso Ekata collected
+                            products
+                          </span>
+                        </summary>
+
+                        <ul className="mt-2 space-y-1 px-4 text-black">
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/cpu"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Pre/ Complete build
+                            </NavLink>
+                          </li>
+
+                          <li>
+                            <NavLink
+                              to="/dashboard/createProducts/cpu"
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Cpu
+                            </NavLink>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+
+              <li className="py-1">
+                <NavLink to="">
+                  <FaBook></FaBook> Coupons
                 </NavLink>
               </li>
+
+              <li>
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
+                    <FaCalendarWeek />
+                    <span className="text-sm font-medium mr-28">Purchases</span>
+                  </summary>
+
+                  <ul className="mt-2 space-y-1 px-4 text-black">
+                    <li>
+                      <NavLink
+                        to="/dashboard/allorders"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Add new purchases
+                      </NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink
+                        to="/dashboard/shopwiseorders"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Purchases list
+                      </NavLink>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li className="mt-2">
+                <NavLink to="">
+                  <FaCalendarAlt />
+                  Manage Stock
+                </NavLink>
+              </li>
+
               <li>
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
@@ -228,6 +451,42 @@ const Dashboard = () => {
               <li>
                 <NavLink to="/dashboard/allusers">
                   <FaUsers></FaUsers> All Users
+                </NavLink>
+              </li>
+              <li>
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
+                    <FaCalendarWeek />
+                    <span className="text-sm font-medium mr-24">
+                      Delivery Partner
+                    </span>
+                  </summary>
+
+                  <ul className="mt-2 space-y-1 px-4 text-black">
+                    <li>
+                      <NavLink
+                        to=""
+                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Product collection
+                      </NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink
+                        to=""
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Product delivery
+                      </NavLink>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+
+              <li className="py-1">
+                <NavLink to="/">
+                  <FaBook></FaBook> Sales & Revenue
                 </NavLink>
               </li>
             </>

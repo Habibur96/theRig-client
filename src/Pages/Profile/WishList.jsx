@@ -15,6 +15,7 @@ const WishList = () => {
   const { user } = UseAuth();
 
   const userInfo = wishList.filter((item) => item.email === user?.email);
+  console.log(userInfo)
 
   const handleCart = async (item) => {
     if (user && user.email) {

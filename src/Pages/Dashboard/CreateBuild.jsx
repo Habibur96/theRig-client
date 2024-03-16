@@ -12,6 +12,16 @@ const CreateBuild = () => {
     const formData = new FormData();
     formData.append("image", data.img[0]);
     console.log(data);
+    const totalPrice =
+      (parseInt(data.cpuPrice) || 0) +
+      (parseInt(data.cpuCoolerPrice) || 0) +
+      (parseInt(data.mbPrice) || 0) +
+      (parseInt(data.memoryPrice) || 0) +
+      (parseInt(data.monitorPrice) || 0) +
+      (parseInt(data.storagePrice) || 0) +
+      (parseInt(data.gpuPrice) || 0) +
+      (parseInt(data.casePrice) || 0) +
+      (parseInt(data.psuPrice) || 0);
 
     fetch(img_hosting_url, {
       method: "POST",
@@ -43,7 +53,6 @@ const CreateBuild = () => {
             memoryModel,
             memoryPrice,
 
-
             monitorName,
             monitorImg,
             monitorModel,
@@ -71,6 +80,7 @@ const CreateBuild = () => {
 
             buildName,
             details,
+            buildQty,
           } = data;
 
           const newItem = {
@@ -93,7 +103,6 @@ const CreateBuild = () => {
             memoryImg,
             memoryModel,
             memoryPrice: parseInt(memoryPrice) || 0,
-
 
             monitorName,
             monitorImg,
@@ -122,7 +131,8 @@ const CreateBuild = () => {
 
             img: imgURL,
             buildName,
-
+            buildQty: parseInt(buildQty),
+            totalPrice: totalPrice,
             details,
           };
 
@@ -130,7 +140,7 @@ const CreateBuild = () => {
           axiosSecure.post("/createBuild", newItem).then((data) => {
             console.log("after posting new menu item", data.data);
             if (data.data?.insertedId) {
-              // reset();
+              reset();
               Swal.fire({
                 position: "top-end",
                 icon: "success",
@@ -166,7 +176,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("cpuName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -180,7 +190,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("cpuImg", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -194,7 +204,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("cpuModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -208,7 +218,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("cpuPrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -227,7 +237,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("cpuCoolerName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -241,7 +251,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("cpuCoolerImage", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -255,7 +265,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("cpuCoolerModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -269,7 +279,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("cpuCoolerPrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -288,7 +298,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("mbName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -302,7 +312,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("mbImg", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -316,7 +326,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("mbModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -330,7 +340,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("mbPrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -350,7 +360,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("memoryName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -364,7 +374,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("memoryImg", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -378,7 +388,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("memoryModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -392,7 +402,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("memoryPrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -411,7 +421,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("monitorName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -425,7 +435,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("monitorImg", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -439,7 +449,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("monitorModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -453,7 +463,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("monitorPrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -472,7 +482,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("storageName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -486,7 +496,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("storageImg", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -500,7 +510,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("storageModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -514,7 +524,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("storagePrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -533,7 +543,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("gpuName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -547,7 +557,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("gpuImg", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -561,7 +571,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("gpuModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -575,7 +585,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("gpuPrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -594,7 +604,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("caseName", {
                 //  required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -608,7 +618,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("caseImg", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -622,7 +632,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("caseModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -636,7 +646,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("casePrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -656,7 +666,7 @@ const CreateBuild = () => {
               placeholder="name"
               {...register("psuName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -670,7 +680,7 @@ const CreateBuild = () => {
               placeholder="image"
               {...register("psuImg", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -684,7 +694,7 @@ const CreateBuild = () => {
               placeholder="model"
               {...register("psuModel", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -698,7 +708,7 @@ const CreateBuild = () => {
               placeholder="price"
               {...register("psuPrice", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -714,7 +724,7 @@ const CreateBuild = () => {
             <input
               {...register("img", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
               })}
               type="file"
               className="file-input file-input-bordered w-full  "
@@ -730,7 +740,22 @@ const CreateBuild = () => {
               placeholder="Build Name"
               {...register("buildName", {
                 // required: true,
-                maxLength:  500,
+                maxLength: 500,
+              })}
+              className="input input-bordered w-full "
+            />
+          </div>
+
+          <div className=" w-80  ml-4">
+            <label className="label">
+              <span className="label-text">Qty*</span>
+            </label>
+            <input
+              type="number"
+              placeholder="qty"
+              {...register("buildQty", {
+                required: true,
+                maxLength: 500,
               })}
               className="input input-bordered w-full "
             />
@@ -746,7 +771,7 @@ const CreateBuild = () => {
             placeholder="Build Details"
             {...register("details", {
               // required: true,F
-              maxLength:  5000,
+              maxLength: 5000,
             })}
           ></textarea>
         </div>

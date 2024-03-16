@@ -33,18 +33,6 @@ const Guides = () => {
   const handleMouseLeave = () => {
     setIsHovered(null);
   };
-  const totalPrice =
-    buildProducts[0]?.cpuPrice +
-    buildProducts[0]?.cpuCoolerPrice +
-    buildProducts[0]?.mbPrice +
-    buildProducts[0]?.memoryPrice +
-    buildProducts[0]?.monitorPrice +
-    buildProducts[0]?.storagePrice +
-    buildProducts[0]?.gpuPrice +
-    buildProducts[0]?.casePrice +
-    buildProducts[0]?.psuPrice;
-
-  console.log(totalPrice);
 
   const handleCart = async (item) => {
     if (user && user.email) {
@@ -86,6 +74,7 @@ const Guides = () => {
   };
 
   const handleWishList = async (item) => {
+    console.log(item);
     if (user && user.email) {
       const wishlistItem = {
         productId: item?._id,
@@ -127,12 +116,12 @@ const Guides = () => {
       <h1 className="text-[#ffffff] text-3xl text-center font-bold bg-[#545578] h-28 pt-4">
         Build Guides
       </h1>
-      <div className=" max-w-screen-xl mx-auto grid md:grid-cols-4 gap-x-28 gap-y-8 mt-10 ">
+      <div className="max-w-screen-xl mx-auto grid md:grid-cols-4 gap-x-28 gap-y-8 mt-10 ">
         {buildProducts.map((item, index) => (
           <div
             key={item._id}
             item={item}
-            className="card w-80 rounded-1 "
+            className="card w-80 rounded-1"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >

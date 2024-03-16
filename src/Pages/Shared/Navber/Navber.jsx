@@ -9,7 +9,7 @@ import UseAuth from "../../../Hooks/UseAuth";
 import { Badge, Typography } from "@mui/material";
 import useWishList from "../../../Hooks/useWishList";
 import MenuIcon from "@mui/icons-material/Menu";
-import theRig from "../../../assets/logo/theRig.png";
+import theRig from "../../../assets/logo/theRIG.png";
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
 // import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
@@ -213,9 +213,11 @@ const Navber = () => {
             style={{ position: "relative", overflow: "hidden" }}
           >
             <img
-              className="mb-3 h-200 w-200"
+              className=""
               src={theRig}
               style={{
+                height: "200",
+                weight: "400",
                 position: "absolute",
                 top: "0",
                 left: "0",

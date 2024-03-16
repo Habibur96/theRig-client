@@ -22,6 +22,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 const GuidesDetails = () => {
   const { buildName } = useParams();
+  console.log(buildName);
   const { user } = UseAuth();
   const [, refetch] = UseCart();
   const location = useLocation();
@@ -31,23 +32,23 @@ const GuidesDetails = () => {
   const [buildProducts, combuildRefetch] = useCompleteBuild();
   console.log(buildProducts);
   const product = buildProducts.filter((item) => item.buildName === buildName);
-  console.log(product);
+  console.log(product[0]?.totalPrice);
   const currentBuildReview = review.filter(
     (item) => item.buildName === buildName
   );
 
-  const totalPrice =
-    product[0]?.cpuPrice +
-    product[0]?.cpuCoolerPrice +
-    product[0]?.mbPrice +
-    product[0]?.memoryPrice +
-    product[0]?.monitorPrice +
-    product[0]?.storagePrice +
-    product[0]?.gpuPrice +
-    product[0]?.casePrice +
-    product[0]?.psuPrice;
+  // const totalPrice =
+  //   product[0]?.cpuPrice +
+  //   product[0]?.cpuCoolerPrice +
+  //   product[0]?.mbPrice +
+  //   product[0]?.memoryPrice +
+  //   product[0]?.monitorPrice +
+  //   product[0]?.storagePrice +
+  //   product[0]?.gpuPrice +
+  //   product[0]?.casePrice +
+  //   product[0]?.psuPrice;
 
-  console.log(totalPrice);
+  // console.log(totalPrice);
 
   const {
     register,
@@ -70,7 +71,7 @@ const GuidesDetails = () => {
         cartItemId: product[0]?._id,
         productName: product[0]?.buildName,
         productImg: product[0]?.img,
-        price: totalPrice,
+        price: product[0]?.totalPrice,
       };
 
       const res = await axiosSecure.post("cart", cartItem);
@@ -511,7 +512,7 @@ const GuidesDetails = () => {
             </tbody>
           </table>
           <h1 className="text-end mr-2 mt-3 font-bold text-lg">
-            Total : {totalPrice}tk
+            Total : {product[0]?.totalPrice}tk
           </h1>
 
           <div className="flex gap-3">

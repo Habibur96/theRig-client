@@ -49,6 +49,7 @@ import Guides from "../Pages/Home/Guides/Guides";
 import WishList from "../Pages/Profile/WishList";
 import CreateBuild from "../Pages/Dashboard/CreateBuild";
 import GuidesDetails from "../Pages/Home/Guides/GuidesDetails";
+import TheRigInventory from "../Pages/Dashboard/Inventory/TheRigInventory";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -369,6 +370,16 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <CreateMice></CreateMice>
+          </AdminRoute>
+        ),
+      },
+
+      // =====================Inventory================
+      {
+        path: "inventory/readyBuild",
+        element: (
+          <AdminRoute>
+            <TheRigInventory></TheRigInventory>
           </AdminRoute>
         ),
       },

@@ -149,15 +149,15 @@ const AddCoupon = () => {
               />
             </div>
           </div>
-        </div>
         <button
           type="submit"
           size="lg"
-          className="btn btn-md btn  bg-[#7371fc] border-b-4 mt-4 mb-96 ml-28"
+          className="btn btn-md btn font-semibold text-lg bg-[#7371fc] border-b-4 mt-4 mb-96 "
           style={{ textTransform: "capitalize" }}
         >
           Create Coupon
         </button>
+        </div>
       </form>
     </div>
   );

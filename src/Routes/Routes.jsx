@@ -49,7 +49,10 @@ import Guides from "../Pages/Home/Guides/Guides";
 import WishList from "../Pages/Profile/WishList";
 import CreateBuild from "../Pages/Dashboard/CreateBuild";
 import GuidesDetails from "../Pages/Home/Guides/GuidesDetails";
-import TheRigInventory from "../Pages/Dashboard/Inventory/TheRigInventory";
+import EditReadyBuild from "../Pages/Dashboard/Inventory/EditReadyBuild";
+import RigReadyBuildInventory from "../Pages/Dashboard/Inventory/RigReadyBuildInventory";
+import AddCoupon from "../Pages/Dashboard/Coupons/AddCoupon";
+import ManageCoupon from "../Pages/Dashboard/Coupons/ManageCoupon";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -104,11 +107,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "guideDetails/:buildName",
-        element: (
-          
-            <GuidesDetails></GuidesDetails>
-          
-        ),
+        element: <GuidesDetails></GuidesDetails>,
       },
       // {
       //   path: "replaceProduct/:_id",
@@ -374,12 +373,37 @@ export const router = createBrowserRouter([
         ),
       },
 
+      // ===================Coupons=============
+      {
+        path: "/dashboard/addcoupon",
+        element: (
+          <AdminRoute>
+            <AddCoupon />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/managecoupon",
+        element: (
+          <AdminRoute>
+            <ManageCoupon />
+          </AdminRoute>
+        ),
+      },
       // =====================Inventory================
       {
         path: "inventory/readyBuild",
         element: (
           <AdminRoute>
-            <TheRigInventory></TheRigInventory>
+            <RigReadyBuildInventory></RigReadyBuildInventory>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "editReadyBuild/:id",
+        element: (
+          <AdminRoute>
+            <EditReadyBuild></EditReadyBuild>
           </AdminRoute>
         ),
       },

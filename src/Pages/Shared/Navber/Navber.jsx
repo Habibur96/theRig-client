@@ -212,7 +212,8 @@ const Navber = () => {
             className="btn btn-ghost normal-case text-xl"
             style={{ position: "relative", overflow: "hidden" }}
           >
-            <img
+            <h1>TheRig</h1>
+            {/* <img
               className=""
               src={theRig}
               style={{
@@ -224,7 +225,7 @@ const Navber = () => {
                 transform: "translateY(-50%)",
               }}
               alt=""
-            />
+            /> */}
           </Link>
         </div>
 

@@ -22,7 +22,7 @@ const AllOrders = () => {
     console.log("Order Status updated", res.data);
     if (res?.data?.modifiedCount > 0) {
       refetch();
-    }
+    } 
   };
 
   const handleDelete = async (_id) => {

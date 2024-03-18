@@ -346,27 +346,42 @@ const Dashboard = () => {
                       <details className="group">
                         <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2 px-1">
                           <span className="">
-                            <ImportantDevicesTwoToneIcon /> kiso Ekata collected
-                            products
+                            <ImportantDevicesTwoToneIcon /> Vendor Inventory
                           </span>
                         </summary>
 
                         <ul className="mt-2 space-y-1 px-4 text-black">
                           <li>
                             <NavLink
-                              to="/dashboard/createProducts/cpu"
+                              to=""
                               className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                             >
-                              Pre/ Complete build
+                              Startech
                             </NavLink>
                           </li>
 
                           <li>
                             <NavLink
-                              to="/dashboard/createProducts/cpu"
+                              to=""
                               className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                             >
-                              Cpu
+                              Ryans
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to=""
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Ultra
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to=""
+                              className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                            >
+                              Skyland
                             </NavLink>
                           </li>
                         </ul>
@@ -376,10 +391,35 @@ const Dashboard = () => {
                 </details>
               </li>
 
-              <li className="py-1">
-                <NavLink to="">
-                  <FaBook></FaBook> Coupons
-                </NavLink>
+              <li>
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
+                    <FaCalendarWeek />
+                    <span className="text-sm font-medium mr-28">
+                      Coupons
+                    </span>
+                  </summary>
+
+                  <ul className="mt-2 space-y-1 px-4 text-black">
+                    <li>
+                      <NavLink
+                        to="/dashboard/addcoupon"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Add Coupons
+                      </NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink
+                        to="/dashboard/managecoupon"
+                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                      Manage Coupons
+                      </NavLink>
+                    </li>
+                  </ul>
+                </details>
               </li>
 
               <li>
@@ -392,7 +432,7 @@ const Dashboard = () => {
                   <ul className="mt-2 space-y-1 px-4 text-black">
                     <li>
                       <NavLink
-                        to="/dashboard/allorders"
+                        to=""
                         className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
                       >
                         Add new purchases
@@ -401,7 +441,7 @@ const Dashboard = () => {
 
                     <li>
                       <NavLink
-                        to="/dashboard/shopwiseorders"
+                        to=""
                         className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Purchases list
@@ -422,7 +462,7 @@ const Dashboard = () => {
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <FaCalendarWeek />
                     <span className="text-sm font-medium mr-28">
-                      Orders Details{" "}
+                      Orders Details
                     </span>
                   </summary>
 
@@ -458,7 +498,7 @@ const Dashboard = () => {
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <FaCalendarWeek />
                     <span className="text-sm font-medium mr-24">
-                      Delivery Partner
+                      Delivery Agents
                     </span>
                   </summary>
 

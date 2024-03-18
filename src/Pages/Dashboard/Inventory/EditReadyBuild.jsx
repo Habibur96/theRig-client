@@ -1,27 +1,24 @@
+import { useParams } from "react-router-dom";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { useForm } from "react-hook-form";
-import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
-import SectionTitle from "../Shared/SectionTitle/SectionTitle";
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
+import useCompleteBuild from "../../../Hooks/useCompleteBuild";
 
-const image_hosting_token = import.meta.env.VITE_Image_hosting_Token;
-const CreateBuild = () => {
+const EditReadyBuild = () => {
+  const { id } = useParams();
+  const [, combuildRefetch] = useCompleteBuild();
+  console.log(id);
   const [axiosSecure] = useAxiosSecure();
+  const image_hosting_token = import.meta.env.VITE_Image_hosting_Token;
   const { register, handleSubmit, reset } = useForm();
   const img_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`;
   const onSubmit = (data) => {
     const formData = new FormData();
-    formData.append("image", data.img[0]);
+    if (data.img) {
+      formData.append("image", data.img[0]);
+    }
     console.log(data);
-    const totalPrice =
-      (parseInt(data.cpuPrice) || 0) +
-      (parseInt(data.cpuCoolerPrice) || 0) +
-      (parseInt(data.mbPrice) || 0) +
-      (parseInt(data.memoryPrice) || 0) +
-      (parseInt(data.monitorPrice) || 0) +
-      (parseInt(data.storagePrice) || 0) +
-      (parseInt(data.gpuPrice) || 0) +
-      (parseInt(data.casePrice) || 0) +
-      (parseInt(data.psuPrice) || 0);
 
     fetch(img_hosting_url, {
       method: "POST",
@@ -29,149 +26,136 @@ const CreateBuild = () => {
     })
       .then((res) => res.json())
       .then((imgeResponse) => {
+        let imgURL = null;
         if (imgeResponse.success) {
-          const imgURL = imgeResponse.data.display_url;
-
-          const {
-            cpuName,
-            cpuImg,
-            cpuModel,
-            cpuPrice,
-
-            cpuCoolerName,
-            cpuCoolerImg,
-            cpuCoolerModel,
-            cpuCoolerPrice,
-
-            mbName,
-            mbImg,
-            mbModel,
-            mbPrice,
-
-            memoryName,
-            memoryImg,
-            memoryModel,
-            memoryPrice,
-
-            monitorName,
-            monitorImg,
-            monitorModel,
-            monitorPrice,
-
-            storageName,
-            storageImg,
-            storageModel,
-            storagePrice,
-
-            gpuName,
-            gpuImg,
-            gpuModel,
-            gpuPrice,
-
-            caseName,
-            caseImg,
-            caseModel,
-            casePrice,
-
-            psuName,
-            psuImg,
-            psuModel,
-            psuPrice,
-
-            couponsCode,
-            couponsDiscount,
-            startDate,
-            endDate,
-
-            buildName,
-            details,
-            buildQty,
-          } = data;
-
-          const newItem = {
-            cpuName,
-            cpuImg,
-            cpuModel,
-            cpuPrice: parseInt(cpuPrice) || 0,
-
-            cpuCoolerName,
-            cpuCoolerImg,
-            cpuCoolerModel,
-            cpuCoolerPrice: parseInt(cpuCoolerPrice) || 0,
-
-            mbName,
-            mbImg,
-            mbModel,
-            mbPrice: parseInt(mbPrice) || 0,
-
-            memoryName,
-            memoryImg,
-            memoryModel,
-            memoryPrice: parseInt(memoryPrice) || 0,
-
-            monitorName,
-            monitorImg,
-            monitorModel,
-            monitorPrice: parseInt(monitorPrice) || 0,
-
-            storageName,
-            storageImg,
-            storageModel,
-            storagePrice: parseInt(storagePrice) || 0,
-
-            gpuName,
-            gpuImg,
-            gpuModel,
-            gpuPrice: parseInt(gpuPrice) || 0,
-
-            caseName,
-            caseImg,
-            caseModel,
-            casePrice: parseInt(casePrice) || 0,
-
-            psuName,
-            psuImg,
-            psuModel,
-            psuPrice: parseInt(psuPrice) || 0,
-
-            couponsCode,
-            couponsDiscount,
-            startDate,
-            endDate,
-
-            img: imgURL,
-            buildName,
-            buildQty: parseInt(buildQty),
-            totalPrice: totalPrice,
-            details,
-          };
-
-          console.log(newItem.totalPrice);
-          axiosSecure.post("/createBuild", newItem).then((data) => {
-            console.log("after posting new menu item", data.data);
-            if (data.data?.insertedId) {
-              reset();
-              Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Menu item saved",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-            } else {
-              console.log("sorry");
-            }
-          });
+          imgURL = imgeResponse.data.display_url;
         }
+
+        const {
+          cpuName,
+          cpuImg,
+          cpuModel,
+          cpuPrice,
+
+          cpuCoolerName,
+          cpuCoolerImg,
+          cpuCoolerModel,
+          cpuCoolerPrice,
+
+          mbName,
+          mbImg,
+          mbModel,
+          mbPrice,
+
+          memoryName,
+          memoryImg,
+          memoryModel,
+          memoryPrice,
+
+          monitorName,
+          monitorImg,
+          monitorModel,
+          monitorPrice,
+
+          storageName,
+          storageImg,
+          storageModel,
+          storagePrice,
+
+          gpuName,
+          gpuImg,
+          gpuModel,
+          gpuPrice,
+
+          caseName,
+          caseImg,
+          caseModel,
+          casePrice,
+
+          psuName,
+          psuImg,
+          psuModel,
+          psuPrice,
+
+          buildName,
+          details,
+        } = data;
+
+        const newItem = {
+          cpuName,
+          cpuImg,
+          cpuModel,
+          cpuPrice: parseInt(cpuPrice) || 0,
+
+          cpuCoolerName,
+          cpuCoolerImg,
+          cpuCoolerModel,
+          cpuCoolerPrice: parseInt(cpuCoolerPrice) || 0,
+
+          mbName,
+          mbImg,
+          mbModel,
+          mbPrice: parseInt(mbPrice) || 0,
+
+          memoryName,
+          memoryImg,
+          memoryModel,
+          memoryPrice: parseInt(memoryPrice) || 0,
+
+          monitorName,
+          monitorImg,
+          monitorModel,
+          monitorPrice: parseInt(monitorPrice) || 0,
+
+          storageName,
+          storageImg,
+          storageModel,
+          storagePrice: parseInt(storagePrice) || 0,
+
+          gpuName,
+          gpuImg,
+          gpuModel,
+          gpuPrice: parseInt(gpuPrice) || 0,
+
+          caseName,
+          caseImg,
+          caseModel,
+          casePrice: parseInt(casePrice) || 0,
+
+          psuName,
+          psuImg,
+          psuModel,
+          psuPrice: parseInt(psuPrice) || 0,
+
+          img: imgURL,
+          buildName,
+          details,
+        };
+
+        console.log(newItem);
+        axiosSecure.put(`/createBuild/${id}`, newItem).then((data) => {
+          console.log("after posting new menu item", data.data);
+          if (data.data?.modifiedCount > 0) {
+            combuildRefetch();
+            //   reset();
+
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Edit done",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          } else {
+            console.log("sorry");
+          }
+        });
       });
   };
   return (
     <div className="max-w-screen-xl mx-auto mt-5 px-10 bg-[#B8DFD8]">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <SectionTitle
-          subHeading="What's new"
-          heading="Create complete build"
-        ></SectionTitle>
+        <SectionTitle heading="Edit complete build"></SectionTitle>
 
         <h3 className="italic text-center font-bold text-2xl text-blue-700">
           Cpu
@@ -724,7 +708,8 @@ const CreateBuild = () => {
             />
           </div>
         </div>
-        <div className="flex">
+
+        {/* <div className="flex">
           <div className=" w-full ml-4">
             <label className="label">
               <span className="label-text">Coupons Code</span>
@@ -781,7 +766,7 @@ const CreateBuild = () => {
               className="input input-bordered"
             />
           </div>
-        </div>
+        </div> */}
 
         <div className="flex my-4">
           <div className="w-75 mr-4">
@@ -808,21 +793,6 @@ const CreateBuild = () => {
               placeholder="Build Name"
               {...register("buildName", {
                 // required: true,
-                maxLength: 500,
-              })}
-              className="input input-bordered w-full "
-            />
-          </div>
-
-          <div className=" w-80  ml-4">
-            <label className="label">
-              <span className="label-text">Qty*</span>
-            </label>
-            <input
-              type="number"
-              placeholder="qty"
-              {...register("buildQty", {
-                required: true,
                 maxLength: 500,
               })}
               className="input input-bordered w-full "
@@ -855,4 +825,4 @@ const CreateBuild = () => {
   );
 };
 
-export default CreateBuild;
+export default EditReadyBuild;

@@ -93,33 +93,6 @@ const SignUp = () => {
             <span className="text-red-600">Name is required</span>
           )}
         </Form.Group>
-        {/* <Form.Label className="mr-2" controlId="formBasicEmail">
-          Name <span className="text-red-600 font-extrabold">*</span>
-          <Form.Control
-            type="text"
-            {...register("firstName", { required: true })}
-            name="name"
-            placeholder="name"
-            required
-          />
-          {errors.name && (
-            <span className="text-red-600">Name is required</span>
-          )}
-        </Form.Label> */}
-
-        {/* <Form.Label>
-          Last Name <span className="text-red-600 font-extrabold">*</span>
-          <Form.Control
-            type="text"
-            name="lastName"
-             {...register("lastName", { required: true })}
-            placeholder="Last Name"
-            required
-          />
-           {errors.lastName && (
-            <span className="text-red-600">Last Name is required</span>
-          )}  
-        </Form.Label> */}
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>

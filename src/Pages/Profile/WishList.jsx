@@ -14,8 +14,8 @@ const WishList = () => {
   const [axiosSecure] = useAxiosSecure();
   const { user } = UseAuth();
 
-  const userInfo = wishList.filter((item) => item.email === user?.email);
-  console.log(userInfo)
+  const wishListProduct = wishList.filter((item) => item.email === user?.email);
+  console.log(wishListProduct)
 
   const handleCart = async (item) => {
     if (user && user.email) {
@@ -107,7 +107,7 @@ const WishList = () => {
         </thead>
 
         <tbody className="bg-re">
-          {userInfo.map((item, index) => (
+          {wishListProduct.map((item, index) => (
             <tr key={item._id}>
               <td>{index + 1}</td>
               <td>

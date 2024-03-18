@@ -3,8 +3,9 @@ import ModeEditOutlinedIcon from "@mui/icons-material/ModeEditOutlined";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-const TheRigInventory = () => {
-  const [buildProducts,combuildRefetch] = useCompleteBuild();
+import { Link } from "react-router-dom";
+const RigReadyBuildInventory = () => {
+  const [buildProducts, combuildRefetch] = useCompleteBuild();
   const [axiosSecure] = useAxiosSecure();
 
   const handleDelete = (id) => {
@@ -90,9 +91,9 @@ const TheRigInventory = () => {
 
                   <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-700">
                     <div className="flex gap-2">
-                      <button onClick={() => handleEdit()}>
+                      <Link to={`/dashboard/editReadyBuild/${item._id}`}>
                         <ModeEditOutlinedIcon />
-                      </button>
+                      </Link>
                       <button onClick={() => handleDelete(item._id)}>
                         <DeleteForeverIcon />
                       </button>
@@ -108,4 +109,4 @@ const TheRigInventory = () => {
   );
 };
 
-export default TheRigInventory;
+export default RigReadyBuildInventory;

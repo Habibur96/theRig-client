@@ -22,7 +22,7 @@ const AllOrders = () => {
     console.log("Order Status updated", res.data);
     if (res?.data?.modifiedCount > 0) {
       refetch();
-    } 
+    }
   };
 
   const handleDelete = async (_id) => {
@@ -38,7 +38,7 @@ const AllOrders = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await axiosSecure.delete(`/payments/${_id}`);
-        
+
         console.log("Order cancelled", res.data);
         if (res?.data?.deletedCount > 0) {
           refetch();
@@ -93,7 +93,7 @@ const AllOrders = () => {
 
             <tbody className="divide-y divide-gray-300">
               {orders.map((order, index) => (
-                <tr className="divide-x divide-gray-110"  key={order._id}>
+                <tr className="divide-x divide-gray-110" key={order._id}>
                   <th className="pl-3 px-2">{index + 1}</th>
                   <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
                     {order.name}
@@ -171,16 +171,21 @@ const AllOrders = () => {
                                   htmlFor="Option1"
                                   className="flex cursor-pointer items-start gap-4"
                                 >
-                                  <div>
-                                    <button
-                                      className="font-medium text-gray-900"
-                                      onClick={() =>
-                                        handleUpdate(order._id, orderStatus[1])
-                                      }
-                                    >
-                                      Cancelled
-                                    </button>
-                                  </div>
+                                  {order.paymentStatus === "success" ? null : (
+                                    <div>
+                                      <button
+                                        className="font-medium text-gray-900"
+                                        onClick={() =>
+                                          handleUpdate(
+                                            order._id,
+                                            orderStatus[1]
+                                          )
+                                        }
+                                      >
+                                        Cancelled
+                                      </button>
+                                    </div>
+                                  )}
                                 </label>
                                 <label
                                   htmlFor="Option1"

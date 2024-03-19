@@ -335,8 +335,10 @@ const CheckoutForm = ({ email }) => {
               <div className="mt-3">
                 <Form.Group controlId="formBasicName">
                   <Form.Label>
-                    Address <span className="font-extrabold">*</span>
+                    Address{" "}
+                    <span className="text-red-600 font-extrabold">*</span>
                   </Form.Label>
+
                   <Form.Control
                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
                     type="text"
@@ -345,6 +347,9 @@ const CheckoutForm = ({ email }) => {
                     placeholder="Address"
                   />
                 </Form.Group>
+                {errors.address && (
+                  <span className="text-red-600">Address is required</span>
+                )}
               </div>
 
               <div className="mt-3">

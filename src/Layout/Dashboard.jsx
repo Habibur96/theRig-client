@@ -23,8 +23,9 @@ import ImportantDevicesTwoToneIcon from "@mui/icons-material/ImportantDevicesTwo
 
 const Dashboard = () => {
   const [cart] = UseCart();
-
   const { user } = UseAuth();
+
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
   // TODO: load data from the server to have dynamic isAdmin based on Data
   // const isAdmin = true;
@@ -395,9 +396,7 @@ const Dashboard = () => {
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <FaCalendarWeek />
-                    <span className="text-sm font-medium mr-28">
-                      Coupons
-                    </span>
+                    <span className="text-sm font-medium mr-28">Coupons</span>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4 text-black">
@@ -415,7 +414,7 @@ const Dashboard = () => {
                         to="/dashboard/managecoupon"
                         className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
-                      Manage Coupons
+                        Manage Coupons
                       </NavLink>
                     </li>
                   </ul>
@@ -506,18 +505,9 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to=""
-                        className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                        className="block rounded-lg px-2 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Product collection
-                      </NavLink>
-                    </li>
-
-                    <li>
-                      <NavLink
-                        to=""
-                        className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                      >
-                        Product delivery
+                        Product collection & delivery
                       </NavLink>
                     </li>
                   </ul>
@@ -544,12 +534,21 @@ const Dashboard = () => {
               </li> */}
 
               <li>
-                <NavLink to="/dashboard/mycart">
-                  <FaShoppingCart></FaShoppingCart> My Cart
-                  <span className="badge inl badge-secondary">
-                    +{cart?.length || 0}
-                  </span>
-                </NavLink>
+                {cart.length === 0 ? (
+                  <NavLink to="/emptyCart">
+                    <FaShoppingCart></FaShoppingCart> My Cart
+                    <span className="badge inl badge-secondary">
+                      +{totalQuantity || 0}
+                    </span>
+                  </NavLink>
+                ) : (
+                  <NavLink to="/dashboard/mycart">
+                    <FaShoppingCart></FaShoppingCart> My Cart
+                    <span className="badge inl badge-secondary">
+                      +{totalQuantity || 0}
+                    </span>
+                  </NavLink>
+                )}
               </li>
               <li>
                 <NavLink to={`/dashboard/orderHistory/${user?.email}`}>

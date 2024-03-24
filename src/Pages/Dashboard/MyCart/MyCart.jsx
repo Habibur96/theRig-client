@@ -1,41 +1,61 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UseCart from "../../../Hooks/UseCart";
 import ClearIcon from "@mui/icons-material/Clear";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
 import Swal from "sweetalert2";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { useContext } from "react";
-import { CartContext } from "../../../Provider/CartProvider";
 import UseAuth from "../../../Hooks/UseAuth";
 import theRig from "../../../assets/logo/theRig.png";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
 const MyCart = () => {
   const [cart, refetch] = UseCart();
-
   const { user } = UseAuth();
-  console.log(cart);
-  const { quantities, updateQuantity } = useContext(CartContext);
-
+  const [axiosSecure] = useAxiosSecure();
+  const navigate = useNavigate();
   // Calculate the total based on the quantities and item prices
+  if (cart.length === 0) {
+    navigate("/emptyCart");
+  }
   const total = cart.reduce(
-    (sum, item, index) => parseFloat(item.price) * quantities[index] + sum,
+    (sum, item) => parseFloat(item.price) * item.quantity + sum,
     0
   );
 
-  const handleQuantity = (index, newQuantity) => {
-    console.log("index:", index);
-    console.log("newQuantity:", newQuantity);
-    if (isNaN(newQuantity)) {
-      newQuantity = 1; // or any default value you want
+  const handleIncrementQuantity = (id) => {
+    const isItemInCart = cart.find((cartitem) => cartitem._id === id);
+
+    if (isItemInCart) {
+      const newQuantity = isItemInCart.quantity + 1;
+      axiosSecure.put(`/cart/${id}`, { quantity: newQuantity }).then((data) => {
+        console.log("after posting new menu item", data.data);
+        if (data.data?.modifiedCount > 0) {
+          refetch();
+        }
+      });
     }
-    newQuantity = Math.max(0, Math.floor(newQuantity));
-    console.log(newQuantity);
-    updateQuantity(index, newQuantity);
-    refetch(); // Call refetch to update the cart data
+  };
+  const handledecrementQuantity = (id) => {
+    const isItemInCart = cart.find((cartitem) => cartitem._id === id);
+
+    if (isItemInCart) {
+      const newQuantity = isItemInCart.quantity - 1;
+
+      if (newQuantity === 0) {
+        handleDelete(id);
+        return;
+      }
+
+      axiosSecure.put(`/cart/${id}`, { quantity: newQuantity }).then((data) => {
+        console.log("after posting new menu item", data.data);
+        if (data.data?.modifiedCount > 0) {
+          refetch();
+        }
+      });
+    }
   };
 
   const handleDelete = (id) => {
-    console.log(id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -52,7 +72,6 @@ const MyCart = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
-              console.log(data.deletedCount);
               refetch();
             }
           });
@@ -71,7 +90,10 @@ const MyCart = () => {
             <th>Image</th>
             <th>Product Name</th>
             <th>Model</th>
-            <th>Quantity</th>
+            <th>
+              <div className="ml-10">Quantity</div>
+            </th>
+
             <th>Unit Price</th>
             <th>Total</th>
           </tr>
@@ -113,21 +135,17 @@ const MyCart = () => {
                 {item.model ? <spanp>{item.model}</spanp> : <span>-----</span>}
               </td>
               <td>
-                <div className="flex space-x-6 items-center">
-                  <button
-                    onClick={() => handleQuantity(index, quantities[index] - 1)}
-                  >
+                <div className="flex space-x-4  items-center">
+                  <button onClick={() => handledecrementQuantity(item._id)}>
                     <RemoveIcon />
                   </button>
-                  <div></div>
+
                   <input
                     // type="text"
-                    value={quantities[index]}
-                    className="input input-bordered input-info w-1/6 max-w-xs rounded-sm"
+                    value={item.quantity}
+                    className="input input-bordered input-info w-1/6 max-w-xs text-center rounded-sm"
                   />
-                  <button
-                    onClick={() => handleQuantity(index, quantities[index] + 1)}
-                  >
+                  <button onClick={() => handleIncrementQuantity(item._id)}>
                     <AddIcon />
                   </button>
                   <div>
@@ -137,18 +155,14 @@ const MyCart = () => {
                         className="mr-4"
                       ></ClearIcon>
                     </button>
-
-                    <Link to="">
-                      <AutorenewIcon></AutorenewIcon>
-                    </Link>
                   </div>
                 </div>
               </td>
 
               <td className="">{item.price}</td>
               {/* Display the total for the current item */}
-              <td className="text-end">
-                {(parseFloat(item.price) * quantities[index]).toFixed(2)}
+              <td className="text-start">
+                {parseFloat(item.price) * item.quantity}
               </td>
             </tr>
           ))}
@@ -163,7 +177,10 @@ const MyCart = () => {
         <tr>
           <td colSpan="5"></td>
           <td className="text-center">
-            <div className="font-bold">Total :{total.toFixed(2)}tk</div>
+            <div className=" font-bold">
+              Total :{total}
+              <FaBangladeshiTakaSign />
+            </div>
           </td>
         </tr>
       </table>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useWishList from "../../Hooks/useWishList";
 import ProfileHeader from "./ProfileHeader/ProfileHeader";
 import ProfileNavber from "./ProfileHeader/ProfileNavber";
@@ -10,15 +10,28 @@ import UseCart from "../../Hooks/UseCart";
 import theRig from "../../assets/logo/theRig.png";
 const WishList = () => {
   const [wishList, wishListRefetch] = useWishList();
-  const [, refetch] = UseCart();
+  const [cart, refetch] = UseCart();
   const [axiosSecure] = useAxiosSecure();
+  const navigate = useNavigate();
   const { user } = UseAuth();
 
   const wishListProduct = wishList.filter((item) => item.email === user?.email);
-  console.log(wishListProduct)
 
   const handleCart = async (item) => {
+    console.log(item);
     if (user && user.email) {
+      const isItemInCart = cart.filter(
+        (cartitem) => cartitem.name === item.productName
+      );
+      console.log(item.productName);
+      console.log(isItemInCart);
+      let quantity;
+      if (isItemInCart[0] && isItemInCart[0].quantity >= 1) {
+        navigate("/dashboard/mycart");
+        return;
+      } else {
+        quantity = 1;
+      }
       const cartItem = {
         email: user?.email,
         cartItemId: item?._id,
@@ -28,6 +41,7 @@ const WishList = () => {
         img: item?.productImg,
         shoplogo: item?.shoplogo,
         price: item?.price,
+        quantity: quantity,
       };
 
       const res = await axiosSecure.post("/cart", cartItem);

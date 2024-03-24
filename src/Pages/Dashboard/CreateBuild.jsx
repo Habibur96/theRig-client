@@ -78,11 +78,6 @@ const CreateBuild = () => {
             psuModel,
             psuPrice,
 
-            couponsCode,
-            couponsDiscount,
-            startDate,
-            endDate,
-
             buildName,
             details,
             buildQty,
@@ -133,11 +128,6 @@ const CreateBuild = () => {
             psuImg,
             psuModel,
             psuPrice: parseInt(psuPrice) || 0,
-
-            couponsCode,
-            couponsDiscount,
-            startDate,
-            endDate,
 
             img: imgURL,
             buildName,
@@ -721,64 +711,6 @@ const CreateBuild = () => {
                 maxLength: 500,
               })}
               className="input input-bordered w-full "
-            />
-          </div>
-        </div>
-        <div className="flex">
-          <div className=" w-full ml-4">
-            <label className="label">
-              <span className="label-text">Coupons Code</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Coupons Code"
-              {...register("couponsCode", {
-                required: true,
-                maxLength: 15,
-              })}
-              className="input input-bordered w-full "
-            />
-          </div>
-
-          <div className=" w-full  ml-4">
-            <label className="label">
-              <span className="label-text">Discount</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Discount"
-              {...register("couponsDiscount", {
-                required: true,
-                maxLength: 15,
-              })}
-              className="input input-bordered w-full "
-            />
-          </div>
-
-          <div className="form-control mr-3 ml-4">
-            <label className="label">
-              <span className="label-text">Start Date</span>
-            </label>
-            <input
-              type="date"
-              name="date"
-              {...register("startDate", {
-                maxLength: 20,
-              })}
-              className="input input-bordered"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">End Date</span>
-            </label>
-            <input
-              type="date"
-              name="date"
-              {...register("endDate", {
-                maxLength: 20,
-              })}
-              className="input input-bordered"
             />
           </div>
         </div>

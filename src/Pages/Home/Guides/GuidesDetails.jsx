@@ -24,7 +24,7 @@ const GuidesDetails = () => {
   const { buildName } = useParams();
   console.log(buildName);
   const { user } = UseAuth();
-  const [, refetch] = UseCart();
+  const [cart, refetch] = UseCart();
   const location = useLocation();
   const navigate = useNavigate();
   const [review, reviewRefetch] = useReview();
@@ -64,14 +64,26 @@ const GuidesDetails = () => {
     },
   });
 
-  const handleCart = async () => {
+  const handleCart = async (productName) => {
     if (user && user.email) {
+      const isItemInCart = cart.filter(
+        (cartitem) => cartitem.name === productName
+      );
+
+      let quantity;
+      if (isItemInCart[0] && isItemInCart[0].quantity >= 1) {
+        navigate("/dashboard/mycart");
+        return;
+      } else {
+        quantity = 1;
+      }
       const cartItem = {
         email: user?.email,
         cartItemId: product[0]?._id,
         productName: product[0]?.buildName,
         productImg: product[0]?.img,
         price: product[0]?.totalPrice,
+        quantity: quantity,
       };
 
       const res = await axiosSecure.post("cart", cartItem);
@@ -517,7 +529,7 @@ const GuidesDetails = () => {
 
           <div className="flex gap-3">
             <button
-              onClick={handleCart}
+              onClick={() => handleCart(product[0]?.productName)}
               type="submit"
               className="btn btn-md btn btn-outline bg-[#00b16a] border-b-4 mt-3 mb-5"
               style={{ textTransform: "capitalize" }}

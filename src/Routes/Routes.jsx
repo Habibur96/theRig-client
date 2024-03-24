@@ -53,6 +53,7 @@ import EditReadyBuild from "../Pages/Dashboard/Inventory/EditReadyBuild";
 import RigReadyBuildInventory from "../Pages/Dashboard/Inventory/RigReadyBuildInventory";
 import AddCoupon from "../Pages/Dashboard/Coupons/AddCoupon";
 import ManageCoupon from "../Pages/Dashboard/Coupons/ManageCoupon";
+import EmptyCart from "../Pages/Dashboard/MyCart/EmptyCart";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -87,6 +88,10 @@ export const router = createBrowserRouter([
       {
         path: "guides",
         element: <Guides></Guides>,
+      },
+      {
+        path: "emptyCart",
+        element: <EmptyCart></EmptyCart>,
       },
 
       {

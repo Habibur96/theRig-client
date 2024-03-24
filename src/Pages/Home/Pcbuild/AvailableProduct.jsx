@@ -14,23 +14,22 @@ import {
   Slider,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import { CartContext } from "../../../Provider/CartProvider";
+
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useWishList from "../../../Hooks/useWishList";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
-  const { quantities, updateQuantity } = useContext(CartContext);
+
   const [axiosSecure] = useAxiosSecure();
-  const [, refetch] = UseCart();
+  const [cart, refetch] = UseCart();
   const [, wishListRefetch] = useWishList();
   const location = useLocation();
   const navigate = useNavigate();
 
   const { collectionName, name } = useParams();
   const [component, setComponent] = useState([]);
-  // console.log(component[0].img)
-  console.log(component);
+
   const from = location.state?.from?.pathname;
   const cartLocation =
     from?.includes("cpus") ||
@@ -60,14 +59,25 @@ const AvailableProduct = () => {
         price: item?.price,
       };
 
-      const res =await axiosSecure.post(`pcbuilderCart`, cartItem);
+      const res = await axiosSecure.post(`pcbuilderCart`, cartItem);
     }
   };
 
-  const handleCart = async (item, index) => {
-    updateQuantity(index, quantities[index] + 1);
+  const handleCart = async (item) => {
+    
 
     if (user && user.email) {
+      const isItemInCart = cart.filter(
+        (cartitem) => cartitem.name === item.name
+      );
+
+      let quantity;
+      if (isItemInCart[0] && isItemInCart[0].quantity >= 1) {
+        navigate("/dashboard/mycart");
+        return;
+      } else {
+        quantity = 1;
+      }
       const cartItem = {
         email: user?.email,
         cartItemId: item?._id,
@@ -77,10 +87,10 @@ const AvailableProduct = () => {
         img: item?.img,
         shoplogo: item?.shoplogo,
         price: item?.price,
+        quantity: quantity,
       };
 
       const res = await axiosSecure.post("cart", cartItem);
-      console.log(res.data);
       if (res.data?.insertedId) {
         refetch();
         Swal.fire({
@@ -111,7 +121,6 @@ const AvailableProduct = () => {
   };
 
   const handleWishList = async (item) => {
-    console.log(item);
     const wishlistItem = {
       productId: item?._id,
       email: user?.email,
@@ -122,9 +131,8 @@ const AvailableProduct = () => {
       model: item?.model,
       price: item.price,
     };
-    console.log(wishlistItem);
+
     const res = await axiosSecure.post(`/wishlist`, wishlistItem);
-    console.log(res.data);
     if (res.data?.insertedId) {
       wishListRefetch();
       Swal.fire({
@@ -138,7 +146,7 @@ const AvailableProduct = () => {
   };
 
   return (
-    <Container className="mt-5  ">
+    <Container className="mt-5">
       <Row>
         <div className="flex column-gap-2">
           <div className="flex-[1] ">
@@ -188,24 +196,6 @@ const AvailableProduct = () => {
                   the bulk of the cards content.
                 </Card.Text>
               </Card.Body>
-              {/* {cartLocation ? null : (
-                <ListGroup className="list-group-flush">
-                  {user ? (
-                    <Link>+Save to wish list</Link>
-                  ) : (
-                    <Link to="/login" state={{ from: location }} replace>
-                      <ListGroup.Item className="text-center font-semibold text-green-700">
-                        Login to save wish list
-                      </ListGroup.Item>
-                    </Link>
-                  )}
-                </ListGroup>
-              )} */}
-
-              {/* <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-              </Card.Body> */}
             </Card>
           </div>
           <div className="flex-[3]">
@@ -253,7 +243,7 @@ const AvailableProduct = () => {
                         ) : (
                           <>
                             <button
-                              onClick={() => handleCart(item, index)}
+                              onClick={() => handleCart(item)}
                               className="btn btn-sm btn-success "
                               style={{ textTransform: "capitalize" }}
                             >

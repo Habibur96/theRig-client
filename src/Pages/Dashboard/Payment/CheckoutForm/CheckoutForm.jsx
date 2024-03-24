@@ -30,9 +30,7 @@ const CheckoutForm = ({ email }) => {
   const [cart, refetch] = UseCart();
   const navigate = useNavigate();
 
-  console.log(cart);
   const userInfo = user.filter((item) => item.email === email);
-  console.log(userInfo);
 
   // const { data: payments = [] } = useQuery({
   //   queryKey: ["payments", userInfo[0]?.email],
@@ -43,8 +41,11 @@ const CheckoutForm = ({ email }) => {
   //   },
   // });
 
-  const totalPrice = cart.reduce((sum, item) => sum + parseInt(item.price), 0);
-  console.log(totalPrice);
+  const totalPrice = cart.reduce(
+    (sum, item) => parseFloat(item.price) * item.quantity + sum,
+    0
+  );
+
   // console.log(userInfo[0]?.starpoints);
 
   let points, balancePoints, devidedPoints;

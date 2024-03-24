@@ -18,11 +18,9 @@ const Navber = () => {
   const { user, logOut } = UseAuth();
 
   const [cart] = UseCart();
-
   const [wishList] = useWishList();
-
-  console.log(wishList.length);
   const userInfo = wishList.filter((item) => item.email === user?.email);
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
   const [isAdmin] = useAdmin();
 
@@ -147,14 +145,29 @@ const Navber = () => {
           </Link>
 
           {/* Cart */}
+
           <div className="flow-root lg:ml-6">
-            <Link to="dashboard/mycart" className="btn ml-2">
-              <ShoppingCartOutlinedIcon
-                className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
-                aria-hidden="true"
-              />
-              <div className="badge badge-secondary">+{cart?.length || 0}</div>
-            </Link>
+            {cart.length === 0 ? (
+              <Link to="/emptyCart" className="btn ml-2">
+                <ShoppingCartOutlinedIcon
+                  className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
+                  aria-hidden="true"
+                />
+                <div className="badge badge-secondary">
+                  +{totalQuantity || 0}
+                </div>
+              </Link>
+            ) : (
+              <Link to="dashboard/mycart" className="btn ml-2">
+                <ShoppingCartOutlinedIcon
+                  className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
+                  aria-hidden="true"
+                />
+                <div className="badge badge-secondary">
+                  +{totalQuantity || 0}
+                </div>
+              </Link>
+            )}
           </div>
         </div>
       </li>

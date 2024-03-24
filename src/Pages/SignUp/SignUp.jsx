@@ -29,9 +29,9 @@ const SignUp = () => {
         console.log(loggedUser);
         updateUserProfile(data.name, data.photoURL).then(() => {
           const saveUser = {
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
+            name: data?.name,
+            email: data?.email,
+            phone: data?.phone,
             starpoints: "0",
           };
           console.log(saveUser);

@@ -3,9 +3,9 @@
 // import useUsers from "./useUsers";
 // const usePayment = () => {
 //      const [user] = useUsers();
-  
+
 //     console.log(user)
-   
+
 //     const [axiosSecure] = useAxiosSecure();
 
 //     const { refetch, data: payments = [] } = useQuery({
@@ -21,12 +21,11 @@
 
 // export default usePayment;
 
-
-// // const { data: orderHistories = [] } = useQuery({
-// //   queryKey: ["payments", userInfo[0]?.email],
-// //   queryFn: async () => {
-// //     const res = await axiosSecure.get(`/payments/${userInfo[0]?.email}`);
-// //     console.log(res.data);
-// //     return res.data;
-// //   },
-// // });
+// const { data: orderHistories = [] } = useQuery({
+//   queryKey: ["payments", userInfo[0]?.email],
+//   queryFn: async () => {
+//     const res = await axiosSecure.get(`/payments/${userInfo[0]?.email}`);
+//     console.log(res.data);
+//     return res.data;
+//   },
+// });

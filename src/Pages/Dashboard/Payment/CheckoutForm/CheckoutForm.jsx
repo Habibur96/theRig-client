@@ -9,7 +9,11 @@ import { useForm } from "react-hook-form";
 import { Form } from "react-bootstrap";
 import { useQuery } from "@tanstack/react-query";
 import StarsIcon from "@mui/icons-material/Stars";
-
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
+import PaymentsIcon from "@mui/icons-material/Payments";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
 const CheckoutForm = ({ email }) => {
   const {
     register,
@@ -28,9 +32,18 @@ const CheckoutForm = ({ email }) => {
   const [transactionid, setTransactionid] = useState("");
   const [point, setPoint] = useState("");
   const [cart, refetch] = UseCart();
+  // console.log("cart = ", cart);
   const navigate = useNavigate();
 
   const userInfo = user.filter((item) => item.email === email);
+
+  const [shippingCost, setShippingCost] = useState(70);
+  const [shippingPlace, setShippingPlace] = useState("Inside Dhaka City"); // Default shipping place
+
+  const handleRadioClick = (cost, place) => {
+    setShippingCost(cost);
+    setShippingPlace(place);
+  };
 
   // const { data: payments = [] } = useQuery({
   //   queryKey: ["payments", userInfo[0]?.email],
@@ -41,11 +54,11 @@ const CheckoutForm = ({ email }) => {
   //   },
   // });
 
-  const totalPrice = cart.reduce(
+  const productPrice = cart.reduce(
     (sum, item) => parseFloat(item.price) * item.quantity + sum,
     0
   );
-
+  const totalPrice = productPrice + shippingCost;
   // console.log(userInfo[0]?.starpoints);
 
   let points, balancePoints, devidedPoints;
@@ -206,8 +219,6 @@ const CheckoutForm = ({ email }) => {
           payment_method: {
             card: card,
             billing_details: {
-              // email: user?.email || "anonymous",
-              // name: user?.displayName || "anonymous",
               email: userInfo?.email || "example@example.com", // Use a default or placeholder email
               name: userInfo?.displayName || "Anonymous", // Use a default or placeholder name
             },
@@ -232,10 +243,11 @@ const CheckoutForm = ({ email }) => {
             }),
             cartIds: cart.map((item) => item._id),
             menuItemIds: cart.map((item) => item.cartItemId),
+            menuItemQuantity: cart.map((item) => item.quantity),
             quantity: cart.length,
             paymentStatus: "success",
             orderStatus: "pending",
-            itemName: cart.map((item) => item.name),
+            itemName: cart.map((item) => item.name || item.productName),
             itemPhoto: cart.map((item) => item.img || item.productImg),
             shoplogo: cart.map((item) => item.shoplogo),
           };
@@ -277,13 +289,12 @@ const CheckoutForm = ({ email }) => {
           Apply
         </button>
       </div> */}
-
       <Form
         onSubmit={handleSubmit(onSubmit)}
         action=""
         className=" flex column-gap-5  px-4 py-16"
       >
-        <div className="flex-[2]  bg-[#545578]  rounded-lg">
+        <div className="flex-[2]  bg-[#]  rounded-lg">
           <div className=" px-4 py-16 sm:px-6 lg:px-8">
             <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
               <h1 className="text-center font-bold ">
@@ -369,8 +380,184 @@ const CheckoutForm = ({ email }) => {
             </div>
           </div>
         </div>
-        <div className="flex-[2] bg-[#DFF5FF] rounded-lg px-4 py-16">
-          <h1 className="mb-4">Total Price : {totalPrice}</h1>
+        <div className="flex-[3] bg-[#] rounded-lg px-4 py-16">
+          <div className="flex gap-20">
+            <div>
+              <h1 className="text-xl ml-4 font-monospace font-semibold">
+                2.Shipping Method
+              </h1>
+              <div className="flex text-xl ml-4 mt-4 font-monospace font-semibold">
+                <DirectionsBikeIcon />
+                <div className="mb-2 ml-3">
+                  <Form.Check
+                    inline
+                    name="group1"
+                    type="radio"
+                    id="inline-radio-1"
+                    checked={shippingPlace === "Inside Dhaka City"} // checked based on shipping place
+                    onClick={() => handleRadioClick(70, "Inside Dhaka City")} // Call handleRadioClick with shipping cost and place
+                  />
+                </div>
+                <h1>Inside Dhaka City - 70</h1>
+                <FaBangladeshiTakaSign />
+              </div>
+              {/* <div className="flex text-xl ml-4 mt-4 font-monospace font-semibold">
+                <DirectionsBikeIcon />
+                {["radio"].map((type) => (
+                  <div key={`inline-${type}`} className="mb-2 ml-3">
+                    <Form.Check
+                      inline
+                      name="group1"
+                      type={type}
+                      id={`inline-${type}-1`}
+                      checked
+                    />
+                  </div>
+                ))}
+                <h1>Inside Dhaka City - 70</h1>
+                <FaBangladeshiTakaSign />
+              </div> */}
+              <div className="ml-4">
+                <small>
+                  Product & Location Dependent Shipping Cost (Our Agent <br />{" "}
+                  Will Inform you After confirming Order)
+                </small>
+              </div>
+              <div className="flex text-xl ml-4 mt-3 font-monospace font-semibold">
+                <LocalShippingIcon />
+                <div className="mb-2 ml-3">
+                  <Form.Check
+                    inline
+                    name="group1"
+                    type="radio"
+                    id="inline-radio-2"
+                    onClick={() => handleRadioClick(150, "Outside Dhaka")} // Call handleRadioClick with shipping cost and place
+                  />
+                </div>
+                <h1> Outside of Dhaka - 150</h1>
+                <FaBangladeshiTakaSign />
+              </div>
+              {/* <div className="flex text-xl ml-4 mt-3 font-monospace font-semibold">
+                <LocalShippingIcon />
+                {["radio"].map((type) => (
+                  <div key={`inline-${type}`} className="mb-2 ml-3">
+                    <Form.Check
+                      inline
+                      name="group1"
+                      type={type}
+                      onClick={() => handleRadioClick(150, true)}
+                      id={`inline-${type}-1`}
+                    />
+                  </div>
+                ))}
+                <h1> Outside of Dhaka - 150</h1>
+                <FaBangladeshiTakaSign />
+              </div> */}
+              <div className="ml-4">
+                <small>
+                  Product & Location Dependent Shipping Cost (Our Agent <br />{" "}
+                  Will Inform you After confirming Order)
+                </small>
+              </div>
+            </div>
+            <div className="ml-14">
+              <h1 className="text-xl font-monospace font-semibold">
+                3.Payment Method
+              </h1>
+              <h1 className="flex  gap-2 mt-4 mb-2 text-lg font-monospace font-semibold">
+                <PaymentsIcon />{" "}
+                <input
+                  type="radio"
+                  name="radio-8"
+                  className="radio radio-info radio-sm"
+                />
+                Cash On Delivery
+              </h1>
+              <h1 className="flex gap-2  mb-3 text-lg font-monospace font-semibold">
+                <CreditCardIcon />{" "}
+                <input
+                  type="radio"
+                  name="radio-8"
+                  className="radio radio-info radio-sm "
+                  checked
+                />
+                Pay with Credit Card/Debit Card
+              </h1>
+            </div>
+          </div>
+          {/* <h1 className="mb-4">Total Price : {totalPrice}</h1> */}
+
+          {cart && cart.length > 0 && (
+            <div className="ml-4">
+              <h3 className="text-2xl font-monospace font-semibold mt-5 mb-4">
+                4.Order Overview
+              </h3>
+              <table className="table w-full">
+                {/* head */}
+                <thead className="">
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {cart.map((item, index) => (
+                    <tr key={item._id}>
+                      <td>
+                        {item.name ? (
+                          <span className="font-semibold">{item.name}</span>
+                        ) : (
+                          <span className="font-semibold">
+                            {item.productName}
+                          </span>
+                        )}
+                      </td>
+                      <td>
+                        <div className="flex gap-1 mr-5 font-semibold">
+                          <h1 className="">{item.price}</h1>
+                          <h1>X</h1>
+                          <h1 className="">{item.quantity}</h1>
+                        </div>
+                      </td>
+                      {/* Display the total for the current item */}
+                      <td className="flex text-start font-semibold">
+                        {parseFloat(item.price) * item.quantity} <FaBangladeshiTakaSign />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="ml-96 pl-64 mb-10">
+                <tr>
+                  <td colSpan="2"></td>
+                  <td>
+                    <div className="flex text-lg font-semibold">
+                      Sub Total : {productPrice}
+                      <FaBangladeshiTakaSign />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colSpan="2"></td>
+                  <td>
+                    <div className="flex text-lg font-semibold">
+                      {shippingPlace} : {shippingCost} <FaBangladeshiTakaSign />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colSpan="2"></td>
+                  <td>
+                    <div className="flex text-lg font-semibold">
+                      Total : {totalPrice} <FaBangladeshiTakaSign />
+                    </div>
+                  </td>
+                </tr>
+              </div>
+            </div>
+          )}
           {/* <h1>{points} </h1> */}
           <CardElement
             options={{

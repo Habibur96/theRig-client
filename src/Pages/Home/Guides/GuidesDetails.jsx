@@ -1,14 +1,11 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import useCompleteBuild from "../../../Hooks/useCompleteBuild";
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Controller, useForm } from "react-hook-form";
 import { Form } from "react-bootstrap";
-
 import { Rating } from "@smastrom/react-rating";
-
 import "@smastrom/react-rating/style.css";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
@@ -30,9 +27,10 @@ const GuidesDetails = () => {
   const [review, reviewRefetch] = useReview();
   const [axiosSecure] = useAxiosSecure();
   const [buildProducts, combuildRefetch] = useCompleteBuild();
+  // const [] = 
   console.log(buildProducts);
   const product = buildProducts.filter((item) => item.buildName === buildName);
-  console.log(product[0]?.totalPrice);
+  
   const currentBuildReview = review.filter(
     (item) => item.buildName === buildName
   );
@@ -64,10 +62,10 @@ const GuidesDetails = () => {
     },
   });
 
-  const handleCart = async (productName) => {
+  const handleCart = async (buildName) => {
     if (user && user.email) {
       const isItemInCart = cart.filter(
-        (cartitem) => cartitem.name === productName
+        (cartitem) => cartitem.productName === buildName
       );
 
       let quantity;
@@ -529,7 +527,7 @@ const GuidesDetails = () => {
 
           <div className="flex gap-3">
             <button
-              onClick={() => handleCart(product[0]?.productName)}
+              onClick={() => handleCart(product[0]?.buildName)}
               type="submit"
               className="btn btn-md btn btn-outline bg-[#00b16a] border-b-4 mt-3 mb-5"
               style={{ textTransform: "capitalize" }}

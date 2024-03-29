@@ -8,11 +8,15 @@ import UseAuth from "../../../Hooks/UseAuth";
 import theRig from "../../../assets/logo/theRig.png";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { FaBangladeshiTakaSign } from "react-icons/fa6";
+import useCompleteBuild from "../../../Hooks/useCompleteBuild";
+import { useState } from "react";
 const MyCart = () => {
   const [cart, refetch] = UseCart();
   const { user } = UseAuth();
   const [axiosSecure] = useAxiosSecure();
   const navigate = useNavigate();
+  const [buildProducts] = useCompleteBuild();
+  const [additionalSentence, setAdditionalSentence] = useState("");
   // Calculate the total based on the quantities and item prices
   if (cart.length === 0) {
     navigate("/emptyCart");
@@ -22,17 +26,25 @@ const MyCart = () => {
     0
   );
 
-  const handleIncrementQuantity = (id) => {
+  const handleIncrementQuantity = (id, cartItemId) => {
     const isItemInCart = cart.find((cartitem) => cartitem._id === id);
-
+    //build products ar inventory check kortasi.....
+    const build = buildProducts.find((build) => build._id === cartItemId);
+    console.log(build);
     if (isItemInCart) {
       const newQuantity = isItemInCart.quantity + 1;
-      axiosSecure.put(`/cart/${id}`, { quantity: newQuantity }).then((data) => {
-        console.log("after posting new menu item", data.data);
-        if (data.data?.modifiedCount > 0) {
-          refetch();
-        }
-      });
+      if (newQuantity > build.buildQty) {
+        setAdditionalSentence("Maximum quantity reached.");
+      } else {
+        axiosSecure
+          .put(`/cart/${id}`, { quantity: newQuantity })
+          .then((data) => {
+            console.log("after posting new menu item", data.data);
+            if (data.data?.modifiedCount > 0) {
+              refetch();
+            }
+          });
+      }
     }
   };
   const handledecrementQuantity = (id) => {
@@ -129,8 +141,21 @@ const MyCart = () => {
                   <span>{item.name}</span>
                 ) : (
                   <span>{item.productName}</span>
+                )}{" "}
+                <br />
+                {additionalSentence && (
+                  <span className="text-red-300 font-semibold">
+                    {additionalSentence}
+                  </span>
                 )}
               </td>
+              {/* <td>
+                {item.name ? (
+                  <span>{item.name}</span>
+                ) : (
+                  <span>{item.productName}</span>
+                )}
+              </td> */}
               <td>
                 {item.model ? <spanp>{item.model}</spanp> : <span>-----</span>}
               </td>
@@ -145,7 +170,11 @@ const MyCart = () => {
                     value={item.quantity}
                     className="input input-bordered input-info w-1/6 max-w-xs text-center rounded-sm"
                   />
-                  <button onClick={() => handleIncrementQuantity(item._id)}>
+                  <button
+                    onClick={() =>
+                      handleIncrementQuantity(item._id, item.cartItemId)
+                    }
+                  >
                     <AddIcon />
                   </button>
                   <div>
@@ -161,8 +190,9 @@ const MyCart = () => {
 
               <td className="">{item.price}</td>
               {/* Display the total for the current item */}
-              <td className="text-start">
-                {parseFloat(item.price) * item.quantity}
+
+              <td className=" text-start">
+                {parseFloat(item.price) * item.quantity}{" "}
               </td>
             </tr>
           ))}
@@ -174,16 +204,15 @@ const MyCart = () => {
             <div className="font-bold">Sub Total :</div>
           </td>
         </tr> */}
-        <tr>
-          <td colSpan="5"></td>
-          <td className="text-center">
-            <div className=" font-bold">
-              Total :{total}
-              <FaBangladeshiTakaSign />
-            </div>
-          </td>
-        </tr>
       </table>
+      <div className="ml-96 pl-64">
+        <tr>
+          <div className="flex  text-lg font-semibold ml-96 pl-32 ">
+            <td>Total :{total}</td>
+            <FaBangladeshiTakaSign />
+          </div>
+        </tr>
+      </div>
       <h1 className="text-2xl font-semibold">
         What would you like to do next?
       </h1>{" "}

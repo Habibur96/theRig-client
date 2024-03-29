@@ -64,8 +64,6 @@ const AvailableProduct = () => {
   };
 
   const handleCart = async (item) => {
-    
-
     if (user && user.email) {
       const isItemInCart = cart.filter(
         (cartitem) => cartitem.name === item.name

@@ -82,7 +82,7 @@ const CreateCpu = () => {
   return (
     <div className="max-w-screen-xl mx-auto mt-5 px-10 bg-body-secondary">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <SectionTitle subHeading="What's new" heading="Add cpu"></SectionTitle>
+        <SectionTitle subHeading="" heading="Add cpu"></SectionTitle>
 
         <div className="flex my-4">
           <div className="w-full mb-4">
@@ -272,65 +272,6 @@ const CreateCpu = () => {
           </div>
         </div>
 
-        <div className="flex">
-          <div className=" w-full ml-4">
-            <label className="label">
-              <span className="label-text">Coupons Code</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Coupons Code"
-              {...register("couponsCode", {
-                required: true,
-                maxLength: 15,
-              })}
-              className="input input-bordered w-full "
-            />
-          </div>
-
-          <div className=" w-full  ml-4">
-            <label className="label">
-              <span className="label-text">Discount</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Discount"
-              {...register("couponsDiscount", {
-                required: true,
-                maxLength: 15,
-              })}
-              className="input input-bordered w-full "
-            />
-          </div>
-
-          <div className="form-control mr-3 ml-4">
-            <label className="label">
-              <span className="label-text">Start Date</span>
-            </label>
-            <input
-              type="date"
-              name="date"
-              {...register("startDate", {
-                maxLength: 20,
-              })}
-              className="input input-bordered"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">End Date</span>
-            </label>
-            <input
-              type="date"
-              name="date"
-              {...register("endDate", {
-                maxLength: 20,
-              })}
-              className="input input-bordered"
-            />
-          </div>
-        </div>
-
         <div className=" w-full">
           <label className="label">
             <span className="label-text">Product Details*</span>
@@ -351,7 +292,6 @@ const CreateCpu = () => {
         >
           Add Item
         </button>
-
 
         {/* <input className="btn btn-sm mt-4" type="submit" value="Add Item" /> */}
       </form>

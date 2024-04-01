@@ -88,16 +88,12 @@ const Pcbuild = () => {
         {/* head */}
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Job</th>
+            {/* <th>Name</th> */}
+            {/* <th>Job</th> */}
           </tr>
+         
           <tr>
-            <th>dfsafdfadsf</th>
-            <th>dfsafdfadsf</th>
-            <th>dfsafdfadsf</th>
-          </tr>
-          <tr>
-            <th>Core Components</th>
+            {/* <th>Core Components</th> */}
           </tr>
         </thead>
         <tbody>

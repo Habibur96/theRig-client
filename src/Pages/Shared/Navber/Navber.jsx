@@ -222,23 +222,26 @@ const Navber = () => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost normal-case text-xl"
-            style={{ position: "relative", overflow: "hidden" }}
+            // className="btn btn-ghost normal-case text-xl"
+            // style={{ position: "relative", overflow: "hidden" }}
           >
-            <h1>TheRig</h1>
-            {/* <img
-              className=""
+            {/* <h1>TheRig</h1> */}
+            
+            
+            <img
+              className="h-32 w-33 mt-10 ml-52"
               src={theRig}
               style={{
-                height: "200",
-                weight: "400",
+                height: "",
+                weight: "",
                 position: "absolute",
                 top: "0",
                 left: "0",
                 transform: "translateY(-50%)",
               }}
               alt=""
-            /> */}
+            />
+            
           </Link>
         </div>
 

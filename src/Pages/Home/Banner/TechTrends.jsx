@@ -86,7 +86,7 @@ const TechTrends = () => {
         <h1 className="text-xl">Your Daily Tech News</h1>
       </div>
 
-      <div className="card card-side bg-base-100 shadow-xl bg-[#111344] text-slate-400 ">
+      <div className="card card-side  shadow-xl bg-[#111344] text-slate-400 ">
         <figure>
           <img
             className="h-40"
@@ -105,7 +105,7 @@ const TechTrends = () => {
           </a>
         </div>
       </div>
-      <div className="card card-side bg-base-100 shadow-xl bg-[#111344] text-slate-400">
+      <div className="card card-side  shadow-xl bg-[#111344] text-slate-400">
         <figure>
           <img
             className="h-40 "
@@ -129,7 +129,7 @@ const TechTrends = () => {
           </div>
         </div>
       </div>
-      <div className="card card-side bg-base-100 shadow-xl bg-[#111344] text-slate-400">
+      <div className="card card-side  shadow-xl bg-[#111344] text-slate-400">
         <figure>
           <img
             className="h-40 "
@@ -150,7 +150,7 @@ const TechTrends = () => {
           <div className="card-actions justify-end"></div>
         </div>
       </div>
-      <div className="card card-side bg-base-100 shadow-xl bg-[#111344] text-slate-400">
+      <div className="card card-side  shadow-xl bg-[#111344] text-slate-400">
         <figure>
           <img
             className="h-40 "

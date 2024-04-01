@@ -156,14 +156,14 @@ const Navber2 = () => {
                       {/* <li>Peripherals</li> */}
                       <li>
                         <Link to="product/monitor" onClick={handleLinkClick}>
-                          <img style={{ height: 190 }} src={monitor} alt="" />{" "}
+                          <img style={{ height: 200 }} src={monitor} alt="" />{" "}
                           Monitor
                         </Link>
                       </li>
                       <li>
                         <Link onClick={handleLinkClick}>
                           <img
-                            style={{ height: 180 }}
+                            style={{ height: 200 }}
                             src={casingCooler}
                             alt=""
                           />{" "}
@@ -172,27 +172,30 @@ const Navber2 = () => {
                       </li>
                       <li>
                         <Link onClick={handleLinkClick}>
-                          <img style={{ height: 250 }} src={keyboard} alt="" />{" "}
+                          <>
+                          
+                          <img style={{ height: 246 }}  className="" src={keyboard} alt="" />{" "}
+                          </>
                           Keyboard
                         </Link>
                       </li>
                       <li>
                         <Link onClick={handleLinkClick}>
-                          <img style={{ height: 190 }} src={mice} alt="" /> Mice
+                          <img style={{ height: 152 }} src={mice} alt="" /> Mice
                         </Link>
                       </li>
                       <li>
                         <Link>
-                          <img style={{ height: 200 }} src={headphone} alt="" />{" "}
+                          <img style={{ height: 152 }} src={headphone} alt="" />{" "}
                           Headphone
                         </Link>
                       </li>
                       <li>
                         <Link onClick={handleLinkClick}>
-                          <img style={{ height: 140 }} src={Ups} alt="" /> UPS
+                          <img style={{ height: 150 }}  src={Ups} alt="" /> UPS
                         </Link>
                       </li>
-                      <li className="mt-3 ml-5 mr-5 bg-green-500">
+                      {/* <li className="mt-3 ml-5 mr-5 bg-green-500">
                         {" "}
                         <Link>
                           <ConstructionIcon />
@@ -204,7 +207,7 @@ const Navber2 = () => {
                           <DescriptionTwoToneIcon />
                           Guides{" "}
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>

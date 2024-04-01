@@ -41,10 +41,10 @@ const Banner = () => {
         <div className=" d-flex mt-16 ">
           {/* <Button variant="Success">Leatest</Button> */}
           <Button variant="warning">Leatest</Button>{" "}
-          <Marquee className="font-semibold text-fuchsia-900" speed={100}>
-            I can be a React component, multiple React components, or just some
-            text..... I can be a React component, multiple React components, or
-            just some text.....
+          <Marquee className="font-bold  text-fuchsia-900" speed={100}>
+            From searching and comparing prices of all over Bangladesh, to the
+            product shipped to your doorstep. The RIG is here to provide you
+            with all you need.
           </Marquee>
         </div>
         <div className="mt-24 mb-20">
@@ -156,9 +156,8 @@ const Banner = () => {
       <div className="flex column-gap-5 bg-[#e5e7eb] pt-5 pb-5">
         <div className="flex-[2] ml-12">
           <div className="grid gap-5">
-          <FeaturedProducts></FeaturedProducts>
-          <TechTrends></TechTrends>
-
+            <FeaturedProducts></FeaturedProducts>
+            <TechTrends></TechTrends>
           </div>
         </div>
         <div className="flex-[5]">

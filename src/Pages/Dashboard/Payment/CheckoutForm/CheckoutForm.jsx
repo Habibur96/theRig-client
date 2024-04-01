@@ -247,7 +247,7 @@ const CheckoutForm = ({ email }) => {
             quantity: cart.length,
             paymentStatus: "success",
             orderStatus: "pending",
-            itemName: cart.map((item) => item.name || item.productName),
+            itemName: cart.map((item) => item.name || item.productName), 
             itemPhoto: cart.map((item) => item.img || item.productImg),
             shoplogo: cart.map((item) => item.shoplogo),
           };
@@ -523,7 +523,8 @@ const CheckoutForm = ({ email }) => {
                       </td>
                       {/* Display the total for the current item */}
                       <td className="flex text-start font-semibold">
-                        {parseFloat(item.price) * item.quantity} <FaBangladeshiTakaSign />
+                        {parseFloat(item.price) * item.quantity}{" "}
+                        <FaBangladeshiTakaSign />
                       </td>
                     </tr>
                   ))}

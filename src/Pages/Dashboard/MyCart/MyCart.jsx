@@ -30,11 +30,11 @@ const MyCart = () => {
     const isItemInCart = cart.find((cartitem) => cartitem._id === id);
     //build products ar inventory check kortasi.....
     const build = buildProducts.find((build) => build._id === cartItemId);
-    console.log(build);
+
     if (isItemInCart) {
       const newQuantity = isItemInCart.quantity + 1;
       if (newQuantity > build.buildQty) {
-        setAdditionalSentence("Maximum quantity reached.");
+        setAdditionalSentence("Maximum quantity reached");
       } else {
         axiosSecure
           .put(`/cart/${id}`, { quantity: newQuantity })
@@ -47,12 +47,16 @@ const MyCart = () => {
       }
     }
   };
-  const handledecrementQuantity = (id) => {
+
+  const handledecrementQuantity = (id, cartItemId) => {
     const isItemInCart = cart.find((cartitem) => cartitem._id === id);
+    const build = buildProducts.find((build) => build._id === cartItemId);
 
     if (isItemInCart) {
       const newQuantity = isItemInCart.quantity - 1;
-
+      if (newQuantity <= build.buildQty ) {
+        setAdditionalSentence(" ");
+      }
       if (newQuantity === 0) {
         handleDelete(id);
         return;
@@ -136,17 +140,20 @@ const MyCart = () => {
                   </div>
                 )}
               </td>
+
               <td>
                 {item.name ? (
                   <span>{item.name}</span>
                 ) : (
-                  <span>{item.productName}</span>
-                )}{" "}
-                <br />
-                {additionalSentence && (
-                  <span className="text-red-300 font-semibold">
-                    {additionalSentence}
-                  </span>
+                  <>
+                    <span>{item.productName}</span>
+                    <br />
+                    {additionalSentence && (
+                      <span className="text-red-300 font-semibold">
+                        {additionalSentence}
+                      </span>
+                    )}
+                  </>
                 )}
               </td>
               {/* <td>
@@ -161,12 +168,16 @@ const MyCart = () => {
               </td>
               <td>
                 <div className="flex space-x-4  items-center">
-                  <button onClick={() => handledecrementQuantity(item._id)}>
+                  <button
+                    onClick={() =>
+                      handledecrementQuantity(item._id, item.cartItemId)
+                    }
+                  >
                     <RemoveIcon />
                   </button>
 
                   <input
-                    // type="text"
+                    //  type="text"
                     value={item.quantity}
                     className="input input-bordered input-info w-1/6 max-w-xs text-center rounded-sm"
                   />
@@ -192,7 +203,7 @@ const MyCart = () => {
               {/* Display the total for the current item */}
 
               <td className=" text-start">
-                {parseFloat(item.price) * item.quantity}{" "}
+                {parseFloat(item.price) * item.quantity}
               </td>
             </tr>
           ))}

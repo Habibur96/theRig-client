@@ -4,10 +4,14 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { Link } from "react-router-dom";
+import usePayment from "../../../Hooks/usePayment";
 const RigReadyBuildInventory = () => {
   const [buildProducts, combuildRefetch] = useCompleteBuild();
   const [axiosSecure] = useAxiosSecure();
-
+  const [payments] = usePayment();
+  console.log(payments);
+  console.log(payments[0]?.menuItemIds);
+  // console.log(payments[0]?.menuItemQuantity);
   const handleDelete = (id) => {
     console.log(id);
     Swal.fire({

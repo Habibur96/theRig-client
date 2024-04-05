@@ -207,11 +207,11 @@ const Navber = () => {
         <div className="flex ml-3 items-center">
           <div className="mr-4">
             {isAdmin ? (
-              <li>
+              
                 <Link to="/dashboard/adminhome">
                   <MenuIcon />
                 </Link>
-              </li>
+              
             ) : (
               <li>
                 <Link to="/dashboard/userhome">
@@ -226,8 +226,7 @@ const Navber = () => {
             // style={{ position: "relative", overflow: "hidden" }}
           >
             {/* <h1>TheRig</h1> */}
-            
-            
+
             <img
               className="h-32 w-33 mt-10 ml-52"
               src={theRig}
@@ -241,7 +240,6 @@ const Navber = () => {
               }}
               alt=""
             />
-            
           </Link>
         </div>
 

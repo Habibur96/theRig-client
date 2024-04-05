@@ -1,0 +1,146 @@
+[
+  // ===========================starTech=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "interface": "",
+    "capacity": "",
+    "formFactor": "",
+    "r/wspeed": "",
+    "MTBF": "",
+    "category": "ssd",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "interface": "",
+    "capacity": "",
+    "formFactor": "",
+    "r/wspeed": "",
+    "MTBF": "",
+    "category": "ssd",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  // ===========================UltraTech=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "interface": "",
+    "capacity": "",
+    "formFactor": "",
+    "r/wspeed": "",
+    "MTBF": "",
+    "category": "ssd",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "interface": "",
+    "capacity": "",
+    "formFactor": "",
+    "r/wspeed": "",
+    "MTBF": "",
+    "category": "ssd",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  // ===========================techland=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "wattage": "",
+    "efficiency": "",
+    "category": "ssd",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "wattage": "",
+    "efficiency": "",
+    "category": "ssd",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  // ===========================skyland=================
+  {
+    "name": "",
+    "price": "",
+    "chipset": "",
+    "Brand": "",
+    "model": "",
+    "Memory": "",
+    "Memorytype": "",
+    "boostClock": "",
+    "recommendedPSU": "",
+    "category": "ssd",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+  {
+    "name": "",
+    "price": "",
+    "chipset": "",
+    "Brand": "",
+    "model": "",
+    "Memory": "",
+    "Memorytype": "",
+    "boostClock": "",
+    "recommendedPSU": "",
+    "category": "ssd",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  }
+]

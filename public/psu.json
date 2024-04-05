@@ -1,34 +1,30 @@
-
 [
-    // ===========================starTech=================
+  // ===========================starTech=================
   {
     "name": "",
     "price": "",
-    "chipset": "",
+
     "Brand": "",
     "model": "",
-    "Memory": "",
-    "Memorytype": "",
-    "boostClock": "",
-    "recommendedPSU": "",
-    "category": "gpu",
+
+    "wattage": "",
+    "efficiency": "",
+    "category": "psu",
     "warranty": "3 Years",
     "img": "",
     "shoplogo": "",
     "shopName": ""
   },
-
   {
     "name": "",
     "price": "",
-    "chipset": "",
+
     "Brand": "",
     "model": "",
-    "Memory": "",
-    "Memorytype": "",
-    "boostClock": "",
-    "recommendedPSU": "",
-    "category": "gpu",
+
+    "wattage": "",
+    "efficiency": "",
+    "category": "psu",
     "warranty": "3 Years",
     "img": "",
     "shoplogo": "",
@@ -36,18 +32,32 @@
   },
 
   // ===========================UltraTech=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "wattage": "",
+    "efficiency": "",
+    "category": "psu",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
 
   {
     "name": "",
     "price": "",
-    "chipset": "",
+
     "Brand": "",
     "model": "",
-    "Memory": "",
-    "Memorytype": "",
-    "boostClock": "",
-    "recommendedPSU": "",
-    "category": "gpu",
+
+    "wattage": "",
+    "efficiency": "",
+    "category": "psu",
     "warranty": "3 Years",
     "img": "",
     "shoplogo": "",
@@ -55,18 +65,32 @@
   },
 
   // ===========================techland=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "wattage": "",
+    "efficiency": "",
+    "category": "psu",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
 
   {
     "name": "",
     "price": "",
-    "chipset": "",
+
     "Brand": "",
     "model": "",
-    "Memory": "",
-    "Memorytype": "",
-    "boostClock": "",
-    "recommendedPSU": "",
-    "category": "gpu",
+
+    "wattage": "",
+    "efficiency": "",
+    "category": "psu",
     "warranty": "3 Years",
     "img": "",
     "shoplogo": "",
@@ -89,6 +113,21 @@
     "img": "",
     "shoplogo": "",
     "shopName": ""
+  },
+  {
+    "name": "",
+    "price": "",
+    "chipset": "",
+    "Brand": "",
+    "model": "",
+    "Memory": "",
+    "Memorytype": "",
+    "boostClock": "",
+    "recommendedPSU": "",
+    "category": "gpu",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
   }
-
 ]

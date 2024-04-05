@@ -1,0 +1,142 @@
+[
+  // ===========================starTech=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+    "socket": "",
+    "coolerType": "",
+    "coolerSize": "",
+    "fanSpeed": "",
+    "category": "cpuCooler",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "socket": "",
+    "coolerType": "",
+    "coolerSize": "",
+    "fanSpeed": "",
+    "category": "cpuCooler",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  // ===========================UltraTech=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "socket": "",
+    "coolerType": "",
+    "coolerSize": "",
+    "fanSpeed": "",
+    "category": "cpuCooler",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "socket": "",
+    "coolerType": "",
+    "coolerSize": "",
+    "fanSpeed": "",
+    "category": "cpuCooler",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+  // ===========================techland=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "socket": "",
+    "coolerType": "",
+    "coolerSize": "",
+    "fanSpeed": "",
+    "category": "cpuCooler",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "socket": "",
+    "coolerType": "",
+    "coolerSize": "",
+    "fanSpeed": "",
+    "category": "cpuCooler",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+  // ===========================skyland=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "socket": "",
+    "coolerType": "",
+    "coolerSize": "",
+    "fanSpeed": "",
+    "category": "cpuCooler",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  },
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "socket": "",
+    "coolerType": "",
+    "coolerSize": "",
+    "fanSpeed": "",
+    "category": "cpuCooler",
+    "warranty": "3 Years",
+    "img": "",
+    "shoplogo": "",
+    "shopName": ""
+  }
+]

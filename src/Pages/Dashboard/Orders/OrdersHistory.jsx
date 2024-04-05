@@ -72,7 +72,11 @@ const OrderHistory = () => {
                         />
                       </td>
                       <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                        {orderHistory.itemName[index]}
+                        {orderHistory.itemName ? (
+                          <span>{orderHistory.itemName[index]}</span>
+                        ) : (
+                          <>{orderHistory.productName[index]}</>
+                        )}
                       </td>
                     </tr>
                   ))}

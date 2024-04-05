@@ -16,7 +16,7 @@ const MyCart = () => {
   const [axiosSecure] = useAxiosSecure();
   const navigate = useNavigate();
   const [buildProducts] = useCompleteBuild();
-  const [additionalSentence, setAdditionalSentence] = useState("");
+  // const [additionalSentence, setAdditionalSentence] = useState("");
   // Calculate the total based on the quantities and item prices
   if (cart.length === 0) {
     navigate("/emptyCart");
@@ -33,9 +33,9 @@ const MyCart = () => {
 
     if (isItemInCart) {
       const newQuantity = isItemInCart.quantity + 1;
-      if (newQuantity > build.buildQty) {
-        setAdditionalSentence("Maximum quantity reached");
-      } else {
+      // if (newQuantity > build.buildQty) {
+      //   setAdditionalSentence("Maximum quantity reached");
+      // } else {
         axiosSecure
           .put(`/cart/${id}`, { quantity: newQuantity })
           .then((data) => {
@@ -44,7 +44,7 @@ const MyCart = () => {
               refetch();
             }
           });
-      }
+      // }
     }
   };
 
@@ -54,9 +54,9 @@ const MyCart = () => {
 
     if (isItemInCart) {
       const newQuantity = isItemInCart.quantity - 1;
-      if (newQuantity <= build.buildQty ) {
-        setAdditionalSentence(" ");
-      }
+      // if (newQuantity <= build.buildQty ) {
+      //   setAdditionalSentence(" ");
+      // }
       if (newQuantity === 0) {
         handleDelete(id);
         return;
@@ -148,11 +148,11 @@ const MyCart = () => {
                   <>
                     <span>{item.productName}</span>
                     <br />
-                    {additionalSentence && (
+                    {/* {additionalSentence && (
                       <span className="text-red-300 font-semibold">
                         {additionalSentence}
                       </span>
-                    )}
+                    )} */}
                   </>
                 )}
               </td>

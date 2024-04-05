@@ -1,4 +1,10 @@
-import { NavLink, Outlet, useParams } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import {
   FaShoppingCart,
   FaWallet,
@@ -20,11 +26,23 @@ import UseAuth from "../Hooks/UseAuth";
 import FilterFramesOutlinedIcon from "@mui/icons-material/FilterFramesOutlined";
 import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
 import ImportantDevicesTwoToneIcon from "@mui/icons-material/ImportantDevicesTwoTone";
-
+import LogoutIcon from "@mui/icons-material/Logout";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 const Dashboard = () => {
   const [cart] = UseCart();
   const { user } = UseAuth();
-
+  const { logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error();
+      });
+  };
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
   // TODO: load data from the server to have dynamic isAdmin based on Data
@@ -38,13 +56,24 @@ const Dashboard = () => {
         <Outlet></Outlet>
       </div>
 
-      <div className="drawer-side bg-[#51A3A3] font-semibold">
-        {/* <div>
-        <img src={theRig} width="250" height="200" className="pl-20" alt="" />
-      </div> */}
+      <div className="drawer-side bg-[#a0eaf1] font-semibold">
+        <div>
+          {/* <img src={theRig} width="230" height="200" className="pl-20" alt="" /> */}
+          <img
+            className="h-36 w-34 mt-16 pl-20"
+            src={theRig}
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              transform: "translateY(-50%)",
+            }}
+            alt=""
+          />
+        </div>
 
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80">
+        <ul className="menu p-4 w-80 mt-20">
           {isAdmin ? (
             <>
               <li>
@@ -577,6 +606,11 @@ const Dashboard = () => {
             <NavLink to="/order/salad">Order Product</NavLink>
           </li>
         </ul>
+        <div className="flex gap-2 ml-10 font-bold">
+          <LogoutIcon />
+
+          <Link onClick={handleLogOut}>Logout</Link>
+        </div>
       </div>
     </div>
   );

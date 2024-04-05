@@ -1,0 +1,144 @@
+[
+  // ===========================starTech=================
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "color": "",
+    "type": "",
+    "motherboardType": "",
+    "psu": "",
+    "img": "",
+    "category":"case",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "color": "",
+    "type": "",
+    "motherboardType": "",
+    "psu": "",
+    "img": "",
+    "category":"case",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  // ===========================UltraTech=================
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "color": "",
+    "type": "",
+    "motherboardType": "",
+    "psu": "",
+    "img": "",
+    "category":"case",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "color": "",
+    "type": "",
+    "motherboardType": "",
+    "psu": "",
+    "img": "",
+    "category":"case",
+    "shoplogo": "",
+    "shopName": ""
+  }
+
+  // ===========================techland=================
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "color": "",
+    "type": "",
+    "motherboardType": "",
+    "psu": "",
+    "img": "",
+    "category":"case",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "color": "",
+    "type": "",
+    "motherboardType": "",
+    "psu": "",
+    "img": "",
+    "category":"case",
+    "shoplogo": "",
+    "shopName": ""
+  }
+
+  // ===========================skyland=================
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "color": "",
+    "type": "",
+    "motherboardType": "",
+    "psu": "",
+    "img": "",
+    "category":"case",
+    "shoplogo": "",
+    "shopName": ""
+  },
+
+  {
+    "name": "",
+    "price": "",
+
+    "Brand": "",
+    "model": "",
+
+    "color": "",
+    "type": "",
+    "motherboardType": "",
+    "psu": "",
+    "img": "",
+    "category":"case",
+    "shoplogo": "",
+    "shopName": ""
+  }
+]

@@ -11,59 +11,6 @@ const RigReadyBuildInventory = () => {
   const [axiosSecure] = useAxiosSecure();
   const [payments] = usePayment();
 
-  // const now = new Date().toLocaleDateString("en-US", {
-  //   timeZone: "Asia/Dhaka",
-  // });
-  // console.log(payments);
-  // let lastDate = null;
-  // for (const item of payments) {
-  //   const formattedDate = new Date(item.date).toLocaleDateString();
-  //   if (lastDate === null || formattedDate > lastDate) {
-  //     lastDate = formattedDate;
-  //   }
-  // }
-  // console.log(buildProducts);
-  // const lastOrderMenuItemIds = {
-  //   itemName: payments.length > 0 ? payments[payments.length - 1].itemName : [],
-  //   menuItemQuantity:
-  //     payments.length > 0 ? payments[payments.length - 1].menuItemQuantity : [],
-  // };
-  // const length = lastOrderMenuItemIds.itemName.length;
-
-  // for (let i = 0; i < length; i++) {
-  //   const build = buildProducts.filter(
-  //     (item) => item.buildName === lastOrderMenuItemIds.itemName[i]
-  //   );
-  //   const updateQty =
-  //     build[i]?.buildQty - lastOrderMenuItemIds.menuItemQuantity[i];
-  //     const id = build[i]?._id
-  //   axiosSecure.put(`/readyBuild/qty/${id}`, updateQty).then((data) => {
-  //     console.log("after posting new menu item", data.data);
-  //     if (data.data?.modifiedCount > 0) {
-  //       combuildRefetch();
-  //       Swal.fire({
-  //         position: "top-end",
-  //         icon: "success",
-  //         title: "Edit done",
-  //         showConfirmButton: false,
-  //         timer: 1500,
-  //       });
-  //     } else {
-  //       console.log("sorry");
-  //     }
-  //   });
-  //   console.log(build[0]?.buildQty);
-  //   console.log(updateQty);
-  //   console.log(build);
-  // }
-
-  // if (now === lastDate) {
-  //   console.log(true);
-  // } else {
-  //   console.log(false);
-  // }
-
-  // console.log(payments[0]?.menuItemQuantity);
   const handleDelete = (id) => {
     console.log(id);
     Swal.fire({

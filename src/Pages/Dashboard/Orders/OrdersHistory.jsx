@@ -1,9 +1,9 @@
 import React from "react";
 import useUsers from "../../../Hooks/useUsers";
 import { useParams } from "react-router-dom";
-
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
+import usePayment from "../../../Hooks/usePayment";
 
 const OrderHistory = () => {
   const [user] = useUsers();
@@ -12,6 +12,8 @@ const OrderHistory = () => {
   const userInfo = user.filter((item) => item.email === email);
 
   const [axiosSecure] = useAxiosSecure();
+
+  
 
   const { data: orderHistories = [] } = useQuery({
     queryKey: ["payments", userInfo[0]?.email],
@@ -106,7 +108,7 @@ const OrderHistory = () => {
                       : ""
                   }`}
                 >
-                  {orderHistory.orderStatus}
+                  {orderHistory?.orderStatus}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                   {orderHistory.price}

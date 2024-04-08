@@ -84,7 +84,9 @@ const AvailableProduct = () => {
         name: item?.name,
         img: item?.img,
         shoplogo: item?.shoplogo,
+        shopName:item?.shopName,
         price: item?.price,
+        category: item?.category,
         quantity: quantity,
       };
 

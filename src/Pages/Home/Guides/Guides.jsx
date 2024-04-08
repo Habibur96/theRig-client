@@ -41,7 +41,8 @@ const Guides = () => {
         cartItemId: item?._id,
         productName: item?.buildName,
         productImg: item?.img,
-        price: item.totalPrice,
+        price: item?.totalPrice,
+        shopName:item?.shopName
       };
 
       const res = await axiosSecure.post("cart", cartItem);

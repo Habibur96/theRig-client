@@ -1,0 +1,25 @@
+import { useQuery } from "@tanstack/react-query";
+
+import useAxiosSecure from "./useAxiosSecure";
+import UseAuth from "./UseAuth";
+
+const useDeliveryAgent = () => {
+  const [axiosSecure] = useAxiosSecure();
+  const { user, loading } = UseAuth();
+  const { data: isDeliveryAgent, isLoading: isDeliveryAgentLoading } = useQuery(
+    {
+      queryKey: ["isDeliveryAgent", user?.email],
+      enabled: !loading,
+      queryFn: async () => {
+        const res = await axiosSecure.get(
+          `/users/deliveryAgent/${user?.email}`
+        );
+        console.log("isDeliveryAgent", res.data);
+        return res.data.deliveryAgent;
+      },
+    }
+  );
+  return [isDeliveryAgent, isDeliveryAgentLoading];
+};
+
+export default useDeliveryAgent;

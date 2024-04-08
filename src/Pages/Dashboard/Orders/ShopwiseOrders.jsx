@@ -5,10 +5,11 @@ import Ultratech from "../../../assets/logo/Ultratech.png";
 import Ryans from "../../../assets/logo/Ryans.png";
 import skyland from "../../../assets/logo/skyland.png";
 import React from "react";
+
 const ShopwiseOrders = () => {
   const [orders] = useOrders();
   console.log(orders);
-
+ 
   return (
     <div className="max-w-screen-3xl mx-auto border-gray-200 mt-2 ">
       <div className="overflow-x-auto ">

@@ -54,6 +54,12 @@ import RigReadyBuildInventory from "../Pages/Dashboard/Inventory/RigReadyBuildIn
 import AddCoupon from "../Pages/Dashboard/Coupons/AddCoupon";
 import ManageCoupon from "../Pages/Dashboard/Coupons/ManageCoupon";
 import EmptyCart from "../Pages/Dashboard/MyCart/EmptyCart";
+import DeliveryAgentRoute from "./DeliveryAgentRoute";
+import Startech from "../Pages/Dashboard/DeliveryAgent/Startech";
+import TechLand from "../Pages/Dashboard/DeliveryAgent/TechLand";
+import Ryans from "../Pages/Dashboard/DeliveryAgent/Ryans";
+import UltraTech from "../Pages/Dashboard/DeliveryAgent/UltraTech";
+import SkyLand from "../Pages/Dashboard/DeliveryAgent/SkyLand";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -410,6 +416,48 @@ export const router = createBrowserRouter([
           <AdminRoute>
             <EditReadyBuild></EditReadyBuild>
           </AdminRoute>
+        ),
+      },
+
+      // =====================Delivery Agent================
+      {
+        path: "startech",
+        element: (
+          <DeliveryAgentRoute>
+            <Startech></Startech>
+          </DeliveryAgentRoute>
+        ),
+      },
+      {
+        path: "ultratech",
+        element: (
+          <DeliveryAgentRoute>
+            <UltraTech></UltraTech>
+          </DeliveryAgentRoute>
+        ),
+      },
+      {
+        path: "techland",
+        element: (
+          <DeliveryAgentRoute>
+            <TechLand></TechLand>
+          </DeliveryAgentRoute>
+        ),
+      },
+      {
+        path: "ryans",
+        element: (
+          <DeliveryAgentRoute>
+            <Ryans></Ryans>
+          </DeliveryAgentRoute>
+        ),
+      },
+      {
+        path: "skyland",
+        element: (
+          <DeliveryAgentRoute>
+            <SkyLand></SkyLand>
+          </DeliveryAgentRoute>
         ),
       },
     ],

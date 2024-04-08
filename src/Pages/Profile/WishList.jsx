@@ -40,6 +40,7 @@ const WishList = () => {
         name: item?.productName,
         img: item?.productImg,
         shoplogo: item?.shoplogo,
+        shopName:item?.shopName,
         price: item?.price,
         quantity: quantity,
       };

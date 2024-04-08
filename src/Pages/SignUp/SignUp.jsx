@@ -33,6 +33,7 @@ const SignUp = () => {
             email: data?.email,
             phone: data?.phone,
             starpoints: "0",
+            role:"user"
           };
           console.log(saveUser);
           fetch("http://localhost:3000/users", {

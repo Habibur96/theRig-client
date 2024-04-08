@@ -81,6 +81,7 @@ const GuidesDetails = () => {
         productName: product[0]?.buildName,
         productImg: product[0]?.img,
         price: product[0]?.totalPrice,
+        shopName:product[0]?.shopName,
         quantity: quantity,
       };
 

@@ -247,9 +247,12 @@ const CheckoutForm = ({ email }) => {
             quantity: cart.length,
             paymentStatus: "success",
             orderStatus: "pending",
-            itemName: cart.map((item) => item.name || item.productName), 
+            itemName: cart.map((item) => item.name || item.productName),
             itemPhoto: cart.map((item) => item.img || item.productImg),
             shoplogo: cart.map((item) => item.shoplogo),
+            shopName: cart.map((item) => item.shopName),
+            category: cart.map((item) => item.category),
+            model: cart.map((item) => item.model),
           };
 
           const res = await axiosSecure.post("/payments", payment);

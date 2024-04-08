@@ -3,12 +3,8 @@ import ModeEditOutlinedIcon from "@mui/icons-material/ModeEditOutlined";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
+import Dropdown from "react-bootstrap/Dropdown";
 
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Swal from "sweetalert2";
 
 const AllOrders = () => {
@@ -138,147 +134,65 @@ const AllOrders = () => {
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     <div className="flex gap-2">
-                      <Accordion>
-                        <AccordionSummary
-                          expandIcon={<ExpandMoreIcon />}
-                          aria-controls="panel1-content"
-                          id="panel1-header"
+                      <Dropdown>
+                        <Dropdown.Toggle
+                          variant=""
+                          id="dropdown-basic"
+                          style={{ textTransform: "capitalize" }}
                         >
-                          <Typography>
-                            <ModeEditOutlinedIcon /> Edit
-                          </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          <Typography>
-                            <fieldset>
-                              <div className="space-y-2 ">
-                                <label
-                                  htmlFor="Option1"
-                                  className="flex cursor-pointer items-start gap-4"
+                          <ModeEditOutlinedIcon /> Edit
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                          <Dropdown.Item
+                            className="font-medium text-gray-900"
+                            onClick={() =>
+                              handleUpdate(order._id, orderStatus[0])
+                            }
+                          >
+                            Processing
+                          </Dropdown.Item>
+
+                          <Dropdown.Item className="font-medium text-gray-900">
+                            {order.paymentStatus === "success" ? null : (
+                              <div>
+                                <button
+                                  className="font-medium text-gray-900"
+                                  onClick={() =>
+                                    handleUpdate(order._id, orderStatus[1])
+                                  }
                                 >
-                                  <div>
-                                    <button
-                                      className="font-medium text-gray-900"
-                                      onClick={() =>
-                                        handleUpdate(order._id, orderStatus[0])
-                                      }
-                                    >
-                                      Processing
-                                    </button>
-                                  </div>
-                                </label>
-                                <label
-                                  htmlFor="Option1"
-                                  className="flex cursor-pointer items-start gap-4"
-                                >
-                                  {order.paymentStatus === "success" ? null : (
-                                    <div>
-                                      <button
-                                        className="font-medium text-gray-900"
-                                        onClick={() =>
-                                          handleUpdate(
-                                            order._id,
-                                            orderStatus[1]
-                                          )
-                                        }
-                                      >
-                                        Cancelled
-                                      </button>
-                                    </div>
-                                  )}
-                                </label>
-                                <label
-                                  htmlFor="Option1"
-                                  className="flex cursor-pointer items-start gap-4"
-                                >
-                                  <div>
-                                    <button
-                                      className="font-medium text-gray-900"
-                                      onClick={() =>
-                                        handleUpdate(order._id, orderStatus[2])
-                                      }
-                                    >
-                                      Shipped
-                                    </button>
-                                  </div>
-                                </label>
-                                <label
-                                  htmlFor="Option1"
-                                  className="flex cursor-pointer items-start gap-4"
-                                >
-                                  <div>
-                                    <button
-                                      className="font-medium text-gray-900"
-                                      onClick={() =>
-                                        handleUpdate(order._id, orderStatus[3])
-                                      }
-                                    >
-                                      Delivered
-                                    </button>
-                                  </div>
-                                </label>
+                                  Cancelled
+                                </button>
                               </div>
-                            </fieldset>
-                          </Typography>
-                        </AccordionDetails>
-                      </Accordion>
+                            )}
+                          </Dropdown.Item>
+
+                          <Dropdown.Item
+                            className="font-medium text-gray-900"
+                            onClick={() =>
+                              handleUpdate(order._id, orderStatus[2])
+                            }
+                          >
+                            Shipped
+                          </Dropdown.Item>
+
+                          <Dropdown.Item
+                            className="font-medium text-gray-900"
+                            onClick={() =>
+                              handleUpdate(order._id, orderStatus[3])
+                            }
+                          >
+                            Delivered
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+
                       <button onClick={() => handleDelete(order._id)}>
                         <DeleteForeverIcon />
                       </button>
                     </div>
                   </td>
-
-                  {/* <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    <button
-                      className="btn btn-sm mr-2 "
-                      onClick={() =>
-                        document.getElementById("my_modal_1").showModal()
-                      }
-                    >
-                      <ModeEditOutlinedIcon />
-                    </button>
-                    <dialog id="my_modal_1" className="modal">
-                      <div className="modal-box">
-                        <div className="modal-action">
-                          <form method="dialog">
-                            <button className="btn">Close</button>
-                          </form>
-
-                         
-                               <DropdownButton
-                            id="dropdown-basic-button"
-                            title="Change Order Status"
-                          >
-                            <Dropdown.Item href="">
-                              <button
-                                onClick={() =>
-                                  handleUpdate(order._id, orderStatus[0])
-                                }
-                              >
-                                Processing
-                              </button>
-                            </Dropdown.Item>
-                            <Dropdown.Item href="">
-                              <button
-                                onClick={() =>
-                                  handleUpdate(order._id, orderStatus[1])
-                                }
-                              >
-                                cancelled
-                              </button>
-                            </Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">
-                              Something else
-                            </Dropdown.Item>
-                          </DropdownButton> 
-                        </div>
-                      </div>
-                    </dialog>
-
-                    <button onClick={() => handleDelete(order._id)}>
-                      <DeleteForeverIcon />
-                    </button>
-                  </td> */}
                 </tr>
               ))}
             </tbody>

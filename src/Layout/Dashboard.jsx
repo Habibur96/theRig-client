@@ -20,6 +20,7 @@ import {
 import theRig from "../assets/logo/theRig.png";
 
 import useAdmin from "../Hooks/useAdmin";
+import useDeliveryAgent from "../Hooks/useDeliveryAgent";
 import UseCart from "../Hooks/UseCart";
 import useUsers from "../Hooks/useUsers";
 import UseAuth from "../Hooks/UseAuth";
@@ -48,7 +49,8 @@ const Dashboard = () => {
   // TODO: load data from the server to have dynamic isAdmin based on Data
   // const isAdmin = true;
   const [isAdmin] = useAdmin();
-
+  const [isDeliveryAgent] = useDeliveryAgent();
+  useDeliveryAgent;
   return (
     <div className="drawer drawer-mobile lg:drawer-open md:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -58,7 +60,6 @@ const Dashboard = () => {
 
       <div className="drawer-side bg-[#a0eaf1] font-semibold">
         <div>
-          {/* <img src={theRig} width="230" height="200" className="pl-20" alt="" /> */}
           <img
             className="h-36 w-34 mt-16 pl-20"
             src={theRig}
@@ -81,12 +82,6 @@ const Dashboard = () => {
                   <FaHome></FaHome> Admin Home
                 </NavLink>
               </li>
-              {/* <li>
-                <NavLink to="/dashboard/manageProducts">
-                  <FaWallet />
-                  Manage Products
-                </NavLink>
-              </li> */}
 
               <li>
                 <details className="group">
@@ -546,6 +541,69 @@ const Dashboard = () => {
               <li className="py-1">
                 <NavLink to="/">
                   <FaBook></FaBook> Sales & Revenue
+                </NavLink>
+              </li>
+            </>
+          ) : isDeliveryAgent ? (
+            <>
+              <li>
+                <details className="group">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2 ">
+                    <CreateNewFolderIcon />
+                    <span className="text-sm font-medium mr-20">
+                      Orders to collect
+                    </span>
+                  </summary>
+
+                  <ul className="mt-2 space-y-1 px-4 text-black">
+                    <li>
+                      <NavLink
+                        to="/dashboard/startech"
+                        className="block rounded-lg px-3 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Startech
+                      </NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink
+                        to="/dashboard/ryans"
+                        className="block rounded-lg px-3 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Ryans
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/ultratech"
+                        className="block rounded-lg px-3 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Ultra
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/skyland"
+                        className="block rounded-lg px-3  text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Skyland
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/dashboard/techland"
+                        className="block rounded-lg px-3 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        TechLand
+                      </NavLink>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+
+              <li className="text-sm font-medium ml-1 mt-1">
+                <NavLink to="/dashboard/allusers">
+                  <FaUsers></FaUsers> Orders to deliver
                 </NavLink>
               </li>
             </>

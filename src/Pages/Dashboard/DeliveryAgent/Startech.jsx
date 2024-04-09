@@ -1,25 +1,22 @@
 import usePayment from "../../../Hooks/usePayment";
 import Dropdown from "react-bootstrap/Dropdown";
 import ModeEditOutlinedIcon from "@mui/icons-material/ModeEditOutlined";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useOrders from "../../../Hooks/useOrders";
-import  { useReactToPrint } from 'react-to-print'
+import { useReactToPrint } from "react-to-print";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import theRig from "../../../assets/logo/theRig.png";
 const Startech = () => {
   const [payments] = usePayment();
   const [, refetch] = useOrders();
   const [axiosSecure] = useAxiosSecure();
   console.log(payments);
-  
 
-  const componentRef = useRef()
+  const componentRef = useRef();
   const handlePrint = useReactToPrint({
-    content:()=> componentRef.current,
-    
-  })
-
+    content: () => componentRef.current,
+  });
 
   const orderStatus = "collected";
   // Filter payments based on orderStatus
@@ -81,109 +78,140 @@ const Startech = () => {
     }
   };
 
+  const formattedDate = new Date().toLocaleString("en-US", {
+    timeZone: "Asia/Dhaka",
+  });
   return (
     <div>
-  
-      <div ref={componentRef} className="max-w-screen-3xl mx-auto border-gray-200 mt-2">
-      
-        <div className="overflow-x-auto ">
-          <table className="min-w-full divide-gray-200 bg-white text-sm font-medium ml-2">
-            <thead className="ltr:text-left rtl:text-right bg-[#00b16a] h-12">
-              <tr>
-                <th className="pl-3 px-2">#</th>
+      <div ref={componentRef}>
+        <div className="flex justify-center gap-3 mt-5">
+    
+          <img
+          className="h-20"
+            src="https://www.startech.com.bd/image/catalog/logo.png"
+            alt=""
+          />
+          <h1 className="text-[#EF4A26]">
+            Star Tech Ltd <hr />{" "}
+            <p className="text-black">
+              Phone: 16793, Email: webteam@startechbd.com <br />
+              https://www.startech.com.bd
+            </p>{" "}
+          </h1>
+        
+        </div>
 
-                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                  Img
-                </th>
-                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                  Product Name
-                </th>
-                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                  Model
-                </th>
-                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                  Category
-                </th>
-                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                  Quantity
-                </th>
+        <div className=" max-w-screen-3xl mx-auto border-gray-200 mt-2">
+          <div className="overflow-x-auto ">
+            <table className="min-w-full divide-gray-200 bg-white text-sm font-medium">
+              <thead className="ltr:text-left rtl:text-right bg-[#5daee4] h-12 ">
+                <tr>
+                  <th className="pl-3 px-2">#</th>
 
-                <th className="whitespace-nowrap px-3 py-2 font-medium text-gray-900">
-                  Order Status
-                </th>
-                <th className="whitespace-nowrap px-3 py-2 font-medium text-gray-900">
-                  Action
-                </th>
-                <th className="whitespace-nowrap px-3 py-2 font-medium text-gray-900">
-                  Details
-                </th>
-              </tr>
-            </thead>
+                  <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    Img
+                  </th>
+                  <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    Product Name
+                  </th>
+                  <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    Model
+                  </th>
+                  <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    Category
+                  </th>
+                  <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    Quantity
+                  </th>
 
-            <tbody className="divide-y divide-gray-300">
-              {startechData.map((item, index) => (
-                <tr className="divide-x divide-gray-110" key={item._id}>
-                  <th className="pl-3 px-2">{index + 1}</th>
-                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                    <img className="h-12 w-12" src={item.itemPhoto} alt="" />
-                  </td>
-                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                    {item.itemName}
-                  </td>
-                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                    {item.model}
-                  </td>
-                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                    {item.category}
-                  </td>
-
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {item.itemQty}
-                  </td>
-
-                  <td
-                    className={`whitespace-nowrap px-4 py-2 font-semibold text-lg ${
-                      item.orderStatus === "collected"
-                        ? "text-green-600"
-                        : "text-blue-600"
-                    }`}
-                  >
-                    {item.orderStatus}
-                  </td>
-
-                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                    <div className="flex gap-2">
-                      <Dropdown>
-                        <Dropdown.Toggle
-                          variant=""
-                          id="dropdown-basic"
-                          style={{ textTransform: "capitalize" }}
-                        >
-                          <ModeEditOutlinedIcon /> Edit
-                        </Dropdown.Toggle>
-
-                        <Dropdown.Menu>
-                          <Dropdown.Item
-                            className="font-medium text-gray-900"
-                            onClick={() => handleUpdate(item._id, orderStatus)}
-                          >
-                            collected
-                          </Dropdown.Item>
-                        </Dropdown.Menu>
-                      </Dropdown>
-                    </div>
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    <Link className="text-blue-700 font-semibold">See Details</Link>
-                  </td>
-
+                  <th className="whitespace-nowrap px-3 py-2 font-medium text-gray-900">
+                    Order Status
+                  </th>
+                  <th className="whitespace-nowrap px-3 py-2 font-medium text-gray-900">
+                    Action
+                  </th>
+                  <th className="whitespace-nowrap px-3 py-2 font-medium text-gray-900">
+                    Details
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody className="divide-y divide-gray-300">
+                {startechData.map((item, index) => (
+                  <tr className="divide-x divide-gray-110" key={item._id}>
+                    <th className="pl-3 px-2">{index + 1}</th>
+                    <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                      <img className="h-12 w-12" src={item.itemPhoto} alt="" />
+                    </td>
+                    <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                      {item.itemName}
+                    </td>
+                    <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                      {item.model}
+                    </td>
+                    <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                      {item.category}
+                    </td>
+
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                      {item.itemQty}
+                    </td>
+
+                    <td
+                      className={`whitespace-nowrap px-4 py-2 font-semibold text-lg ${
+                        item.orderStatus === "collected"
+                          ? "text-green-600"
+                          : "text-blue-600"
+                      }`}
+                    >
+                      {item.orderStatus}
+                    </td>
+
+                    <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                      <div className="flex gap-2">
+                        <Dropdown>
+                          <Dropdown.Toggle
+                            variant=""
+                            id="dropdown-basic"
+                            style={{ textTransform: "capitalize" }}
+                          >
+                            <ModeEditOutlinedIcon /> Edit
+                          </Dropdown.Toggle>
+
+                          <Dropdown.Menu>
+                            <Dropdown.Item
+                              className="font-medium text-gray-900"
+                              onClick={() =>
+                                handleUpdate(item._id, orderStatus)
+                              }
+                            >
+                              collected
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </div>
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                      <Link className="text-blue-700 font-semibold">
+                        See Details
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+                <tr></tr>
+              </tbody>
+            </table>
+            <h1 className="ml-10 mt-5 font-semibold">All information generated from TheRIG at {formattedDate}</h1>
+          </div>
         </div>
       </div>
-          <button variant="success" onClick={handlePrint}>Print</button>
+      <button
+        style={{ textTransform: "capitalize" }}
+        onClick={handlePrint}
+        className="btn btn-wide bg-[#5daee4] text-lg mt-10"
+      >
+        Print
+      </button>
     </div>
   );
 };

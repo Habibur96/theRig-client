@@ -4,7 +4,6 @@ import mice from "../../../assets/image/mice.png";
 import keyboard from "../../../assets/image/keyboard.png";
 import headphone from "../../../assets/image/headphone.png";
 import casingCooler from "../../../assets/image/casingCooler.png";
-import monitor from "../../../assets/image/monitor.png";
 import Ups from "../../../assets/image/Ups.png";
 import { Accordion, AccordionItem } from "react-bootstrap";
 import AccordionButton from "react-bootstrap/AccordionButton";
@@ -14,6 +13,7 @@ import ConstructionIcon from "@mui/icons-material/Construction";
 import DevicesTwoToneIcon from "@mui/icons-material/DevicesTwoTone";
 import DescriptionTwoToneIcon from "@mui/icons-material/DescriptionTwoTone";
 import MemorySharpIcon from "@mui/icons-material/MemorySharp";
+import monitor from "../../../assets/image/monitor.png";
 const Navber2 = () => {
   const [activeKey, setActiveKey] = useState(null);
   const accordionRef = useRef(null);
@@ -70,6 +70,7 @@ const Navber2 = () => {
                         {" "}
                         <Link to="product/cpu" onClick={handleLinkClick}>
                           <img
+                            className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-cpu-2023.png"
                             alt=""
                           />{" "}
@@ -80,6 +81,7 @@ const Navber2 = () => {
                         {" "}
                         <Link onClick={handleLinkClick}>
                           <img
+                           className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-cpucooler-2023.png"
                             alt=""
                           />{" "}
@@ -93,6 +95,7 @@ const Navber2 = () => {
                           onClick={handleLinkClick}
                         >
                           <img
+                          className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-motherboard-2023.png"
                             alt=""
                           />{" "}
@@ -103,6 +106,7 @@ const Navber2 = () => {
                         {" "}
                         <Link to="product/memory" onClick={handleLinkClick}>
                           <img
+                            className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-memory-2023.png"
                             alt=""
                           />{" "}
@@ -112,7 +116,22 @@ const Navber2 = () => {
                       <li>
                         {" "}
                         <Link onClick={handleLinkClick}>
+                          <img   className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]" style={{ height: 200 }} src={keyboard} alt="" />{" "}
+                        </Link>{" "}
+                        Keyboard
+                      </li>
+                      <li>
+                        {" "}
+                        <Link onClick={handleLinkClick}>
+                          <img   className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]" style={{ height: 200 }} src={mice} alt="" />{" "}
+                        </Link>{" "}
+                        Mice
+                      </li>
+                      <li>
+                        {" "}
+                        <Link>
                           <img
+                            className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-ssd-2023.png"
                             alt=""
                           />{" "}
@@ -121,8 +140,9 @@ const Navber2 = () => {
                       </li>
                       <li>
                         {" "}
-                        <Link onClick={handleLinkClick}>
+                        <Link>
                           <img
+                            className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-videocard-2023.png"
                             alt=""
                           />{" "}
@@ -132,7 +152,7 @@ const Navber2 = () => {
                       <li>
                         {" "}
                         <Link onClick={handleLinkClick}>
-                          <img
+                          <img className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-powersupply-2023.png"
                             alt=""
                           />{" "}
@@ -143,58 +163,60 @@ const Navber2 = () => {
                         {" "}
                         <Link>
                           <img
+                            className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             src="https://cdna.pcpartpicker.com/static/forever/img/nav-case-2023.png"
                             alt=""
                           />{" "}
                         </Link>{" "}
                         Cases
                       </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul className="Peripherals text-center;">
-                      {/* <li>Peripherals</li> */}
+
                       <li>
-                        <Link to="product/monitor" onClick={handleLinkClick}>
-                          <img style={{ height: 200 }} src={monitor} alt="" />{" "}
-                          Monitor
-                        </Link>
-                      </li>
-                      <li>
-                        <Link onClick={handleLinkClick}>
+                        {" "}
+                        <Link>
                           <img
+                            className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                             style={{ height: 200 }}
                             src={casingCooler}
                             alt=""
                           />{" "}
-                          Casing Cooler
-                        </Link>
+                        </Link>{" "}
+                        Case Cooler
                       </li>
                       <li>
-                        <Link onClick={handleLinkClick}>
-                          <>
-                          
-                          <img style={{ height: 246 }}  className="" src={keyboard} alt="" />{" "}
-                          </>
-                          Keyboard
-                        </Link>
+                        {" "}
+                        <Link to="product/monitor" onClick={handleLinkClick}>
+                          <img   className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]" style={{ height: 200 }} src={monitor} alt="" />{" "}
+                        </Link>{" "}
+                        Monitor
                       </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul className="">
+                      {/*                     
                       <li>
-                        <Link onClick={handleLinkClick}>
-                          <img style={{ height: 152 }} src={mice} alt="" /> Mice
+                        <Link to="product/monitor" onClick={handleLinkClick}>
+                          <img className="mb-5" style={{ height: 200 }} src={monitor} alt="" />{" "}
+                      
                         </Link>
                       </li>
-                      <li>
-                        <Link>
-                          <img style={{ height: 152 }} src={headphone} alt="" />{" "}
-                          Headphone
-                        </Link>
-                      </li>
-                      <li>
-                        <Link onClick={handleLinkClick}>
-                          <img style={{ height: 150 }}  src={Ups} alt="" /> UPS
-                        </Link>
-                      </li>
+
+                      <ul className="flex">
+                        <li>
+                          <Link onClick={handleLinkClick}>
+                            <img style={{ height: 152 }} src={mice} alt="" />{" "}
+                            Mice
+                          </Link>
+                        </li>{" "}
+                        <li>
+                          <Link onClick={handleLinkClick}>
+                            <img style={{ height: 152 }} src={mice} alt="" />{" "}
+                            Mice
+                          </Link>
+                        </li>
+                      </ul> */}
+
                       {/* <li className="mt-3 ml-5 mr-5 bg-green-500">
                         {" "}
                         <Link>

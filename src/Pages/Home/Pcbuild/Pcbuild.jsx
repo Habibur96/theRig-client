@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import cpu from "../../../assets/icon/cpu.jpg";
 import cpuCooler from "../../../assets/icon/cpuCooler.jpg";
 import Motherboard from "../../../assets/icon/motherboard.jpg";
@@ -17,13 +17,20 @@ import ups from "../../../assets/icon/ups.jpg";
 import ClearIcon from "@mui/icons-material/Clear";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import { useEffect, useState } from "react";
-import UsepcbuilderCart from "../../../Hooks/UsepcbuilderCart";
+// import UsepcbuilderCart from "../../../Hooks/UsepcbuilderCart";
+import UseAuth from "../../../Hooks/UseAuth";
 
 const Pcbuild = () => {
   const { _id } = useParams();
+  const { user } = UseAuth();
+  const userEmail = user?.email;
 
-  const [pcbuilderCart] = UsepcbuilderCart();
-  console.log(pcbuilderCart);
+  const { state } = useLocation();
+  console.log({ state });
+
+  // const [pcbuilderCart, refetch] = UsepcbuilderCart();
+  // console.log({ pcbuilderCart });
+  // const { result, pcbuilderId: pcbuilderIds } = pcbuilderCart;
   const [replaceCpu, setReplaceCpu] = useState(false);
   const [replaceMotherboard, setReplaceMotherboard] = useState(false);
   const [replaceMonitor, setReplaceMonitor] = useState(false);
@@ -33,54 +40,178 @@ const Pcbuild = () => {
   const [selectMotherboard, setSelectMotherboard] = useState([]);
   const [selectMonitor, setSelectMonitor] = useState([]);
   const [selectMemory, setSelectMemory] = useState([]);
-  console.log({ _id });
+
+  // const cartItemIds = pcbuilderCart?.pcbuilderId?.map((item) => item);
+  // console.log({ cartItemIds });
+  // useEffect(() => {
+  //   // Extract the cartItemId values from pcbuilderIds and create a set
+  //   const pcbuilderCartItemIds = new Set(
+  //     pcbuilderIds?.map((item) => item.cartItemId)
+  //   );
+
+  //   // Filter the result array to include only objects with cartItemId matching the set
+  //   const data = result?.filter((item) =>
+  //     pcbuilderCartItemIds.has(item.cartItemId)
+  //   );
+
+  //   // Process the filtered data based on item category
+  //   data?.forEach((item) => {
+  //     console.log({ item }); // Debugging: Log the item
+
+  //     switch (item.category) {
+  //       case "cpu":
+  //         console.log("cpu");
+  //         setSelectCpu(item);
+  //         setReplaceCpu(true);
+  //         break;
+
+  //       case "motherboard":
+  //         console.log(item.img);
+  //         setSelectMotherboard(item);
+  //         setReplaceMotherboard(true);
+  //         break;
+
+  //       case "monitor":
+  //         console.log(item.img);
+  //         setSelectMonitor(item);
+  //         setReplaceMonitor(true);
+  //         break;
+
+  //       case "memory":
+  //         console.log(item.img);
+  //         setSelectMemory(item);
+  //         setReplaceMemory(true);
+  //         break;
+
+  //       // Add more cases here for other categories as needed
+  //       default:
+  //         // You can handle any additional categories or unexpected categories here
+  //         break;
+  //     }
+  //   });
+  //   refetch();
+  // }, [_id, refetch]);
+  // useEffect(() => {
+  // const data = pcbuilderCart?.result?.filter(
+  //   (item) => item?.cartItemId === cartItemIds?.cartItemId
+  // );
+  // console.log({ data });
+  // Extract the cartItemId values from pcbuilderIds and create a set
+  // const pcbuilderCartItemIds = new Set(
+  //   pcbuilderIds?.map((item) => item.cartItemId)
+  // );
+
+  // // Filter the result array to include only objects with cartItemId matching the set
+  // const data = result?.filter((item) =>
+  //   pcbuilderCartItemIds.has(item.cartItemId)
+  // );
+  // console.log({ data });
+
+  // // Output the filtered results
+
+  // const mappeData = data?.map((item) => {
+  //   console.log({ item });
+  //   if (item.category === "cpu") {
+  //     console.log("cpu");
+  //     setSelectCpu(item);
+  //     setReplaceCpu(true);
+  //   }
+
+  //   if (item.category === "motherboard") {
+  //     console.log(item.img);
+  //     setSelectMotherboard(item);
+  //     setReplaceMotherboard(true);
+  //   }
+  //   if (item.category === "monitor") {
+  //     console.log(item.img);
+  //     setSelectMonitor(item);
+  //     setReplaceMonitor(true);
+  //   }
+  //   if (item.category === "memory") {
+  //     console.log(item.img);
+  //     setSelectMemory(item);
+  //     setReplaceMemory(true);
+  //   }
+  //   return item;
+  // });
+
+  // if (data.length > 0) {
+  //   const firstItem = data[0];
+  //   console.log({ firstItem });
+
+  //   if (firstItem.category === "cpu") {
+  //     console.log("cpu");
+  //     setSelectCpu(data);
+  //     setReplaceCpu(true);
+  //   }
+
+  //   if (firstItem.category === "motherboard") {
+  //     console.log("motherboard");
+  //     setSelectMotherboard(data);
+  //     setReplaceMotherboard(true);
+  //   }
+  // }
+  // }, [_id, pcbuilderCart]);
+
+  const pcbuilderDataGet = async () => {
+    const url = `http://localhost:3000/pcbuilderCart?email=${userEmail}`;
+    try {
+      const response = await fetch(url);
+      const pcbuilderCart = await response.json();
+      const { result, pcbuilderId: pcbuilderIds } = pcbuilderCart;
+      // Extract the cartItemId values from pcbuilderIds and create a set
+      const pcbuilderCartItemIds = new Set(
+        pcbuilderIds?.map((item) => item.cartItemId)
+      );
+
+      // Filter the result array to include only objects with cartItemId matching the set
+      const data = result?.filter((item) =>
+        pcbuilderCartItemIds.has(item.cartItemId)
+      );
+
+      // Process the filtered data based on item category
+      data?.forEach((item) => {
+        console.log({ item }); // Debugging: Log the item
+
+        switch (item.category) {
+          case "cpu":
+            console.log("cpu");
+            setSelectCpu(item);
+            setReplaceCpu(true);
+            break;
+
+          case "motherboard":
+            console.log(item.img);
+            setSelectMotherboard(item);
+            setReplaceMotherboard(true);
+            break;
+
+          case "monitor":
+            console.log(item.img);
+            setSelectMonitor(item);
+            setReplaceMonitor(true);
+            break;
+
+          case "memory":
+            console.log(item.img);
+            setSelectMemory(item);
+            setReplaceMemory(true);
+            break;
+
+          // Add more cases here for other categories as needed
+          default:
+            // You can handle any additional categories or unexpected categories here
+            break;
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-    const data = pcbuilderCart.filter((item) => item.cartItemId === _id);
-    console.log(data);
-    const mappeData = data.map((item) => {
-      console.log({ item });
-      if (item.category === "cpu") {
-        console.log("cpu");
-        setSelectCpu(item);
-        setReplaceCpu(true);
-      }
-
-      if (item.category === "motherboard") {
-        console.log(item.img);
-        setSelectMotherboard(item);
-        setReplaceMotherboard(true);
-      }
-      if (item.category === "monitor") {
-        console.log(item.img);
-        setSelectMonitor(item);
-        setReplaceMonitor(true);
-      }
-      if (item.category === "memory") {
-        console.log(item.img);
-        setSelectMemory(item);
-        setReplaceMemory(true);
-      }
-      return item;
-    });
-
-    // if (data.length > 0) {
-    //   const firstItem = data[0];
-    //   console.log({ firstItem });
-
-    //   if (firstItem.category === "cpu") {
-    //     console.log("cpu");
-    //     setSelectCpu(data);
-    //     setReplaceCpu(true);
-    //   }
-
-    //   if (firstItem.category === "motherboard") {
-    //     console.log("motherboard");
-    //     setSelectMotherboard(data);
-    //     setReplaceMotherboard(true);
-    //   }
-    // }
-  }, [_id, pcbuilderCart]);
+    pcbuilderDataGet();
+  }, [userEmail]);
 
   return (
     <div className="max-w-screen-xl mx-auto mt-20 pl-40">
@@ -91,10 +222,8 @@ const Pcbuild = () => {
             {/* <th>Name</th> */}
             {/* <th>Job</th> */}
           </tr>
-         
-          <tr>
-            {/* <th>Core Components</th> */}
-          </tr>
+
+          <tr>{/* <th>Core Components</th> */}</tr>
         </thead>
         <tbody>
           {/* row 1 */}
@@ -116,7 +245,7 @@ const Pcbuild = () => {
                   </div>
                 </div>
               </td>
-              <td> </td>
+              <td></td>
 
               <th>
                 <div className="flex space-x-6 items-center  ">
@@ -158,7 +287,12 @@ const Pcbuild = () => {
               <th>
                 {/* /routeName/$apiName/$productCategory */}
                 <Link to="/cpus">
-                  <button className=" btn btn-outline btn-info font-semibold text-lg" style={{textTransform:"capitalize"}}>Choose</button>
+                  <button
+                    className=" btn btn-outline btn-info font-semibold text-lg"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    Choose
+                  </button>
                 </Link>
               </th>
             </tr>
@@ -182,7 +316,12 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg" style={{textTransform:"capitalize"}}>Choose</button>
+                <button
+                  className=" btn btn-outline btn-info font-semibold text-lg"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Choose
+                </button>
               </Link>
             </th>
           </tr>
@@ -249,7 +388,12 @@ const Pcbuild = () => {
               <th>
                 {/* /routeName/$apiName/$productCategory */}
                 <Link to="/motherboards">
-                  <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                  <button
+                    className=" btn btn-outline btn-info font-semibold text-lg"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    Choose
+                  </button>
                 </Link>
               </th>
             </tr>
@@ -312,7 +456,12 @@ const Pcbuild = () => {
 
               <th>
                 <Link to="/memoryes">
-                  <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                  <button
+                    className=" btn btn-outline btn-info font-semibold text-lg"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    Choose
+                  </button>
                 </Link>
               </th>
             </tr>
@@ -335,7 +484,12 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                <button
+                  className=" btn btn-outline btn-info font-semibold text-lg"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Choose
+                </button>
               </Link>
             </th>
           </tr>
@@ -357,7 +511,12 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                <button
+                  className=" btn btn-outline btn-info font-semibold text-lg"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Choose
+                </button>
               </Link>
             </th>
           </tr>
@@ -371,7 +530,12 @@ const Pcbuild = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm font-bold font-semibold text-lg"style={{textTransform:"capitalize"}}>Power Supply</div>
+                  <div
+                    className="text-sm font-bold font-semibold text-lg"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    Power Supply
+                  </div>
                 </div>
               </div>
             </td>
@@ -379,7 +543,12 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                <button
+                  className=" btn btn-outline btn-info font-semibold text-lg"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Choose
+                </button>
               </Link>
             </th>
           </tr>
@@ -402,7 +571,12 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                <button
+                  className=" btn btn-outline btn-info font-semibold text-lg"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Choose
+                </button>
               </Link>
             </th>
           </tr>
@@ -473,7 +647,12 @@ const Pcbuild = () => {
 
               <th>
                 <Link to="/monitors">
-                  <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                  <button
+                    className=" btn btn-outline btn-info font-semibold text-lg"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    Choose
+                  </button>
                 </Link>
               </th>
             </tr>
@@ -500,7 +679,12 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                <button
+                  className=" btn btn-outline btn-info font-semibold text-lg"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Choose
+                </button>
               </Link>
             </th>
           </tr>
@@ -514,7 +698,12 @@ const Pcbuild = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm font-bold font-semibold text-lg"style={{textTransform:"capitalize"}}>Keyboard</div>
+                  <div
+                    className="text-sm font-bold font-semibold text-lg"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    Keyboard
+                  </div>
                 </div>
               </div>
             </td>
@@ -522,7 +711,12 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                <button
+                  className=" btn btn-outline btn-info font-semibold text-lg"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Choose
+                </button>
               </Link>
             </th>
           </tr>
@@ -544,55 +738,19 @@ const Pcbuild = () => {
 
             <th>
               <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
+                <button
+                  className=" btn btn-outline btn-info font-semibold text-lg"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Choose
+                </button>
               </Link>
             </th>
           </tr>
 
           {/* row 12 */}
-          <tr>
-            <td>
-              <div className="flex items-center space-x-10">
-                <div className="avatar">
-                  <div className=" w-12 h-12">
-                    <img src={headphone} alt="Avatar Tailwind CSS Component" />
-                  </div>
-                </div>
-                <div>
-                  <div className="text-sm font-bold">Headphone</div>
-                </div>
-              </div>
-            </td>
-            <td></td>
 
-            <th>
-              <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg"style={{textTransform:"capitalize"}}>Choose</button>
-              </Link>
-            </th>
-          </tr>
           {/* row 14 */}
-          <tr>
-            <td>
-              <div className="flex items-center space-x-10">
-                <div className="avatar">
-                  <div className=" w-12 h-12">
-                    <img src={ups} alt="Avatar Tailwind CSS Component" />
-                  </div>
-                </div>
-                <div>
-                  <div className="font-bold">UPS</div>
-                </div>
-              </div>
-            </td>
-            <td></td>
-
-            <th>
-              <Link>
-                <button className=" btn btn-outline btn-info font-semibold text-lg" style={{textTransform:"capitalize"}}>Choose</button>
-              </Link>
-            </th>
-          </tr>
         </tbody>
       </table>
     </div>

@@ -30,6 +30,8 @@ const AvailableProduct = () => {
   const { collectionName, name } = useParams();
   const [component, setComponent] = useState([]);
 
+  const [pcbuildCart, setPcbuildCart] = useState(null);
+
   const from = location.state?.from?.pathname;
   const cartLocation =
     from?.includes("cpus") ||
@@ -60,8 +62,13 @@ const AvailableProduct = () => {
       };
 
       const res = await axiosSecure.post(`pcbuilderCart`, cartItem);
+      // const { result, pcbuilderId } = res?.data;
+      // const pcbuilderCart = res?.data;
+      console.log({ res, pcbuildCart });
+      setPcbuildCart(res?.data);
     }
   };
+  console.log({pcbuildCart });
 
   const handleCart = async (item) => {
     if (user && user.email) {
@@ -84,7 +91,7 @@ const AvailableProduct = () => {
         name: item?.name,
         img: item?.img,
         shoplogo: item?.shoplogo,
-        shopName:item?.shopName,
+        shopName: item?.shopName,
         price: item?.price,
         category: item?.category,
         quantity: quantity,
@@ -234,7 +241,8 @@ const AvailableProduct = () => {
                         {cartLocation ? (
                           <Link
                             onClick={() => pcbuilderCartGet(item)}
-                            to={`/pcbuild/${item._id}`}
+                            to={`/pcbuild`}
+                            state={{ data: pcbuildCart }}
                             className="ap"
                             style={{ textTransform: "capitalize" }}
                           >

@@ -23,7 +23,8 @@ const Startech = () => {
   const processingPayments = payments.filter(
     (payment) =>
       payment.orderStatus === "processing" ||
-      payment.orderStatus === "collected"
+      payment.orderStatus === "collected" ||
+      payment.orderStatus === "delivered"
   );
   console.log(processingPayments);
 
@@ -192,7 +193,7 @@ const Startech = () => {
                       </div>
                     </td>
                     <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                      <Link className="text-blue-700 font-semibold">
+                      <Link to={`/dashboard/ordersToDeliver/${item._id}`} className="text-blue-700 font-semibold">
                         See Details
                       </Link>
                     </td>

@@ -60,6 +60,7 @@ import TechLand from "../Pages/Dashboard/DeliveryAgent/TechLand";
 import Ryans from "../Pages/Dashboard/DeliveryAgent/Ryans";
 import UltraTech from "../Pages/Dashboard/DeliveryAgent/UltraTech";
 import SkyLand from "../Pages/Dashboard/DeliveryAgent/SkyLand";
+import OrdersToDeliver from "../Pages/Dashboard/DeliveryAgent/OrdersToDeliver";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -428,6 +429,7 @@ export const router = createBrowserRouter([
           </DeliveryAgentRoute>
         ),
       },
+
       {
         path: "ultratech",
         element: (
@@ -457,6 +459,16 @@ export const router = createBrowserRouter([
         element: (
           <DeliveryAgentRoute>
             <SkyLand></SkyLand>
+          </DeliveryAgentRoute>
+        ),
+      },
+
+      //=============OrdersToDeliver==============
+      {
+        path: "ordersToDeliver/:id",
+        element: (
+          <DeliveryAgentRoute>
+            <OrdersToDeliver></OrdersToDeliver>
           </DeliveryAgentRoute>
         ),
       },

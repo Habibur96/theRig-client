@@ -86,7 +86,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "pcbuild",
-        element: <Pcbuild></Pcbuild>,
+        element: (
+          <PrivateRoute>
+            <Pcbuild></Pcbuild>
+          </PrivateRoute>
+        ),
       },
       {
         path: "pcbuild/:_id",

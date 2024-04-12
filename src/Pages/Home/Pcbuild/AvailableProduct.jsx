@@ -17,6 +17,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useWishList from "../../../Hooks/useWishList";
+import { toast } from "react-toastify";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
@@ -30,15 +31,14 @@ const AvailableProduct = () => {
   const { collectionName, name } = useParams();
   const [component, setComponent] = useState([]);
 
-  const [pcbuildCart, setPcbuildCart] = useState(null);
-
   const from = location.state?.from?.pathname;
+  console.log(from);
   const cartLocation =
     from?.includes("cpus") ||
     from?.includes("motherboards") ||
     from?.includes("monitors") ||
     from?.includes("memoryes");
-
+  console.log(cartLocation);
   useEffect(() => {
     fetch(`http://localhost:3000/cpu/${collectionName}/${name}`, {
       method: "GET",
@@ -62,13 +62,14 @@ const AvailableProduct = () => {
       };
 
       const res = await axiosSecure.post(`pcbuilderCart`, cartItem);
-      // const { result, pcbuilderId } = res?.data;
-      // const pcbuilderCart = res?.data;
-      console.log({ res, pcbuildCart });
-      setPcbuildCart(res?.data);
+      const pcbuilderCart = res?.data;
+      if (pcbuilderCart) {
+        toast("new pcbuilder added", { autoClose: 2000 });
+
+        navigate("/pcbuild");
+      }
     }
   };
-  console.log({pcbuildCart });
 
   const handleCart = async (item) => {
     if (user && user.email) {
@@ -100,13 +101,7 @@ const AvailableProduct = () => {
       const res = await axiosSecure.post("cart", cartItem);
       if (res.data?.insertedId) {
         refetch();
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Product added to the cart",
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        toast("product added", { autoClose: 2000 });
       }
     } else {
       Swal.fire({
@@ -239,15 +234,13 @@ const AvailableProduct = () => {
 
                       <td>
                         {cartLocation ? (
-                          <Link
+                          <button
                             onClick={() => pcbuilderCartGet(item)}
-                            to={`/pcbuild`}
-                            state={{ data: pcbuildCart }}
                             className="ap"
                             style={{ textTransform: "capitalize" }}
                           >
                             Add
-                          </Link>
+                          </button>
                         ) : (
                           <>
                             <button

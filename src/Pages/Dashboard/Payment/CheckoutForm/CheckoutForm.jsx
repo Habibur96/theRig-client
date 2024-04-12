@@ -14,6 +14,7 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import PaymentsIcon from "@mui/icons-material/Payments";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
+
 const CheckoutForm = ({ email }) => {
   const {
     register,
@@ -260,7 +261,8 @@ const CheckoutForm = ({ email }) => {
           refetch();
 
           if (res.data?.insertResult?.insertedId) {
-            // toast('Pay The Payment Successfully !!!', { autoClose: 2000 })
+            // toast('Pay the Payment Successfully !!!', { autoClose: 2000 })
+          
             Swal.fire({
               position: "top-end",
               icon: "success",

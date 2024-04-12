@@ -5,13 +5,29 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Dropdown from "react-bootstrap/Dropdown";
-import Form from "react-bootstrap/Form";
+
+import { Button, Form } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 const OrdersToDeliver = () => {
   const { id } = useParams();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const [payments, refetch] = usePayment();
   const [axiosSecure] = useAxiosSecure();
   const orders = payments.filter((payment) => payment._id === id);
   const orderStatus = "delivered";
+  const onSubmit = (data) => {
+    console.log(data?.phone);
+    const saveUser = {
+      phoneNumber: data?.phone,
+      message: data?.message
+    };
+    axiosSecure.post(`sendmessage`, saveUser);
+  };
   const handleUpdate = async (_id, orderStatus) => {
     console.log(_id, orderStatus);
     const res = await axiosSecure.put(`/payments/${_id}`, { orderStatus });
@@ -20,6 +36,7 @@ const OrdersToDeliver = () => {
       refetch();
     }
   };
+
   console.log(id);
   console.log(orders);
   return (
@@ -124,25 +141,47 @@ const OrdersToDeliver = () => {
             <tr></tr>
           </tbody>
         </table>
-        
       </div>
       <div className="w-50 mx-auto">
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Phone</Form.Label>
-              <Form.Control type="phone" placeholder="name@example.com" />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-          </Form>
-        </div>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form.Group className="mb-3" controlId="formBasicMobile">
+            <Form.Label>
+              Mobile <span className="text-red-600 font-extrabold">*</span>
+            </Form.Label>
+            <Form.Control
+              type="tel"
+              name="phone"
+              {...register("phone", { required: true })}
+              placeholder="Mobile"
+            />
+            {errors.phone && (
+              <span className="text-red-600">Mobile num is required</span>
+            )}
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Example textarea</Form.Label>
+            <div className="mt-3">
+              <label className="sr-only" htmlFor="message">
+                Message
+              </label>
+
+              <textarea
+                className="w-full textarea textarea-bordered rounded-lg border-gray-200 p-3 text-sm"
+                placeholder="Message"
+                rows="8"
+                id="message"
+                {...register("message")}
+              ></textarea>
+            </div>
+          </Form.Group>
+          <div className="d-grid gap-2 mt-4">
+            <Button variant="info" type="submit" value="" size="">
+              Continue
+            </Button>
+          </div>
+        </Form>
+      </div>
     </div>
-    
   );
 };
 

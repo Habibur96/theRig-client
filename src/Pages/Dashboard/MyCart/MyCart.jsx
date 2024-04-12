@@ -62,7 +62,8 @@ const MyCart = () => {
         return;
       }
 
-      axiosSecure.put(`/cart/${id}`, { quantity: newQuantity }).then((data) => {
+      axiosSecure.put(`/cart/${id}`, { quantity: newQuantity })
+      .then((data) => {
         console.log("after posting new menu item", data.data);
         if (data.data?.modifiedCount > 0) {
           refetch();

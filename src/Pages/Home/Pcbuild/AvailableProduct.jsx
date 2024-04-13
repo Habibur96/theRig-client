@@ -64,7 +64,7 @@ const AvailableProduct = () => {
       const res = await axiosSecure.post(`pcbuilderCart`, cartItem);
       const pcbuilderCart = res?.data;
       if (pcbuilderCart) {
-        toast("new pcbuilder added", { autoClose: 2000 });
+        toast("new component added", { autoClose: 2000 });
 
         navigate("/pcbuild");
       }

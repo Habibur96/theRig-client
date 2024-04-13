@@ -20,16 +20,34 @@ const OrdersToDeliver = () => {
   const [axiosSecure] = useAxiosSecure();
   const orders = payments.filter((payment) => payment._id === id);
   const orderStatus = "delivered";
+
   const onSubmit = (data) => {
-    console.log(data?.phone);
-    const saveUser = {
-      phoneNumber: data?.phone,
-      message: data?.message
+    // Generate random OTP
+    const otp = Math.floor(100000 + Math.random() * 900000);
+    const test = {
+      api_key: process.env.API_KEY,
+      senderid: process.env.SENDER_ID,
+      number: `${data?.phone}, 01882043618`,
+      message: `${data?.message}. Your OTP is: ${otp}`,
     };
-    axiosSecure.post(`sendmessage`, saveUser);
+
+    fetch(`http://bulksmsbd.net/api/smsapi`, {
+      method: "Post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(test),
+    })
+      .then((res) => res.json())
+      .then((test) => {
+        reset();
+        console.log(test);
+      });
   };
+
   const handleUpdate = async (_id, orderStatus) => {
     console.log(_id, orderStatus);
+
     const res = await axiosSecure.put(`/payments/${_id}`, { orderStatus });
     console.log("Order Status updated", res.data);
     if (res?.data?.modifiedCount > 0) {
@@ -142,7 +160,7 @@ const OrdersToDeliver = () => {
           </tbody>
         </table>
       </div>
-      <div className="w-50 mx-auto">
+      <div className="w-50 ml-20 mt-5 ">
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formBasicMobile">
             <Form.Label>
@@ -151,6 +169,7 @@ const OrdersToDeliver = () => {
             <Form.Control
               type="tel"
               name="phone"
+              value={orders[0].phone}
               {...register("phone", { required: true })}
               placeholder="Mobile"
             />
@@ -159,7 +178,9 @@ const OrdersToDeliver = () => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Example textarea</Form.Label>
+            <Form.Label>
+              Message<span className="text-red-600 font-extrabold">*</span>
+            </Form.Label>
             <div className="mt-3">
               <label className="sr-only" htmlFor="message">
                 Message
@@ -170,8 +191,11 @@ const OrdersToDeliver = () => {
                 placeholder="Message"
                 rows="8"
                 id="message"
-                {...register("message")}
+                {...register("message", { required: true })}
               ></textarea>
+              {errors.message && (
+                <span className="text-red-600">Message is required</span>
+              )}
             </div>
           </Form.Group>
           <div className="d-grid gap-2 mt-4">

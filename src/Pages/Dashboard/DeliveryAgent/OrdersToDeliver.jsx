@@ -19,20 +19,22 @@ const OrdersToDeliver = () => {
   const [payments, refetch] = usePayment();
   const [axiosSecure] = useAxiosSecure();
   const orders = payments.filter((payment) => payment._id === id);
+  console.log(orders);
   const orderStatus = "delivered";
 
   const onSubmit = (data) => {
     // Generate random OTP
     const otp = Math.floor(100000 + Math.random() * 900000);
+
     const test = {
-      api_key: process.env.API_KEY,
-      senderid: process.env.SENDER_ID,
+      api_key: import.meta.env.VITE_API_KEY,
+      senderid: import.meta.env.VITE_SENDER_ID,
       number: `${data?.phone}, 01882043618`,
-      message: `${data?.message}. Your OTP is: ${otp}`,
+      message: `${data?.message} Your OTP is: ${otp}`,
     };
 
     fetch(`http://bulksmsbd.net/api/smsapi`, {
-      method: "Post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -73,10 +75,16 @@ const OrdersToDeliver = () => {
                 </th>
               </div>
 
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Quantity
-              </th>
               <th className="whitespace-nowrap px-4 py-2 font-medium text-center text-gray-900">
+                Order Id
+              </th>
+              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                Qty
+              </th>
+              {/* <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                Customer Name
+              </th> */}
+              <th className="whitespace-nowrap  py-2 font-medium text-center text-gray-900">
                 Phone
               </th>
 
@@ -118,9 +126,15 @@ const OrdersToDeliver = () => {
                   ))}
                 </td>
 
-                <td className="whitespace-nowrap text-center py-2 text-gray-700">
+                <td className="whitespace-nowrap text-center pl-2 pr-2 py-2 text-gray-700">
+                  {order._id}
+                </td>
+                <td className="whitespace-nowrap text-center text-gray-700">
                   {order.quantity}
                 </td>
+                {/* <td className="whitespace-nowrap text-center py-2 text-gray-700">
+                  {order.name}
+                </td> */}
 
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                   {order.phone}
@@ -128,7 +142,7 @@ const OrdersToDeliver = () => {
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                   {order.address}
                 </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                <td className="whitespace-nowrap px-2 py-2 text-center text-gray-700">
                   {order.orderStatus}
                 </td>
 
@@ -169,7 +183,7 @@ const OrdersToDeliver = () => {
             <Form.Control
               type="tel"
               name="phone"
-              value={orders[0].phone}
+              // value={orders[0].phone}
               {...register("phone", { required: true })}
               placeholder="Mobile"
             />
@@ -189,7 +203,8 @@ const OrdersToDeliver = () => {
               <textarea
                 className="w-full textarea textarea-bordered rounded-lg border-gray-200 p-3 text-sm"
                 placeholder="Message"
-                rows="8"
+                defaultValue="Please share your provided OTP with our delivery agent to confirm your reception."
+                rows="6"
                 id="message"
                 {...register("message", { required: true })}
               ></textarea>

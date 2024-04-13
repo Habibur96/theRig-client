@@ -24,7 +24,8 @@ const Startech = () => {
     (payment) =>
       payment.orderStatus === "processing" ||
       payment.orderStatus === "collected" ||
-      payment.orderStatus === "delivered"
+      payment.orderStatus === "delivered" ||
+      payment.orderStatus === "shipped"
   );
   console.log(processingPayments);
 

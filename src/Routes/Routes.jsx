@@ -61,6 +61,7 @@ import Ryans from "../Pages/Dashboard/DeliveryAgent/Ryans";
 import UltraTech from "../Pages/Dashboard/DeliveryAgent/UltraTech";
 import SkyLand from "../Pages/Dashboard/DeliveryAgent/SkyLand";
 import OrdersToDeliver from "../Pages/Dashboard/DeliveryAgent/OrdersToDeliver";
+import SendMessage from "../Pages/Dashboard/Orders/SendMessage";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -474,6 +475,14 @@ export const router = createBrowserRouter([
           <DeliveryAgentRoute>
             <OrdersToDeliver></OrdersToDeliver>
           </DeliveryAgentRoute>
+        ),
+      },
+      {
+        path: "sendMessage/:id",
+        element: (
+          <AdminRoute>
+            <SendMessage></SendMessage>
+          </AdminRoute>
         ),
       },
     ],

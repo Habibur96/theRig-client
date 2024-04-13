@@ -6,11 +6,13 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Dropdown from "react-bootstrap/Dropdown";
 
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const AllOrders = () => {
   const [orders, refetch] = useOrders();
   const [axiosSecure] = useAxiosSecure();
   console.log(orders);
+ 
   const orderStatus = ["processing", "cancelled", "shipped", "delivered"];
   const handleUpdate = async (_id, orderStatus) => {
     console.log(_id, orderStatus);
@@ -20,6 +22,44 @@ const AllOrders = () => {
       refetch();
     }
   };
+
+  const onSubmit = (data) => {
+    console.log(data);
+    const test = {
+      api_key: import.meta.env.VITE_API_KEY,
+      senderid: import.meta.env.VITE_SENDER_ID,
+      number: `${data?.phoneNumber}`,
+      message: `${data?.message}`,
+    };
+
+    fetch(`http://bulksmsbd.net/api/smsapi`, {
+      method: "Post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(test),
+    })
+      .then((res) => res.json())
+      .then((test) => {
+        // reset();
+        console.log(test);
+      });
+  };
+  {
+    orders.map((order, index) => {
+      if (order?.orderStatus === "delivered") {
+        // const phoneNumber = order?.phone;
+         const phoneNumber = "01715123820";
+        const message = `Cheers! Your product has been delivered successfully. Thank you for choosing The RIG.`;
+
+        // Assuming onSubmit is a function that handles submitting the order details
+        onSubmit({ phoneNumber, message }); ///ekhane phone hobe phoneNumber na ata mone raikho
+      }
+
+      // You should return JSX from the map function, but in this case, you might not need to render anything
+      return null;
+    });
+  }
 
   const handleDelete = async (_id) => {
     console.log(_id);
@@ -49,7 +89,7 @@ const AllOrders = () => {
 
       <div className="max-w-screen-3xl mx-auto border-gray-200 mt-2">
         <div className="overflow-x-auto ">
-          <table className="min-w-full divide-gray-200 bg-white text-sm font-medium ml-2">
+          <table className="min-w-full divide-gray-200 bg-white text-sm font-medium">
             <thead className="ltr:text-left rtl:text-right bg-[#00b16a] h-12">
               <tr>
                 <th className="pl-3 px-2">#</th>
@@ -84,6 +124,9 @@ const AllOrders = () => {
                 <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-center">
                   Action
                 </th>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-center">
+                  Send Message
+                </th>
               </tr>
             </thead>
 
@@ -91,13 +134,13 @@ const AllOrders = () => {
               {orders.map((order, index) => (
                 <tr className="divide-x divide-gray-110" key={order._id}>
                   <th className="pl-3 px-2">{index + 1}</th>
-                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900 text-center">
                     {order.name}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     {order._id}
                   </td>
-                  <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                  <td className="whitespace-nowrap px-2 py-2 text-gray-700 text-center">
                     {order.email}
                   </td>
                   <td className="whitespace-nowrap px-2 py-2 text-gray-700">
@@ -140,7 +183,7 @@ const AllOrders = () => {
                           id="dropdown-basic"
                           style={{ textTransform: "capitalize" }}
                         >
-                          <ModeEditOutlinedIcon /> Edit
+                          <ModeEditOutlinedIcon />
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
@@ -193,10 +236,14 @@ const AllOrders = () => {
                       </button>
                     </div>
                   </td>
+                  <td className="text-center font-bold text-blue-700">
+                    <Link to={`/dashboard/sendMessage/${order._id}`}>Send</Link>
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <hr />
         </div>
       </div>
     </div>

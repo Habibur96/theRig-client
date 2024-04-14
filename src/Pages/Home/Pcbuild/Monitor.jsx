@@ -16,7 +16,7 @@ const Monitor = () => {
   return (
     <div className="flex column-gap-5">
       <div className=" flex-[1]">
-        <MonitorFilter ></MonitorFilter>
+        <MonitorFilter></MonitorFilter>
       </div>
 
       <div className="flex-[4] mr-5">
@@ -74,7 +74,6 @@ const Monitor = () => {
                         </div>
                       </div>
                       <div>
-                        {/* <Link to="/login" state={{ from: location }} replace> */}
                         <Link
                           to={`/availableProduct/${Component.Monitor}/${item.name}`}
                           state={{ from: location }}
@@ -94,7 +93,12 @@ const Monitor = () => {
 
                   <td className="text-right">{item.price}tk</td>
                   <td>
-                    <button className="btn btn-sm btn-success " style={{textTransform:"capitalize"}}>Add</button>
+                    <button
+                      className="btn btn-sm btn-success "
+                      style={{ textTransform: "capitalize" }}
+                    >
+                      Add
+                    </button>
                   </td>
                 </tr>
               ))}

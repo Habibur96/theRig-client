@@ -6,6 +6,10 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import UseCart from "../../../Hooks/UseCart";
 
+import { Form } from "react-bootstrap";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
+
 import {
   CarouselProvider,
   DotGroup,
@@ -18,6 +22,9 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useWishList from "../../../Hooks/useWishList";
 import { toast } from "react-toastify";
+import { Controller } from "react-hook-form";
+import MonitorDetails from "./productDetails/monitorDetails";
+import MemoryDetails from "./productDetails/MemoryDetails";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
@@ -38,7 +45,7 @@ const AvailableProduct = () => {
     from?.includes("motherboards") ||
     from?.includes("monitors") ||
     from?.includes("memoryes");
-  console.log(cartLocation);
+  console.log(component);
   useEffect(() => {
     fetch(`http://localhost:3000/cpu/${collectionName}/${name}`, {
       method: "GET",
@@ -308,6 +315,66 @@ const AvailableProduct = () => {
                   ))}
                 </tbody>
               </table>
+            </div>
+            <div className="ml-28">
+              <div className="max-w-screen-full mx-auto pt-10">
+                <div className="flex gap-4 ml-2 mt-10">
+                  <a
+                    className="btn inline-block rounded border border-indigo-600 bg-[#ef4a23]  px-10 py-3 text-md font-medium text-white  focus:outline-none focus:ring active:text-indigo-500"
+                    style={{ textTransform: "capitalize" }}
+                    href="#Specification"
+                  >
+                    Specification
+                  </a>
+
+                  <a
+                    className="btn inline-block rounded border border-indigo-600 px-10 py-3 text-md font-medium text-indigo-600 hover:bg-[#ef4a23] hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+                    style={{ textTransform: "capitalize" }}
+                    href="#Description"
+                  >
+                    Description
+                  </a>
+                </div>
+                <h1
+                  className="mt-5 ml-2 text-xl font-bold text-blue-800"
+                  id="Specification"
+                >
+                  Specification
+                </h1>
+                {component[0]?.category === "monitor" && <MonitorDetails />}
+
+                {component[0]?.category === "motherboard" && <CpuDetails />}
+
+                {component[0]?.category === "memory" && <MemoryDetails />}
+
+                <div className="max-w-screen-lg">
+                  <h1
+                    className="mt-5 ml-2 text-xl font-bold text-blue-800 "
+                    id="Description"
+                  >
+                    Description
+                  </h1>
+                  <h1 className="mt-5 ml-2 text-xl font-semibold text-justify">
+                    {/* {product[0]?.buildName} */} Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Doloremque voluptatibus quidem
+                    labore, ratione placeat exercitationem nobis harum autem
+                    dolore aspernatur molestiae, nihil, cupiditate veniam
+                    asperiores? Iure ad consequatur sapiente optio dolorum
+                    assumenda, totam vitae minus repellendus aspernatur!
+                    Eveniet, repellat aspernatur! Facere, temporibus magni ea
+                    voluptatum doloremque error cupiditate sint. Quas quod
+                    magnam, voluptas dignissimos a impedit voluptates iste.
+                    Quasi at quisquam eaque, aperiam hic culpa distinctio quo
+                    facilis, nobis reiciendis nisi ab porro suscipit, odio
+                    similique vero dolor tenetur doloribus dolore quam itaque?
+                    Consequuntur, saepe. Numquam hic quis culpa a magni. Facere
+                    atque deserunt non veritatis ipsum repudiandae esse fugit.
+                  </h1>
+                  <p className="mt-3 ml-2 text-md font-semibold text-justify">
+                    {/* {product[0]?.details} */}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

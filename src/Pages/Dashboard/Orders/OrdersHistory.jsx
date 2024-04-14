@@ -26,7 +26,7 @@ const OrderHistory = () => {
   return (
     <div className="max-w-screen-3xl mx-auto border-gray-200 mt-2 ">
       <div className="overflow-x-auto ">
-        <table className="min-w-full divide-gray-200 bg-white text-sm ml-1">
+        <table className="min-w-full divide-gray-200 bg-white text-sm">
           <thead className="ltr:text-left rtl:text-right bg-[#00b16a] h-12">
             <tr>
               <th className="pl-3">#</th>

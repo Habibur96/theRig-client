@@ -62,6 +62,7 @@ import UltraTech from "../Pages/Dashboard/DeliveryAgent/UltraTech";
 import SkyLand from "../Pages/Dashboard/DeliveryAgent/SkyLand";
 import OrdersToDeliver from "../Pages/Dashboard/DeliveryAgent/OrdersToDeliver";
 import SendMessage from "../Pages/Dashboard/Orders/SendMessage";
+import MonitorDetails from "../Pages/Home/Pcbuild/productDetails/monitorDetails";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -125,6 +126,14 @@ export const router = createBrowserRouter([
       {
         path: "guideDetails/:buildName",
         element: <GuidesDetails></GuidesDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <MonitorDetails></MonitorDetails>,
+      },
+      {
+        path: "productDetails/:model",
+        element: <MonitorDetails></MonitorDetails>,
       },
       // {
       //   path: "replaceProduct/:_id",

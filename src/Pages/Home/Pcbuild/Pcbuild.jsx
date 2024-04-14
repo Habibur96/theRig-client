@@ -24,6 +24,7 @@ import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import html2canvas from "html2canvas";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { useReactToPrint } from "react-to-print";
+import MonitorDetails from "./productDetails/monitorDetails";
 const Pcbuild = () => {
   const { user } = UseAuth();
   const userEmail = user?.email;
@@ -41,13 +42,15 @@ const Pcbuild = () => {
   });
 
   //Saved pc
-  const handleSavedPc = () => {
-    axiosSecure.post(`/savedPc}`, savePc, { email: userEmail }).then((data) => {
-      console.log("after posting new menu item", data.data);
-      if (data.data?.modifiedCount > 0) {
-        refetch();
-      }
-    });
+  const handleSavedPc = (savepc, email) => {
+    console.log(savepc);
+    
+    const data = {
+      savepc,
+      email,
+    };
+
+    axiosSecure.post("/savedPc", data);
   };
 
   //Make pdf
@@ -242,7 +245,7 @@ const Pcbuild = () => {
             </button>
             <div className="border-l border-gray-800 h-10"></div>
             <button
-              onClick={handleSavedPc}
+              onClick={() => handleSavedPc(savePc, userEmail)}
               className="flex flex-col items-center"
             >
               <ImportantDevicesIcon style={{ fontSize: "1.95rem" }} />
@@ -328,6 +331,7 @@ const Pcbuild = () => {
             {renderTableRow("Keyboard", keyboard, "Keyboard", 0, "")}
             {renderTableRow("Mouse", mouse, "Mouse", 0, "")}
           </tbody>
+      
         </table>
       </div>
     </div>

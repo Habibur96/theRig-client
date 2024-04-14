@@ -32,28 +32,28 @@ const AllOrders = () => {
       message: `${data?.message}`,
     };
 
-    fetch(`http://bulksmsbd.net/api/smsapi`, {
-      method: "Post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(test),
-    })
-      .then((res) => res.json())
-      .then((test) => {
-        // reset();
-        console.log(test);
-      });
+    // fetch(`http://bulksmsbd.net/api/smsapi`, {
+    //   method: "Post",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(test),
+    // })
+    //   .then((res) => res.json())
+    //   .then((test) => {
+    //     // reset();
+    //     console.log(test);
+    //   });
   };
   {
     orders.map((order, index) => {
       if (order?.orderStatus === "delivered") {
         // const phoneNumber = order?.phone;
-         const phoneNumber = "01715123820";
+        //  const phoneNumber = "01715123820";
         const message = `Cheers! Your product has been delivered successfully. Thank you for choosing The RIG.`;
 
         // Assuming onSubmit is a function that handles submitting the order details
-        onSubmit({ phoneNumber, message }); ///ekhane phone hobe phoneNumber na ata mone raikho
+        //onSubmit({ phoneNumber, message }); ///ekhane phone hobe phoneNumber na ata mone raikho
       }
 
       // You should return JSX from the map function, but in this case, you might not need to render anything

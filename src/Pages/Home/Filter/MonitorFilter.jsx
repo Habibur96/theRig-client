@@ -56,7 +56,7 @@ const MonitorFilter = () => {
           </Card>
         ))}
       </>
-
+      {/* ======================Brand=================== */}
       <Accordion defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -65,7 +65,7 @@ const MonitorFilter = () => {
         >
           <Typography>Brand</Typography>
         </AccordionSummary>
-        <AccordionDetails className="bg-[#DCDCDC]">
+        <AccordionDetails className="bg-[#]">
           <Typography>
             <fieldset>
               <legend className="sr-only">Checkboxes</legend>

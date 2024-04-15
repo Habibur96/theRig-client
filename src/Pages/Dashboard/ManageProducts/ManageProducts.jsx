@@ -117,6 +117,8 @@ const ManageProducts = () => {
       </div>
 
       <table className="table">
+     
+
         <thead className="ltr:text-left rtl:text-right h-14">
           <tr>
             <th className="pl-3 px-4">#</th>
@@ -124,12 +126,14 @@ const ManageProducts = () => {
               Product
             </th>
             <th className=" px-1 py-2 text-gray-900r">Category</th>
-            <th className=" px-4 py-2 text-gray-900 text-center">Brand</th>
+            <th className=" px-4 py-2  text-gray-900 text-center">Brand</th>
+          
             <th className=" px-4 py-2  text-gray-900 ">Qty</th>
             <th className=" px-4 py-2 text-gray-900">Price</th>
             <th className=" px-4 py-2  text-gray-900">Action</th>
           </tr>
         </thead>
+   
 
         <tbody className="divide-y divide-gray-300  ">
           {productArray.map((item, index) => (
@@ -156,101 +160,14 @@ const ManageProducts = () => {
                 {item.price}
               </td>
               <td className="whitespace-nowrap px-4 py-2 ">
-                <div className="flex gap-2">
-                  <button
-                    variant="primary"
-                    onClick={() =>
-                      document.getElementById("my_modal_3").showModal()
-                    }
-                  >
-                    <ModeEditOutlinedIcon /> Edit
-                  </button>
-
-                  <dialog id="my_modal_3" className="modal">
-                    <div className="modal-box ">
-                      <FormCheck method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                          ✕
-                        </button>
-                      
-                        <form onSubmit={handleSubmit(onsubmit)}>
-                          <div className="flex">
-                            <Form.Group className="w-full">
-                              <Form.Label className="label">
-                                <span className="label-text">Coupon Code</span>
-                              </Form.Label>
-                              <input
-                                type="text"
-                                placeholder="Coupon Code"
-                                className="input input-bordered w-full"
-                                {...register("couponsCode")}
-                              />
-                            </Form.Group>
-                            <Form.Group className="w-full ml-4 mr-4">
-                              <Form.Label className="label">
-                                <span className="label-text">Discount</span>
-                              </Form.Label>
-                              <input
-                                type="text"
-                                placeholder="Discount"
-                                className="input input-bordered w-full"
-                                {...register("couponsDiscount")}
-                              />
-                            </Form.Group>
-                            <Form.Group className="w-full">
-                              <Form.Label className="label">
-                                <span className="label-text">Price</span>
-                              </Form.Label>
-                              <input
-                                type="number"
-                                placeholder="Price"
-                                className="input input-bordered w-full"
-                                {...register("price")}
-                              />
-                            </Form.Group>
-                          </div>
-                          <div className="flex">
-                            <Form.Group className="mr-3 ml-4">
-                              <Form.Label className="label">
-                                <span className="label-text">Start Date</span>
-                              </Form.Label>
-                              <input
-                                type="date"
-                                name="date"
-                                className="input input-bordered"
-                                {...register("startDate")}
-                              />
-                            </Form.Group>
-                            <Form.Group className="">
-                              <Form.Label className="label">
-                                <span className="label-text">End Date</span>
-                              </Form.Label>
-                              <input
-                                type="date"
-                                name="date"
-                                className="input input-bordered"
-                                {...register("endDate")}
-                              />
-                            </Form.Group>
-                          </div>
-                          <button
-                            type="submit"
-                            className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-3 mb-5"
-                          >
-                            Update Now
-                          </button>
-                        </form>
-                      </FormCheck>
-                    </div>
-                  </dialog>
-
-                  <button onClick={() => handleDelete(order._id)}>
-                    <DeleteForeverIcon />
-                  </button>
-                </div>
+                
+                <button onClick={() => handleDelete(order._id)}>
+                  <DeleteForeverIcon />
+                </button>
               </td>
             </tr>
           ))}
+         
         </tbody>
       </table>
     </div>

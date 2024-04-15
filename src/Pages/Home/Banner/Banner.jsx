@@ -29,7 +29,7 @@ const Banner = () => {
 
   return (
     <div className=" bg-[#f4f4f3]">
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="max-w-screen-2xl mx-auto pt-5">
         <Carousel>
           <img src={banner1} alt="example-image-1" />
           <img src={banner2} alt="example-image-2" />

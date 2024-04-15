@@ -25,6 +25,16 @@ import { toast } from "react-toastify";
 import { Controller } from "react-hook-form";
 import MonitorDetails from "./productDetails/monitorDetails";
 import MemoryDetails from "./productDetails/MemoryDetails";
+import CpuDetails from "./productDetails/CpuDetails";
+import CaseDetails from "./productDetails/CaseDetails";
+import KeyboardDetails from "./productDetails/KeyboardDetails";
+import MiceDetails from "./productDetails/MiceDetails";
+import CaseCoolerDetails from "./productDetails/CaseCoolerDetails";
+import CpuCoolerDetails from "./productDetails/CpuCoolerDetails";
+import PsuDetails from "./productDetails/PsuDetails";
+import GpuDetails from "./productDetails/GpuDetails";
+import StorageDetails from "./productDetails/StorageDetails";
+import MotherboardDetails from "./productDetails/MotherboardDetails";
 
 const AvailableProduct = () => {
   const { user } = useContext(AuthContext);
@@ -243,7 +253,7 @@ const AvailableProduct = () => {
                         {cartLocation ? (
                           <button
                             onClick={() => pcbuilderCartGet(item)}
-                            className="ap"
+                            className="btn btn-sm btn-success"
                             style={{ textTransform: "capitalize" }}
                           >
                             Add
@@ -252,7 +262,7 @@ const AvailableProduct = () => {
                           <>
                             <button
                               onClick={() => handleCart(item)}
-                              className="btn btn-sm btn-success "
+                              className="btn btn-sm btn-success"
                               style={{ textTransform: "capitalize" }}
                             >
                               Add
@@ -346,6 +356,15 @@ const AvailableProduct = () => {
                 {component[0]?.category === "motherboard" && <CpuDetails />}
 
                 {component[0]?.category === "memory" && <MemoryDetails />}
+                {component[0]?.category === "memory" && <CaseDetails />}
+                {component[0]?.category === "memory" && <KeyboardDetails />}
+                {component[0]?.category === "memory" && <MiceDetails />}
+                {component[0]?.category === "memory" && <CpuCoolerDetails />}
+                {component[0]?.category === "memory" && <CaseCoolerDetails />}
+                {component[0]?.category === "memory" && <PsuDetails />}
+                {component[0]?.category === "memory" && <GpuDetails />}
+                {component[0]?.category === "memory" && <StorageDetails />}
+                {component[0]?.category === "memory" && <MotherboardDetails />}
 
                 <div className="max-w-screen-lg">
                   <h1

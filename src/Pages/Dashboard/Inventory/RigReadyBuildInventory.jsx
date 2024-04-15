@@ -41,7 +41,7 @@ const RigReadyBuildInventory = () => {
 
   return (
     <div>
-      <div className="  border-gray-200 mt-2 ml-2">
+      <div className="  border-gray-200 mt-2 ">
         <div className="overflow-x-auto ">
           <table className="min-w-full divide-gray-200 bg-white text-sm">
             <thead className="ltr:text-left rtl:text-right bg-[#00b16a]  h-12">
@@ -106,6 +106,7 @@ const RigReadyBuildInventory = () => {
               ))}
             </tbody>
           </table>
+          <hr />
         </div>
       </div>
     </div>

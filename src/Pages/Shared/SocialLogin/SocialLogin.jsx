@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { FaGoogle } from "react-icons/fa";
+// import { FaGoogle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import gglLogo from "../../../assets/icon/google.png";
 
 const SocialLogin = () => {
   const navigate = useNavigate();
@@ -36,16 +37,16 @@ const SocialLogin = () => {
   };
   return (
     <div>
-      <div className="divider custom-form mt-3">Or</div>
-
-      <div className="text-center my-4">
-        <button
-          onClick={handleGoogleSignIn}
-          className="btn btn-circle btn-outline"
-        >
-          <FaGoogle></FaGoogle>
-        </button>
-      </div>
+      <div className="divider mt-3">Or</div>
+      <button
+        onClick={handleGoogleSignIn}
+        style={{ height: "53px" }}
+        type="button"
+        className="btn btn-wide btn-dark flex text-white bg-black mt-3 mx-auto block"
+      >
+        <img className="h-8" src={gglLogo} alt="" /> SignIn Google
+      </button>
+      <br />
     </div>
   );
 };

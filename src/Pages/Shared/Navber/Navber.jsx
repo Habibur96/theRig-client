@@ -10,6 +10,7 @@ import { Badge, Typography } from "@mui/material";
 import useWishList from "../../../Hooks/useWishList";
 import MenuIcon from "@mui/icons-material/Menu";
 import theRig from "../../../assets/logo/theRIG.png";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
 // import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
@@ -129,10 +130,9 @@ const Navber = () => {
           </div>
 
           <div className="hidden lg:ml-8 lg:flex">
-        
             <Link to="pcbuild">
               <button
-                className="btn btn-secondary mr-5"
+                className="btn rounded-1 btn-info mr-5"
                 style={{ textTransform: "capitalize" }}
               >
                 Pc Builder
@@ -141,7 +141,9 @@ const Navber = () => {
           </div>
           <Link to="/wishlist">
             <Badge badgeContent={userInfo.length || 0} variant="solid">
-              <Typography fontSize="mg">💌</Typography>
+              <Typography fontSize="mg">
+                <FavoriteIcon className="text-red-600" />
+              </Typography>
             </Badge>
           </Link>
 
@@ -151,22 +153,20 @@ const Navber = () => {
             {cart.length === 0 ? (
               <Link to="/emptyCart" className="btn ml-2">
                 <ShoppingCartOutlinedIcon
-                  className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
+                  className="h-6 w-6 flex-shrink-0 text-gray-0 group-hover:text-gray-600"
                   aria-hidden="true"
                 />
-                <div className="badge badge-secondary">
+                <div className="badge badge-info rounded-3">
                   +{totalQuantity || 0}
                 </div>
               </Link>
             ) : (
               <Link to="dashboard/mycart" className="btn ml-2">
                 <ShoppingCartOutlinedIcon
-                  className="h-6 w-6 flex-shrink-0 text-gray-00 group-hover:text-gray-600"
+                  className="h-6 w-6 flex-shrink-0 text-gray-0 group-hover:text-gray-600"
                   aria-hidden="true"
                 />
-                <div className="badge badge-secondary">
-                  +{totalQuantity || 0}
-                </div>
+                <div className="badge badge-info">+{totalQuantity || 0}</div>
               </Link>
             )}
           </div>
@@ -205,20 +205,18 @@ const Navber = () => {
           </ul>
         </div>
 
-        <div className="flex ml-3 items-center">
+        <div className="flex ml-3 mr-60 items-center">
           <div className="mr-4">
             {isAdmin ? (
-              
-                <Link to="/dashboard/adminhome">
-                  <MenuIcon />
-                </Link>
-              
+              <Link to="/dashboard/adminhome">
+                <MenuIcon />
+              </Link>
             ) : (
-              <li>
+              
                 <Link to="/dashboard/userhome">
                   <MenuIcon />
                 </Link>
-              </li>
+              
             )}
           </div>
           <Link
@@ -244,7 +242,7 @@ const Navber = () => {
           </Link>
         </div>
 
-        <div className="flex items-start border-3 pr-3  rounded-lg mx-auto bg-cyan-700">
+        <div className="flex items-start border-3 pr-3 rounded-lg mx-auto bg-cyan-700">
           <input
             ref={searchRef}
             type="text"

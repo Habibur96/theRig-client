@@ -631,7 +631,7 @@ const Dashboard = () => {
                 ) : (
                   <NavLink to="/dashboard/mycart">
                     <FaShoppingCart></FaShoppingCart> My Cart
-                    <span className="badge inl badge-secondary">
+                    <span className="badge  badge-info rounded-3">
                       +{totalQuantity || 0}
                     </span>
                   </NavLink>

@@ -25,6 +25,7 @@ import html2canvas from "html2canvas";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { useReactToPrint } from "react-to-print";
 import MonitorDetails from "./productDetails/monitorDetails";
+import { toast } from "react-toastify";
 const Pcbuild = () => {
   const { user } = UseAuth();
   const userEmail = user?.email;
@@ -42,15 +43,20 @@ const Pcbuild = () => {
   });
 
   //Saved pc
-  const handleSavedPc = (savepc, email) => {
+  const handleSavedPc = async (savepc, email) => {
     console.log(savepc);
-    
+    console.log(savepc.length);
+
     const data = {
       savepc,
       email,
     };
-
-    axiosSecure.post("/savedPc", data);
+    if (savepc.length !== 0) {
+      const res = await axiosSecure.post("/savedPc", data);
+      toast("Created pc added", { autoClose: 2000 });
+      if (res.data?.insertedId) {
+      }
+    }
   };
 
   //Make pdf
@@ -331,7 +337,6 @@ const Pcbuild = () => {
             {renderTableRow("Keyboard", keyboard, "Keyboard", 0, "")}
             {renderTableRow("Mouse", mouse, "Mouse", 0, "")}
           </tbody>
-      
         </table>
       </div>
     </div>

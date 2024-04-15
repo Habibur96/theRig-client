@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div>
       <footer
-        className="footer p-10 text-base-content mt-5 "
+        className="footer p-10 text-base-content pt-5 "
         style={{ backgroundColor: "#26293b", color: "white" }}
       >
         <aside>

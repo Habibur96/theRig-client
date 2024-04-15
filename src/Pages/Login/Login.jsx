@@ -11,6 +11,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import login from "../../assets/login.svg";
 // import { Helmet } from "react-helmet-async";
 
 const Login = () => {
@@ -33,7 +34,6 @@ const Login = () => {
     }
   };
 
-  
   const handleLogin = (event) => {
     event.preventDefault();
     const Form = event.target;
@@ -99,54 +99,52 @@ const Login = () => {
       {/* <Helmet>
         <title>TheRig | Login</title>
       </Helmet> */}
-      <div className="mt-5 pt-5">
-        <h2 className="custom-form text-bold text-xl mt-5 mb-4 font-bold">
-          Account Login
-        </h2>
-        <Form onSubmit={handleLogin} className="custom-form">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>E-Mail</Form.Label>
-            <Form.Control type="email" name="email" placeholder="E-mail" />
-          </Form.Group>
+      <div className="flex gap-12  pt-5 pt-5 bg-[#f4f4f3]">
+        <img className="ml-96 pl-20" src={login} alt="" />
+        <div className="shadow-lg p-4 mb-8 mt-4  rounded-4">
+          <h2 className=" text-bold text-xl mt-5 mb-4 font-bold">
+            Account Login
+          </h2>
+          <Form onSubmit={handleLogin} className="p-1">
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>E-Mail</Form.Label>
+              <Form.Control type="email" name="email" placeholder="E-mail" />
+            </Form.Group>
 
-          <Form.Label>Password</Form.Label>
+            <Form.Label>Password</Form.Label>
 
-          <div className="input-field mb-2 ">
-            <input type={type} name="password" placeholder="Password" />
-            <span onClick={handleToggle}>
-              <Icon icon={icon} size={20} />
-            </span>
-          </div>
+            <div className="input-field mb-2 ">
+              <input type={type} name="password" placeholder="Password" />
+              <span onClick={handleToggle}>
+                <Icon icon={icon} size={20} />
+              </span>
+            </div>
 
-          {/* <Form.Label>
+            {/* <Form.Label>
           <button onClick={handleResetPassword}>Forgotten Password?</button>
         </Form.Label> */}
 
-          <Form.Label>
-            <Link onClick={handleResetPassword}>Forgotten Password?</Link>{" "}
-          </Form.Label>
+            <Form.Label>
+              <Link onClick={handleResetPassword}>Forgotten Password?</Link>{" "}
+            </Form.Label>
 
-          <div className="d-grid gap-2 mt-3">
-            <Button variant="info" type="submit" value="signIn" size="">
-              Login
-            </Button>
-          
+            <div className="d-grid gap-2 mt-3">
+              <Button variant="info" type="submit" value="signIn" size="">
+                Login
+              </Button>
+            </div>
+            <div className="divider">Don't have an account</div>
+          </Form>
+
+          <Link to="/signUp" className="d-grid gap-2 button">
+            <button className="btn btn-outline btn-warning">
+              <div className="text-sm">Create Your account</div>
+            </button>
+          </Link>
+          <div>
+            <SocialLogin></SocialLogin>
           </div>
-          <div className="divider">Don't have an account</div>
-        </Form>
-
-        <Link to="/signUp" className="d-grid gap-2 custom-form button">
-          <button className="btn btn-outline btn-warning">
-            <div className="text-sm">Create Your account</div>
-          </button>
-        </Link>
-
-        
-    
-      </div>
-
-      <div>
-      <SocialLogin></SocialLogin>
+        </div>
       </div>
     </>
   );

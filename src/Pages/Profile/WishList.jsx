@@ -8,6 +8,7 @@ import UseAuth from "../../Hooks/UseAuth";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import UseCart from "../../Hooks/UseCart";
 import theRig from "../../assets/logo/theRig.png";
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
 const WishList = () => {
   const [wishList, wishListRefetch] = useWishList();
   const [cart, refetch] = UseCart();
@@ -40,7 +41,7 @@ const WishList = () => {
         name: item?.productName,
         img: item?.productImg,
         shoplogo: item?.shoplogo,
-        shopName:item?.shopName,
+        shopName: item?.shopName,
         price: item?.price,
         quantity: quantity,
       };
@@ -156,8 +157,9 @@ const WishList = () => {
               <td>{item.productName}</td>
 
               <td>
-                <div className="mr-10 font-semibold text-lg text-[#ef4a23]">
+                <div className="flex mr-10 font-semibold text-lg text-[#ef4a23]">
                   {item?.price}
+                  <FaBangladeshiTakaSign />
                 </div>
               </td>
               <td>

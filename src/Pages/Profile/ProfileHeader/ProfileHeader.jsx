@@ -5,14 +5,15 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 const ProfileHeader = () => {
   const { user } = useContext(AuthContext);
   // console.log(user.uid)
+ console.log(user)
   return (
     <>
       <div className="flex">
-        <div className="avatar">
+        {/* <div className="avatar">
           <div className="w-24 mr-10  rounded-full">
             <img src={profile} />
           </div>
-        </div>
+        </div> */}
 
         <div className="font-semibold ">
           <h1 className="mb-3"> Hello, </h1>

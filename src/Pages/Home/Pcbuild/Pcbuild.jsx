@@ -25,6 +25,7 @@ import html2canvas from "html2canvas";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { useReactToPrint } from "react-to-print";
 import MonitorDetails from "./productDetails/monitorDetails";
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
 import { toast } from "react-toastify";
 const Pcbuild = () => {
   const { user } = UseAuth();
@@ -32,6 +33,7 @@ const Pcbuild = () => {
   const targetRef = useRef();
   const [axiosSecure] = useAxiosSecure();
   const [requiredFieldsFilled, setRequiredFieldsFilled] = useState(false); // State to track if all required fields are filled
+  const [totalAmount, setTotalAmount] = useState(0);
   // console.log({ userEmail });
   const [savePc, setSavePc] = useState();
   console.log(savePc);
@@ -42,7 +44,7 @@ const Pcbuild = () => {
       selectedItems.cpu,
       selectedItems.motherboard,
       selectedItems.memory,
-      // selectedItems.storage, Note: json data add korar por comment-out kore dibe
+      selectedItems.storage, // Note: json data add korar por comment-out kore dibe
     ];
     const allFieldsFilled = requiredFields.every(
       (field) => field !== null && field !== undefined
@@ -60,21 +62,6 @@ const Pcbuild = () => {
   });
 
   //Saved pc
-  // const handleSavedPc = async (savepc, email) => {
-  //   console.log(savepc);
-  //   console.log(savepc.length);
-
-  //   const data = {
-  //     savepc,
-  //     email,
-  //   };
-  //   if (savepc.length !== 0) {
-  //     const res = await axiosSecure.post("/savedPc", data);
-  //     toast("Created pc added", { autoClose: 2000 });
-  //     if (res.data?.insertedId) {
-  //     }
-  //   }
-  // };
 
   const handleSavedPc = async (savepc, email) => {
     if (checkRequiredFields()) {
@@ -90,7 +77,7 @@ const Pcbuild = () => {
         }
       }
     } else {
-      toast.error("Please fill in all required fields."); // Show error message if required fields are not filled
+      toast.error("Please fill in all required component."); // Show error message if required fields are not filled
     }
   };
 
@@ -164,7 +151,27 @@ const Pcbuild = () => {
         );
         setSavePc(data);
 
-        console.log(data);
+        //For find out total price
+        const data2 = result?.filter((item) =>
+          pcbuilderCartItemIds.has(item.cartItemId)
+        );
+
+        let totalAmount = 0;
+
+        data2.forEach((item) => {
+          if (parseInt(item.price) !== 0) {
+            totalAmount += parseInt(item.price);
+          }
+        });
+        setTotalAmount(totalAmount);
+
+        const totalPrice = data.reduce((accumulator, currentItem) => {
+          if (parseInt(currentItem.price) === 0) {
+            accumulator += parseInt(currentItem.price);
+          }
+          return accumulator;
+        }, 0);
+
         const updatedSelectedItems = {
           cpu: {},
           motherboard: {},
@@ -312,7 +319,23 @@ const Pcbuild = () => {
           </div>
         </div>
 
-        <table className="table border border-2  shadow-lg ">
+        <div class="flex justify-between items-center border-1 p-2 pt-3 pb-3">
+          <div>
+            <h1 class="text-lg text-[#3749bb] ml-10 font-semibold">
+              PC Builder - Build Your Own Computer - The RIG
+            </h1>
+          </div>
+
+          <div class="rounded-3 bg-[#3749bb] text-white px-16 py-1 text-center mr-16">
+            <div className="flex items-center justify-center text-lg font-semibold">
+              <td>{totalAmount}</td>
+              <FaBangladeshiTakaSign />
+            </div>
+            <span>{savePc?.length} Items</span>
+          </div>
+        </div>
+
+        <table className="table border border-1  shadow-lg ">
           <tbody>
             <div className="mt-2 ml-28">
               <tr>

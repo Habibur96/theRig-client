@@ -248,15 +248,15 @@ const Navber2 = () => {
         </AccordionItem>
       </Accordion>
      
-      <Link to="pcbuild" className="ml-2 mt-3 flex gap-2">
+      {/* <Link to="pcbuild" className="ml-2 mt-3 flex gap-2">
         <ConstructionIcon />
         Builder
-      </Link>
-      <div className="border-l border-gray-300 h-15"></div>
+      </Link> */}
       <Link to="guides" className="mt-3 mr-10 flex gap-1">
         <DescriptionTwoToneIcon />
         Build Guides
       </Link>
+      {/* <div className="border-l border-gray-300 h-15"></div> */}
     </div>
   );
 };

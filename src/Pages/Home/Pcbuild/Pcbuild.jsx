@@ -31,9 +31,26 @@ const Pcbuild = () => {
   const userEmail = user?.email;
   const targetRef = useRef();
   const [axiosSecure] = useAxiosSecure();
+  const [requiredFieldsFilled, setRequiredFieldsFilled] = useState(false); // State to track if all required fields are filled
   // console.log({ userEmail });
   const [savePc, setSavePc] = useState();
   console.log(savePc);
+
+  // Function to check if all required fields are filled
+  const checkRequiredFields = () => {
+    const requiredFields = [
+      selectedItems.cpu,
+      selectedItems.motherboard,
+      selectedItems.memory,
+      // selectedItems.storage, Note: json data add korar por comment-out kore dibe
+    ];
+    const allFieldsFilled = requiredFields.every(
+      (field) => field !== null && field !== undefined
+    );
+    setRequiredFieldsFilled(allFieldsFilled);
+    return allFieldsFilled;
+  };
+
   const [selectedItems, setSelectedItems] = useState({
     cpu: {},
     motherboard: {},
@@ -43,19 +60,37 @@ const Pcbuild = () => {
   });
 
   //Saved pc
-  const handleSavedPc = async (savepc, email) => {
-    console.log(savepc);
-    console.log(savepc.length);
+  // const handleSavedPc = async (savepc, email) => {
+  //   console.log(savepc);
+  //   console.log(savepc.length);
 
-    const data = {
-      savepc,
-      email,
-    };
-    if (savepc.length !== 0) {
-      const res = await axiosSecure.post("/savedPc", data);
-      toast("Created pc added", { autoClose: 2000 });
-      if (res.data?.insertedId) {
+  //   const data = {
+  //     savepc,
+  //     email,
+  //   };
+  //   if (savepc.length !== 0) {
+  //     const res = await axiosSecure.post("/savedPc", data);
+  //     toast("Created pc added", { autoClose: 2000 });
+  //     if (res.data?.insertedId) {
+  //     }
+  //   }
+  // };
+
+  const handleSavedPc = async (savepc, email) => {
+    if (checkRequiredFields()) {
+      // Check if all required fields are filled
+      const data = {
+        savepc,
+        email,
+      };
+      if (savepc.length !== 0) {
+        const res = await axiosSecure.post("/savedPc", data);
+        toast("Created pc added", { autoClose: 2000 });
+        if (res.data?.insertedId) {
+        }
       }
+    } else {
+      toast.error("Please fill in all required fields."); // Show error message if required fields are not filled
     }
   };
 
@@ -287,7 +322,13 @@ const Pcbuild = () => {
             {renderTableRow(
               "Cpu",
               selectedItems?.cpu?.img || cpu,
-              selectedItems?.cpu?.name || "Cpu",
+
+              selectedItems?.cpu?.name || (
+                <>
+                  Cpu <span className="text-red-500">[Required]</span>
+                </>
+              ),
+
               selectedItems?.cpu?.price || "",
               "cpus",
               selectedItems?.cpu?.cartItemId
@@ -296,7 +337,11 @@ const Pcbuild = () => {
             {renderTableRow(
               "Motherboard",
               selectedItems?.motherboard?.img || motherboard,
-              selectedItems?.motherboard?.name || "Motherboard",
+              selectedItems?.motherboard?.name || (
+                <>
+                  Motherboard <span className="text-red-500">[Required]</span>
+                </>
+              ),
               selectedItems?.motherboard?.price || "",
               "motherboards",
               selectedItems?.motherboard?.cartItemId
@@ -304,12 +349,28 @@ const Pcbuild = () => {
             {renderTableRow(
               "Memory",
               selectedItems?.memory?.img || memory,
-              selectedItems?.memory?.name || "Ram",
+              selectedItems?.memory?.name || (
+                <>
+                  Ram <span className="text-red-500">[Required]</span>
+                </>
+              ),
               selectedItems?.memory?.price || "",
               "memoryes",
               selectedItems?.memory?.cartItemId
             )}
-            {renderTableRow("Storage", storage, "Storage", 0, "")}
+            {renderTableRow(
+              "Storage",
+              selectedItems?.storage?.img || storage,
+              selectedItems?.storage?.name || (
+                <>
+                  Storage <span className="text-red-500">[Required]</span>
+                </>
+              ),
+              selectedItems?.storage?.price || "",
+              "storages",
+              selectedItems?.storage?.cartItemId
+            )}
+            {/* {renderTableRow("Storage", storage, "Storage [Required]", 0, "")} */}
             {renderTableRow("Graphics Card", gpu, "Graphics Card", 0, "")}
             {renderTableRow("Power Supply", psu, "Power Supply", 0, "")}
             {renderTableRow("Casing", casing, "Casing", 0, "")}

@@ -45,7 +45,7 @@ const AvailableProduct = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { collectionName, name } = useParams();
+  const { collectionName, model } = useParams();
   const [component, setComponent] = useState([]);
 
   const from = location.state?.from?.pathname;
@@ -53,11 +53,19 @@ const AvailableProduct = () => {
   const cartLocation =
     from?.includes("cpus") ||
     from?.includes("motherboards") ||
+    from?.includes("gpus") ||
+    from?.includes("keyboards") ||
+    from?.includes("mices") ||
+    from?.includes("casecoolers") ||
+    from?.includes("cpucoolers") ||
+    from?.includes("storages") ||
+    from?.includes("cases") ||
+    from?.includes("memoryes") ||
     from?.includes("monitors") ||
-    from?.includes("memoryes");
+    from?.includes("psus") 
   console.log(component);
   useEffect(() => {
-    fetch(`http://localhost:3000/cpu/${collectionName}/${name}`, {
+    fetch(`http://localhost:3000/cpu/${collectionName}/${model}`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -118,7 +126,7 @@ const AvailableProduct = () => {
       const res = await axiosSecure.post("cart", cartItem);
       if (res.data?.insertedId) {
         refetch();
-        toast("product added", { autoClose: 2000 });
+        toast("product added to the cart", { autoClose: 800 });
       }
     } else {
       Swal.fire({
@@ -154,13 +162,14 @@ const AvailableProduct = () => {
     const res = await axiosSecure.post(`/wishlist`, wishlistItem);
     if (res.data?.insertedId) {
       wishListRefetch();
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Added to the wishlist",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+      toast("Added to the wishlist", { autoClose: 800 });
+      // Swal.fire({
+      //   position: "top-end",
+      //   icon: "success",
+      //   title: "Added to the wishlist",
+      //   showConfirmButton: false,
+      //   timer: 1500,
+      // });
     }
   };
 
@@ -260,13 +269,13 @@ const AvailableProduct = () => {
                           </button>
                         ) : (
                           <>
-                            <button
+                            <buttonp
                               onClick={() => handleCart(item)}
                               className="btn btn-sm btn-success"
                               style={{ textTransform: "capitalize" }}
                             >
                               Add
-                            </button>
+                            </buttonp>
                             {user ? (
                               <button
                                 onClick={() => handleWishList(item)}
@@ -351,20 +360,24 @@ const AvailableProduct = () => {
                 >
                   Specification
                 </h1>
-                {component[0]?.category === "monitor" && <MonitorDetails />}
 
                 {component[0]?.category === "motherboard" && <CpuDetails />}
+                {component[0]?.category === "monitor" && <MonitorDetails />}
 
                 {component[0]?.category === "memory" && <MemoryDetails />}
-                {component[0]?.category === "memory" && <CaseDetails />}
-                {component[0]?.category === "memory" && <KeyboardDetails />}
-                {component[0]?.category === "memory" && <MiceDetails />}
-                {component[0]?.category === "memory" && <CpuCoolerDetails />}
-                {component[0]?.category === "memory" && <CaseCoolerDetails />}
-                {component[0]?.category === "memory" && <PsuDetails />}
-                {component[0]?.category === "memory" && <GpuDetails />}
-                {component[0]?.category === "memory" && <StorageDetails />}
-                {component[0]?.category === "memory" && <MotherboardDetails />}
+                {component[0]?.category === "case" && <CaseDetails />}
+                {component[0]?.category === "keyboard" && <KeyboardDetails />}
+                {component[0]?.category === "mice" && <MiceDetails />}
+                {component[0]?.category === "cpuCooler" && <CpuCoolerDetails />}
+                {component[0]?.category === "caseCooler" && (
+                  <CaseCoolerDetails />
+                )}
+                {component[0]?.category === "psu" && <PsuDetails />}
+                {component[0]?.category === "gpu" && <GpuDetails />}
+                {component[0]?.category === "ssd" && <StorageDetails />}
+                {component[0]?.category === "motherboard" && (
+                  <MotherboardDetails />
+                )}
 
                 <div className="max-w-screen-lg">
                   <h1

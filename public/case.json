@@ -1,144 +1,470 @@
 [
-  // ===========================starTech=================
+  // ===========================startech=================
   {
-    "name": "",
-    "price": "",
+    "name": "Value-Top V500W Mini Tower Micro ATX Gaming Casing",
+    "price": "2300",
+    "description": "The Value-Top V500W Micro ATX Gaming Casing strikes the ideal mix of functionality and design to satisfy the needs of PC builders and gamers. This V500W casing, classified as a Mini Tower, is carefully constructed from A grade SPCC material and has a 0.6mm thickness for durability and strength. Supporting ATX power supply units and Micro ATX/ITX motherboards, the V500W provides versatile compatibility for a variety of hardware configurations.",
+    "Brand": "Value Top",
+    "model": "V500W",
 
-    "Brand": "",
-    "model": "",
-
-    "color": "",
-    "type": "",
-    "motherboardType": "",
-    "psu": "",
-    "img": "",
+    "color": "White",
+    "type": "Mini Tower",
+    "motherboardType": "MicroATX",
+    "psu": "ATX",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/value-top/v500w/v500w-01-500x500.webp",
     "category":"case",
-    "shoplogo": "",
-    "shopName": ""
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+ 
+            
+
+  {
+    "name": "OVO J-618 B RGB Mini-Tower mATX Gaming Casing",
+    "price": "1500",
+    "description": "The OVO J-618 B RGB Mini-Tower mATX Gaming Casing is a wonderful option for gaming fans, as it supports Micro-ATX, ITX, and Mini-ITX motherboards to suit a variety of build configurations. With bright, adjustable lighting that matches any setup, its eye-catching RGB lighting improves the gaming experience. ",
+    "Brand": "OVO",
+    "model": "J-618 B",
+
+    "color": "Black",
+    "type": "Mini Tower",
+    "motherboardType": "Micro-ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/ovo/j-618-b/j-618-b-500x500.webp",
+    "category":"case",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "Xtreme T38 RGB ATX Gaming Casing without Power Supply",
+    "price": "2600",
+    "description": "Build and customize your own PC with the T38 CASING Case from XTREME. With this ATX case, you can create the PC to best suit your needs with a variety of available slots and ports. Whether you intend on installing 2 HDDs and 3 SSDs slots you can take advantage of tool-free access making it easy to install and swap outdrives. You can also connect a variety of peripherals to the dual USB ports located on the external side of the front panel.",
+    "Brand": "Xtreme",
+    "model": "Xtreme T38",
+
+    "color": "Black",
+    "type": "Mid Tower",
+    "motherboardType": "ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/xtreme/t38/xtreme-t38-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
   },
 
   {
-    "name": "",
-    "price": "",
+    "name": "OVO E-335D RGB Mid-Tower Gaming Case",
+    "price": "2950",
+    "description": "The OVO E-335D RGB Mid-Tower Gaming Case includes a clear left-side tempered glass panel. The fine mesh front panel and 4 powerful 120mm RGB fans provide massive air intake in this OVO Gaming case. it has a 3x120 mm font and a 1x120mm rear RGB fan Pre-installed. It also has an outstanding Airflow and Ventilation Chassis Design with several Cooling Fan Positions. The OVO E-335D RGB has an ATX motherboard, and this ATX White Gaming Case is compatible with ATX, Micro ATX, Mini ITX, and motherboards. ",
+    "Brand": "OVO",
+    "model": "E-335D RGB",
 
-    "Brand": "",
-    "model": "",
-
-    "color": "",
-    "type": "",
-    "motherboardType": "",
-    "psu": "",
-    "img": "",
+    "color": "Black",
+    "type": "Mid-Tower",
+    "motherboardType": "Micro ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/ovo/e335d/e335d-01-500x500.webp",
     "category":"case",
-    "shoplogo": "",
-    "shopName": ""
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "MSI MAG FORGE 100M Mid-Tower Gaming Case",
+    "price": "4500",
+    "description": "The MSI MAG FORGE 100R has been designed with multiple easy installation mechanisms and accommodated an up to ATX motherboard. It supports ATX / mATX / Mini-ITX motherboards. It features two 120mm fans aligned vertically on the front to draw in air evenly across the entire face of the enclosure. ",
+    "Brand": "MSI",
+    "model": "MAG FORGE 100M",
+
+    "color": "Black",
+    "type": "Mid Tower",
+    "motherboardType": "ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/msi/mag-forge-100m/mag-forge-100m-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "Deepcool MATREXX 30 Mini Tower Case",
+    "price": "3100",
+    "description": "Deepcool MATREXX 30 is a Mini Tower Case. This casing is an excellent example of portability and functionality combined. This classic M-ATX structure casing is fully compatible with M-ATX and ITX motherboards. This casing is also equipped with a larger area of air-intake as mesh cover at the front panel. this casing utilizes honeycomb front air intake design. Deepcool MATREXX 30 Mini Tower Case supports 120mm radiator or  cooling fan in the front.",
+    "Brand": "Deepcool",
+    "model": "MATREXX 30",
+
+    "color": "Black",
+    "type": "Mini Tower",
+    "motherboardType": "Mini-ITX",
+    "psu": "ATX PS2",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/matrexx-30/deepcool-matrexx-30-mini-tower-case-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "Antec TORQUE Black + Red Aluminum ATX Mid Tower Gaming Casing",
+    "price": "25000",
+    "description": "Torque, a commanding mid tower with a forward-tilted motherboard position, aggressive lines, and plenty of features designed for performance-heavy builds, merges precision cut aluminium panels in high contrast crimson and gunmetal to bring an augmented experience to your desktop. Torque is entirely open-air, with vast airflow and cooling management measures in place so that form and function are in perfect alignment. The high quality anodized aluminium panels are corrosion resistant, for unrivaled durability.4 mm tempered glass side panels showcase your internal components in full glory.",
+    "Brand": "Antec",
+    "model": "Antec TORQUE",
+
+    "color": "Black + Red",
+    "type": "Mid-Tower",
+    "motherboardType": "E-ATX, ATX, Micro-ATX, ITX",
+    "psu": "ATX PS2",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/matrexx-30/deepcool-matrexx-30-mini-tower-case-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
   },
 
-  // ===========================UltraTech=================
+
+  // ===========================ultratech=================
 
   {
-    "name": "",
-    "price": "",
+    "name": "Value-Top V500W Mini Tower Micro ATX Gaming Casing",
+    "price": "2250",
+    "description": "The Value-Top V500W Micro ATX Gaming Casing strikes the ideal mix of functionality and design to satisfy the needs of PC builders and gamers. This V500W casing, classified as a Mini Tower, is carefully constructed from A grade SPCC material and has a 0.6mm thickness for durability and strength. Supporting ATX power supply units and Micro ATX/ITX motherboards, the V500W provides versatile compatibility for a variety of hardware configurations.",
+    "Brand": "Value Top",
+    "model": "V500W",
 
-    "Brand": "",
-    "model": "",
-
-    "color": "",
-    "type": "",
-    "motherboardType": "",
-    "psu": "",
-    "img": "",
+    "color": "White",
+    "type": "Mini Tower",
+    "motherboardType": "MicroATX",
+    "psu": "ATX",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/value-top/v500w/v500w-01-500x500.webp",
     "category":"case",
-    "shoplogo": "",
-    "shopName": ""
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
 
   {
-    "name": "",
-    "price": "",
+    "name": "OVO J-618 B RGB Mini-Tower mATX Gaming Casing",
+    "price": "1700",
+    "description": "The OVO J-618 B RGB Mini-Tower mATX Gaming Casing is a wonderful option for gaming fans, as it supports Micro-ATX, ITX, and Mini-ITX motherboards to suit a variety of build configurations. With bright, adjustable lighting that matches any setup, its eye-catching RGB lighting improves the gaming experience. ",
+    "Brand": "OVO",
+    "model": "J-618 B",
 
-    "Brand": "",
-    "model": "",
-
-    "color": "",
-    "type": "",
-    "motherboardType": "",
-    "psu": "",
-    "img": "",
+    "color": "Black",
+    "type": "Mini Tower",
+    "motherboardType": "Micro-ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/ovo/j-618-b/j-618-b-500x500.webp",
     "category":"case",
-    "shoplogo": "",
-    "shopName": ""
-  }
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "Xtreme T38 RGB ATX Gaming Casing without Power Supply",
+    "price": "2650",
+    "description": "Build and customize your own PC with the T38 CASING Case from XTREME. With this ATX case, you can create the PC to best suit your needs with a variety of available slots and ports. Whether you intend on installing 2 HDDs and 3 SSDs slots you can take advantage of tool-free access making it easy to install and swap outdrives. You can also connect a variety of peripherals to the dual USB ports located on the external side of the front panel.",
+    "Brand": "Xtreme",
+    "model": "Xtreme T38",
+
+    "color": "Black",
+    "type": "Mid Tower",
+    "motherboardType": "ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/xtreme/t38/xtreme-t38-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+
+  {
+    "name": "OVO E-335D RGB Mid-Tower Gaming Case",
+    "price": "2900",
+    "description": "The OVO E-335D RGB Mid-Tower Gaming Case includes a clear left-side tempered glass panel. The fine mesh front panel and 4 powerful 120mm RGB fans provide massive air intake in this OVO Gaming case. it has a 3x120 mm font and a 1x120mm rear RGB fan Pre-installed. It also has an outstanding Airflow and Ventilation Chassis Design with several Cooling Fan Positions. The OVO E-335D RGB has an ATX motherboard, and this ATX White Gaming Case is compatible with ATX, Micro ATX, Mini ITX, and motherboards. ",
+    "Brand": "OVO",
+    "model": "E-335D RGB",
+
+    "color": "Black",
+    "type": "Mid-Tower",
+    "motherboardType": "Micro ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/ovo/e335d/e335d-01-500x500.webp",
+    "category":"case",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "MSI MAG FORGE 100M Mid-Tower Gaming Case",
+    "price": "4400",
+    "description": "The MSI MAG FORGE 100R has been designed with multiple easy installation mechanisms and accommodated an up to ATX motherboard. It supports ATX / mATX / Mini-ITX motherboards. It features two 120mm fans aligned vertically on the front to draw in air evenly across the entire face of the enclosure. ",
+    "Brand": "MSI",
+    "model": "MAG FORGE 100M",
+
+    "color": "Black",
+    "type": "Mid Tower",
+    "motherboardType": "ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/msi/mag-forge-100m/mag-forge-100m-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "Deepcool MATREXX 30 Mini Tower Case",
+    "price": "3000",
+    "description": "Deepcool MATREXX 30 is a Mini Tower Case. This casing is an excellent example of portability and functionality combined. This classic M-ATX structure casing is fully compatible with M-ATX and ITX motherboards. This casing is also equipped with a larger area of air-intake as mesh cover at the front panel. this casing utilizes honeycomb front air intake design. Deepcool MATREXX 30 Mini Tower Case supports 120mm radiator or  cooling fan in the front.",
+    "Brand": "Deepcool",
+    "model": "MATREXX 30",
+
+    "color": "Black",
+    "type": "Mini Tower",
+    "motherboardType": "Mini-ITX",
+    "psu": "ATX PS2",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/matrexx-30/deepcool-matrexx-30-mini-tower-case-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "Antec TORQUE Black + Red Aluminum ATX Mid Tower Gaming Casing",
+    "price": "25100",
+    "description": "Torque, a commanding mid tower with a forward-tilted motherboard position, aggressive lines, and plenty of features designed for performance-heavy builds, merges precision cut aluminium panels in high contrast crimson and gunmetal to bring an augmented experience to your desktop. Torque is entirely open-air, with vast airflow and cooling management measures in place so that form and function are in perfect alignment. The high quality anodized aluminium panels are corrosion resistant, for unrivaled durability.4 mm tempered glass side panels showcase your internal components in full glory.",
+    "Brand": "Antec",
+    "model": "Antec TORQUE",
+
+    "color": "Black + Red",
+    "type": "Mid-Tower",
+    "motherboardType": "E-ATX, ATX, Micro-ATX, ITX",
+    "psu": "ATX PS2",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/matrexx-30/deepcool-matrexx-30-mini-tower-case-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
 
   // ===========================techland=================
-
   {
-    "name": "",
-    "price": "",
+    "name": "Value-Top V500W Mini Tower Micro ATX Gaming Casing",
+    "price": "2200",
+    "description": "The Value-Top V500W Micro ATX Gaming Casing strikes the ideal mix of functionality and design to satisfy the needs of PC builders and gamers. This V500W casing, classified as a Mini Tower, is carefully constructed from A grade SPCC material and has a 0.6mm thickness for durability and strength. Supporting ATX power supply units and Micro ATX/ITX motherboards, the V500W provides versatile compatibility for a variety of hardware configurations.",
+    "Brand": "Value Top",
+    "model": "V500W",
 
-    "Brand": "",
-    "model": "",
-
-    "color": "",
-    "type": "",
-    "motherboardType": "",
-    "psu": "",
-    "img": "",
+    "color": "White",
+    "type": "Mini Tower",
+    "motherboardType": "MicroATX",
+    "psu": "ATX",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/value-top/v500w/v500w-01-500x500.webp",
     "category":"case",
-    "shoplogo": "",
-    "shopName": ""
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
   },
 
   {
-    "name": "",
-    "price": "",
+    "name": "OVO J-618 B RGB Mini-Tower mATX Gaming Casing",
+    "price": "1600",
+    "description": "The OVO J-618 B RGB Mini-Tower mATX Gaming Casing is a wonderful option for gaming fans, as it supports Micro-ATX, ITX, and Mini-ITX motherboards to suit a variety of build configurations. With bright, adjustable lighting that matches any setup, its eye-catching RGB lighting improves the gaming experience. ",
+    "Brand": "OVO",
+    "model": "J-618 B",
 
-    "Brand": "",
-    "model": "",
-
-    "color": "",
-    "type": "",
-    "motherboardType": "",
-    "psu": "",
-    "img": "",
+    "color": "Black",
+    "type": "Mini Tower",
+    "motherboardType": "Micro-ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/ovo/j-618-b/j-618-b-500x500.webp",
     "category":"case",
-    "shoplogo": "",
-    "shopName": ""
-  }
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "Xtreme T38 RGB ATX Gaming Casing without Power Supply",
+    "price": "2630",
+    "description": "Build and customize your own PC with the T38 CASING Case from XTREME. With this ATX case, you can create the PC to best suit your needs with a variety of available slots and ports. Whether you intend on installing 2 HDDs and 3 SSDs slots you can take advantage of tool-free access making it easy to install and swap outdrives. You can also connect a variety of peripherals to the dual USB ports located on the external side of the front panel.",
+    "Brand": "Xtreme",
+    "model": "Xtreme T38",
+
+    "color": "Black",
+    "type": "Mid Tower",
+    "motherboardType": "ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/xtreme/t38/xtreme-t38-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+
+  {
+    "name": "OVO E-335D RGB Mid-Tower Gaming Case",
+    "price": "2900",
+    "description": "The OVO E-335D RGB Mid-Tower Gaming Case includes a clear left-side tempered glass panel. The fine mesh front panel and 4 powerful 120mm RGB fans provide massive air intake in this OVO Gaming case. it has a 3x120 mm font and a 1x120mm rear RGB fan Pre-installed. It also has an outstanding Airflow and Ventilation Chassis Design with several Cooling Fan Positions. The OVO E-335D RGB has an ATX motherboard, and this ATX White Gaming Case is compatible with ATX, Micro ATX, Mini ITX, and motherboards. ",
+    "Brand": "OVO",
+    "model": "E-335D RGB",
+
+    "color": "Black",
+    "type": "Mid-Tower",
+    "motherboardType": "Micro ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/ovo/e335d/e335d-01-500x500.webp",
+    "category":"case",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "MSI MAG FORGE 100M Mid-Tower Gaming Case",
+    "price": "4450",
+    "description": "The MSI MAG FORGE 100R has been designed with multiple easy installation mechanisms and accommodated an up to ATX motherboard. It supports ATX / mATX / Mini-ITX motherboards. It features two 120mm fans aligned vertically on the front to draw in air evenly across the entire face of the enclosure. ",
+    "Brand": "MSI",
+    "model": "MAG FORGE 100M",
+
+    "color": "Black",
+    "type": "Mid Tower",
+    "motherboardType": "ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/msi/mag-forge-100m/mag-forge-100m-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "Deepcool MATREXX 30 Mini Tower Case",
+    "price": "3100",
+    "description": "Deepcool MATREXX 30 is a Mini Tower Case. This casing is an excellent example of portability and functionality combined. This classic M-ATX structure casing is fully compatible with M-ATX and ITX motherboards. This casing is also equipped with a larger area of air-intake as mesh cover at the front panel. this casing utilizes honeycomb front air intake design. Deepcool MATREXX 30 Mini Tower Case supports 120mm radiator or  cooling fan in the front.",
+    "Brand": "Deepcool",
+    "model": "MATREXX 30",
+
+    "color": "Black",
+    "type": "Mini Tower",
+    "motherboardType": "Mini-ITX",
+    "psu": "ATX PS2",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/matrexx-30/deepcool-matrexx-30-mini-tower-case-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "Antec TORQUE Black + Red Aluminum ATX Mid Tower Gaming Casing",
+    "price": "24000",
+    "description": "Torque, a commanding mid tower with a forward-tilted motherboard position, aggressive lines, and plenty of features designed for performance-heavy builds, merges precision cut aluminium panels in high contrast crimson and gunmetal to bring an augmented experience to your desktop. Torque is entirely open-air, with vast airflow and cooling management measures in place so that form and function are in perfect alignment. The high quality anodized aluminium panels are corrosion resistant, for unrivaled durability.4 mm tempered glass side panels showcase your internal components in full glory.",
+    "Brand": "Antec",
+    "model": "Antec TORQUE",
+
+    "color": "Black + Red",
+    "type": "Mid-Tower",
+    "motherboardType": "E-ATX, ATX, Micro-ATX, ITX",
+    "psu": "ATX PS2",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/matrexx-30/deepcool-matrexx-30-mini-tower-case-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
   // ===========================skyland=================
-
   {
-    "name": "",
-    "price": "",
+    "name": "Value-Top V500W Mini Tower Micro ATX Gaming Casing",
+    "price": "2200",
+    "description": "The Value-Top V500W Micro ATX Gaming Casing strikes the ideal mix of functionality and design to satisfy the needs of PC builders and gamers. This V500W casing, classified as a Mini Tower, is carefully constructed from A grade SPCC material and has a 0.6mm thickness for durability and strength. Supporting ATX power supply units and Micro ATX/ITX motherboards, the V500W provides versatile compatibility for a variety of hardware configurations.",
+    "Brand": "Value Top",
+    "model": "V500W",
 
-    "Brand": "",
-    "model": "",
-
-    "color": "",
-    "type": "",
-    "motherboardType": "",
-    "psu": "",
-    "img": "",
+    "color": "White",
+    "type": "Mini Tower",
+    "motherboardType": "MicroATX",
+    "psu": "ATX",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/value-top/v500w/v500w-01-500x500.webp",
     "category":"case",
-    "shoplogo": "",
-    "shopName": ""
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
   },
 
   {
-    "name": "",
-    "price": "",
+    "name": "OVO J-618 B RGB Mini-Tower mATX Gaming Casing",
+    "price": "1600",
+    "description": "The OVO J-618 B RGB Mini-Tower mATX Gaming Casing is a wonderful option for gaming fans, as it supports Micro-ATX, ITX, and Mini-ITX motherboards to suit a variety of build configurations. With bright, adjustable lighting that matches any setup, its eye-catching RGB lighting improves the gaming experience. ",
+    "Brand": "OVO",
+    "model": "J-618 B",
 
-    "Brand": "",
-    "model": "",
-
-    "color": "",
-    "type": "",
-    "motherboardType": "",
-    "psu": "",
-    "img": "",
+    "color": "Black",
+    "type": "Mini Tower",
+    "motherboardType": "Micro-ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/ovo/j-618-b/j-618-b-500x500.webp",
     "category":"case",
-    "shoplogo": "",
-    "shopName": ""
-  }
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "Xtreme T38 RGB ATX Gaming Casing without Power Supply",
+    "price": "2680",
+    "description": "Build and customize your own PC with the T38 CASING Case from XTREME. With this ATX case, you can create the PC to best suit your needs with a variety of available slots and ports. Whether you intend on installing 2 HDDs and 3 SSDs slots you can take advantage of tool-free access making it easy to install and swap outdrives. You can also connect a variety of peripherals to the dual USB ports located on the external side of the front panel.",
+    "Brand": "Xtreme",
+    "model": "Xtreme T38",
+
+    "color": "Black",
+    "type": "Mid Tower",
+    "motherboardType": "ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/xtreme/t38/xtreme-t38-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "OVO E-335D RGB Mid-Tower Gaming Case",
+    "price": "2700",
+    "description": "The OVO E-335D RGB Mid-Tower Gaming Case includes a clear left-side tempered glass panel. The fine mesh front panel and 4 powerful 120mm RGB fans provide massive air intake in this OVO Gaming case. it has a 3x120 mm font and a 1x120mm rear RGB fan Pre-installed. It also has an outstanding Airflow and Ventilation Chassis Design with several Cooling Fan Positions. The OVO E-335D RGB has an ATX motherboard, and this ATX White Gaming Case is compatible with ATX, Micro ATX, Mini ITX, and motherboards. ",
+    "Brand": "OVO",
+    "model": "E-335D RGB",
+
+    "color": "Black",
+    "type": "Mid-Tower",
+    "motherboardType": "Micro ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/ovo/e335d/e335d-01-500x500.webp",
+    "category":"case",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "MSI MAG FORGE 100M Mid-Tower Gaming Case",
+    "price": "4350",
+    "description": "The MSI MAG FORGE 100R has been designed with multiple easy installation mechanisms and accommodated an up to ATX motherboard. It supports ATX / mATX / Mini-ITX motherboards. It features two 120mm fans aligned vertically on the front to draw in air evenly across the entire face of the enclosure. ",
+    "Brand": "MSI",
+    "model": "MAG FORGE 100M",
+
+    "color": "Black",
+    "type": "Mid Tower",
+    "motherboardType": "ATX",
+    "psu": "Not Included",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/msi/mag-forge-100m/mag-forge-100m-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "Deepcool MATREXX 30 Mini Tower Case",
+    "price": "3200",
+    "description": "Deepcool MATREXX 30 is a Mini Tower Case. This casing is an excellent example of portability and functionality combined. This classic M-ATX structure casing is fully compatible with M-ATX and ITX motherboards. This casing is also equipped with a larger area of air-intake as mesh cover at the front panel. this casing utilizes honeycomb front air intake design. Deepcool MATREXX 30 Mini Tower Case supports 120mm radiator or  cooling fan in the front.",
+    "Brand": "Deepcool",
+    "model": "MATREXX 30",
+
+    "color": "Black",
+    "type": "Mini Tower",
+    "motherboardType": "Mini-ITX",
+    "psu": "ATX PS2",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/matrexx-30/deepcool-matrexx-30-mini-tower-case-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "Antec TORQUE Black + Red Aluminum ATX Mid Tower Gaming Casing",
+    "price": "25100",
+    "description": "Torque, a commanding mid tower with a forward-tilted motherboard position, aggressive lines, and plenty of features designed for performance-heavy builds, merges precision cut aluminium panels in high contrast crimson and gunmetal to bring an augmented experience to your desktop. Torque is entirely open-air, with vast airflow and cooling management measures in place so that form and function are in perfect alignment. The high quality anodized aluminium panels are corrosion resistant, for unrivaled durability.4 mm tempered glass side panels showcase your internal components in full glory.",
+    "Brand": "Antec",
+    "model": "Antec TORQUE",
+
+    "color": "Black + Red",
+    "type": "Mid-Tower",
+    "motherboardType": "E-ATX, ATX, Micro-ATX, ITX",
+    "psu": "ATX PS2",
+    "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/matrexx-30/deepcool-matrexx-30-mini-tower-case-01-500x500.jpg",
+    "category":"case",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
 ]

@@ -48,8 +48,6 @@ const Navber2 = () => {
 
   return (
     <div className="flex gap-10 text-gray-300 font-semibold bg-[#191b2a]">
-     
-
       <Accordion
         activeKey={activeKey}
         onSelect={handleAccordionToggle}
@@ -72,7 +70,7 @@ const Navber2 = () => {
                         src="https://cdna.pcpartpicker.com/static/forever/img/nav-cpu-2023.png"
                         alt=""
                       />{" "}
-                      Cpus{" "}
+                      Cpu{" "}
                     </Link>{" "}
                   </li>
                   <li>
@@ -84,7 +82,7 @@ const Navber2 = () => {
                         alt=""
                       />{" "}
                     </Link>{" "}
-                    CPU Coolers
+                    CPU Cooler
                   </li>
                   <li>
                     {" "}
@@ -95,7 +93,7 @@ const Navber2 = () => {
                         alt=""
                       />{" "}
                     </Link>{" "}
-                    Motherboards
+                    Motherboard
                   </li>
                   <li>
                     {" "}
@@ -145,14 +143,14 @@ const Navber2 = () => {
                   </li>
                   <li>
                     {" "}
-                    <Link>
+                    <Link to="product/gpu" onClick={handleLinkClick}>
                       <img
                         className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                         src="https://cdna.pcpartpicker.com/static/forever/img/nav-videocard-2023.png"
                         alt=""
                       />{" "}
                     </Link>{" "}
-                    Video Card
+                    Graphics Card
                   </li>
                   <li>
                     {" "}
@@ -167,7 +165,7 @@ const Navber2 = () => {
                   </li>
                   <li>
                     {" "}
-                    <Link>
+                    <Link to="product/case" onClick={handleLinkClick}>
                       <img
                         className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                         src="https://cdna.pcpartpicker.com/static/forever/img/nav-case-2023.png"
@@ -247,12 +245,12 @@ const Navber2 = () => {
           </AccordionBody>
         </AccordionItem>
       </Accordion>
-     
+
       {/* <Link to="pcbuild" className="ml-2 mt-3 flex gap-2">
         <ConstructionIcon />
         Builder
       </Link> */}
-      <Link to="guides" className="mt-3 mr-10 flex gap-1">
+      <Link to="guides" className="text-xl mt-3 mr-10 flex gap-1">
         <DescriptionTwoToneIcon />
         Build Guides
       </Link>

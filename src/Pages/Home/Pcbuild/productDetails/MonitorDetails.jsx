@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+
 import UseProduct from "../../../../Hooks/UseProduct";
 
 const MonitorDetails = () => {

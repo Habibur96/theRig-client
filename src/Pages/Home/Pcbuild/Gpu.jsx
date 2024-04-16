@@ -3,20 +3,21 @@ import UseProduct from "../../../Hooks/UseProduct";
 import Pages from "./Pages";
 import ScrollToTop from "react-scroll-to-top";
 import MonitorFilter from "../Filter/MonitorFilter";
+import GpuFilter from "../Filter/GpuFilter";
 
-const Monitor = () => {
+const Gpu = () => {
   const [product] = UseProduct();
 
   const location = useLocation();
-  const monitor = product.filter((item) => item.category === "monitor");
+  const gpu = product.filter((item) => item.category === "gpu");
   const Component = {
-    Monitor: "monitor",
+    Gpu: "gpu",
   };
 
   return (
     <div className="flex column-gap-5">
       <div className=" flex-[1]">
-        <MonitorFilter></MonitorFilter>
+        <GpuFilter></GpuFilter>
       </div>
 
       <div className="flex-[4] mr-5">
@@ -30,7 +31,7 @@ const Monitor = () => {
             style={{ backgroundColor: "#FF8080" }}
           />
           <h3 className="text-2xl font-semibold">
-            {monitor.length} Compatible Products
+            {gpu.length} Compatible Products
           </h3>
           <table className="table ">
             {/* head */}
@@ -40,11 +41,13 @@ const Monitor = () => {
                 <th></th>
                 <th>Name</th>
 
-                <th>Screen Size</th>
+                <th>Boost Clock</th>
 
-                <th>Resolution</th>
-                <th>Refresh Rate</th>
-                <th>Panel Type</th>
+                <th>Recommended PSU</th>
+                <th>Chipset</th>
+                <th>Memory</th>
+                <th>Memorytype</th>
+                <th>Warranty</th>
 
                 <th>
                   <div className="pl-4">Price</div>
@@ -53,7 +56,7 @@ const Monitor = () => {
             </thead>
 
             <tbody>
-              {monitor.map((item) => (
+              {gpu.map((item) => (
                 <tr key={item._id}>
                   <td>
                     <label>
@@ -79,16 +82,18 @@ const Monitor = () => {
                     </div>
                   </td>
 
-                  <td className=" text-center">{item.ScreenSize}</td>
-                  <td className=" text-center">{item.Resolution}</td>
-                  <td className=" text-center">{item.RefreshRate}</td>
+                  <td className=" text-center">{item.boostClock}</td>
+                  <td className=" text-center">{item.recommendedPSU}</td>
+                  <td className=" text-center">{item.chipset}</td>
+                  <td className=" text-center">{item.Memory}</td>
 
-                  <td className=" text-center">{item.Panel}</td>
+                  <td className=" text-center">{item.Memorytype}</td>
+                  <td className=" text-center">{item.warranty}</td>
 
                   <td className="text-right">{item.price}tk</td>
                   <td>
                     <Link
-                      to={`/availableProduct/${Component.Monitor}/${item.model}`}
+                      to={`/availableProduct/${Component.Gpu}/${item.model}`}
                       state={{ from: location }}
                       replace
                       className="btn btn-sm btn-success "
@@ -109,4 +114,4 @@ const Monitor = () => {
   );
 };
 
-export default Monitor;
+export default Gpu;

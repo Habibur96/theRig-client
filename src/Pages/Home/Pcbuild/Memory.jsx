@@ -39,9 +39,6 @@ const Memory = () => {
                   <th>Modules</th>
                   <th>CAS Latency</th>
                   <th>TDP</th>
-                  
-  
-                 
                   <th>
                     <div className="pl-4">Price</div>
                   </th>
@@ -71,13 +68,9 @@ const Memory = () => {
                         </div>
                         <div>
                           {/* <Link to="/login" state={{ from: location }} replace> */}
-                          <Link
-                            to={`/availableProduct/${Component.Memory}/${item.name}`}
-                            state={{ from: location }}
-                            replace
-                          >
+                         
                             <div className="font-bold">{item.name}</div>
-                          </Link>
+                          
                         </div>
                       </div>
                     </td>
@@ -90,7 +83,11 @@ const Memory = () => {
   
                     <td className="text-right">{item.price}tk</td>
                     <td>
-                      <button className="btn btn-sm btn-success "style={{textTransform:"capitalize"}}>Add</button>
+                      <Link
+                      to={`/availableProduct/${Component.Memory}/${item.model}`}
+                      state={{ from: location }}
+                      replace
+                      className="btn btn-sm btn-success "style={{textTransform:"capitalize"}}>Add</Link>
                     </td>
                   </tr>
                 ))}

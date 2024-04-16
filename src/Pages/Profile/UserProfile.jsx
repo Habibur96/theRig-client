@@ -32,8 +32,8 @@ const UserProfile = () => {
       });
   };
   return (
-    <>
-      <div className="max-w-screen-md mx-auto mt-44">
+    <div className="bg-[#f4f4f3]">
+      <div className="max-w-screen-md mx-auto pt-28">
         <ProfileHeader></ProfileHeader>
       </div>
   
@@ -42,12 +42,12 @@ const UserProfile = () => {
          style={{ height: '1.75px' }}
         className="divider max-w-screen-md mx-auto mt-4 bg-red-500 "
       ></div> */}
-      <div className="mt-16 max-w-screen-md mx-auto">
+      <div className="mt-16 max-w-screen-md mx-auto ">
         <Container className="flex gap-5">
           <Row className="">
             <Col className="">
               <div className="stack ">
-                <div className=" pt-14 shadow-md w-36 h-40 card bg-amber-300">
+                <div className=" pt-14 shadow-lg w-36 h-40 card bg-base-200">
                   <FilterFramesOutlinedIcon className="ml-14 icon"></FilterFramesOutlinedIcon>
                   <div className="text-center font-bold ">Order</div>
                 </div>
@@ -58,7 +58,7 @@ const UserProfile = () => {
           <Row className="">
             <Col className="">
               <div className="stack">
-                <div className=" pt-14 shadow-md w-36 h-40 card bg-base-200">
+                <div className=" pt-14 shadow-lg w-36 h-40 card bg-base-200">
                   <PersonOutlineSharpIcon className="icon ml-14"></PersonOutlineSharpIcon>
                   <div className="text-center font-bold">Edit profile</div>
                 </div>
@@ -68,7 +68,7 @@ const UserProfile = () => {
           <Row className="">
             <Col className="">
               <div className="stack">
-                <div className=" pt-14 shadow-md w-36 h-40 card bg-base-200">
+                <div className=" pt-14 shadow-lg w-36 h-40 card bg-base-200">
                   <LockOutlinedIcon className="icon ml-14"></LockOutlinedIcon>
                   <div className="text-center font-bold">Change Passwors</div>
                 </div>
@@ -78,7 +78,7 @@ const UserProfile = () => {
           <Row className="">
             <Col className="">
               <div className="stack">
-                <div className=" pt-14 shadow-md w-36 h-40 card bg-base-200">
+                <div className=" pt-14 shadow-lg w-36 h-40 card bg-base-200">
                   <HomeWorkOutlinedIcon className="icon ml-14"></HomeWorkOutlinedIcon>
                   <div className="text-center font-bold">Addresses</div>
                 </div>
@@ -91,7 +91,7 @@ const UserProfile = () => {
             <Col className="">
               <Link to="/wishlist/Saved List">
                 <div className="stack">
-                  <div className="text-bold pt-14 shadow-md w-36 h-40 card bg-green-300">
+                  <div className="text-bold pt-14 shadow-lg w-36 h-40 card bg-base-200">
                     <FavoriteBorderOutlinedIcon className="icon ml-14"></FavoriteBorderOutlinedIcon>
                     <div className="text-center font-bold">Wish List</div>
                   </div>
@@ -103,7 +103,7 @@ const UserProfile = () => {
           <Row className="">
             <Col className="">
               <div className="stack">
-                <div className="text-bold pt-14 shadow-md w-36 h-40 card bg-teal-700">
+                <div className="text-bold pt-14 shadow-lg w-36 h-40 card bg-base-200">
                   <ImportantDevicesIcon className="icon ml-14"></ImportantDevicesIcon>
                   <div className="text-center font-bold">Saved PC</div>
                 </div>
@@ -114,7 +114,7 @@ const UserProfile = () => {
           <Row className="">
             <Col className="">
               <div className="stack">
-                <div className="text-bold pt-14  shadow-md w-36 h-40 card bg-violet-400">
+                <div className="text-bold pt-14  shadow-lg w-36 h-40 card bg-base-200">
                   <StarsIcon className="icon ml-14"></StarsIcon>
                   <div className="text-center font-bold">Star Points</div>
                 </div>
@@ -124,7 +124,7 @@ const UserProfile = () => {
           <Row className="">
             <Col className="">
               <div className="stack">
-                <div className="text-bold pt-14  shadow-md w-36 h-40 card bg-sky-600">
+                <div className="text-bold pt-14  shadow-lg w-36 h-40 card bg-base-200">
                   <AccountBalanceWalletIcon className="icon ml-14"></AccountBalanceWalletIcon>
                   <div className="text-center font-bold">Your Transactions</div>
                 </div>
@@ -137,7 +137,7 @@ const UserProfile = () => {
             <Col className="">
               <Link onClick={handleLogOut}>
                 <div className="stack ml-8">
-                  <div className="text-bold pt-14  shadow-md w-36 h-40 card bg-base-200">
+                  <div className="text-bold pt-14 shadow-lg mb-5 w-36 h-40 card bg-base-200">
                     <ExitToAppIcon className="icon ml-14"></ExitToAppIcon>
                     <div className="text-center font-bold">Logout</div>
                   </div>
@@ -147,7 +147,7 @@ const UserProfile = () => {
           </Row>
         </Container>
       </div>
-    </>
+    </div>
   );
 };
 

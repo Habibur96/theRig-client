@@ -39,7 +39,7 @@ const CheckoutForm = ({ email }) => {
   const userInfo = user.filter((item) => item.email === email);
 
   const [shippingCost, setShippingCost] = useState(70);
-  const [shippingPlace, setShippingPlace] = useState("Inside Dhaka City"); // Default shipping place
+  const [shippingPlace, setShippingPlace] = useState("Inside Dhaka "); // Default shipping place
 
   const handleRadioClick = (cost, place) => {
     setShippingCost(cost);
@@ -262,7 +262,7 @@ const CheckoutForm = ({ email }) => {
 
           if (res.data?.insertResult?.insertedId) {
             // toast('Pay the Payment Successfully !!!', { autoClose: 2000 })
-          
+
             Swal.fire({
               position: "top-end",
               icon: "success",
@@ -294,15 +294,20 @@ const CheckoutForm = ({ email }) => {
           Apply
         </button>
       </div> */}
+      <div className="bg-[#f4f4f3]">
+      <div className="max-w-screen-lg mx-auto divider text-3xl pt-5 font-monospace font-semibold">
+        Payment
+      </div>
+
       <Form
         onSubmit={handleSubmit(onSubmit)}
         action=""
-        className=" flex column-gap-5  px-4 py-16"
+        className=" flex column-gap-5  px-4 py-15"
       >
         <div className="flex-[2]  bg-[#]  rounded-lg">
           <div className=" px-4 py-16 sm:px-6 lg:px-8">
             <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-              <h1 className="text-center font-bold ">
+              <h1 className="text-2xl text-center font-monospace font-semibold ">
                 1. Customer Information
               </h1>
               <div className="mt-3">
@@ -388,7 +393,7 @@ const CheckoutForm = ({ email }) => {
         <div className="flex-[3] bg-[#] rounded-lg px-4 py-16">
           <div className="flex gap-20">
             <div>
-              <h1 className="text-xl ml-4 font-monospace font-semibold">
+              <h1 className="text-2xl ml-4 font-monospace font-semibold">
                 2.Shipping Method
               </h1>
               <div className="flex text-xl ml-4 mt-4 font-monospace font-semibold">
@@ -399,11 +404,11 @@ const CheckoutForm = ({ email }) => {
                     name="group1"
                     type="radio"
                     id="inline-radio-1"
-                    checked={shippingPlace === "Inside Dhaka City"} // checked based on shipping place
-                    onClick={() => handleRadioClick(70, "Inside Dhaka City")} // Call handleRadioClick with shipping cost and place
+                    checked={shippingPlace === "Inside Dhaka "} // checked based on shipping place
+                    onClick={() => handleRadioClick(70, "Inside Dhaka ")} // Call handleRadioClick with shipping cost and place
                   />
                 </div>
-                <h1>Inside Dhaka City - 70</h1>
+                <h1>Inside Dhaka - 70</h1>
                 <FaBangladeshiTakaSign />
               </div>
               {/* <div className="flex text-xl ml-4 mt-4 font-monospace font-semibold">
@@ -419,7 +424,7 @@ const CheckoutForm = ({ email }) => {
                     />
                   </div>
                 ))}
-                <h1>Inside Dhaka City - 70</h1>
+                <h1>Inside Dhaka  - 70</h1>
                 <FaBangladeshiTakaSign />
               </div> */}
               <div className="ml-4">
@@ -466,7 +471,7 @@ const CheckoutForm = ({ email }) => {
               </div>
             </div>
             <div className="ml-14">
-              <h1 className="text-xl font-monospace font-semibold">
+              <h1 className="text-2xl font-monospace font-semibold">
                 3.Payment Method
               </h1>
               <h1 className="flex  gap-2 mt-4 mb-2 text-lg font-monospace font-semibold">
@@ -539,7 +544,7 @@ const CheckoutForm = ({ email }) => {
                 <tr>
                   <td colSpan="2"></td>
                   <td>
-                    <div className="flex text-lg font-semibold">
+                    <div className="flex text-lg font-monospace font-semibold">
                       Sub Total : {productPrice}
                       <FaBangladeshiTakaSign />
                     </div>
@@ -548,7 +553,7 @@ const CheckoutForm = ({ email }) => {
                 <tr>
                   <td colSpan="2"></td>
                   <td>
-                    <div className="flex text-lg font-semibold">
+                    <div className="flex text-lg font-semibold font-monospace">
                       {shippingPlace} : {shippingCost} <FaBangladeshiTakaSign />
                     </div>
                   </td>
@@ -556,7 +561,7 @@ const CheckoutForm = ({ email }) => {
                 <tr>
                   <td colSpan="2"></td>
                   <td>
-                    <div className="flex text-lg font-semibold">
+                    <div className="flex text-lg font-semibold font-monospace">
                       Total : {totalPrice} <FaBangladeshiTakaSign />
                     </div>
                   </td>
@@ -603,6 +608,7 @@ const CheckoutForm = ({ email }) => {
           </p> */}
         </div>
       </Form>
+      </div>
     </div>
   );
 };

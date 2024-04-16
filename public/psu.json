@@ -1,133 +1,430 @@
 [
-  // ===========================starTech=================
+  // ===========================startech=================
   {
-    "name": "",
-    "price": "",
+    "name": "Value-Top VT-P300B Real 300W ATX Power Supply",
+    "price": "1875",
+    "description": "The Value-Top VT-P300B is a reliable ATX power supply intended to meet the power requirements of modern computer systems. With a 300-watt capacity, it provides a robust and constant power supply to components, resulting in dependable system performance. Its ATX form factor improves compatibility, allowing easy integration into a wide range of computer cases.  ",
+    "Brand": "Value-Top",
+    "model": "VT-P300B",
 
-    "Brand": "",
-    "model": "",
-
-    "wattage": "",
-    "efficiency": "",
+    "wattage": "300W",
+    "Certification": "+85%",
     "category": "psu",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/value-top/vt-p300b/vt-p300b-01-500x500.webp",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
   },
   {
-    "name": "",
-    "price": "",
+    "name": "1stPlayer FK 300W Power Supply",
+    "price": "2450",
+    "description": "1stPlayer FK 300W comes with Double Forward + APFC (4.0 PPFC), EFF. high as 85% under typical loading. This power supply is the Perfect combination of cooling and silent with 12CM Hydraulic, Bearing fan. The powed supply has +12V Loadup To90% Of Total Power, Active PFC, Standby Power Low As 0.5W, Open Circuit Protect. ",
+    "Brand": "1stPlayer",
+    "model": "FK 300W",
 
-    "Brand": "",
-    "model": "",
-
-    "wattage": "",
-    "efficiency": "",
+    "wattage": "300W",
+    "Certification": "None 80+",
     "category": "psu",
     "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/1stplayer/fk-300w/fk-300w-02-500x500.jpg",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "DeepCool PK450D 450 Watt 80 PLUS Bronze Power Supply",
+    "price": "4000",
+    "description": "The DeepCool PK-D series power supply offers reliable 80 PLUS Bronze Certification for computer system builds thanks to stability and low noise performance. The PK-D series is 80 PLUS Bronze certified, delivers up to 85% Certification at normal loads, and reduces unnecessary heat generation while boosting energy Certification. The +3.3V and +5V rails now include a highly efficient DC-DC board that helps with tighter voltage regulation and improves system compatibility for components of the next generation.",
+    "Brand": "DeepCool",
+    "model": "PK450D",
+
+    "wattage": "450 Watt",
+    "Certification": "80 PLUS Bronze Certified",
+    "category": "psu",
+    "warranty": "3 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pk450d/pk450d-01-500x500.webp",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },  
+  {
+    "name": "Corsair CX Series CX550 550W 80 PLUS Bronze ATX Power Supply",
+    "price": "5550",
+    "description": "The Corsair CX Series CX550 power supply is a dependable and efficient option for current PC systems. This semi-modular ATX power supply has a power output of 550W and 80 PLUS Bronze certification, resulting in up to 88% operating efficiency, less heat generation, and decreased energy expenditures. Full continuous power delivery ensures that your computer performs consistently and reliably. The CX550's 120mm thermally regulated low-noise cooling fan provides silent operation. The fan only runs at high speed when there is a high load, and it automatically slows down for quieter performance when there is a lower demand. This technology not only makes computing quieter, but also increases the power supply's total longevity.",
+    "Brand": "Corsair",
+    "model": "CX Series CX550",
+
+    "wattage": "550 Watt",
+    "Certification": "80+ Bronze",
+    "category": "psu",
+    "warranty": "5 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/corsair/cx-series-cx550/cx-series-cx550-01-500x500.webp",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  }, 
+  {
+    "name": "MSI MAG A650BN 650W 80 Plus Bronze Power Supply",
+    "price": "6700",
+    "description": "MSI MAG A650BN 650W 80 Plus Bronze Power Supply is an Entry level power supply that is also very budget friendly. MAG A550BN provides players with a safe, reliable, and efficient entry-level power supply option. Its core features include 80 PLUS Bronze certification, DC to DC circuit design, 12V single rail, active PFC, and low-noise fan. The MAG A650BN will be one of the best choices for players who are just getting started with looking into DIY computers. After installation, gamers can immediately enjoy a reliable performance experience without additional settings.",
+    "Brand": "MSI",
+    "model": "A650BN",
+
+    "wattage": "650 watt",
+    "Certification": "80 Plus Bronze",
+    "category": "psu",
+    "warranty": "5 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/msi/mag-a650bn/mag-a650bn-01-500x500.jpg",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "ASUS ROG Strix 650G 650W 80 Plus Gold Power Supply",
+    "price": "13600",
+    "description": "The ASUS ROG Strix 650G 80 Plus Gold Power Supply features high-end cooling and premium components together for an ultra-quiet high-performance product aimed at core gamers. It has a dual ball bearing setup that will last up to twice as long as a sleeve bearing design. ROG heatsinks cover critical components. Lower temps result in a longer lifespan and reduced noise. The integrated ROG heatsinks have 2x more volume than traditional designs, resulting in significantly lower temperatures inside Strix PSUs. This extends the lifespan of components and allows 0dB operation for a longer duration than standard designs. An onboard controller brings the 135mm fan to a standstill when total draw power (TDP) is below 40%, letting you enjoy light gaming in relative silence.",
+    "Brand": "ASUS",
+    "model": "ROG Strix 650G",
+
+    "wattage": "650W",
+    "Certification": "80 Plus Gold Certification",
+    "category": "psu",
+    "warranty": "10 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/asus/rog-strix-650g/rog-strix-650g-01-500x500.jpg",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "DeepCool DQ1000M-V3L 1000W 80 Plus Gold Full Modular Power Supply",
+    "price": "13899",
+    "description": "DeepCool DQ1000M-V3L 100W is a Full Modular Power Supply with 80 Plus Gold certification. This new DeepCool power supply is made entirely of Japanese capacitors and employs high-quality switch MOSFETs. The DQ1000M-V3L is designed to provide stable output capacity with high conversion efficiency, improving the reliability of your PC system. The DeepCool Full Modular Power Supply is 80 PLUS Gold Certified, so you'll get all the power you need while saving up to 91.2% on energy consumption and waste heat. The DQ1000M-V3L delivers improved performance with lower power dissipation, increased quality, and better thermals to meet your needs.",
+    "Brand": "DeepCool",
+    "model": "DQ1000M-V3L",
+
+    "wattage": "1000W",
+    "Certification": "",
+    "category": "psu",
+    "warranty": "10 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/dq1000m-v3l/dq750m-v3l-004-500x500.webp",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
   },
 
-  // ===========================UltraTech=================
+  // ===========================ultratech=================
   {
-    "name": "",
-    "price": "",
+    "name": "Value-Top VT-P300B Real 300W ATX Power Supply",
+    "price": "1850",
+    "description": "The Value-Top VT-P300B is a reliable ATX power supply intended to meet the power requirements of modern computer systems. With a 300-watt capacity, it provides a robust and constant power supply to components, resulting in dependable system performance. Its ATX form factor improves compatibility, allowing easy integration into a wide range of computer cases.  ",
+    "Brand": "Value-Top",
+    "model": "VT-P300B",
 
-    "Brand": "",
-    "model": "",
-
-    "wattage": "",
-    "efficiency": "",
+    "wattage": "300W",
+    "Certification": "+85%",
     "category": "psu",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/value-top/vt-p300b/vt-p300b-01-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
-
   {
-    "name": "",
-    "price": "",
+    "name": "1stPlayer FK 300W Power Supply",
+    "price": "2380",
+    "description": "1stPlayer FK 300W comes with Double Forward + APFC (4.0 PPFC), EFF. high as 85% under typical loading. This power supply is the Perfect combination of cooling and silent with 12CM Hydraulic, Bearing fan. The powed supply has +12V Loadup To90% Of Total Power, Active PFC, Standby Power Low As 0.5W, Open Circuit Protect. ",
+    "Brand": "1stPlayer",
+    "model": "FK 300W",
 
-    "Brand": "",
-    "model": "",
-
-    "wattage": "",
-    "efficiency": "",
+    "wattage": "300W",
+    "Certification": "None 80+",
     "category": "psu",
     "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/1stplayer/fk-300w/fk-300w-02-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "DeepCool PK450D 450 Watt 80 PLUS Bronze Power Supply",
+    "price": "4100",
+    "description": "The DeepCool PK-D series power supply offers reliable 80 PLUS Bronze Certification for computer system builds thanks to stability and low noise performance. The PK-D series is 80 PLUS Bronze certified, delivers up to 85% Certification at normal loads, and reduces unnecessary heat generation while boosting energy Certification. The +3.3V and +5V rails now include a highly efficient DC-DC board that helps with tighter voltage regulation and improves system compatibility for components of the next generation.",
+    "Brand": "DeepCool",
+    "model": "PK450D",
+
+    "wattage": "450 Watt",
+    "Certification": "80 PLUS Bronze Certified",
+    "category": "psu",
+    "warranty": "3 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pk450d/pk450d-01-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },  
+  {
+    "name": "Corsair CX Series CX550 550W 80 PLUS Bronze ATX Power Supply",
+    "price": "5500",
+    "description": "The Corsair CX Series CX550 power supply is a dependable and efficient option for current PC systems. This semi-modular ATX power supply has a power output of 550W and 80 PLUS Bronze certification, resulting in up to 88% operating efficiency, less heat generation, and decreased energy expenditures. Full continuous power delivery ensures that your computer performs consistently and reliably. The CX550's 120mm thermally regulated low-noise cooling fan provides silent operation. The fan only runs at high speed when there is a high load, and it automatically slows down for quieter performance when there is a lower demand. This technology not only makes computing quieter, but also increases the power supply's total longevity.",
+    "Brand": "Corsair",
+    "model": "CX Series CX550",
+
+    "wattage": "550 Watt",
+    "Certification": "80+ Bronze",
+    "category": "psu",
+    "warranty": "5 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/corsair/cx-series-cx550/cx-series-cx550-01-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  }, 
+  {
+    "name": "MSI MAG A650BN 650W 80 Plus Bronze Power Supply",
+    "price": "6700",
+    "description": "MSI MAG A650BN 650W 80 Plus Bronze Power Supply is an Entry level power supply that is also very budget friendly. MAG A550BN provides players with a safe, reliable, and efficient entry-level power supply option. Its core features include 80 PLUS Bronze certification, DC to DC circuit design, 12V single rail, active PFC, and low-noise fan. The MAG A650BN will be one of the best choices for players who are just getting started with looking into DIY computers. After installation, gamers can immediately enjoy a reliable performance experience without additional settings.",
+    "Brand": "MSI",
+    "model": "A650BN",
+
+    "wattage": "650 watt",
+    "Certification": "80 Plus Bronze",
+    "category": "psu",
+    "warranty": "5 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/msi/mag-a650bn/mag-a650bn-01-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "ASUS ROG Strix 650G 650W 80 Plus Gold Power Supply",
+    "price": "13500",
+    "description": "The ASUS ROG Strix 650G 80 Plus Gold Power Supply features high-end cooling and premium components together for an ultra-quiet high-performance product aimed at core gamers. It has a dual ball bearing setup that will last up to twice as long as a sleeve bearing design. ROG heatsinks cover critical components. Lower temps result in a longer lifespan and reduced noise. The integrated ROG heatsinks have 2x more volume than traditional designs, resulting in significantly lower temperatures inside Strix PSUs. This extends the lifespan of components and allows 0dB operation for a longer duration than standard designs. An onboard controller brings the 135mm fan to a standstill when total draw power (TDP) is below 40%, letting you enjoy light gaming in relative silence.",
+    "Brand": "ASUS",
+    "model": "ROG Strix 650G",
+
+    "wattage": "650W",
+    "Certification": "80 Plus Gold Certification",
+    "category": "psu",
+    "warranty": "10 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/asus/rog-strix-650g/rog-strix-650g-01-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "DeepCool DQ1000M-V3L 1000W 80 Plus Gold Full Modular Power Supply",
+    "price": "13800",
+    "description": "DeepCool DQ1000M-V3L 100W is a Full Modular Power Supply with 80 Plus Gold certification. This new DeepCool power supply is made entirely of Japanese capacitors and employs high-quality switch MOSFETs. The DQ1000M-V3L is designed to provide stable output capacity with high conversion efficiency, improving the reliability of your PC system. The DeepCool Full Modular Power Supply is 80 PLUS Gold Certified, so you'll get all the power you need while saving up to 91.2% on energy consumption and waste heat. The DQ1000M-V3L delivers improved performance with lower power dissipation, increased quality, and better thermals to meet your needs.",
+    "Brand": "DeepCool",
+    "model": "DQ1000M-V3L",
+
+    "wattage": "1000W",
+    "Certification": "",
+    "category": "psu",
+    "warranty": "10 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/dq1000m-v3l/dq750m-v3l-004-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
 
   // ===========================techland=================
   {
-    "name": "",
-    "price": "",
+    "name": "Value-Top VT-P300B Real 300W ATX Power Supply",
+    "price": "1900",
+    "description": "The Value-Top VT-P300B is a reliable ATX power supply intended to meet the power requirements of modern computer systems. With a 300-watt capacity, it provides a robust and constant power supply to components, resulting in dependable system performance. Its ATX form factor improves compatibility, allowing easy integration into a wide range of computer cases.  ",
+    "Brand": "Value-Top",
+    "model": "VT-P300B",
 
-    "Brand": "",
-    "model": "",
-
-    "wattage": "",
-    "efficiency": "",
+    "wattage": "300W",
+    "Certification": "+85%",
     "category": "psu",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/value-top/vt-p300b/vt-p300b-01-500x500.webp",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
   },
-
   {
-    "name": "",
-    "price": "",
+    "name": "1stPlayer FK 300W Power Supply",
+    "price": "2500",
+    "description": "1stPlayer FK 300W comes with Double Forward + APFC (4.0 PPFC), EFF. high as 85% under typical loading. This power supply is the Perfect combination of cooling and silent with 12CM Hydraulic, Bearing fan. The powed supply has +12V Loadup To90% Of Total Power, Active PFC, Standby Power Low As 0.5W, Open Circuit Protect. ",
+    "Brand": "1stPlayer",
+    "model": "FK 300W",
 
-    "Brand": "",
-    "model": "",
-
-    "wattage": "",
-    "efficiency": "",
+    "wattage": "300W",
+    "Certification": "None 80+",
     "category": "psu",
     "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/1stplayer/fk-300w/fk-300w-02-500x500.jpg",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
   },
+  {
+    "name": "DeepCool PK450D 450 Watt 80 PLUS Bronze Power Supply",
+    "price": "3800",
+    "description": "The DeepCool PK-D series power supply offers reliable 80 PLUS Bronze Certification for computer system builds thanks to stability and low noise performance. The PK-D series is 80 PLUS Bronze certified, delivers up to 85% Certification at normal loads, and reduces unnecessary heat generation while boosting energy Certification. The +3.3V and +5V rails now include a highly efficient DC-DC board that helps with tighter voltage regulation and improves system compatibility for components of the next generation.",
+    "Brand": "DeepCool",
+    "model": "PK450D",
 
+    "wattage": "450 Watt",
+    "Certification": "80 PLUS Bronze Certified",
+    "category": "psu",
+    "warranty": "3 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pk450d/pk450d-01-500x500.webp",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },  
+  {
+    "name": "Corsair CX Series CX550 550W 80 PLUS Bronze ATX Power Supply",
+    "price": "5480",
+    "description": "The Corsair CX Series CX550 power supply is a dependable and efficient option for current PC systems. This semi-modular ATX power supply has a power output of 550W and 80 PLUS Bronze certification, resulting in up to 88% operating efficiency, less heat generation, and decreased energy expenditures. Full continuous power delivery ensures that your computer performs consistently and reliably. The CX550's 120mm thermally regulated low-noise cooling fan provides silent operation. The fan only runs at high speed when there is a high load, and it automatically slows down for quieter performance when there is a lower demand. This technology not only makes computing quieter, but also increases the power supply's total longevity.",
+    "Brand": "Corsair",
+    "model": "CX Series CX550",
+
+    "wattage": "550 Watt",
+    "Certification": "80+ Bronze",
+    "category": "psu",
+    "warranty": "5 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/corsair/cx-series-cx550/cx-series-cx550-01-500x500.webp",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  }, 
+  {
+    "name": "MSI MAG A650BN 650W 80 Plus Bronze Power Supply",
+    "price": "6650",
+    "description": "MSI MAG A650BN 650W 80 Plus Bronze Power Supply is an Entry level power supply that is also very budget friendly. MAG A550BN provides players with a safe, reliable, and efficient entry-level power supply option. Its core features include 80 PLUS Bronze certification, DC to DC circuit design, 12V single rail, active PFC, and low-noise fan. The MAG A650BN will be one of the best choices for players who are just getting started with looking into DIY computers. After installation, gamers can immediately enjoy a reliable performance experience without additional settings.",
+    "Brand": "MSI",
+    "model": "A650BN",
+
+    "wattage": "650 watt",
+    "Certification": "80 Plus Bronze",
+    "category": "psu",
+    "warranty": "5 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/msi/mag-a650bn/mag-a650bn-01-500x500.jpg",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "ASUS ROG Strix 650G 650W 80 Plus Gold Power Supply",
+    "price": "13500",
+    "description": "The ASUS ROG Strix 650G 80 Plus Gold Power Supply features high-end cooling and premium components together for an ultra-quiet high-performance product aimed at core gamers. It has a dual ball bearing setup that will last up to twice as long as a sleeve bearing design. ROG heatsinks cover critical components. Lower temps result in a longer lifespan and reduced noise. The integrated ROG heatsinks have 2x more volume than traditional designs, resulting in significantly lower temperatures inside Strix PSUs. This extends the lifespan of components and allows 0dB operation for a longer duration than standard designs. An onboard controller brings the 135mm fan to a standstill when total draw power (TDP) is below 40%, letting you enjoy light gaming in relative silence.",
+    "Brand": "ASUS",
+    "model": "ROG Strix 650G",
+
+    "wattage": "650W",
+    "Certification": "80 Plus Gold Certification",
+    "category": "psu",
+    "warranty": "10 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/asus/rog-strix-650g/rog-strix-650g-01-500x500.jpg",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "DeepCool DQ1000M-V3L 1000W 80 Plus Gold Full Modular Power Supply",
+    "price": "13700",
+    "description": "DeepCool DQ1000M-V3L 100W is a Full Modular Power Supply with 80 Plus Gold certification. This new DeepCool power supply is made entirely of Japanese capacitors and employs high-quality switch MOSFETs. The DQ1000M-V3L is designed to provide stable output capacity with high conversion efficiency, improving the reliability of your PC system. The DeepCool Full Modular Power Supply is 80 PLUS Gold Certified, so you'll get all the power you need while saving up to 91.2% on energy consumption and waste heat. The DQ1000M-V3L delivers improved performance with lower power dissipation, increased quality, and better thermals to meet your needs.",
+    "Brand": "DeepCool",
+    "model": "DQ1000M-V3L",
+
+    "wattage": "1000W",
+    "Certification": "",
+    "category": "psu",
+    "warranty": "10 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/dq1000m-v3l/dq750m-v3l-004-500x500.webp",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+ 
   // ===========================skyland=================
   {
-    "name": "",
-    "price": "",
-    "chipset": "",
-    "Brand": "",
-    "model": "",
-    "Memory": "",
-    "Memorytype": "",
-    "boostClock": "",
-    "recommendedPSU": "",
-    "category": "gpu",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "name": "Value-Top VT-P300B Real 300W ATX Power Supply",
+    "price": "1890",
+    "description": "The Value-Top VT-P300B is a reliable ATX power supply intended to meet the power requirements of modern computer systems. With a 300-watt capacity, it provides a robust and constant power supply to components, resulting in dependable system performance. Its ATX form factor improves compatibility, allowing easy integration into a wide range of computer cases.  ",
+    "Brand": "Value-Top",
+    "model": "VT-P300B",
+
+    "wattage": "300W",
+    "Certification": "+85%",
+    "category": "psu",
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/value-top/vt-p300b/vt-p300b-01-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
   },
   {
-    "name": "",
-    "price": "",
-    "chipset": "",
-    "Brand": "",
-    "model": "",
-    "Memory": "",
-    "Memorytype": "",
-    "boostClock": "",
-    "recommendedPSU": "",
-    "category": "gpu",
+    "name": "1stPlayer FK 300W Power Supply",
+    "price": "2350",
+    "description": "1stPlayer FK 300W comes with Double Forward + APFC (4.0 PPFC), EFF. high as 85% under typical loading. This power supply is the Perfect combination of cooling and silent with 12CM Hydraulic, Bearing fan. The powed supply has +12V Loadup To90% Of Total Power, Active PFC, Standby Power Low As 0.5W, Open Circuit Protect. ",
+    "Brand": "1stPlayer",
+    "model": "FK 300W",
+
+    "wattage": "300W",
+    "Certification": "None 80+",
+    "category": "psu",
     "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/1stplayer/fk-300w/fk-300w-02-500x500.jpg",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "DeepCool PK450D 450 Watt 80 PLUS Bronze Power Supply",
+    "price": "4050",
+    "description": "The DeepCool PK-D series power supply offers reliable 80 PLUS Bronze Certification for computer system builds thanks to stability and low noise performance. The PK-D series is 80 PLUS Bronze certified, delivers up to 85% Certification at normal loads, and reduces unnecessary heat generation while boosting energy Certification. The +3.3V and +5V rails now include a highly efficient DC-DC board that helps with tighter voltage regulation and improves system compatibility for components of the next generation.",
+    "Brand": "DeepCool",
+    "model": "PK450D",
+
+    "wattage": "450 Watt",
+    "Certification": "80 PLUS Bronze Certified",
+    "category": "psu",
+    "warranty": "3 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pk450d/pk450d-01-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },  
+  {
+    "name": "Corsair CX Series CX550 550W 80 PLUS Bronze ATX Power Supply",
+    "price": "5450",
+    "description": "The Corsair CX Series CX550 power supply is a dependable and efficient option for current PC systems. This semi-modular ATX power supply has a power output of 550W and 80 PLUS Bronze certification, resulting in up to 88% operating efficiency, less heat generation, and decreased energy expenditures. Full continuous power delivery ensures that your computer performs consistently and reliably. The CX550's 120mm thermally regulated low-noise cooling fan provides silent operation. The fan only runs at high speed when there is a high load, and it automatically slows down for quieter performance when there is a lower demand. This technology not only makes computing quieter, but also increases the power supply's total longevity.",
+    "Brand": "Corsair",
+    "model": "CX Series CX550",
+
+    "wattage": "550 Watt",
+    "Certification": "80+ Bronze",
+    "category": "psu",
+    "warranty": "5 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/corsair/cx-series-cx550/cx-series-cx550-01-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  }, 
+  {
+    "name": "MSI MAG A650BN 650W 80 Plus Bronze Power Supply",
+    "price": "6600",
+    "description": "MSI MAG A650BN 650W 80 Plus Bronze Power Supply is an Entry level power supply that is also very budget friendly. MAG A550BN provides players with a safe, reliable, and efficient entry-level power supply option. Its core features include 80 PLUS Bronze certification, DC to DC circuit design, 12V single rail, active PFC, and low-noise fan. The MAG A650BN will be one of the best choices for players who are just getting started with looking into DIY computers. After installation, gamers can immediately enjoy a reliable performance experience without additional settings.",
+    "Brand": "MSI",
+    "model": "A650BN",
+
+    "wattage": "650 watt",
+    "Certification": "80 Plus Bronze",
+    "category": "psu",
+    "warranty": "5 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/msi/mag-a650bn/mag-a650bn-01-500x500.jpg",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "ASUS ROG Strix 650G 650W 80 Plus Gold Power Supply",
+    "price": "13400",
+    "description": "The ASUS ROG Strix 650G 80 Plus Gold Power Supply features high-end cooling and premium components together for an ultra-quiet high-performance product aimed at core gamers. It has a dual ball bearing setup that will last up to twice as long as a sleeve bearing design. ROG heatsinks cover critical components. Lower temps result in a longer lifespan and reduced noise. The integrated ROG heatsinks have 2x more volume than traditional designs, resulting in significantly lower temperatures inside Strix PSUs. This extends the lifespan of components and allows 0dB operation for a longer duration than standard designs. An onboard controller brings the 135mm fan to a standstill when total draw power (TDP) is below 40%, letting you enjoy light gaming in relative silence.",
+    "Brand": "ASUS",
+    "model": "ROG Strix 650G",
+
+    "wattage": "650W",
+    "Certification": "80 Plus Gold Certification",
+    "category": "psu",
+    "warranty": "10 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/asus/rog-strix-650g/rog-strix-650g-01-500x500.jpg",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "DeepCool DQ1000M-V3L 1000W 80 Plus Gold Full Modular Power Supply",
+    "price": "13799",
+    "description": "DeepCool DQ1000M-V3L 100W is a Full Modular Power Supply with 80 Plus Gold certification. This new DeepCool power supply is made entirely of Japanese capacitors and employs high-quality switch MOSFETs. The DQ1000M-V3L is designed to provide stable output capacity with high conversion efficiency, improving the reliability of your PC system. The DeepCool Full Modular Power Supply is 80 PLUS Gold Certified, so you'll get all the power you need while saving up to 91.2% on energy consumption and waste heat. The DQ1000M-V3L delivers improved performance with lower power dissipation, increased quality, and better thermals to meet your needs.",
+    "Brand": "DeepCool",
+    "model": "DQ1000M-V3L",
+
+    "wattage": "1000W",
+    "Certification": "",
+    "category": "psu",
+    "warranty": "10 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/dq1000m-v3l/dq750m-v3l-004-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
   }
+
 ]

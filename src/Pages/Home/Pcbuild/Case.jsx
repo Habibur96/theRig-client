@@ -1,23 +1,21 @@
 import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
-import Pages from "./Pages";
+// import Pages from "./Pages";
 import ScrollToTop from "react-scroll-to-top";
-import MonitorFilter from "../Filter/MonitorFilter";
+// import MonitorFilter from "../Filter/MonitorFilter";
 
-const Monitor = () => {
+const Case = () => {
   const [product] = UseProduct();
 
   const location = useLocation();
-  const monitor = product.filter((item) => item.category === "monitor");
+  const casing = product.filter((item) => item.category === "case");
   const Component = {
-    Monitor: "monitor",
+    Case: "case",
   };
 
   return (
     <div className="flex column-gap-5">
-      <div className=" flex-[1]">
-        <MonitorFilter></MonitorFilter>
-      </div>
+      <div className=" flex-[1]">{/* <MonitorFilter></MonitorFilter> */}</div>
 
       <div className="flex-[4] mr-5">
         <div className="overflow-x-auto ">
@@ -30,7 +28,7 @@ const Monitor = () => {
             style={{ backgroundColor: "#FF8080" }}
           />
           <h3 className="text-2xl font-semibold">
-            {monitor.length} Compatible Products
+            {casing.length} Compatible Products
           </h3>
           <table className="table ">
             {/* head */}
@@ -39,12 +37,10 @@ const Monitor = () => {
               <tr>
                 <th></th>
                 <th>Name</th>
-
-                <th>Screen Size</th>
-
-                <th>Resolution</th>
-                <th>Refresh Rate</th>
-                <th>Panel Type</th>
+                <th>Motherboard Type</th>
+                <th>Psu</th>
+                <th>Color</th>
+                <th>Brand</th>
 
                 <th>
                   <div className="pl-4">Price</div>
@@ -53,7 +49,7 @@ const Monitor = () => {
             </thead>
 
             <tbody>
-              {monitor.map((item) => (
+              {casing.map((item) => (
                 <tr key={item._id}>
                   <td>
                     <label>
@@ -79,16 +75,15 @@ const Monitor = () => {
                     </div>
                   </td>
 
-                  <td className=" text-center">{item.ScreenSize}</td>
-                  <td className=" text-center">{item.Resolution}</td>
-                  <td className=" text-center">{item.RefreshRate}</td>
-
-                  <td className=" text-center">{item.Panel}</td>
+                  <td className=" text-start">{item.motherboardType}</td>
+                  <td className=" text-start">{item.psu}</td>
+                  <td className=" text-start">{item.color}</td>
+                  <td className=" text-start">{item.Brand}</td>
 
                   <td className="text-right">{item.price}tk</td>
                   <td>
                     <Link
-                      to={`/availableProduct/${Component.Monitor}/${item.model}`}
+                      to={`/availableProduct/${Component.Case}/${item.model}`}
                       state={{ from: location }}
                       replace
                       className="btn btn-sm btn-success "
@@ -103,10 +98,10 @@ const Monitor = () => {
           </table>
         </div>
 
-        <Pages></Pages>
+        {/* <Pages></Pages> */}
       </div>
     </div>
   );
 };
 
-export default Monitor;
+export default Case;

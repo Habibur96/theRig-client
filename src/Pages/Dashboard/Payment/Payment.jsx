@@ -11,9 +11,7 @@ import UseCart from "../../../Hooks/UseCart";
 
 const stripePromise = loadStripe(import.meta.env.VITE_payment_getway_pk);
 const Payment = () => {
- 
-  
-   const { email } = useParams();
+  const { email } = useParams();
 
   return (
     <div className="">
@@ -21,16 +19,21 @@ const Payment = () => {
         <title>TheRig | Payment</title>
       </Helmet> */}
 
-      <h1 className="text-3xl text-center  mt-2">Payment here..............</h1>
+      {/* <h1 className="text-3xl text-center  mt-2">Payment here..............</h1> */}
+      {/* <div className="divider text-lg font-semibold pt-10">
+        Create New Voucher
+      </div> */}
+      {/* <div className=" max-w-screen-xl mx-auto divider text-2xl pt-5">
+        Create New Voucher
+      </div> */}
       <Elements stripe={stripePromise}>
-        <CheckoutForm  email={email}></CheckoutForm>
+        <CheckoutForm email={email}></CheckoutForm>
       </Elements>
     </div>
   );
 };
 
 export default Payment;
-
 
 // import { loadStripe } from '@stripe/stripe-js'
 // import { Elements } from '@stripe/react-stripe-js'

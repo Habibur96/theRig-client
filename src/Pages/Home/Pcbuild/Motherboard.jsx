@@ -65,12 +65,9 @@ const Motherboard = () => {
                         </div>
                       </div>
                       <div>
-                        <Link
-                          to={`/availableProduct/${Component.motherboard}/${item.name} ` }
-                          state={{ from: location }} replace
-                        >
+                        
                           <div className="font-bold">{item.name}</div>
-                        </Link>
+                     
                       </div>
                     </div>
                   </td>
@@ -84,7 +81,10 @@ const Motherboard = () => {
 
                   <td className="text-right">{item.price}tk</td>
                   <td>
-                    <button className="btn btn-sm btn-success "style={{textTransform:"capitalize"}}>Add</button>
+                    <Link
+                     to={`/availableProduct/${Component.motherboard}/${item.model} ` }
+                     state={{ from: location }} replace
+                    className="btn btn-sm btn-success "style={{textTransform:"capitalize"}}>Add</Link>
                   </td>
                 </tr>
               ))}

@@ -63,6 +63,25 @@ import SkyLand from "../Pages/Dashboard/DeliveryAgent/SkyLand";
 import OrdersToDeliver from "../Pages/Dashboard/DeliveryAgent/OrdersToDeliver";
 import SendMessage from "../Pages/Dashboard/Orders/SendMessage";
 import MonitorDetails from "../Pages/Home/Pcbuild/productDetails/monitorDetails";
+import Gpu from "../Pages/Home/Pcbuild/Gpu";
+import { Keyboard } from "@mui/icons-material";
+import Mice from "../Pages/Home/Pcbuild/Mice";
+import CaseCooler from "../Pages/Home/Pcbuild/CaseCooler";
+import CpuCooler from "../Pages/Home/Pcbuild/CpuCooler";
+import Storage from "../Pages/Home/Pcbuild/Storage";
+import Case from "../Pages/Home/Pcbuild/Case";
+import GpuDetails from "../Pages/Home/Pcbuild/productDetails/GpuDetails";
+import Psu from "../Pages/Home/Pcbuild/Psu";
+import CaseCoolerDetails from "../Pages/Home/Pcbuild/productDetails/CaseCoolerDetails";
+import KeyboardDetails from "../Pages/Home/Pcbuild/productDetails/KeyboardDetails";
+import PsuDetails from "../Pages/Home/Pcbuild/productDetails/PsuDetails";
+import MiceDetails from "../Pages/Home/Pcbuild/productDetails/MiceDetails";
+import StorageDetails from "../Pages/Home/Pcbuild/productDetails/StorageDetails";
+import MotherboardDetails from "../Pages/Home/Pcbuild/productDetails/MotherboardDetails";
+import MemoryDetails from "../Pages/Home/Pcbuild/productDetails/MemoryDetails";
+import CpuCoolerDetails from "../Pages/Home/Pcbuild/productDetails/CpuCoolerDetails";
+import CaseDetails from "../Pages/Home/Pcbuild/productDetails/CaseDetails";
+import CpuDetails from "../Pages/Home/Pcbuild/productDetails/CpuDetails";
 // import Navber2 from "../Pages/Shared/Navber/Navber2";
 
 export const router = createBrowserRouter([
@@ -115,6 +134,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      
       {
         path: "wishlist/:tabName",
         element: (
@@ -131,15 +151,53 @@ export const router = createBrowserRouter([
         path: "productDetails",
         element: <MonitorDetails></MonitorDetails>,
       },
+      
       {
-        path: "productDetails/:model",
-        element: <MonitorDetails></MonitorDetails>,
+        path: "productDetails",
+        element: <GpuDetails></GpuDetails>,
       },
-      // {
-      //   path: "replaceProduct/:_id",
-      //   element: <ReplaceProduct></ReplaceProduct>,
-      //   loader: ({ params }) => fetch(`http://localhost:3000/products/${params._id}`),
-      // },
+      {
+        path: "productDetails",
+        element: <CaseCoolerDetails></CaseCoolerDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <KeyboardDetails></KeyboardDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <PsuDetails></PsuDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <MiceDetails></MiceDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <StorageDetails></StorageDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <MotherboardDetails></MotherboardDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <MemoryDetails></MemoryDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <CpuCoolerDetails></CpuCoolerDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <CaseDetails></CaseDetails>,
+      },
+      {
+        path: "productDetails",
+        element: <CpuDetails></CpuDetails>,
+      },
+      
+      
       {
         path: "searchCpu",
         element: <SearchCpu></SearchCpu>,
@@ -154,10 +212,6 @@ export const router = createBrowserRouter([
         element: <Cpu></Cpu>,
       },
 
-      // {
-      //   path: "motherboard/:pcbuilderProductName/:category",
-      //   element: <Motherboard></Motherboard>,
-      // },
       {
         path: "motherboards",
         element: <Motherboard></Motherboard>,
@@ -169,6 +223,39 @@ export const router = createBrowserRouter([
       {
         path: "memoryes",
         element: <Memory></Memory>,
+      },
+      {
+        path: "gpus",
+        element: <Gpu></Gpu>,
+      },
+      {
+        path: "psus",
+        element: <Psu></Psu>,
+      },
+      {
+        path: "keyboards",
+        element: <Keyboard></Keyboard>,
+      },
+      {
+        path: "mices",
+        element: <Mice></Mice>,
+      },
+      {
+        path: "casecoolers",
+        element: <CaseCooler></CaseCooler>,
+      },
+      {
+        path: "cpucoolers",
+        element: <CpuCooler></CpuCooler>,
+      },
+      
+      {
+        path: "storages",
+        element: <Storage></Storage>,
+      },
+      {
+        path: "cases",
+        element: <Case></Case>,
       },
 
       {
@@ -187,9 +274,41 @@ export const router = createBrowserRouter([
         path: "product/memory",
         element: <Memory></Memory>,
       },
+      {
+        path: "product/gpu",
+        element: <Gpu></Gpu>,
+      },
+      {
+        path: "product/case",
+        element: <Case></Case>,
+      },
+      {
+        path: "product/psu",
+        element: <Psu></Psu>,
+      },
+      {
+        path: "product/storage",
+        element: <Storage></Storage>,
+      },
+      {
+        path: "product/mice",
+        element: <Mice></Mice>,
+      },
+      {
+        path: "product/casecooler",
+        element: <CaseCooler></CaseCooler>,
+      },
+      {
+        path: "product/cpuclller",
+        element: <CpuCooler></CpuCooler>,
+      },
+      {
+        path: "product/keyboard",
+        element: <Keyboard></Keyboard>,
+      },
 
       {
-        path: "availableProduct/:collectionName/:name",
+        path: "availableProduct/:collectionName/:model",
         element: (
           // <PrivateRoute>
           <AvailableProduct></AvailableProduct>

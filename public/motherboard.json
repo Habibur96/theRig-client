@@ -18,7 +18,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
 
     },
     {
@@ -36,7 +37,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
 
     },
     {
@@ -54,7 +56,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
 
     },
     {
@@ -72,7 +75,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
 
     },
     //======Asus======
@@ -91,7 +95,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/asus/tuf-gaming-b450m-pro-ii/tuf-gaming-b450m-pro-ii-01-500x500.jpg",
@@ -108,7 +113,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/asus/b550m-e-wifi/b550m-e-wifi-01-500x500.jpg",
@@ -125,7 +131,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/asus/tuf-gaming-b650m-e-wifi/tuf-gaming-b650m-e-wifi-01-500x500.webp",
@@ -142,7 +149,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     //======MSI======
     {
@@ -160,7 +168,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/msi/pro-a620m-e/pro-a620m-e-01-500x500.webp",
@@ -177,7 +186,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/msi/mpg-b550-gaming-plus/mpg-b550-gaming-plus-500x500.jpg",
@@ -194,7 +204,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/msi/mag-b550-tomahawk-max-wifi/mag-b550-tomahawk-max-wifi-01-500x500.webp",
@@ -211,7 +222,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     //======Gigabyte======
     {
@@ -229,7 +241,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/gigabyte/aorus-b550m-elite/aorus-b550m-elite-500x500.jpg",
@@ -246,7 +259,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/gigabyte/b550-aorus-elite-ax-v2/b550-aorus-elite-ax-v2-500x500.jpg",
@@ -263,7 +277,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
     {
         "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/gigabyte/x670-gaming-x-ax/x670-gaming-x-ax-01-500x500.webp",
@@ -280,7 +295,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png"
+        "shoplogo":"https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
     },
 
     //==========Ryans==========
@@ -300,7 +316,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/asrock-b450m-steel-legend-ddr4-amd-am4-socket-11617526693.webp",
@@ -317,7 +334,9 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
+
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/asrock-b550-pro4-ddr4-amd-11618049186.webp",
@@ -334,7 +353,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/asrock-b550m-steel-legend-ddr4-amd-11618049631.webp",
@@ -351,7 +371,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     //======Asus======
     {
@@ -369,7 +390,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/asus-tuf-gaming-b450m-pro-ii-ddr4-amd-am4-socket-11650429093.webp",
@@ -386,7 +408,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/asus-tuf-gaming-b550m-e-amd-am4-socket-11639036309.webp",
@@ -403,7 +426,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "phttps://www.ryanscomputers.com/storage/products/main/asus-tuf-gaming-b650m-e-wi-fi-6-ddr5-amd-am5-11694063167.webp",
@@ -420,7 +444,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     //======MSI======
     {
@@ -438,7 +463,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/msi-pro-a620m-e-ddr5-amd-11683979595.webp",
@@ -455,7 +481,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/msi-mpg-b550-gaming-plus-ddr4-am4-socket-amd-11595502716.webp",
@@ -472,7 +499,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/msi-mag-b550-tomahawk-max-wi-fi-6e-ddr4-amd-11693387935.webp",
@@ -489,7 +517,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     //======Gigabyte======
     {
@@ -507,7 +536,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/gigabyte-b550m-aorus-elite-ddr4-am4-socket-amd-11595682569.webp",
@@ -524,7 +554,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/gigabyte-b550-aorus-elite-ax-v2-wi-fi-6-ddr4-21657014963.webp",
@@ -541,7 +572,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
     {
         "img": "https://www.ryanscomputers.com/storage/products/main/gigabyte-x670-gaming-x-ax-wi-fi-6e-ddr5-11668835256.webp",
@@ -558,7 +590,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+        "shoplogo":"https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+        "shopName": "ryans"
     },
 
     //==========Ultratech==========
@@ -578,7 +611,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/2021/12/asrock-b450m-steel-legend-motherboard-1-500x500.jpg.webp",
@@ -595,7 +629,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/2021/12/asrock-b550-pro4-ddr4-motherboard-1-500x500.jpg.webp",
@@ -612,7 +647,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/2021/12/asrock-b550m-steel-legend-motherboard-1-500x500.jpg.webp",
@@ -629,7 +665,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     //======Asus======
     {
@@ -647,7 +684,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/catalog/motherboard/asus/tuf-gaming-b450m-pro-ii/asus-tuf-gaming-b450m-pro-ii-amd-am4-micro-atx-gaming-motherboard-500x500.jpg.webp",
@@ -664,7 +702,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/2021/12/asus-tuf-gaming-b550m-e-wifi-motherboard-500x500.png.webp",
@@ -681,7 +720,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/catalog/products_2023/asus-tuf-gaming-b650m-e-wi-fi-ddr5-motherboard-500x500.jpg.webp",
@@ -698,7 +738,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     //======MSI======
     {
@@ -716,7 +757,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/catalog/motherboard/msi/pro-a620m-e/msi-pro-a620m-e-ddr5-amd-motherboard-500x500.jpg.webp",
@@ -733,7 +775,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/2021/12/msi-mpg-b550-gaming-plus-motherboard-1-500x500.jpg.webp",
@@ -750,7 +793,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/catalog/motherboard/msi/mag-b550-tomahawk-max-wifi/msi-mag-b550-tomahawk-max-wifi-motherboard-500x500.jpg.webp",
@@ -767,7 +811,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     //======Gigabyte======
     {
@@ -785,7 +830,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/catalog/motherboard/gigabyte/gigabyte-aorus-b550m-elite-amd-motherboard/gigabyte-b550m-aorus-elite-amd-motherboard-500x500.jpg.webp",
@@ -802,7 +848,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/2022/07/GIGABYTE-B550-AORUS-ELITE-AX-MOTHERBOARD-500x500.jpg.webp",
@@ -819,7 +866,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
     {
         "img": "https://www.ultratech.com.bd/image/cache/2022/11/Gigabyte-X670-GAMING-X-AX-AMD-ATX-Motherboard-500x500.jpg.webp",
@@ -836,7 +884,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+        "shoplogo":"https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
     },
 
     //==========Skyland==========
@@ -856,7 +905,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/b450m-steel-legend-500x500-1-500x500.jpg",
@@ -873,7 +923,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/2020/05/asrock-b550-pro4-amd-motherboard-price-in-bd-500x500.jpg",
@@ -890,7 +941,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/2020/05/asrock-b550m-steel-legend-amd-motherboard-price-in-bd-500x500.jpg",
@@ -907,7 +959,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     //======Asus======
     {
@@ -925,7 +978,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/TUF-GAMING-B450M-PRO-II-1-500x500.jpg",
@@ -942,7 +996,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/b550m-e-wifi-0-500x500.jpg",
@@ -959,7 +1014,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/October23/asus-tuf-gaming-b650m-e-wifi-motherboard-500x500.jpg",
@@ -976,7 +1032,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     //======MSI======
     {
@@ -994,7 +1051,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/pictures/MOTHERBOARD/msi-pro-a620m-e-ddr5-amd-motherboard-500x500.jpg",
@@ -1011,7 +1069,8 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/2020/07/mpg-b550-gaming-plus-1-500x500-1-500x500.jpg",
@@ -1028,7 +1087,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/B550-TOMAHAWK-1-500x500.jpg",
@@ -1045,7 +1105,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     //======Gigabyte======
     {
@@ -1063,7 +1124,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/aorus-b550m-elite-1-500x500-1-500x500.jpg",
@@ -1080,7 +1142,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.pnghttps://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.pnghttps://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/b550-aorus-elite-ax-500x500.jpg",
@@ -1097,7 +1160,8 @@
         "RamType":"DDR4",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.pnghttps://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.pnghttps://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     },
     {
         "img": "https://www.skyland.com.bd/image/cache/catalog/x670-gaming-x-ax-01-500x500-1-500x500.webp",
@@ -1114,6 +1178,7 @@
         "RamType":"DDR5",
         "category": "motherboard",
         "Availability":"In stock",
-        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+        "shoplogo":"https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+        "shopName": "skyland"
     }
 ]

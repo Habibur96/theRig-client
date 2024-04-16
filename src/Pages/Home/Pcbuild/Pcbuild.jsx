@@ -44,7 +44,7 @@ const Pcbuild = () => {
       selectedItems.cpu,
       selectedItems.motherboard,
       selectedItems.memory,
-      selectedItems.storage, // Note: json data add korar por comment-out kore dibe
+      selectedItems.storage, 
     ];
     const allFieldsFilled = requiredFields.every(
       (field) => field !== null && field !== undefined
@@ -56,9 +56,8 @@ const Pcbuild = () => {
   const [selectedItems, setSelectedItems] = useState({
     cpu: {},
     motherboard: {},
-    monitor: {},
     memory: {},
-    gpu: {},
+    storage: {},
   });
 
   //Saved pc
@@ -178,6 +177,13 @@ const Pcbuild = () => {
           monitor: {},
           memory: {},
           gpu: {},
+          psu: {},
+          casecooler: {},
+          cpucooler: {},
+          casing: {},
+          mice: {},
+          keyboard: {},
+          storage: {},
         };
 
         data?.forEach((item) => {
@@ -193,6 +199,31 @@ const Pcbuild = () => {
               break;
             case "memory":
               updatedSelectedItems.memory = item;
+              break;
+            case "gpu":
+              updatedSelectedItems.gpu = item;
+              break;
+            case "psu":
+              updatedSelectedItems.psu = item;
+              break;
+
+            case "casecooler":
+              updatedSelectedItems.casecooler = item;
+              break;
+            case "cpucooler":
+              updatedSelectedItems.cpucooler = item;
+              break;
+            case "casing":
+              updatedSelectedItems.casing = item;
+              break;
+            case "mice":
+              updatedSelectedItems.mice = item;
+              break;
+            case "keyboard":
+              updatedSelectedItems.keyboard = item;
+              break;
+            case "storage":
+              updatedSelectedItems.storage = item;
               break;
             default:
               break;
@@ -381,6 +412,7 @@ const Pcbuild = () => {
               "memoryes",
               selectedItems?.memory?.cartItemId
             )}
+
             {renderTableRow(
               "Storage",
               selectedItems?.storage?.img || storage,
@@ -393,16 +425,38 @@ const Pcbuild = () => {
               "storages",
               selectedItems?.storage?.cartItemId
             )}
-            {/* {renderTableRow("Storage", storage, "Storage [Required]", 0, "")} */}
-            {renderTableRow("Graphics Card", gpu, "Graphics Card", 0, "")}
-            {renderTableRow("Power Supply", psu, "Power Supply", 0, "")}
-            {renderTableRow("Casing", casing, "Casing", 0, "")}
+            {renderTableRow(
+              "Gpu",
+              selectedItems?.gpu?.img || gpu,
+              selectedItems?.gpu?.name || "Graphics Card",
+              selectedItems?.gpu?.price || "",
+              "gpus",
+              selectedItems?.gpu?.cartItemId
+            )}
+
+            {renderTableRow(
+              "Psu",
+              selectedItems?.psu?.img || memory,
+              selectedItems?.psu?.name || "Power Supply",
+
+              selectedItems?.psu?.price || "",
+              "psus",
+              selectedItems?.psu?.cartItemId
+            )}
+            {renderTableRow(
+              "Casing",
+              selectedItems?.casing?.img || casing,
+              selectedItems?.casing?.name || "Casing",
+              selectedItems?.casing?.price || "",
+              "cases",
+              selectedItems?.casing?.cartItemId
+            )}
+
             <div className="ml-28">
               <tr>
                 <th>Peripherals & Others</th>
               </tr>
             </div>
-
             {renderTableRow(
               "Monitor",
               selectedItems?.monitor?.img || monitor,
@@ -411,15 +465,34 @@ const Pcbuild = () => {
               "monitors",
               selectedItems?.monitor?.cartItemId
             )}
+
             {renderTableRow(
               "Casing Cooler",
-              casingCooler,
-              "Casing Cooler",
-              0,
-              ""
+              selectedItems?.casecooler?.img || casingCooler,
+              selectedItems?.casecooler?.name || "Casing Cooler",
+              selectedItems?.casecooler?.price || "",
+              "casecoolers",
+              selectedItems?.casecooler?.cartItemId
             )}
-            {renderTableRow("Keyboard", keyboard, "Keyboard", 0, "")}
-            {renderTableRow("Mouse", mouse, "Mouse", 0, "")}
+            {renderTableRow(
+              "Keyboard",
+              selectedItems?.keyboard?.img || keyboard,
+              selectedItems?.keyboard?.name || "Keyboard",
+              selectedItems?.keyboard?.price || "",
+              "keyboards",
+              selectedItems?.keyboard?.cartItemId
+            )}
+            {renderTableRow(
+              "Mice",
+              selectedItems?.mice?.img || mouse,
+              selectedItems?.mice?.name || "Mouse",
+              selectedItems?.mice?.price || "",
+              "mices",
+              selectedItems?.mice?.cartItemId
+            )}
+
+            {/* {renderTableRow("Keyboard", keyboard, "Keyboard", 0, "")}
+            {renderTableRow("Mouse", mouse, "Mouse", 0, "")} */}
           </tbody>
         </table>
       </div>

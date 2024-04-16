@@ -63,7 +63,7 @@ const AddCoupon = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-4 max-w-screen-md pt-20 ml-28 ">
           <div className="divider text-lg font-semibold pb-5">
-            Create New Coupon
+            Create New Voucher
           </div>
 
           <div className="flex gap-4">

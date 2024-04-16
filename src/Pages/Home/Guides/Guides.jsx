@@ -11,6 +11,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useWishList from "../../../Hooks/useWishList";
 import Swal from "sweetalert2";
 import UseCart from "../../../Hooks/UseCart";
+import { toast } from "react-toastify";
 
 const Guides = () => {
   const { user } = useContext(AuthContext);
@@ -42,20 +43,21 @@ const Guides = () => {
         productName: item?.buildName,
         productImg: item?.img,
         price: item?.totalPrice,
-        shopName:item?.shopName
+        shopName: item?.shopName,
       };
 
       const res = await axiosSecure.post("cart", cartItem);
       console.log(res.data);
       if (res.data?.insertedId) {
         refetch();
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Product added to the cart",
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        toast("BuildPc added to the cart ", { autoClose: 2000 });
+        // Swal.fire({
+        //   position: "top-end",
+        //   icon: "success",
+        //   title: "Product added to the cart",
+        //   showConfirmButton: false,
+        //   timer: 1500,
+        // });
       }
     } else {
       Swal.fire({
@@ -88,13 +90,14 @@ const Guides = () => {
       const res = await axiosSecure.post(`/wishlist`, wishlistItem);
       if (res.data?.insertedId) {
         wishListRefetch();
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Added to the wishlist",
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        toast("Added to the wishlist", { autoClose: 2000 });
+        // Swal.fire({
+        //   position: "top-end",
+        //   icon: "success",
+        //   title: "Added to the wishlist",
+        //   showConfirmButton: false,
+        //   timer: 1500,
+        // });
       }
     } else {
       Swal.fire({

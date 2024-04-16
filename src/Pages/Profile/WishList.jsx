@@ -100,7 +100,7 @@ const WishList = () => {
     });
   };
   return (
-    <div className="max-w-screen-lg mx-auto mt-20">
+    <div className="max-w-screen-lg mx-auto mt-20 pb-8">
       <div className="max-w-screen-md mx-auto">
         <ProfileHeader></ProfileHeader>
       </div>

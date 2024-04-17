@@ -705,11 +705,11 @@ const Pcbuild = () => {
               updatedSelectedItems.psu = item;
               break;
 
-            case "casecooler":
-              updatedSelectedItems.casecooler = item;
+            case "casingCooler":
+              updatedSelectedItems.casingCooler = item;
               break;
             case "cpuCooler":
-              updatedSelectedItems.cpucooler = item;
+              updatedSelectedItems.cpuCooler = item;
               break;
             case "casing":
               updatedSelectedItems.casing = item;
@@ -975,11 +975,11 @@ const Pcbuild = () => {
 
             {renderTableRow(
               "Casing Cooler",
-              selectedItems?.casecooler?.img || casingCooler,
-              selectedItems?.casecooler?.name || "Casing Cooler",
-              selectedItems?.casecooler?.price || "",
+              selectedItems?.casingCooler?.img || casingCooler,
+              selectedItems?.casingCooler?.name || "Casing Cooler",
+              selectedItems?.casingCooler?.price || "",
               "casecoolers",
-              selectedItems?.casecooler?.cartItemId
+              selectedItems?.casingCooler?.cartItemId
             )}
             {renderTableRow(
               "Keyboard",

@@ -1,0 +1,435 @@
+[
+    // ===========================startech=================
+    {
+      "name": "Deepcool RF 120 B Blue LED Case Fan",
+      "price": "500",
+      "description": "Deepcool RF 120 B is a budget friendly Case Fan that is ideal for any budget gaming setup. This casing comes with a Single color LED light built within the fan. As a part of the New RF 120 series this fan has 4 single-color LED lights build into the case fan. This case fan is available at the most favorable price possible. RF 120 B is a high brightness hydro bearing case fan with build-in Blue colored LED. With the 4 ultra-bright LED lights in the body, RF120 B gives bright and clean visual experience.The 9-blade case fan balances airflow and air pressure to offer perfect compatibility with your case or the cooler. The Noise Level of this case fan is 21.9 dB. This case fan is powered in two ways, either through a 4 Pin molex connector or 3 pin motherboard connector. But be sure not to use both connectors at the same time. The overall dimension of this casing fan is 120 x 120 x 25 mm and it weights around 150 grams. The wattage range is from 1W to 5W while the average wattage is 2.88 W Deepcool RF 120 B Blue LED Case Fan offers 01 year warranty.",
+      "Brand": "Deepcool",
+      "model": "RF 120 B",
+      "color": "White fan with Blue LED",
+      "fanSpeed": "1300 RPM+10%",
+      "noise": "21.9 dB(A)",
+      "size":"120 x 120 x 25mm",
+      "category": "casingCooler",
+      "warranty": "1 Years",
+      "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/rf-120-b/rf-120-b-01-500x500.jpg",
+      "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+      "shopName": "startech"
+    },
+  
+    {
+        "name": "Value-Top W1298ARGB 12CM ARGB Case Fan White",
+        "price": "450",
+        "description": "The stylish and versatile VALUE-TOP W1298ARGB 12CM Ring Light ARGB Case Fan is a great way to cool your PC. Its fan speed of 1100 RPM ± 10% ensures efficient airflow to keep your system cool and operating correctly. Because it uses between 3 and 4 watts of power, it is energy-efficient. The fan features a 4-pin connector that is simple to install and use. Its 120mm size complements many PC case styles, and its black finish offers your setup a fashionable look. High performance PC cooling arrangement is provided by this fan.",
+        "Brand": "Value-Top",
+        "model": "W1298ARGB",
+        "color": "White",
+        "fanSpeed": "1100 RPM ± 10%",
+        "noise": "21.9 dB",
+        "size":"120mm",
+        "category": "casingCooler",
+        "warranty": "none",
+        "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/value-top/w1298argb/w1298argb-01-500x500.webp",
+        "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
+      },
+     
+      {
+        "name": "Aigo DarkFlash DR12 Pro 3-in-1 RGB Case Fan",
+        "price": "2800",
+        "description": "The Aigo DarkFlash DR12 Pro 3-in-1 RGB Case Fan has an elegant look and colorful lightning design. It comes with a 3-in-1 remote control that enables users to easily select preferred RGB lighting effects, colors, and fan speed. It is designed to decorate your RGB systems and you can enjoy the performance in a beautiful setting. Equipped with rubber pads and hydraulic bearings, which greatly reduce operating noise and improve efficiency. It makes the Aigo fan spin at 1200RPM at low 16dBA.",
+        "Brand": "Aigo",
+        "model": "DarkFlash DR12 Pro",
+        "color": "Black",
+        "fanSpeed": "1200(+/-10%) RPM",
+        "noise": "8 - 27 dBA",
+        "size":"120mm(W) x 120mm(D) x 25mm(H)",
+        "category": "casingCooler",
+        "warranty": "1 Years",
+        "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/aigo/darkflash-dr12-pro/darkflash-dr12-pro-01-500x500.webp",
+        "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
+      },
+     
+      {
+        "name": "Revenger PRISM-1 120mm ARGB Case Fan",
+        "price": "550",
+        "description": "The Revenger PRISM-1 120mm ARGB Case Fan provides effective cooling. They provide a steady airflow of 30 CFM while operating at a fan speed of 1200RPM 10% to keep your system cool. Despite their powerful performance, they run quietly, producing 19.5 dBA of noise. The Revenger PRISM-1 120mm ARGB Case Fan has a 4-pin connector for easy installation, dimensions of 120 120 25mm, and a weight of 110g. These fans are dependable and convenient for enhancing your PC cooling system, with a power consumption of 3W 10% and a cable length of 40cm.",
+        "Brand": "Revenger",
+        "model": " PRISM-1",
+        "color": "Black",
+        "fanSpeed": "1200RPM ±10%",
+        "noise": "19.5 dBA",
+        "size":"120 × 120 × 25mm",
+        "category": "casingCooler",
+        "warranty": "1 Years",
+        "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/revenger/prism-1/prism-1-01-500x500.webp",
+        "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
+      },
+     
+
+      {
+        "name": "Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Fan Kit with Lighting Node CORE",
+        "price": "9000",
+        "description": "The Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Fan Kit with Lighting Node CORE features four zones and 34 LEDs per fan for vibrant lighting effects. The fan produces stunning visuals. Take complete control of the RGB lighting with the Lighting Node CORE, which is easily managed with the CORSAIR iCUE software. Synchronize your iCUE-compatible devices' lighting and enjoy immersive lighting experiences with supported games. With powerful fan speeds, low-noise fan blades, rubber dampers to reduce vibration, and stylish metal logo plates, you can enjoy efficient cooling and quiet operation. With the Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Pack, you can enjoy mesmerizing lighting, superior cooling, and a touch of sophistication in your build.",
+        "Brand": "Corsair",
+        "model": "iCUE QL120 RGB",
+        "color": "White",
+        "fanSpeed": "1500 RPM +/- 10%",
+        "noise": "26(dB)",
+        "size":"120mm x 25mm",
+        "category": "casingCooler",
+        "warranty": "2 Years",
+        "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/corsair/icue-ql120-rgb/icue-ql120-rgb-white-triple-pack-01-500x500.webp",
+        "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
+      },
+     
+      {
+        "name": "Lian Li UNI FAN SL V2 120 ARGB Case Fan Triple Pack",
+        "price": "9500",
+        "description": "The Lian Li UNI FAN SL V2 120 ARGB Case Fan Triple Pack features a unique design that promotes airflow while adding a splash of color to your system. Three ARGB fans and a controller are included in the UNI FAN SL V2 3-pack. Each fan is outfitted with Fluid Dynamic Bearings (FDB), which enable fan speeds ranging from 250 to 2000 rpm, promoting a maximum airflow of 64.5 CFM and a maximum air pressure of 2.59mm H20, ensuring proper thermal performance throughout your case while maintaining a low noise level of 29.2 dBA.",
+        "Brand": "Lian Li",
+        "model": "UNI FAN SL V2 120",
+        "color": "Black",
+        "fanSpeed": "250~2000 RPM",
+        "noise": "29.2 dB(A) Max",
+        "size":"120 X 120 X 28 (mm)",
+        "category": "casingCooler",
+        "warranty": "1 Years",
+        "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/lian-li/uni-fan-sl-v2-120/uni-fan-sl-v2-120-triple-pack-black-02-500x500.webp",
+        "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+        "shopName": "startech"
+      },
+     
+
+     // ===========================ultratech=================
+     {
+        "name": "Deepcool RF 120 B Blue LED Case Fan",
+        "price": "500",
+        "description": "Deepcool RF 120 B is a budget friendly Case Fan that is ideal for any budget gaming setup. This casing comes with a Single color LED light built within the fan. As a part of the New RF 120 series this fan has 4 single-color LED lights build into the case fan. This case fan is available at the most favorable price possible. RF 120 B is a high brightness hydro bearing case fan with build-in Blue colored LED. With the 4 ultra-bright LED lights in the body, RF120 B gives bright and clean visual experience.The 9-blade case fan balances airflow and air pressure to offer perfect compatibility with your case or the cooler. The Noise Level of this case fan is 21.9 dB. This case fan is powered in two ways, either through a 4 Pin molex connector or 3 pin motherboard connector. But be sure not to use both connectors at the same time. The overall dimension of this casing fan is 120 x 120 x 25 mm and it weights around 150 grams. The wattage range is from 1W to 5W while the average wattage is 2.88 W Deepcool RF 120 B Blue LED Case Fan offers 01 year warranty.",
+        "Brand": "Deepcool",
+        "model": "RF 120 B",
+        "color": "White fan with Blue LED",
+        "fanSpeed": "1300 RPM+10%",
+        "noise": "21.9 dB(A)",
+        "size":"120 x 120 x 25mm",
+        "category": "casingCooler",
+        "warranty": "1 Years",
+        "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/rf-120-b/rf-120-b-01-500x500.jpg",
+        "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+        "shopName": "ultratech"
+      },
+    
+      {
+          "name": "Value-Top W1298ARGB 12CM ARGB Case Fan White",
+          "price": "500",
+          "description": "The stylish and versatile VALUE-TOP W1298ARGB 12CM Ring Light ARGB Case Fan is a great way to cool your PC. Its fan speed of 1100 RPM ± 10% ensures efficient airflow to keep your system cool and operating correctly. Because it uses between 3 and 4 watts of power, it is energy-efficient. The fan features a 4-pin connector that is simple to install and use. Its 120mm size complements many PC case styles, and its black finish offers your setup a fashionable look. High performance PC cooling arrangement is provided by this fan.",
+          "Brand": "Value-Top",
+          "model": "W1298ARGB",
+          "color": "White",
+          "fanSpeed": "1100 RPM ± 10%",
+          "noise": "21.9 dB",
+          "size":"120mm",
+          "category": "casingCooler",
+          "warranty": "none",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/value-top/w1298argb/w1298argb-01-500x500.webp",
+          "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+          "shopName": "ultratech"
+        },
+       
+        {
+          "name": "Aigo DarkFlash DR12 Pro 3-in-1 RGB Case Fan",
+          "price": "2700",
+          "description": "The Aigo DarkFlash DR12 Pro 3-in-1 RGB Case Fan has an elegant look and colorful lightning design. It comes with a 3-in-1 remote control that enables users to easily select preferred RGB lighting effects, colors, and fan speed. It is designed to decorate your RGB systems and you can enjoy the performance in a beautiful setting. Equipped with rubber pads and hydraulic bearings, which greatly reduce operating noise and improve efficiency. It makes the Aigo fan spin at 1200RPM at low 16dBA.",
+          "Brand": "Aigo",
+          "model": "DarkFlash DR12 Pro",
+          "color": "Black",
+          "fanSpeed": "1200(+/-10%) RPM",
+          "noise": "8 - 27 dBA",
+          "size":"120mm(W) x 120mm(D) x 25mm(H)",
+          "category": "casingCooler",
+          "warranty": "1 Years",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/aigo/darkflash-dr12-pro/darkflash-dr12-pro-01-500x500.webp",
+          "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+          "shopName": "ultratech"
+        },
+       
+  
+  
+  
+        {
+          "name": "Revenger PRISM-1 120mm ARGB Case Fan",
+          "price": "550",
+          "description": "The Revenger PRISM-1 120mm ARGB Case Fan provides effective cooling. They provide a steady airflow of 30 CFM while operating at a fan speed of 1200RPM 10% to keep your system cool. Despite their powerful performance, they run quietly, producing 19.5 dBA of noise. The Revenger PRISM-1 120mm ARGB Case Fan has a 4-pin connector for easy installation, dimensions of 120 120 25mm, and a weight of 110g. These fans are dependable and convenient for enhancing your PC cooling system, with a power consumption of 3W 10% and a cable length of 40cm.",
+          "Brand": "Revenger",
+          "model": " PRISM-1",
+          "color": "Black",
+          "fanSpeed": "1200RPM ±10%",
+          "noise": "19.5 dBA",
+          "size":"120 × 120 × 25mm",
+          "category": "casingCooler",
+          "warranty": "1 Years",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/revenger/prism-1/prism-1-01-500x500.webp",
+          "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+          "shopName": "ultratech"
+        },
+       
+  
+        {
+          "name": "Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Fan Kit with Lighting Node CORE",
+          "price": "8900",
+          "description": "The Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Fan Kit with Lighting Node CORE features four zones and 34 LEDs per fan for vibrant lighting effects. The fan produces stunning visuals. Take complete control of the RGB lighting with the Lighting Node CORE, which is easily managed with the CORSAIR iCUE software. Synchronize your iCUE-compatible devices' lighting and enjoy immersive lighting experiences with supported games. With powerful fan speeds, low-noise fan blades, rubber dampers to reduce vibration, and stylish metal logo plates, you can enjoy efficient cooling and quiet operation. With the Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Pack, you can enjoy mesmerizing lighting, superior cooling, and a touch of sophistication in your build.",
+          "Brand": "Corsair",
+          "model": "iCUE QL120 RGB",
+          "color": "White",
+          "fanSpeed": "1500 RPM +/- 10%",
+          "noise": "26(dB)",
+          "size":"120mm x 25mm",
+          "category": "casingCooler",
+          "warranty": "2 Years",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/corsair/icue-ql120-rgb/icue-ql120-rgb-white-triple-pack-01-500x500.webp",
+          "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+          "shopName": "ultratech"
+        },
+       
+  
+  
+        {
+          "name": "Lian Li UNI FAN SL V2 120 ARGB Case Fan Triple Pack",
+          "price": "9600",
+          "description": "The Lian Li UNI FAN SL V2 120 ARGB Case Fan Triple Pack features a unique design that promotes airflow while adding a splash of color to your system. Three ARGB fans and a controller are included in the UNI FAN SL V2 3-pack. Each fan is outfitted with Fluid Dynamic Bearings (FDB), which enable fan speeds ranging from 250 to 2000 rpm, promoting a maximum airflow of 64.5 CFM and a maximum air pressure of 2.59mm H20, ensuring proper thermal performance throughout your case while maintaining a low noise level of 29.2 dBA.",
+          "Brand": "Lian Li",
+          "model": "UNI FAN SL V2 120",
+          "color": "Black",
+          "fanSpeed": "250~2000 RPM",
+          "noise": "29.2 dB(A) Max",
+          "size":"120 X 120 X 28 (mm)",
+          "category": "casingCooler",
+          "warranty": "1 Years",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/lian-li/uni-fan-sl-v2-120/uni-fan-sl-v2-120-triple-pack-black-02-500x500.webp",
+          "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+          "shopName": "ultratech"
+        },
+       
+  
+      // ==========================techland=================
+      {
+        "name": "Deepcool RF 120 B Blue LED Case Fan",
+        "price": "500",
+        "description": "Deepcool RF 120 B is a budget friendly Case Fan that is ideal for any budget gaming setup. This casing comes with a Single color LED light built within the fan. As a part of the New RF 120 series this fan has 4 single-color LED lights build into the case fan. This case fan is available at the most favorable price possible. RF 120 B is a high brightness hydro bearing case fan with build-in Blue colored LED. With the 4 ultra-bright LED lights in the body, RF120 B gives bright and clean visual experience.The 9-blade case fan balances airflow and air pressure to offer perfect compatibility with your case or the cooler. The Noise Level of this case fan is 21.9 dB. This case fan is powered in two ways, either through a 4 Pin molex connector or 3 pin motherboard connector. But be sure not to use both connectors at the same time. The overall dimension of this casing fan is 120 x 120 x 25 mm and it weights around 150 grams. The wattage range is from 1W to 5W while the average wattage is 2.88 W Deepcool RF 120 B Blue LED Case Fan offers 01 year warranty.",
+        "Brand": "Deepcool",
+        "model": "RF 120 B",
+        "color": "White fan with Blue LED",
+        "fanSpeed": "1300 RPM+10%",
+        "noise": "21.9 dB(A)",
+        "size":"120 x 120 x 25mm",
+        "category": "casingCooler",
+        "warranty": "1 Years",
+        "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/rf-120-b/rf-120-b-01-500x500.jpg",
+        "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+        "shopName": "techland"
+      },
+    
+      {
+          "name": "Value-Top W1298ARGB 12CM ARGB Case Fan White",
+          "price": "470",
+          "description": "The stylish and versatile VALUE-TOP W1298ARGB 12CM Ring Light ARGB Case Fan is a great way to cool your PC. Its fan speed of 1100 RPM ± 10% ensures efficient airflow to keep your system cool and operating correctly. Because it uses between 3 and 4 watts of power, it is energy-efficient. The fan features a 4-pin connector that is simple to install and use. Its 120mm size complements many PC case styles, and its black finish offers your setup a fashionable look. High performance PC cooling arrangement is provided by this fan.",
+          "Brand": "Value-Top",
+          "model": "W1298ARGB",
+          "color": "White",
+          "fanSpeed": "1100 RPM ± 10%",
+          "noise": "21.9 dB",
+          "size":"120mm",
+          "category": "casingCooler",
+          "warranty": "none",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/value-top/w1298argb/w1298argb-01-500x500.webp",
+          "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+          "shopName": "techland"
+        },
+       
+        {
+          "name": "Aigo DarkFlash DR12 Pro 3-in-1 RGB Case Fan",
+          "price": "2800",
+          "description": "The Aigo DarkFlash DR12 Pro 3-in-1 RGB Case Fan has an elegant look and colorful lightning design. It comes with a 3-in-1 remote control that enables users to easily select preferred RGB lighting effects, colors, and fan speed. It is designed to decorate your RGB systems and you can enjoy the performance in a beautiful setting. Equipped with rubber pads and hydraulic bearings, which greatly reduce operating noise and improve efficiency. It makes the Aigo fan spin at 1200RPM at low 16dBA.",
+          "Brand": "Aigo",
+          "model": "DarkFlash DR12 Pro",
+          "color": "Black",
+          "fanSpeed": "1200(+/-10%) RPM",
+          "noise": "8 - 27 dBA",
+          "size":"120mm(W) x 120mm(D) x 25mm(H)",
+          "category": "casingCooler",
+          "warranty": "1 Years",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/aigo/darkflash-dr12-pro/darkflash-dr12-pro-01-500x500.webp",
+          "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+          "shopName": "techland"
+        },
+       
+  
+  
+  
+        {
+          "name": "Revenger PRISM-1 120mm ARGB Case Fan",
+          "price": "550",
+          "description": "The Revenger PRISM-1 120mm ARGB Case Fan provides effective cooling. They provide a steady airflow of 30 CFM while operating at a fan speed of 1200RPM 10% to keep your system cool. Despite their powerful performance, they run quietly, producing 19.5 dBA of noise. The Revenger PRISM-1 120mm ARGB Case Fan has a 4-pin connector for easy installation, dimensions of 120 120 25mm, and a weight of 110g. These fans are dependable and convenient for enhancing your PC cooling system, with a power consumption of 3W 10% and a cable length of 40cm.",
+          "Brand": "Revenger",
+          "model": " PRISM-1",
+          "color": "Black",
+          "fanSpeed": "1200RPM ±10%",
+          "noise": "19.5 dBA",
+          "size":"120 × 120 × 25mm",
+          "category": "casingCooler",
+          "warranty": "1 Years",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/revenger/prism-1/prism-1-01-500x500.webp",
+          "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+          "shopName": "techland"
+        },
+       
+  
+        {
+          "name": "Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Fan Kit with Lighting Node CORE",
+          "price": "9100",
+          "description": "The Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Fan Kit with Lighting Node CORE features four zones and 34 LEDs per fan for vibrant lighting effects. The fan produces stunning visuals. Take complete control of the RGB lighting with the Lighting Node CORE, which is easily managed with the CORSAIR iCUE software. Synchronize your iCUE-compatible devices' lighting and enjoy immersive lighting experiences with supported games. With powerful fan speeds, low-noise fan blades, rubber dampers to reduce vibration, and stylish metal logo plates, you can enjoy efficient cooling and quiet operation. With the Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Pack, you can enjoy mesmerizing lighting, superior cooling, and a touch of sophistication in your build.",
+          "Brand": "Corsair",
+          "model": "iCUE QL120 RGB",
+          "color": "White",
+          "fanSpeed": "1500 RPM +/- 10%",
+          "noise": "26(dB)",
+          "size":"120mm x 25mm",
+          "category": "casingCooler",
+          "warranty": "2 Years",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/corsair/icue-ql120-rgb/icue-ql120-rgb-white-triple-pack-01-500x500.webp",
+          "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+          "shopName": "techland"
+        },
+       
+  
+        {
+          "name": "Lian Li UNI FAN SL V2 120 ARGB Case Fan Triple Pack",
+          "price": "9400",
+          "description": "The Lian Li UNI FAN SL V2 120 ARGB Case Fan Triple Pack features a unique design that promotes airflow while adding a splash of color to your system. Three ARGB fans and a controller are included in the UNI FAN SL V2 3-pack. Each fan is outfitted with Fluid Dynamic Bearings (FDB), which enable fan speeds ranging from 250 to 2000 rpm, promoting a maximum airflow of 64.5 CFM and a maximum air pressure of 2.59mm H20, ensuring proper thermal performance throughout your case while maintaining a low noise level of 29.2 dBA.",
+          "Brand": "Lian Li",
+          "model": "UNI FAN SL V2 120",
+          "color": "Black",
+          "fanSpeed": "250~2000 RPM",
+          "noise": "29.2 dB(A) Max",
+          "size":"120 X 120 X 28 (mm)",
+          "category": "casingCooler",
+          "warranty": "1 Years",
+          "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/lian-li/uni-fan-sl-v2-120/uni-fan-sl-v2-120-triple-pack-black-02-500x500.webp",
+          "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+          "shopName": "techland"
+        },
+       
+  
+        // ==========================skyland=================
+
+        {
+            "name": "Deepcool RF 120 B Blue LED Case Fan",
+            "price": "470",
+            "description": "Deepcool RF 120 B is a budget friendly Case Fan that is ideal for any budget gaming setup. This casing comes with a Single color LED light built within the fan. As a part of the New RF 120 series this fan has 4 single-color LED lights build into the case fan. This case fan is available at the most favorable price possible. RF 120 B is a high brightness hydro bearing case fan with build-in Blue colored LED. With the 4 ultra-bright LED lights in the body, RF120 B gives bright and clean visual experience.The 9-blade case fan balances airflow and air pressure to offer perfect compatibility with your case or the cooler. The Noise Level of this case fan is 21.9 dB. This case fan is powered in two ways, either through a 4 Pin molex connector or 3 pin motherboard connector. But be sure not to use both connectors at the same time. The overall dimension of this casing fan is 120 x 120 x 25 mm and it weights around 150 grams. The wattage range is from 1W to 5W while the average wattage is 2.88 W Deepcool RF 120 B Blue LED Case Fan offers 01 year warranty.",
+            "Brand": "Deepcool",
+            "model": "RF 120 B",
+            "color": "White fan with Blue LED",
+            "fanSpeed": "1300 RPM+10%",
+            "noise": "21.9 dB(A)",
+            "size":"120 x 120 x 25mm",
+            "category": "casingCooler",
+            "warranty": "1 Years",
+            "img": "https://www.startech.com.bd/image/cache/catalog/casing/deepcool/rf-120-b/rf-120-b-01-500x500.jpg",
+            "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+            "shopName": "skyland"
+          },
+        
+          {
+              "name": "Value-Top W1298ARGB 12CM ARGB Case Fan White",
+              "price": "500",
+              "description": "The stylish and versatile VALUE-TOP W1298ARGB 12CM Ring Light ARGB Case Fan is a great way to cool your PC. Its fan speed of 1100 RPM ± 10% ensures efficient airflow to keep your system cool and operating correctly. Because it uses between 3 and 4 watts of power, it is energy-efficient. The fan features a 4-pin connector that is simple to install and use. Its 120mm size complements many PC case styles, and its black finish offers your setup a fashionable look. High performance PC cooling arrangement is provided by this fan.",
+              "Brand": "Value-Top",
+              "model": "W1298ARGB",
+              "color": "White",
+              "fanSpeed": "1100 RPM ± 10%",
+              "noise": "21.9 dB",
+              "size":"120mm",
+              "category": "casingCooler",
+              "warranty": "none",
+              "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/value-top/w1298argb/w1298argb-01-500x500.webp",
+              "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+              "shopName": "skyland"
+            },
+           
+            {
+              "name": "Aigo DarkFlash DR12 Pro 3-in-1 RGB Case Fan",
+              "price": "2850",
+              "description": "The Aigo DarkFlash DR12 Pro 3-in-1 RGB Case Fan has an elegant look and colorful lightning design. It comes with a 3-in-1 remote control that enables users to easily select preferred RGB lighting effects, colors, and fan speed. It is designed to decorate your RGB systems and you can enjoy the performance in a beautiful setting. Equipped with rubber pads and hydraulic bearings, which greatly reduce operating noise and improve efficiency. It makes the Aigo fan spin at 1200RPM at low 16dBA.",
+              "Brand": "Aigo",
+              "model": "DarkFlash DR12 Pro",
+              "color": "Black",
+              "fanSpeed": "1200(+/-10%) RPM",
+              "noise": "8 - 27 dBA",
+              "size":"120mm(W) x 120mm(D) x 25mm(H)",
+              "category": "casingCooler",
+              "warranty": "1 Years",
+              "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/aigo/darkflash-dr12-pro/darkflash-dr12-pro-01-500x500.webp",
+              "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+              "shopName": "skyland"
+            },
+           
+      
+            {
+              "name": "Revenger PRISM-1 120mm ARGB Case Fan",
+              "price": "500",
+              "description": "The Revenger PRISM-1 120mm ARGB Case Fan provides effective cooling. They provide a steady airflow of 30 CFM while operating at a fan speed of 1200RPM 10% to keep your system cool. Despite their powerful performance, they run quietly, producing 19.5 dBA of noise. The Revenger PRISM-1 120mm ARGB Case Fan has a 4-pin connector for easy installation, dimensions of 120 120 25mm, and a weight of 110g. These fans are dependable and convenient for enhancing your PC cooling system, with a power consumption of 3W 10% and a cable length of 40cm.",
+              "Brand": "Revenger",
+              "model": " PRISM-1",
+              "color": "Black",
+              "fanSpeed": "1200RPM ±10%",
+              "noise": "19.5 dBA",
+              "size":"120 × 120 × 25mm",
+              "category": "casingCooler",
+              "warranty": "1 Years",
+              "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/revenger/prism-1/prism-1-01-500x500.webp",
+              "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+              "shopName": "skyland"
+            },
+           
+
+            {
+              "name": "Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Fan Kit with Lighting Node CORE",
+              "price": "9000",
+              "description": "The Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Fan Kit with Lighting Node CORE features four zones and 34 LEDs per fan for vibrant lighting effects. The fan produces stunning visuals. Take complete control of the RGB lighting with the Lighting Node CORE, which is easily managed with the CORSAIR iCUE software. Synchronize your iCUE-compatible devices' lighting and enjoy immersive lighting experiences with supported games. With powerful fan speeds, low-noise fan blades, rubber dampers to reduce vibration, and stylish metal logo plates, you can enjoy efficient cooling and quiet operation. With the Corsair iCUE QL120 RGB 120mm PWM White Case Fan Triple Pack, you can enjoy mesmerizing lighting, superior cooling, and a touch of sophistication in your build.",
+              "Brand": "Corsair",
+              "model": "iCUE QL120 RGB",
+              "color": "White",
+              "fanSpeed": "1500 RPM +/- 10%",
+              "noise": "26(dB)",
+              "size":"120mm x 25mm",
+              "category": "casingCooler",
+              "warranty": "2 Years",
+              "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/corsair/icue-ql120-rgb/icue-ql120-rgb-white-triple-pack-01-500x500.webp",
+              "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+              "shopName": "skyland"
+            },
+           
+      
+            {
+              "name": "Lian Li UNI FAN SL V2 120 ARGB Case Fan Triple Pack",
+              "price": "8700",
+              "description": "The Lian Li UNI FAN SL V2 120 ARGB Case Fan Triple Pack features a unique design that promotes airflow while adding a splash of color to your system. Three ARGB fans and a controller are included in the UNI FAN SL V2 3-pack. Each fan is outfitted with Fluid Dynamic Bearings (FDB), which enable fan speeds ranging from 250 to 2000 rpm, promoting a maximum airflow of 64.5 CFM and a maximum air pressure of 2.59mm H20, ensuring proper thermal performance throughout your case while maintaining a low noise level of 29.2 dBA.",
+              "Brand": "Lian Li",
+              "model": "UNI FAN SL V2 120",
+              "color": "Black",
+              "fanSpeed": "250~2000 RPM",
+              "noise": "29.2 dB(A) Max",
+              "size":"120 X 120 X 28 (mm)",
+              "category": "casingCooler",
+              "warranty": "1 Years",
+              "img": "https://www.startech.com.bd/image/cache/catalog/casing-cooler/lian-li/uni-fan-sl-v2-120/uni-fan-sl-v2-120-triple-pack-black-02-500x500.webp",
+              "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+              "shopName": "skyland"
+            }
+           
+      
+    ]
+    

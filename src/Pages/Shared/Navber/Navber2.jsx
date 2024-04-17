@@ -175,9 +175,9 @@ const Navber2 = () => {
                     Cases
                   </li>
 
-                  <li to="product/casecooler" onClick={handleLinkClick}>
+                  <li>
                     {" "}
-                    <Link>
+                    <Link to="product/casecooler" onClick={handleLinkClick}>
                       <img
                         className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                         style={{ height: 200 }}

@@ -1,7 +1,7 @@
 
 import UseProduct from "../../../../Hooks/UseProduct";
 
-const miceDetails = () => {
+const MiceDetails = () => {
   const [product] = UseProduct();
   const mice = product.filter((item) => item.category === "mice");
 
@@ -16,17 +16,17 @@ const miceDetails = () => {
         </thead>
         <tbody>
           <tr>
-            <td className="border p-4 w-1/4 font-semibold">Resolution</td>
-            <td className="border p-4 w-3/4 font-semibold">{mice[0]?.Resolution}</td>
+            <td className="border p-4 w-1/4 font-semibold">Interface</td>
+            <td className="border p-4 w-3/4 font-semibold">{mice[0]?.interface}</td>
           </tr>
           <tr>
-            <td className="border p-4 w-1/4 font-semibold">Refresh Rate</td>
-            <td className="border p-4 w-3/4 font-semibold">{mice[0]?.RefreshRate}</td>
+            <td className="border p-4 w-1/4 font-semibold">Type</td>
+            <td className="border p-4 w-3/4 font-semibold">{mice[0]?.type}</td>
           </tr>
 
           <tr>
-            <td className="border p-4 w-1/4 font-semibold">Panel</td>
-            <td className="border p-4 w-3/4 font-semibold">{mice[0]?.Panel}</td>
+            <td className="border p-4 w-1/4 font-semibold">Dpi</td>
+            <td className="border p-4 w-3/4 font-semibold">{mice[0]?.dpi}</td>
           </tr>
           <tr>
             <td className="border p-4 w-1/4 font-semibold">Model</td>
@@ -37,10 +37,7 @@ const miceDetails = () => {
             <td className="border p-4 w-1/4 font-semibold">Brand</td>
             <td className="p-4 w-3/4 font-semibold font-semibold">{mice[0]?.Brand}</td>{" "}
           </tr>
-          <tr>
-            <td className="border p-4 w-1/4 font-semibold">Screen Size</td>
-            <td className="border p-4 w-3/4 font-semibold">{mice[0]?.ScreenSize}</td>
-          </tr>
+          
         </tbody>
       </table>
     </div>

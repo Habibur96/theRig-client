@@ -86,10 +86,11 @@ const CpuCooler = () => {
 
                   <td className=" text-center">{item.model}</td>
 
+                  <td className="text-right">{item.warranty}</td>
                   <td className="text-right">{item.price}tk</td>
                   <td>
                     <Link
-                      to={`/availableProduct/${Component.cpuCooler}/${item.model}`}
+                      to={`/availableProduct/${Component.CpuCooler}/${item.model}`}
                       state={{ from: location }}
                       replace
                       className="btn btn-sm btn-success "

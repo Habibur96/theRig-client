@@ -369,7 +369,7 @@ const AvailableProduct = () => {
                 {component[0]?.category === "keyboard" && <KeyboardDetails />}
                 {component[0]?.category === "mice" && <MiceDetails />}
                 {component[0]?.category === "cpuCooler" && <CpuCoolerDetails />}
-                {component[0]?.category === "caseCooler" && (
+                {component[0]?.category === "casingCooler" && (
                   <CaseCoolerDetails />
                 )}
                 {component[0]?.category === "psu" && <PsuDetails />}

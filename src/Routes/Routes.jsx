@@ -64,7 +64,6 @@ import OrdersToDeliver from "../Pages/Dashboard/DeliveryAgent/OrdersToDeliver";
 import SendMessage from "../Pages/Dashboard/Orders/SendMessage";
 import MonitorDetails from "../Pages/Home/Pcbuild/productDetails/monitorDetails";
 import Gpu from "../Pages/Home/Pcbuild/Gpu";
-import { Keyboard } from "@mui/icons-material";
 import Mice from "../Pages/Home/Pcbuild/Mice";
 import CaseCooler from "../Pages/Home/Pcbuild/CaseCooler";
 import CpuCooler from "../Pages/Home/Pcbuild/CpuCooler";
@@ -72,6 +71,7 @@ import Storage from "../Pages/Home/Pcbuild/Storage";
 import Case from "../Pages/Home/Pcbuild/Case";
 import GpuDetails from "../Pages/Home/Pcbuild/productDetails/GpuDetails";
 import Psu from "../Pages/Home/Pcbuild/Psu";
+import Keyboard from "../Pages/Home/Pcbuild/Keyboard";
 import CaseCoolerDetails from "../Pages/Home/Pcbuild/productDetails/CaseCoolerDetails";
 import KeyboardDetails from "../Pages/Home/Pcbuild/productDetails/KeyboardDetails";
 import PsuDetails from "../Pages/Home/Pcbuild/productDetails/PsuDetails";
@@ -299,7 +299,7 @@ export const router = createBrowserRouter([
         element: <CaseCooler></CaseCooler>,
       },
       {
-        path: "product/cpuclller",
+        path: "product/cpucooler",
         element: <CpuCooler></CpuCooler>,
       },
       {

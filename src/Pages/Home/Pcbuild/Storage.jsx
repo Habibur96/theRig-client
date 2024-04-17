@@ -2,23 +2,20 @@ import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 // import Pages from "./Pages";
 import ScrollToTop from "react-scroll-to-top";
-import MonitorFilter from "../Filter/MonitorFilter";
-
 
 const Storage = () => {
   const [product] = UseProduct();
 
   const location = useLocation();
   const storage = product.filter((item) => item.category === "storage");
+  console.log(storage);
   const Component = {
     Storage: "storage",
   };
 
   return (
     <div className="flex column-gap-5">
-      <div className=" flex-[1]">
-        {/* <GpuFilter></GpuFilter> */}
-      </div>
+      <div className=" flex-[1]">{/* <GpuFilter></GpuFilter> */}</div>
 
       <div className="flex-[4] mr-5">
         <div className="overflow-x-auto ">
@@ -31,7 +28,7 @@ const Storage = () => {
             style={{ backgroundColor: "#FF8080" }}
           />
           <h3 className="text-2xl font-semibold">
-            {gpu.length} Compatible Products
+            {storage.length} Compatible Products
           </h3>
           <table className="table ">
             {/* head */}
@@ -45,7 +42,7 @@ const Storage = () => {
                 <th>MTBF</th>
                 <th>Capacity</th>
                 <th>Warranty</th>
-            
+
                 <th>
                   <div className="pl-4">Price</div>
                 </th>
@@ -79,18 +76,17 @@ const Storage = () => {
                     </div>
                   </td>
 
-                  <td className=" text-center">{item.boostClock}</td>
-                  <td className=" text-center">{item.recommendedPSU}</td>
-                  <td className=" text-center">{item.chipset}</td>
-                  <td className=" text-center">{item.Memory}</td>
+                  <td className=" text-start">{item.interface}</td>
+                  <td className=" text-start">{item.formFactor}</td>
+                  <td className=" text-start">{item.MTBF}</td>
+                  <td className=" text-start">{item.capacity}</td>
 
-                  <td className=" text-center">{item.Memorytype}</td>
-                  <td className=" text-center">{item.warranty}</td>
+                  <td className=" text-start">{item.warranty}</td>
 
-                  <td className="text-right">{item.price}tk</td>
+                  <td className="text-center">{item.price}tk</td>
                   <td>
                     <Link
-                      to={`/availableProduct/${Component.Gpu}/${item.model}`}
+                      to={`/availableProduct/${Component.Storage}/${item.model}`}
                       state={{ from: location }}
                       replace
                       className="btn btn-sm btn-success "

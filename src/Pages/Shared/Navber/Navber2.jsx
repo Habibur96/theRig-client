@@ -75,7 +75,7 @@ const Navber2 = () => {
                   </li>
                   <li>
                     {" "}
-                    <Link onClick={handleLinkClick}>
+                    <Link to="product/cpucooler" onClick={handleLinkClick}>
                       <img
                         className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                         src="https://cdna.pcpartpicker.com/static/forever/img/nav-cpucooler-2023.png"
@@ -108,7 +108,7 @@ const Navber2 = () => {
                   </li>
                   <li>
                     {" "}
-                    <Link onClick={handleLinkClick}>
+                    <Link to="product/keyboard" onClick={handleLinkClick}>
                       <img
                         className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                         style={{ height: 200 }}
@@ -120,7 +120,7 @@ const Navber2 = () => {
                   </li>
                   <li>
                     {" "}
-                    <Link onClick={handleLinkClick}>
+                    <Link to="product/mice" onClick={handleLinkClick}>
                       <img
                         className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                         style={{ height: 200 }}
@@ -132,7 +132,7 @@ const Navber2 = () => {
                   </li>
                   <li>
                     {" "}
-                    <Link>
+                    <Link to="product/storage" onClick={handleLinkClick}>
                       <img
                         className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                         src="https://cdna.pcpartpicker.com/static/forever/img/nav-ssd-2023.png"
@@ -154,7 +154,7 @@ const Navber2 = () => {
                   </li>
                   <li>
                     {" "}
-                    <Link onClick={handleLinkClick}>
+                    <Link to="product/psu" onClick={handleLinkClick}>
                       <img
                         className="shadow-lg rounded m-2 border-2 border-transparent hover:border-[#EDA920] hover:bg-[#EDA920]"
                         src="https://cdna.pcpartpicker.com/static/forever/img/nav-powersupply-2023.png"
@@ -175,7 +175,7 @@ const Navber2 = () => {
                     Cases
                   </li>
 
-                  <li>
+                  <li to="product/casecooler" onClick={handleLinkClick}>
                     {" "}
                     <Link>
                       <img

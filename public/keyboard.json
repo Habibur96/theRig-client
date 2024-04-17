@@ -1,148 +1,355 @@
 [
-  // ===========================starTech=================
+  // ===========================startech=================
   {
-    "name": "",
-    "price": "",
+    "name": "Rapoo NK2600 Spill- Resistant Wired Keyboard with Bangla",
+    "price": "700",
+    "description": "The Rapoo NK2600 Spill-Resistant Wired Keyboard with Bangla is a flexible and durable input device built to satisfy the needs of current users. With 104 buttons, including special keys for Bangla letters, this keyboard provides full capabilities for typing in other languages and executing tasks effectively. Its USB interface provides seamless communication to a broad range of devices, allowing for quick and easy configuration without the need for extra drivers or software installs.",
+    "Brand": "Rapoo",
+    "model": "NK2600",
 
-    "Brand": "",
-    "model": "",
-
-    "type": "",
-    "interface": "",
-    "switchType": "",
+    "type": "Full sized",
+    "interface": "USB",
+    "switchType": "Membrane",
 
     "category": "keyboard",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/rapoo/nk2600/nk2600-02-500x500.webp",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
   },
 
   {
-    "name": "",
-    "price": "",
+    "name": "Fantech Shikari K515 Gaming Keyboard",
+    "price": "850",
+    "description":"The Fantech Shikari K515 Gaming Keyboard is a stylish and ergonomic gaming powerhouse that will enhance your gaming experience. It blends utility and design with adjustable height settings for tailored comfort, 104 keys including multimedia controls, and three dynamic lighting options. The membrane switch provides responsiveness and durability, while anti-ghosting technology ensures accurate instructions in fast-paced games. It finds a mix between portability and stability, weighing only 429.3g. This tiny keyboard (440x130x30mm) is wired for a lag-free connection and is your go-to solution for a great gaming setup. Upgrade to the Fantech Shikari K515 for a statement piece that will improve your gaming abilities.",
+    "Brand": "Fantech",
+    "model": "Shikari K515",
 
-    "Brand": "",
-    "model": "",
-
-    "type": "",
-    "interface": "",
-    "switchType": "",
+    "type": "Full sized",
+    "interface": "Wired",
+    "switchType": "Membrane",
 
     "category": "keyboard",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/fantech/p51-power/p51-power-02-500x500.webp",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "Dareu EK871 GTR RGB Hot Swappable Wireless Mechanical Keyboard",
+    "price": "3900",
+    "description":"The Dareu EK871 GTR RGB Hot Swappable Wireless Mechanical Keyboard offers versatile connectivity options, including wired, Bluetooth, and 2.4 GHz. Featuring the innovative Dream Switch, this keyboard boasts Rainbow RGB Lighting for a vibrant and customizable backlit experience. With a compact 71-key layout, the keyboard supports three connection modes: USB wired, 2.4G, and Bluetooth (3.0 & 5.0), enabling seamless connectivity with various devices such as notebooks, pads, and phones. The compact design, equivalent to a 15.6-inch notebook, provides a portable solution with standard mechanical keyboard functions for an enhanced typing experience on mobile devices. ",
+    "Brand": "Dareu",
+    "model": "EK871 GTR",
+
+    "type": "Mechanical 71 keys",
+    "interface": "Wired",
+    "switchType": "Dream Switch",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/dareu/ek871-gtr/ek871-gtr-01-500x500.webp",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "E-Yooso Z-686 Monochrome Hot Swappable Brown Switch Mechanical Keyboard",
+    "price": "2800",
+    "description":"The E-Yooso Z-686 Mechanical Keyboard improves your typing experience. This keyboard has 68 keys and Brown Switches. It is hardwired for dependable connectivity and features extensive anti-ghosting to ensure precise typing during intense games. ICE Blue Backlit lighting enhances both aesthetics and visibility in low light. It is constructed of high-quality PBT material, ensuring durability and a comfortable typing experience. The double-injection keycaps offer style while extending the life of your system. The E-Yooso Z-686 Monochrome Mechanical Keyboard has a Type C connection and compact size (L311xW102xH36mm), making it ideal for both gaming and mobile productivity. ",
+    "Brand": "E-Yooso",
+    "model": "Z-686",
+
+    "type": "Mechanical tenkeyless",
+    "interface": "Wired",
+    "switchType": "Brown Switch",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/e-yooso/z-686-brown/z-686-brown-500x500.webp",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
+  {
+    "name": "ROYAL KLUDGE RKG68 Hot Swappable Red Switch Wireless Mechanical Gaming Keyboard",
+    "price": "4800",
+    "description":"The ROYAL KLUDGE RKG68 Hot-Swappable Red Switch Wireless Mechanical Gaming Keyboard comes with Stand-Alone Arrow Keys & Function Keys. It features a compact Practical layout with 68 keys. It supports Reliable Dual Modes with a Maximum of 6 Devices. It comes with a wireless connection. It is powered by a 1450mAh Long-lasting Battery. It comes with Red, Brown switches. Hot-swap PCB allows you to replace 3 pins/5 pins switches freely without soldering issues. Enjoy the fun of making your own unique keyboard. The red switch features a quiet and linear typing experience. The soft, top-to-bottom feedback offers easier and smoother use than other tactile switches.",
+    "Brand": "ROYAL KLUDGE",
+    "model": "RKG68",
+
+    "type": "65% Layout Compact Practical",
+    "interface": "Wireless",
+    "switchType": "Red",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/rk-royal-kludge/rkg68/rkg68-black-500x500.jpg",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
   },
 
-  // ===========================UltraTech=================
+  // ===========================ultratech=================
 
   {
-    "name": "",
-    "price": "",
+    "name": "Rapoo NK2600 Spill- Resistant Wired Keyboard with Bangla",
+    "price": "650",
+    "description": "The Rapoo NK2600 Spill-Resistant Wired Keyboard with Bangla is a flexible and durable input device built to satisfy the needs of current users. With 104 buttons, including special keys for Bangla letters, this keyboard provides full capabilities for typing in other languages and executing tasks effectively. Its USB interface provides seamless communication to a broad range of devices, allowing for quick and easy configuration without the need for extra drivers or software installs.",
+    "Brand": "Rapoo",
+    "model": "NK2600",
 
-    "Brand": "",
-    "model": "",
-
-    "type": "",
-    "interface": "",
-    "switchType": "",
+    "type": "Full sized",
+    "interface": "USB",
+    "switchType": "Membrane",
 
     "category": "keyboard",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/rapoo/nk2600/nk2600-02-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
 
   {
-    "name": "",
-    "price": "",
+    "name": "Fantech Shikari K515 Gaming Keyboard",
+    "price": "900",
+    "description":"The Fantech Shikari K515 Gaming Keyboard is a stylish and ergonomic gaming powerhouse that will enhance your gaming experience. It blends utility and design with adjustable height settings for tailored comfort, 104 keys including multimedia controls, and three dynamic lighting options. The membrane switch provides responsiveness and durability, while anti-ghosting technology ensures accurate instructions in fast-paced games. It finds a mix between portability and stability, weighing only 429.3g. This tiny keyboard (440x130x30mm) is wired for a lag-free connection and is your go-to solution for a great gaming setup. Upgrade to the Fantech Shikari K515 for a statement piece that will improve your gaming abilities.",
+    "Brand": "Fantech",
+    "model": "Shikari K515",
 
-    "Brand": "",
-    "model": "",
-
-    "type": "",
-    "interface": "",
-    "switchType": "",
+    "type": "Full sized",
+    "interface": "Wired",
+    "switchType": "Membrane",
 
     "category": "keyboard",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/fantech/p51-power/p51-power-02-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
+  {
+    "name": "Dareu EK871 GTR RGB Hot Swappable Wireless Mechanical Keyboard",
+    "price": "3700",
+    "description":"The Dareu EK871 GTR RGB Hot Swappable Wireless Mechanical Keyboard offers versatile connectivity options, including wired, Bluetooth, and 2.4 GHz. Featuring the innovative Dream Switch, this keyboard boasts Rainbow RGB Lighting for a vibrant and customizable backlit experience. With a compact 71-key layout, the keyboard supports three connection modes: USB wired, 2.4G, and Bluetooth (3.0 & 5.0), enabling seamless connectivity with various devices such as notebooks, pads, and phones. The compact design, equivalent to a 15.6-inch notebook, provides a portable solution with standard mechanical keyboard functions for an enhanced typing experience on mobile devices. ",
+    "Brand": "Dareu",
+    "model": "EK871 GTR",
+
+    "type": "Mechanical 71 keys",
+    "interface": "Wired",
+    "switchType": "Dream Switch",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/dareu/ek871-gtr/ek871-gtr-01-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "E-Yooso Z-686 Monochrome Hot Swappable Brown Switch Mechanical Keyboard",
+    "price": "2650",
+    "description":"The E-Yooso Z-686 Mechanical Keyboard improves your typing experience. This keyboard has 68 keys and Brown Switches. It is hardwired for dependable connectivity and features extensive anti-ghosting to ensure precise typing during intense games. ICE Blue Backlit lighting enhances both aesthetics and visibility in low light. It is constructed of high-quality PBT material, ensuring durability and a comfortable typing experience. The double-injection keycaps offer style while extending the life of your system. The E-Yooso Z-686 Monochrome Mechanical Keyboard has a Type C connection and compact size (L311xW102xH36mm), making it ideal for both gaming and mobile productivity. ",
+    "Brand": "E-Yooso",
+    "model": "Z-686",
+
+    "type": "Mechanical tenkeyless",
+    "interface": "Wired",
+    "switchType": "Brown Switch",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/e-yooso/z-686-brown/z-686-brown-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "ROYAL KLUDGE RKG68 Hot Swappable Red Switch Wireless Mechanical Gaming Keyboard",
+    "price": "4700",
+    "description":"The ROYAL KLUDGE RKG68 Hot-Swappable Red Switch Wireless Mechanical Gaming Keyboard comes with Stand-Alone Arrow Keys & Function Keys. It features a compact Practical layout with 68 keys. It supports Reliable Dual Modes with a Maximum of 6 Devices. It comes with a wireless connection. It is powered by a 1450mAh Long-lasting Battery. It comes with Red, Brown switches. Hot-swap PCB allows you to replace 3 pins/5 pins switches freely without soldering issues. Enjoy the fun of making your own unique keyboard. The red switch features a quiet and linear typing experience. The soft, top-to-bottom feedback offers easier and smoother use than other tactile switches.",
+    "Brand": "ROYAL KLUDGE",
+    "model": "RKG68",
+
+    "type": "65% Layout Compact Practical",
+    "interface": "Wireless",
+    "switchType": "Red",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/rk-royal-kludge/rkg68/rkg68-black-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+
   // ===========================techland=================
   {
-    "name": "",
-    "price": "",
+    "name": "Rapoo NK2600 Spill- Resistant Wired Keyboard with Bangla",
+    "price": "750",
+    "description": "The Rapoo NK2600 Spill-Resistant Wired Keyboard with Bangla is a flexible and durable input device built to satisfy the needs of current users. With 104 buttons, including special keys for Bangla letters, this keyboard provides full capabilities for typing in other languages and executing tasks effectively. Its USB interface provides seamless communication to a broad range of devices, allowing for quick and easy configuration without the need for extra drivers or software installs.",
+    "Brand": "Rapoo",
+    "model": "NK2600",
 
-    "Brand": "",
-    "model": "",
-
-    "type": "",
-    "interface": "",
-    "switchType": "",
+    "type": "Full sized",
+    "interface": "USB",
+    "switchType": "Membrane",
 
     "category": "keyboard",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/rapoo/nk2600/nk2600-02-500x500.webp",
+     "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland" 
   },
 
   {
-    "name": "",
-    "price": "",
+    "name": "Fantech Shikari K515 Gaming Keyboard",
+    "price": "850",
+    "description":"The Fantech Shikari K515 Gaming Keyboard is a stylish and ergonomic gaming powerhouse that will enhance your gaming experience. It blends utility and design with adjustable height settings for tailored comfort, 104 keys including multimedia controls, and three dynamic lighting options. The membrane switch provides responsiveness and durability, while anti-ghosting technology ensures accurate instructions in fast-paced games. It finds a mix between portability and stability, weighing only 429.3g. This tiny keyboard (440x130x30mm) is wired for a lag-free connection and is your go-to solution for a great gaming setup. Upgrade to the Fantech Shikari K515 for a statement piece that will improve your gaming abilities.",
+    "Brand": "Fantech",
+    "model": "Shikari K515",
 
-    "Brand": "",
-    "model": "",
-
-    "type": "",
-    "interface": "",
-    "switchType": "",
+    "type": "Full sized",
+    "interface": "Wired",
+    "switchType": "Membrane",
 
     "category": "keyboard",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/fantech/p51-power/p51-power-02-500x500.webp",
+      "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland" 
   },
+  {
+    "name": "Dareu EK871 GTR RGB Hot Swappable Wireless Mechanical Keyboard",
+    "price": "3800",
+    "description":"The Dareu EK871 GTR RGB Hot Swappable Wireless Mechanical Keyboard offers versatile connectivity options, including wired, Bluetooth, and 2.4 GHz. Featuring the innovative Dream Switch, this keyboard boasts Rainbow RGB Lighting for a vibrant and customizable backlit experience. With a compact 71-key layout, the keyboard supports three connection modes: USB wired, 2.4G, and Bluetooth (3.0 & 5.0), enabling seamless connectivity with various devices such as notebooks, pads, and phones. The compact design, equivalent to a 15.6-inch notebook, provides a portable solution with standard mechanical keyboard functions for an enhanced typing experience on mobile devices. ",
+    "Brand": "Dareu",
+    "model": "EK871 GTR",
+
+    "type": "Mechanical 71 keys",
+    "interface": "Wired",
+    "switchType": "Dream Switch",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/dareu/ek871-gtr/ek871-gtr-01-500x500.webp",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland" 
+  },
+  {
+    "name": "E-Yooso Z-686 Monochrome Hot Swappable Brown Switch Mechanical Keyboard",
+    "price": "2700",
+    "description":"The E-Yooso Z-686 Mechanical Keyboard improves your typing experience. This keyboard has 68 keys and Brown Switches. It is hardwired for dependable connectivity and features extensive anti-ghosting to ensure precise typing during intense games. ICE Blue Backlit lighting enhances both aesthetics and visibility in low light. It is constructed of high-quality PBT material, ensuring durability and a comfortable typing experience. The double-injection keycaps offer style while extending the life of your system. The E-Yooso Z-686 Monochrome Mechanical Keyboard has a Type C connection and compact size (L311xW102xH36mm), making it ideal for both gaming and mobile productivity. ",
+    "Brand": "E-Yooso",
+    "model": "Z-686",
+
+    "type": "Mechanical tenkeyless",
+    "interface": "Wired",
+    "switchType": "Brown Switch",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/e-yooso/z-686-brown/z-686-brown-500x500.webp",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "ROYAL KLUDGE RKG68 Hot Swappable Red Switch Wireless Mechanical Gaming Keyboard",
+    "price": "4600",
+    "description":"The ROYAL KLUDGE RKG68 Hot-Swappable Red Switch Wireless Mechanical Gaming Keyboard comes with Stand-Alone Arrow Keys & Function Keys. It features a compact Practical layout with 68 keys. It supports Reliable Dual Modes with a Maximum of 6 Devices. It comes with a wireless connection. It is powered by a 1450mAh Long-lasting Battery. It comes with Red, Brown switches. Hot-swap PCB allows you to replace 3 pins/5 pins switches freely without soldering issues. Enjoy the fun of making your own unique keyboard. The red switch features a quiet and linear typing experience. The soft, top-to-bottom feedback offers easier and smoother use than other tactile switches.",
+    "Brand": "ROYAL KLUDGE",
+    "model": "RKG68",
+
+    "type": "65% Layout Compact Practical",
+    "interface": "Wireless",
+    "switchType": "Red",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/rk-royal-kludge/rkg68/rkg68-black-500x500.jpg",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+
   // ===========================skyland=================
   {
-    "name": "",
-    "price": "",
+    "name": "Rapoo NK2600 Spill- Resistant Wired Keyboard with Bangla",
+    "price": "750",
+    "description": "The Rapoo NK2600 Spill-Resistant Wired Keyboard with Bangla is a flexible and durable input device built to satisfy the needs of current users. With 104 buttons, including special keys for Bangla letters, this keyboard provides full capabilities for typing in other languages and executing tasks effectively. Its USB interface provides seamless communication to a broad range of devices, allowing for quick and easy configuration without the need for extra drivers or software installs.",
+    "Brand": "Rapoo",
+    "model": "NK2600",
 
-    "Brand": "",
-    "model": "",
-
-    "type": "",
-    "interface": "",
-    "switchType": "",
+    "type": "Full sized",
+    "interface": "USB",
+    "switchType": "Membrane",
 
     "category": "keyboard",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/rapoo/nk2600/nk2600-02-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
   },
 
   {
-    "name": "",
-    "price": "",
+    "name": "Fantech Shikari K515 Gaming Keyboard",
+    "price": "750",
+    "description":"The Fantech Shikari K515 Gaming Keyboard is a stylish and ergonomic gaming powerhouse that will enhance your gaming experience. It blends utility and design with adjustable height settings for tailored comfort, 104 keys including multimedia controls, and three dynamic lighting options. The membrane switch provides responsiveness and durability, while anti-ghosting technology ensures accurate instructions in fast-paced games. It finds a mix between portability and stability, weighing only 429.3g. This tiny keyboard (440x130x30mm) is wired for a lag-free connection and is your go-to solution for a great gaming setup. Upgrade to the Fantech Shikari K515 for a statement piece that will improve your gaming abilities.",
+    "Brand": "Fantech",
+    "model": "Shikari K515",
 
-    "Brand": "",
-    "model": "",
-
-    "type": "",
-    "interface": "",
-    "switchType": "",
+    "type": "Full sized",
+    "interface": "Wired",
+    "switchType": "Membrane",
 
     "category": "keyboard",
-    "warranty": "3 Years",
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "warranty": "2 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/fantech/p51-power/p51-power-02-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "Dareu EK871 GTR RGB Hot Swappable Wireless Mechanical Keyboard",
+    "price": "3700",
+    "description":"The Dareu EK871 GTR RGB Hot Swappable Wireless Mechanical Keyboard offers versatile connectivity options, including wired, Bluetooth, and 2.4 GHz. Featuring the innovative Dream Switch, this keyboard boasts Rainbow RGB Lighting for a vibrant and customizable backlit experience. With a compact 71-key layout, the keyboard supports three connection modes: USB wired, 2.4G, and Bluetooth (3.0 & 5.0), enabling seamless connectivity with various devices such as notebooks, pads, and phones. The compact design, equivalent to a 15.6-inch notebook, provides a portable solution with standard mechanical keyboard functions for an enhanced typing experience on mobile devices. ",
+    "Brand": "Dareu",
+    "model": "EK871 GTR",
+
+    "type": "Mechanical 71 keys",
+    "interface": "Wired",
+    "switchType": "Dream Switch",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/dareu/ek871-gtr/ek871-gtr-01-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "E-Yooso Z-686 Monochrome Hot Swappable Brown Switch Mechanical Keyboard",
+    "price": "2500",
+    "description":"The E-Yooso Z-686 Mechanical Keyboard improves your typing experience. This keyboard has 68 keys and Brown Switches. It is hardwired for dependable connectivity and features extensive anti-ghosting to ensure precise typing during intense games. ICE Blue Backlit lighting enhances both aesthetics and visibility in low light. It is constructed of high-quality PBT material, ensuring durability and a comfortable typing experience. The double-injection keycaps offer style while extending the life of your system. The E-Yooso Z-686 Monochrome Mechanical Keyboard has a Type C connection and compact size (L311xW102xH36mm), making it ideal for both gaming and mobile productivity. ",
+    "Brand": "E-Yooso",
+    "model": "Z-686",
+
+    "type": "Mechanical tenkeyless",
+    "interface": "Wired",
+    "switchType": "Brown Switch",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/e-yooso/z-686-brown/z-686-brown-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "ROYAL KLUDGE RKG68 Hot Swappable Red Switch Wireless Mechanical Gaming Keyboard",
+    "price": "4900",
+    "description":"The ROYAL KLUDGE RKG68 Hot-Swappable Red Switch Wireless Mechanical Gaming Keyboard comes with Stand-Alone Arrow Keys & Function Keys. It features a compact Practical layout with 68 keys. It supports Reliable Dual Modes with a Maximum of 6 Devices. It comes with a wireless connection. It is powered by a 1450mAh Long-lasting Battery. It comes with Red, Brown switches. Hot-swap PCB allows you to replace 3 pins/5 pins switches freely without soldering issues. Enjoy the fun of making your own unique keyboard. The red switch features a quiet and linear typing experience. The soft, top-to-bottom feedback offers easier and smoother use than other tactile switches.",
+    "Brand": "ROYAL KLUDGE",
+    "model": "RKG68",
+
+    "type": "65% Layout Compact Practical",
+    "interface": "Wireless",
+    "switchType": "Red",
+
+    "category": "keyboard",
+    "warranty": "1 Years",
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/rk-royal-kludge/rkg68/rkg68-black-500x500.jpg",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
   }
+
 ]

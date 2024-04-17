@@ -1,127 +1,309 @@
+
+Mice 
 [
-  // ===========================starTech=================
+  // ===========================startech=================
   {
-    "name": "",
-    "price": "",
-
-    "Brand": "",
-    "model": "",
-    "type": "",
-    "interface": "",
-    "dpi": "",
+    "name": "Micropack M103 Optical USB Mouse",
+    "price": "350",
+    "description": "Micropack M103 Optical mouse is USB type mouse.This mouse is comfortable for use because of its clump weight and thick cable (OD 3.2mm) to improve the durability, USB 2.0 interface, plug & play. In this mouse, Windows 7, 8, 10, Vista, XP, 2000, Linux and Mac OS higher version Operating systems are support with this mouse. The Micropack Optical mouse in built in 113 x 65 x 37mm size, 1000dpi resolution and 3D button with 5 million times Button life. This M103 optical mouse comes with 1 year warranty.",
+    "Brand": "Micropack",
+    "model": "Micropack M103",
+    "type": "Standard",
+    "interface": "Wired",
+    "dpi": "800 dpi",
     "category": "mice",
 
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/micropack/m103/m103-1-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
   {
-    "name": "",
-    "price": "",
+    "name": "Asus P305 TUF M3 Gaming Mouse",
+    "price": "2200",
 
-    "Brand": "",
-    "model": "",
-    "type": "",
-    "interface": "",
-    "dpi": "",
+    "Brand": "ASUS",
+    "model": "P305 TUF M3",
+    "type": "Gaming",
+    "interface": "Wired",
+    "dpi": "200 to 7000 dpi Optical Sensor",
     "category": "mice",
 
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/asus/p305-tuf-m3/p305-tuf-m3-07-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },  
+  {
+    "name": "Fantech Helios Go XD5 USB Type-C Wireless RGB Gaming Mouse Space Edition",
+    "price": "6800",
+
+    "Brand": "Fantech",
+    "model": "Helios Go XD5",
+    "type": "Gaming",
+    "interface": "Wireless",
+    "dpi": "upto 19,000 DPI",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/fantech/xd5/xd5-space-edition-02-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
 
-  // ===========================UltraTech=================
   {
-    "name": "",
-    "price": "",
+    "name": "A4TECH OP-330 USB Wired Mouse",
+    "price": "400",
 
-    "Brand": "",
-    "model": "",
-    "type": "",
-    "interface": "",
-    "dpi": "",
+    "Brand": "A4Tech",
+    "model": "OP-330",
+    "type": "Standard",
+    "interface": "Wired",
+    "dpi": "1200 dpi",
     "category": "mice",
 
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/a4tech/op-330/op-330-02-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
   {
-    "name": "",
-    "price": "",
+    "name": "AULA F805 Wired Programmable Gaming Mouse",
+    "price": "890",
 
-    "Brand": "",
-    "model": "",
-    "type": "",
-    "interface": "",
-    "dpi": "",
+    "Brand": "AULA",
+    "model": "F805",
+    "type": "Gaming",
+    "interface": "Wired",
+    "dpi": "800-1600-2400-3200-4800-6400DPI",
     "category": "mice",
 
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/aula/f805/f805-01-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  // ===========================ultratech=================
+  {
+    "name": "Micropack M103 Optical USB Mouse",
+    "price": "325",
+    "description": "Micropack M103 Optical mouse is USB type mouse.This mouse is comfortable for use because of its clump weight and thick cable (OD 3.2mm) to improve the durability, USB 2.0 interface, plug & play. In this mouse, Windows 7, 8, 10, Vista, XP, 2000, Linux and Mac OS higher version Operating systems are support with this mouse. The Micropack Optical mouse in built in 113 x 65 x 37mm size, 1000dpi resolution and 3D button with 5 million times Button life. This M103 optical mouse comes with 1 year warranty.",
+    "Brand": "Micropack",
+    "model": "Micropack M103",
+    "type": "Standard",
+    "interface": "Wired",
+    "dpi": "800 dpi",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/micropack/m103/m103-1-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "Asus P305 TUF M3 Gaming Mouse",
+    "price": "2300",
+
+    "Brand": "ASUS",
+    "model": "P305 TUF M3",
+    "type": "Gaming",
+    "interface": "Wired",
+    "dpi": "200 to 7000 dpi Optical Sensor",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/asus/p305-tuf-m3/p305-tuf-m3-07-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },  
+  {
+    "name": "Fantech Helios Go XD5 USB Type-C Wireless RGB Gaming Mouse Space Edition",
+    "price": "6850",
+
+    "Brand": "Fantech",
+    "model": "Helios Go XD5",
+    "type": "Gaming",
+    "interface": "Wireless",
+    "dpi": "upto 19,000 DPI",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/fantech/xd5/xd5-space-edition-02-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "A4TECH OP-330 USB Wired Mouse",
+    "price": "420",
+
+    "Brand": "A4Tech",
+    "model": "OP-330",
+    "type": "Standard",
+    "interface": "Wired",
+    "dpi": "1200 dpi",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/a4tech/op-330/op-330-02-500x500.jpg",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
+  },
+  {
+    "name": "AULA F805 Wired Programmable Gaming Mouse",
+    "price": "840",
+
+    "Brand": "AULA",
+    "model": "F805",
+    "type": "Gaming",
+    "interface": "Wired",
+    "dpi": "800-1600-2400-3200-4800-6400DPI",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/aula/f805/f805-01-500x500.webp",
+    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp",
+    "shopName": "ultratech"
   },
   // ===========================techland=================
   {
-    "name": "",
-    "price": "",
-
-    "Brand": "",
-    "model": "",
-    "type": "",
-    "interface": "",
-    "dpi": "",
+    "name": "Micropack M103 Optical USB Mouse",
+    "price": "330",
+    "description": "Micropack M103 Optical mouse is USB type mouse.This mouse is comfortable for use because of its clump weight and thick cable (OD 3.2mm) to improve the durability, USB 2.0 interface, plug & play. In this mouse, Windows 7, 8, 10, Vista, XP, 2000, Linux and Mac OS higher version Operating systems are support with this mouse. The Micropack Optical mouse in built in 113 x 65 x 37mm size, 1000dpi resolution and 3D button with 5 million times Button life. This M103 optical mouse comes with 1 year warranty.",
+    "Brand": "Micropack",
+    "model": "Micropack M103",
+    "type": "Standard",
+    "interface": "Wired",
+    "dpi": "800 dpi",
     "category": "mice",
 
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/micropack/m103/m103-1-500x500.jpg",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
   },
   {
-    "name": "",
-    "price": "",
+    "name": "Asus P305 TUF M3 Gaming Mouse",
+    "price": "2250",
 
-    "Brand": "",
-    "model": "",
-    "type": "",
-    "interface": "",
-    "dpi": "",
+    "Brand": "ASUS",
+    "model": "P305 TUF M3",
+    "type": "Gaming",
+    "interface": "Wired",
+    "dpi": "200 to 7000 dpi Optical Sensor",
     "category": "mice",
 
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/asus/p305-tuf-m3/p305-tuf-m3-07-500x500.jpg",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },  
+  {
+    "name": "Fantech Helios Go XD5 USB Type-C Wireless RGB Gaming Mouse Space Edition",
+    "price": "6900",
+
+    "Brand": "Fantech",
+    "model": "Helios Go XD5",
+    "type": "Gaming",
+    "interface": "Wireless",
+    "dpi": "upto 19,000 DPI",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/fantech/xd5/xd5-space-edition-02-500x500.jpg",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "A4TECH OP-330 USB Wired Mouse",
+    "price": "400",
+
+    "Brand": "A4Tech",
+    "model": "OP-330",
+    "type": "Standard",
+    "interface": "Wired",
+    "dpi": "1200 dpi",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/a4tech/op-330/op-330-02-500x500.jpg",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+  {
+    "name": "AULA F805 Wired Programmable Gaming Mouse",
+    "price": "820",
+
+    "Brand": "AULA",
+    "model": "F805",
+    "type": "Gaming",
+    "interface": "Wired",
+    "dpi": "800-1600-2400-3200-4800-6400DPI",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/aula/f805/f805-01-500x500.webp",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
   },
   // ===========================skyland=================
   {
-    "name": "",
-    "price": "",
-
-    "Brand": "",
-    "model": "",
-    "type": "",
-    "interface": "",
-    "dpi": "",
+    "name": "Micropack M103 Optical USB Mouse",
+    "price": "330",
+    "description": "Micropack M103 Optical mouse is USB type mouse.This mouse is comfortable for use because of its clump weight and thick cable (OD 3.2mm) to improve the durability, USB 2.0 interface, plug & play. In this mouse, Windows 7, 8, 10, Vista, XP, 2000, Linux and Mac OS higher version Operating systems are support with this mouse. The Micropack Optical mouse in built in 113 x 65 x 37mm size, 1000dpi resolution and 3D button with 5 million times Button life. This M103 optical mouse comes with 1 year warranty.",
+    "Brand": "Micropack",
+    "model": "Micropack M103",
+    "type": "Standard",
+    "interface": "Wired",
+    "dpi": "800 dpi",
     "category": "mice",
 
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/micropack/m103/m103-1-500x500.jpg",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
   },
   {
-    "name": "",
-    "price": "",
+    "name": "Asus P305 TUF M3 Gaming Mouse",
+    "price": "2250",
 
-    "Brand": "",
-    "model": "",
-    "type": "",
-    "interface": "",
-    "dpi": "",
+    "Brand": "ASUS",
+    "model": "P305 TUF M3",
+    "type": "Gaming",
+    "interface": "Wired",
+    "dpi": "200 to 7000 dpi Optical Sensor",
     "category": "mice",
 
-    "img": "",
-    "shoplogo": "",
-    "shopName": ""
-  }
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/asus/p305-tuf-m3/p305-tuf-m3-07-500x500.jpg",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },  
+  {
+    "name": "Fantech Helios Go XD5 USB Type-C Wireless RGB Gaming Mouse Space Edition",
+    "price": "6800",
+
+    "Brand": "Fantech",
+    "model": "Helios Go XD5",
+    "type": "Gaming",
+    "interface": "Wireless",
+    "dpi": "upto 19,000 DPI",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/fantech/xd5/xd5-space-edition-02-500x500.jpg",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "A4TECH OP-330 USB Wired Mouse",
+    "price": "400",
+
+    "Brand": "A4Tech",
+    "model": "OP-330",
+    "type": "Standard",
+    "interface": "Wired",
+    "dpi": "1200 dpi",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/a4tech/op-330/op-330-02-500x500.jpg",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+  {
+    "name": "AULA F805 Wired Programmable Gaming Mouse",
+    "price": "850",
+
+    "Brand": "AULA",
+    "model": "F805",
+    "type": "Gaming",
+    "interface": "Wired",
+    "dpi": "800-1600-2400-3200-4800-6400DPI",
+    "category": "mice",
+
+    "img": "https://www.startech.com.bd/image/cache/catalog/mouse/aula/f805/f805-01-500x500.webp",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
 ]

@@ -8,9 +8,9 @@ const Case = () => {
   const [product] = UseProduct();
 
   const location = useLocation();
-  const casing = product.filter((item) => item.category === "case");
+  const casing = product.filter((item) => item.category === "casing");
   const Component = {
-    Case: "case",
+    Caseing: "casing",
   };
 
   return (
@@ -83,7 +83,7 @@ const Case = () => {
                   <td className="text-right">{item.price}tk</td>
                   <td>
                     <Link
-                      to={`/availableProduct/${Component.Case}/${item.model}`}
+                      to={`/availableProduct/${Component.Caseing}/${item.model}`}
                       state={{ from: location }}
                       replace
                       className="btn btn-sm btn-success "

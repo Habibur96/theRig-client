@@ -1,1145 +1,909 @@
-
-//-------------StarTech------------//
+//-------------startech------------//
 [
-  {     
-            "name": "Adata XPG SPECTRIX D35G RGB 8GB DDR4 3200MHz Gaming Desktop RAM",
-            "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/spectrix-d35g-rgb/spectrix-d35g-rgb-01-500x500.webp",
-            "Brand":"Adata",
-            "model":"XPG SPECTRIX D35G RGB",
-            "Speed": "3200Mhz",
-            "Memory":"8GB",
-            "Memorytype":"DDR4",
-            "CASLatency": "CL16",
-            "TDP": "1.35",
-            "price":"3500",
-            "category": "memory",
-            "Availability":"In Stock",
-            "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-          },
-   
-          {     
-            "name": "ADATA 4GB DDR3 1600 BUS",
-            "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/4gb-ddr3/4gb-ddr3-1-500x500.jpg",
-            "Brand":"Adata",
-            "model":"ADATA 4GB DDR3",
-            "Speed": "1600Mhz",
-            "Memory":"4GB",
-            "Memorytype":"DDR3",
-            "CASLatency": "CL11",
-            "TDP": "1.2",
-            "price":"1450",
-            "category": "memory",
-            "Availability":"In Stock",
-            "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-          },
-          
-          {     
-              "name": "Adata 16GB DDR4 2666MHz Desktop RAM",
-              "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/16gb-ddr4-2666mhz/16gb-ddr4-2666mhz-01-500x500.jpg",
-              "Brand":"Adata",
-              "model":"ADATA 16GB DDR4",
-              "Speed": "2666MHz",
-              "Memory":"16GB",
-              "Memorytype":"DDR4",
-              "CASLatency": "CL19",
-              "TDP": "1.2",
-              "price":"4000",
-              "category": "memory",
-              "Availability":"In Stock",
-              "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-            },
+  {
+    "name": "Adata XPG SPECTRIX D35G RGB 8GB DDR4 3200MHz Gaming Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/spectrix-d35g-rgb/spectrix-d35g-rgb-01-500x500.webp",
+    "Brand": "Adata",
+    "model": "XPG SPECTRIX D35G RGB",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3500",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-////
+  {
+    "name": "ADATA 4GB DDR3 1600 BUS",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/4gb-ddr3/4gb-ddr3-1-500x500.jpg",
+    "Brand": "Adata",
+    "model": "ADATA 4GB DDR3",
+    "Speed": "1600Mhz",
+    "Memory": "4GB",
+    "Memorybrand": "DDR3",
+    "CASLatency": "CL11",
+    "TDP": "1.2",
+    "price": "1450",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-            {     
-              "name": "Corsair Vengeance LPX 8GB 3200MHz DDR4 Desktop RAM",
-              "img": "https://www.startech.com.bd/image/cache/catalog/RAM/VENG_LPX_BLK_01-500x500.png",
-              "Brand":"Corsair",
-              "model":"Corsair Vengeance LPX 8GB",
-              "Speed": "3200Mhz",
-              "Memory":"8GB",
-              "Memorytype":"DDR4",
-              "CASLatency": "CL16",
-              "TDP": "1.35",
-              "price":"2700",
-              "category": "memory",
-              "Availability":"In Stock",
-              "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-            },
-     
-            {     
-              "name": "Corsair DOMINATOR PLATINUM RGB 16GB DDR5 7200MHz Desktop RAM",
-              "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/dominator-platinum-rgb-ddr5/dominator-platinum-rgb-ddr5-04-500x500.webp",
-              "Brand":"Corsair",
-              "model":"DOMINATOR PLATINUM RGB DDR5",
-              "Speed": "7200MHz",
-              "Memory":"16GB",
-              "Memorytype":"DDR5",
-              "CASLatency": "CL40",
-              "TDP": "1.45",
-              "price":"13500",
-              "category": "memory",
-              "Availability":"In Stock",
-              "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-            },
-            
-            {     
-                "name": "CORSAIR VENGEANCE RGB RS 8GB DDR4 3200MHz RAM",
-                "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/vengeance-rgb-rs/vengeance-rgb-rs-01-500x500.jpg",
-                "Brand":"Corsair",
-                "model":"VENGEANCE RGB RS",
-                "Speed": "3200Mhz",
-                "Memory":"8GB",
-                "Memorytype":"DDR4",
-                "CASLatency": "CL16",
-                "TDP": "1.35",
-                "price":"3300",
-                "category": "memory",
-                "Availability":"In Stock",
-                "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
+  {
+    "name": "Adata 16GB DDR4 2666MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/16gb-ddr4-2666mhz/16gb-ddr4-2666mhz-01-500x500.jpg",
+    "Brand": "Adata",
+    "model": "ADATA 16GB DDR4",
+    "Speed": "2666MHz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL19",
+    "TDP": "1.2",
+    "price": "4000",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-            },
+  {
+    "name": "Corsair Vengeance LPX 8GB 3200MHz DDR4 Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/RAM/VENG_LPX_BLK_01-500x500.png",
+    "Brand": "Corsair",
+    "model": "Corsair Vengeance LPX 8GB",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2700",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-////
+  {
+    "name": "Corsair DOMINATOR PLATINUM RGB 16GB DDR5 7200MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/dominator-platinum-rgb-ddr5/dominator-platinum-rgb-ddr5-04-500x500.webp",
+    "Brand": "Corsair",
+    "model": "DOMINATOR PLATINUM RGB DDR5",
+    "Speed": "7200MHz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR5",
+    "CASLatency": "CL40",
+    "TDP": "1.45",
+    "price": "13500",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-{     
-"name": "Team T-Force VULCAN TUF Gaming Alliance 8GB 3200MHz DDR4 Desktop RAM",
-"img": "https://www.startech.com.bd/image/cache/catalog/ram/team/vulcan-tuf/vulcan-tuf-01-500x500.jpg",
-"Brand":"Team",
-"model":"VULCAN TUF",
-"Speed": "3200Mhz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2649",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-},
+  {
+    "name": "CORSAIR VENGEANCE RGB RS 8GB DDR4 3200MHz RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/vengeance-rgb-rs/vengeance-rgb-rs-01-500x500.jpg",
+    "Brand": "Corsair",
+    "model": "VENGEANCE RGB RS",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3300",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-{     
-"name": "Team Elite Plus Red 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
-"img": "https://www.startech.com.bd/image/cache/catalog/ram/team/elite-plus/elite-plus-red-01-500x500.jpg",
-"Brand":"Team",
-"model":" Elite Plus 3200MHz",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL22",
-"TDP": "1.25",
-"price":"2400",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-},
+  {
+    "name": "Team T-Force VULCAN TUF Gaming Alliance 8GB 3200MHz DDR4 Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/vulcan-tuf/vulcan-tuf-01-500x500.jpg",
+    "Brand": "Team",
+    "model": "VULCAN TUF",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2649",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-{     
-  "name": "TEAM T-FORCE DELTA RGB WHITE 8GB 3200MHz DDR4 Desktop Gaming RAM",
-  "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-ddr4/delta-rgb-ddr4-01-500x500.webp",
-  "Brand":"Team",
-  "model":"T-FORCE DELTA",
-  "Speed": "3200Mhz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"3299",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
+  {
+    "name": "Team Elite Plus Red 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/elite-plus/elite-plus-red-01-500x500.jpg",
+    "Brand": "Team",
+    "model": " Elite Plus 3200MHz",
+    "Speed": "3200MHz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL22",
+    "TDP": "1.25",
+    "price": "2400",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-},
+  {
+    "name": "TEAM T-FORCE DELTA RGB WHITE 8GB 3200MHz DDR4 Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-ddr4/delta-rgb-ddr4-01-500x500.webp",
+    "Brand": "Team",
+    "model": "T-FORCE DELTA",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3299",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-{     
-       
+  {
     "name": "TEAM T-Force DELTA RGB White 16GB 3200MHz DDR4 CL16 Gaming RAM",
     "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-16gb/delta-white-10-500x500.jpg",
-    "Brand":"Team",
-    "model":"T-Force DELTA RGB",
+    "Brand": "Team",
+    "model": "T-Force DELTA RGB",
     "Speed": "3200Mhz",
-    "Memory":"16GB",
-    "Memorytype":"DDR4",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
     "CASLatency": "CL16",
     "TDP": "1.35",
-    "price":"5399",
+    "price": "5399",
     "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-},
+  {
+    "name": "PNY XLR8 Gaming EPIC-X RGB 8GB DDR4 3200MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8-gaming-epic-x/xlr8-gaming-epic-x-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "PNY XLR8 Gaming EPIC-X RGB",
+    "Speed": "3200MHz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3100",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
+  },
 
-
-////
-{     
-  "name": "PNY XLR8 Gaming EPIC-X RGB 8GB DDR4 3200MHz Desktop RAM",
-  "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8-gaming-epic-x/xlr8-gaming-epic-x-01-500x500.jpg",
-  "Brand":"PNY",
-  "model":"PNY XLR8 Gaming EPIC-X RGB",
-  "Speed": "3200MHz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"3100",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-},
-
-{     
+  {
     "name": "PNY XLR8 8GB DDR4 3200MHz Desktop Gaming RAM",
     "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
-    "Brand":"PNY",
-    "model":"XLR8",
+    "Brand": "PNY",
+    "model": "XLR8",
     "Speed": "3200Mhz",
-    "Memory":"8GB",
-    "Memorytype":"DDR4",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
     "CASLatency": "CL16",
     "TDP": "1.35",
-    "price":"2500",
+    "price": "2390",
     "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-
-},
-
-{     
-         
-      "name": "PNY XLR8 16GB DDR4 3200MHz Desktop Gaming RAM",
-      "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
-      "Brand":"PNY",
-      "model":"PNY XLR8",
-      "Speed": "3200Mhz",
-      "Memory":"16GB",
-      "Memorytype":"DDR4",
-      "CASLatency": "CL16",
-      "TDP": "1.35",
-      "price":"4000",
-      "category": "memory",
-      "Availability":"In Stock",
-      "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png"
-  
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
   },
 
-
-
-
-
-//-------------TECHLAND-------------//
-
-
-{     
-            "name": "Adata XPG Spectrix D35G 8GB DDR4 3200MHz RGB Gaming Desktop RAM",
-            "img": "https://www.techlandbd.com/image/catalog/Adata/adata-xpg-spectrix-d35g-8gb-desktop-ram-1.jpg",
-            "Brand":"Adata",
-            "model":"XPG SPECTRIX D35G",
-            "Speed": "3200Mhz",
-            "Memory":"8GB",
-            "Memorytype":"DDR4",
-            "CASLatency": "CL16",
-            "TDP": "1.35",
-            "price":"2900",
-            "category": "memory",
-            "Availability":"In Stock",
-            "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-          },
-   
-          {     
-            "name": "ADATA 4GB DDR3 1600Mhz Desktop RAM",
-            "img": "https://www.techlandbd.com/image/catalog/RAM/Adata/Premier/adata-4gb-ddr3-1600-bus.jpg",
-            "Brand":"Adata",
-            "model":"ADATA DDR3",
-            "Speed": "1600Mhz",
-            "Memory":"4GB",
-            "Memorytype":"DDR3",
-            "CASLatency": "CL11",
-            "TDP": "1.2",
-            "price":"1500",
-            "category": "memory",
-            "Availability":"In Stock",
-            "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-          },
-          
-          {     
-              "name": "Adata 8GB DDR4 2666MHz U-DIMM Desktop RAM",
-              "img": "https://www.techlandbd.com/image/catalog/RAM/Adata/8GB-DDR4-2666MHz/adata-8gb-ddr5-2666mhz-ram.jpg",
-              "Brand":"Adata",
-              "model":"8GB DDR4",
-              "Speed": "2666MHz",
-              "Memory":"8GB",
-              "Memorytype":"DDR4",
-              "CASLatency": "CL19",
-              "TDP": "1.2",
-              "price":"2250",
-              "category": "memory",
-              "Availability":"In Stock",
-              "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-            },
-
-
-////
-
-            {     
-              "name": "CORSAIR VENGEANCE RGB RS 8GB(1 X 8GB) DDR4 3200MHz DESKTOP RAM",
-              "img": "https://www.techlandbd.com/image/catalog/RAM/Corsair/VENGEANCE%C2%AE%20RGB%20RS-16GB/VENGEANCE-RGB-RS-1.jpg",
-              "Brand":"Corsair",
-              "model":"VENGEANCE RGB RS",
-              "Speed": "3200Mhz",
-              "Memory":"8GB",
-              "Memorytype":"DDR4",
-              "CASLatency": "CL16",
-              "TDP": "1.35",
-              "price":"3300",
-              "category": "memory",
-              "Availability":"In Stock",
-              "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-            },
-     
-            {     
-              "name": "Corsair Vengeance LPX 8GB DDR4 3200Mhz Desktop Ram",
-              "img": "https://www.techlandbd.com/image/catalog/RAM/Corsair/corsair-vengeance-lpx-16GB.jpg",
-              "Brand":"Corsair",
-              "model":"Vengeance LPX",
-              "Speed": "3200MHz",
-              "Memory":"8GB",
-              "Memorytype":"DDR4",
-              "CASLatency": "CL16",
-              "TDP": "1.35",
-              "price":"2500",
-              "category": "memory",
-              "Availability":"In Stock",
-              "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-            },
-            
-            {     
-                "name": "Corsair Dominator Platinum RGB 8GB DDR4 3200Mhz Desktop Ram",
-                "img": "https://www.techlandbd.com/image/catalog/RAM/Corsair/DOMINATOR%20RGB/corsair-dominator-platinum-8-ram.jpg",
-                "Brand":"Corsair",
-                "model":"Dominator Platinum RGB",
-                "Speed": "3200Mhz",
-                "Memory":"8GB",
-                "Memorytype":"DDR4",
-                "CASLatency": "CL18",
-                "TDP": "1.35",
-                "price":"5600",
-                "category": "memory",
-                "Availability":"In Stock",
-                "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-
-            },
-
-
-
-////
-
-{     
-"name": "TEAM T-FORCE NIGHT HAWK RGB WHITE 8GB (KIT) 3200MHZ DDR4 RAM",
-"img": "https://www.techlandbd.com/image/catalog/RAM/Team/%20T-Force%20ZEUS/t-force-night-hawk-rgb/t-force-night-hawk-rgb.jpg",
-"Brand":"Team",
-"model":"T-Force Night Hawk RGB",
-"Speed": "3200Mhz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"3399",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-},
-
-{     
-"name": "Team Elite Plus Red 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
-"img": "https://www.techlandbd.com/image/catalog/RAM/Team/Elite%20Plus/8GB%203200MHz/Team%20Elite%20Plus%20Red%208GB%203200MHz-500x500-01.jpg",
-"Brand":"Team",
-"model":" Elite Plus 3200MHz",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL22",
-"TDP": "1.25",
-"price":"2300",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-},
-
-{     
-  "name": "Team T-Force VULCAN TUF Gaming Alliance 8GB 3200MHz DDR4 Desktop RAM",
-  "img": "https://www.techlandbd.com/image/catalog/RAM/Team/VULCAN%20TUF/Team%20T-Force.jpg",
-  "Brand":"Team",
-  "model":"VULCAN TUF",
-  "Speed": "3200Mhz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"2450",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-
-},
-
-{       
-    "name": "TEAM T-FORCE DELTA TUF GAMING 16GB 3200MHZ DDR4 RGB DESKTOP RAM",
-    "img": "https://www.techlandbd.com/image/catalog/Accessories/RAM/team-t-force-delta-tuf-gaming-8gb-3200mhz-ddr4-rgb-desktop-ram/team-t-force-delta-tuf-gaming-8gb-3200mhz-ddr4-rgb-desktop-ram.jpg",
-    "Brand":"Team",
-    "model":"T-FORCE DELTA TUF Gaming Alliance RGB ",
+  {
+    "name": "PNY XLR8 16GB DDR4 3200MHz Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "PNY XLR8",
     "Speed": "3200Mhz",
-    "Memory":"16GB",
-    "Memorytype":"DDR4",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
     "CASLatency": "CL16",
     "TDP": "1.35",
-    "price":"4300",
+    "price": "4060",
     "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-
-},
-
-
-////
-{     
-  "name": "PNY XLR8 GAMING EPIC-X RGB 8GB DDR4 3200MHz DESKTOP RAM",
-  "img": "https://www.techlandbd.com/image/catalog/RAM/pny/xlr8/RGB/pny-xlr8-rgb-gaming-ram-double-stick-1.jpg",
-  "Brand":"PNY",
-  "model":"XLR8 GAMING EPIC-X RGB",
-  "Speed": "3200MHz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"3090",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-},
-
-{     
-    "name": "PNY XLR8 GAMING RGB 8GB DDR4 3600MHz DESKTOP RAM (WHITE)",
-    "img": "https://www.techlandbd.com/image/catalog/RAM/pny/xlr8/White/pny-xlr8-rgb-8gb-ddr4-3600mhz-ram-white.jpg",
-    "Brand":"PNY",
-    "model":"XLR8 GAMING EPIC-X RGB",
-    "Speed": "3600Mhz",
-    "Memory":"8GB",
-    "Memorytype":"DDR4",
-    "CASLatency": "CL16",
-    "TDP": "1.35",
-    "price":"3800",
-    "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-
-},
-
-{     
-         
-      "name": "PNY XLR8 GAMING 8GB DDR4 3200MHz DESKTOP RAM",
-      "img": "https://www.techlandbd.com/image/catalog/RAM/pny/xlr8/pny-xlr8-gaming-ram-single-stick-1.jpg",
-      "Brand":"PNY",
-      "model":"XLR8 GAMING",
-      "Speed": "3200Mhz",
-      "Memory":"8GB",
-      "Memorytype":"DDR4",
-      "CASLatency": "CL16",
-      "TDP": "1.35",
-      "price":"2400",
-      "category": "memory",
-      "Availability":"In Stock",
-      "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp"
-  
+    "Availability": "In Stock",
+    "shoplogo": "https://www.startech.com.bd/image/catalog/logo.png",
+    "shopName": "startech"
   },
 
+  //-------------techland-------------//
 
-//-------------RYANS-------------//
-
-{     
-            "name": "Adata XPG Spectrix D35G RGB 8GB DDR4 3200MHz Gaming Desktop RAM",
-            "img": "https://www.ryanscomputers.com/storage/products/main/adata-xpg-spectrix-d35g-rgb-8gb-ddr4-3200mhz-11692449562.webp",
-            "Brand":"Adata",
-            "model":"Adata XPG Spectrix D35G RGB 8GBG",
-            "Speed": "3200Mhz",
-            "Memory":"8GB",
-            "Memorytype":"DDR4",
-            "CASLatency": "CL16",
-            "TDP": "1.35",
-            "price":"3200",
-            "Availability":"In Stock",
-            "category": "memory",
-            "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-          },
-   
-          {     
-            "name": "ADATA 4GB DDR3 1600Mhz Desktop RAM",
-            "img": "https://www.ryanscomputers.com/storage/products/main/a-data-4gb-ddr3-1600-bus-desktop-11545645105.webp",
-            "Brand":"Adata",
-            "model":"ADATA 4GB",
-            "Speed": "1600Mhz",
-            "Memory":"4GB",
-            "Memorytype":"DDR3",
-            "CASLatency": "CL11",
-            "TDP": "1.2",
-            "price":"1700",
-            "category": "memory",
-            "Availability":"In Stock",
-            "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-          },
-          
-          {     
-              "name": "Adata 16GB DDR4 2666MHz Desktop RAM",
-              "img": "https://www.ryanscomputers.com/storage/products/main/adata-16gb-ddr4-2666mhz-desktop-11557660456.webpg",
-              "Brand":"Adata",
-              "model":"Adata 16GB",
-              "Speed": "2666MHz",
-              "Memory":"8GB",
-              "Memorytype":"DDR4",
-              "CASLatency": "CL19",
-              "TDP": "1.2",
-              "price":"4300",
-              "category": "memory",
-              "Availability":"In Stock",
-              "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-            },
-
-
-
-////
-
-{     
-"name": "Corsair Vengeance LPX 8GB DDR4 3200MHz Black Heatsink Desktop RAM",
-"img": "https://www.ryanscomputers.com/storage/products/main/corsair-vengeance-lpx-8gb-ddr4-3200mhz-black-11572682684.webp",
-"Brand":"Corsair",
-"model":"Corsair Vengeance LPX",
-"Speed": "3200Mhz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2600",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-},
-
-{     
-"name": "Corsair Vengeance RGB RS 8GB DDR4 3200MHz Black Heatsink Desktop RAM",
-"img": "https://www.ryanscomputers.com/storage/products/main/corsair-vengeance-rgb-rs-8gb-ddr4-3200mhz-black-11639800869.webp",
-"Brand":"Corsair",
-"model":"Corsair Vengeance RGB RS",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"3299",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-},
-
-{     
-  "name": "Corsair Dominator Platinum RGB 8GB DDR4 3200MHz Gaming Desktop RAM",
-  "img": "https://www.ryanscomputers.com/storage/products/main/corsair-dominator-platinum-rgb-8gb-ddr4-3200mhz-11595936336.webp",
-  "Brand":"Corsair",
-  "model":"Corsair Dominator Platinum RGB",
-  "Speed": "3200Mhz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL18",
-  "TDP": "1.35",
-  "price":"5150",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
- 
-
-},
-
-
-////
-
-{     
-"name": "Team Vulcan TUF 8GB DDR4 3200 MHz Heatsink Desktop RAM",
-"img": "https://www.ryanscomputers.com/storage/products/main/team-vulcan-tuf-8gb-ddr4-3200-mhz-heatsink-11644410261.webp",
-"Brand":"Team",
-"model":"Team Vulcan TUF",
-"Speed": "3200Mhz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2550",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-},
-
-{     
-"name": "Team Elite PLUS 8GB DDR4 3200MHz Desktop RAM #TPRD48G3200HC2201",
-"img": "https://www.ryanscomputers.com/storage/products/main/team-elite-plus-8gb-ddr4-3200mhz-desktop-ram-11644410027.webp",
-"Brand":"Team",
-"model":" Team Elite Plus",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL22",
-"TDP": "1.25",
-"price":"2400",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-},
-
-{     
-  "name": "Team Delta RGB 8GB DDR4 3200MHz White Heatsink Gaming Desktop RAM #TF4D48G3200HC16C01",
-  "img": "https://www.ryanscomputers.com/storage/products/main/team-delta-rgb-8gb-ddr4-3200mhz-white-heatsink-11668494587.webp",
-  "Brand":"Team",
-  "model":"Team Delta RGB 8GB",
-  "Speed": "3200Mhz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"2950",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-
-},
-
-{     
-       
-    "name": "Team Vulcan TUF Gaming Alliance 16GB DDR4 3200MHz Gaming Desktop RAM #TLTYD416G3200HC16F01",
-    "img": "https://www.ryanscomputers.com/storage/products/main/team-vulcan-tuf-gaming-alliance-16gb-ddr4-3200mhz-11700052931.webp",
-    "Brand":"Team",
-    "model":"Team Vulcan TUF Gaming Alliance 16GB ",
+  {
+    "name": "Adata XPG SPECTRIX D35G RGB 8GB DDR4 3200MHz Gaming Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/spectrix-d35g-rgb/spectrix-d35g-rgb-01-500x500.webp",
+    "Brand": "Adata",
+    "model": "XPG SPECTRIX D35G RGB",
     "Speed": "3200Mhz",
-    "Memory":"16GB",
-    "Memorytype":"DDR4",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
     "CASLatency": "CL16",
     "TDP": "1.35",
-    "price":"4299",
+    "price": "3370",
     "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
-},
-
-
-////
-{     
-"name": "PNY XLR8 8GB DDR4 3200MHz Gaming Desktop RAM",
-"img": "https://www.ryanscomputers.com/storage/products/main/pny-xlr8-8gb-ddr4-3200mhz-gaming-desktop-ram-11653914852.webp",
-"Brand":"PNY",
-"model":"PNY XLR8 8GB",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2450",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-},
-
-{     
-  "name": "PNY XLR8 RGB 8GB DDR4 3600MHz White Gaming Desktop RAM",
-  "img": "https://www.ryanscomputers.com/storage/products/main/pny-xlr8-rgb-8gb-ddr4-3600mhz-white-gaming-21668491707.webp",
-  "Brand":"PNY",
-  "model":"PNY XLR8 RGB 8GB",
-  "Speed": "3600Mhz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"4050",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
-
-},
-
-{     
-       
-    "name": "PNY XLR8 RGB 8GB DDR4 3600MHz Black Gaming Desktop RAM",
-    "img": "https://www.ryanscomputers.com/storage/products/main/pny-xlr8-rgb-8gb-ddr4-3600mhz-black-gaming-11665904346.webp",
-    "Brand":"PNY",
-    "model":"Pny XLR8 RGB 8GB",
-    "Speed": "3600Mhz",
-    "Memory":"8GB",
-    "Memorytype":"DDR4",
-    "CASLatency": "CL18",
-    "TDP": "1.35",
-    "price":"4100",
+  {
+    "name": "ADATA 4GB DDR3 1600 BUS",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/4gb-ddr3/4gb-ddr3-1-500x500.jpg",
+    "Brand": "Adata",
+    "model": "ADATA 4GB DDR3",
+    "Speed": "1600Mhz",
+    "Memory": "4GB",
+    "Memorybrand": "DDR3",
+    "CASLatency": "CL11",
+    "TDP": "1.2",
+    "price": "1550",
     "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg"
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
-},
+  {
+    "name": "Adata 16GB DDR4 2666MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/16gb-ddr4-2666mhz/16gb-ddr4-2666mhz-01-500x500.jpg",
+    "Brand": "Adata",
+    "model": "ADATA 16GB DDR4",
+    "Speed": "2666MHz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL19",
+    "TDP": "1.2",
+    "price": "3800",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
-
-
-
-//----------------ULTRA TECH-------------//
-
-{     
-            "name": "ADATA XPG 8GB D35G DDR4 3200 BUS RGB Gaming RAM",
-            "img": "https://www.ultratech.com.bd/image/cache/catalog/products_2023/adata-xpg-8gb-d35g-ddr4-3200-bus-rgb-gaming-ram-500x500.jpg.webp",
-            "Brand":"Adata",
-            "model":"XPG 8GB D35G DDR4 3200 BUS",
-            "Speed": "3200Mhz",
-            "Memory":"8GB",
-            "Memorytype":"DDR4",
-            "CASLatency": "CL16",
-            "TDP": "1.35",
-            "price":"3200",
-            "category": "memory",
-            "Availability":"In Stock",
-            "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-          },
-   
-          {     
-            "name": "Adata 8GB DDR4 2666 BUS Desktop Ram",
-            "img": "https://www.ultratech.com.bd/image/cache/catalog/ram/adata/8-gb-ddr4-2666/adata-8-gb-ddr4-2666-bus-desktop-ram-500x500.jpg.webp",
-            "Brand":"Adata",
-            "model":"8 GB DDR4 2666",
-            "Speed": "2666MHz",
-            "Memory":"8GB",
-            "Memorytype":"DDR3",
-            "CASLatency": "CL19",
-            "TDP": "1.2",
-            "price":"2300",
-            "category": "memory",
-            "Availability":"In Stock",
-            "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-          },
-          
-          {     
-              "name": "ADATA DDR4 16GB 2666 BUS Desktop RAM",
-              "img": "https://www.ultratech.com.bd/image/cache/catalog/ram/adata/ddr4-16gb-2666/adata-ddr4-16gb-2666-bus-desktop-ram-500x500.jpg.webp",
-              "Brand":"Adata",
-              "model":"Adata 16GB",
-              "Speed": "2666MHz",
-              "Memory":"16GB",
-              "Memorytype":"DDR4",
-              "CASLatency": "CL19",
-              "TDP": "1.2",
-              "price":"4600",
-              "category": "memory",
-              "Availability":"In Stock",
-              "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-            },
-
-
-
-////
-
-{     
-"name": "Corsair Vengeance lpx 8gb ddr4 3200mhz Desktop Ram",
-"img": "https://www.ultratech.com.bd/image/cache/catalog/ram/corsair/vengeance-lpx-8gb-ddr4-3200mhz/corsair-vengeance-lpx-8gb-3200mhz-500x500.jpg.webp",
-"Brand":"Corsair",
-"model":"Vengeance lpx 8gb ddr4 3200mhz",
-"Speed": "3200Mhz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2500",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-},
-
-{     
-"name": "CORSAIR VENGEANCE RGB RS 8GB DDR4 3200MHz RAM",
-"img": "https://www.ultratech.com.bd/image/cache/2021/12/CORSAIR-VENGEANCE-RGB-RS-8GB-DDR4--1000x1000.jpg.webp",
-"Brand":"Corsair",
-"model":"Corsair Vengeance RGB RS",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"3200",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-},
-
-{     
-  "name": "Corsair Dominator Platinum RGB 8GB 3200MHz DDR4 RAM",
-  "img": "https://www.ultratech.com.bd/image/cache/2021/12/corsair-dominator-platinum-8gb-ram-1-500x500.jpg.webp",
-  "Brand":"Corsair",
-  "model":"3200MHz-RAM",
-  "Speed": "3200Mhz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL18",
-  "TDP": "1.35",
-  "price":"6200",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
- 
-
-},
-
-////
-
-{     
-"name": "Team Elite Plus Red 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
-"img": "https://www.ultratech.com.bd/image/cache/2022/09/elite-plus-red-01-500x500-1-500x500.jpg.webp",
-"Brand":"Team",
-"model":"Team Elite Plus",
-"Speed": "3200Mhz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL22",
-"TDP": "1.25",
-"price":"2350",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-},
-
-{     
-"name": "Team T-Force VULCAN TUF Gaming Alliance 8GB 3200MHz DDR4 Desktop RAM",
-"img": "https://www.ultratech.com.bd/image/cache/2021/12/Team-T-Force-VULCAN-8GB-3200MHz-RAM-500x500.jpg.webp",
-"Brand":"Team",
-"model":" T-FORCE-3200MHZ",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2600",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-},
-
-{     
-  "name": "Team T-Force Delta 8GB 3200MHz DDR4 RGB White Desktop Gaming RAM",
-  "img": "https://www.ultratech.com.bd/image/cache/2022/09/delta-00010-500x500-1-500x500.jpg.webp",
-  "Brand":"Team",
-  "model":"Team T-Force Delta RGB",
-  "Speed": "3200Mhz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"3250",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-
-},
-
-{     
-       
-    "name": "TEAM T-Force DELTA RGB White 16GB 3200MHz DDR4 Gaming RAM",
-    "img": "https://www.ultratech.com.bd/image/cache/2022/09/delta-white-10-500x500-1-500x500.jpg.webp",
-    "Brand":"Team",
-    "model":"Team T-Force Delta RGB 16GB ",
+  {
+    "name": "Corsair Vengeance LPX 8GB 3200MHz DDR4 Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/RAM/VENG_LPX_BLK_01-500x500.png",
+    "Brand": "Corsair",
+    "model": "Corsair Vengeance LPX 8GB",
     "Speed": "3200Mhz",
-    "Memory":"16GB",
-    "Memorytype":"DDR4",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
     "CASLatency": "CL16",
     "TDP": "1.35",
-    "price":"5350",
+    "price": "2600",
     "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
-},
+  {
+    "name": "Corsair DOMINATOR PLATINUM RGB 16GB DDR5 7200MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/dominator-platinum-rgb-ddr5/dominator-platinum-rgb-ddr5-04-500x500.webp",
+    "Brand": "Corsair",
+    "model": "DOMINATOR PLATINUM RGB DDR5",
+    "Speed": "7200MHz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR5",
+    "CASLatency": "CL40",
+    "TDP": "1.45",
+    "price": "13200",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
+  {
+    "name": "CORSAIR VENGEANCE RGB RS 8GB DDR4 3200MHz RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/vengeance-rgb-rs/vengeance-rgb-rs-01-500x500.jpg",
+    "Brand": "Corsair",
+    "model": "VENGEANCE RGB RS",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3450",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
+  {
+    "name": "Team T-Force VULCAN TUF Gaming Alliance 8GB 3200MHz DDR4 Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/vulcan-tuf/vulcan-tuf-01-500x500.jpg",
+    "Brand": "Team",
+    "model": "VULCAN TUF",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2549",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
-////
-{     
-"name": "PNY XLR8 8GB DDR4 3200MHz Desktop Gaming RAM",
-"img": "https://www.ultratech.com.bd/image/cache/catalog/ram/pny/%20XLR8/PNY%20XLR8%208GB%20DDR4%203200MHz%20Desktop%20Gaming%20RAM-500x500.jpg.webp",
-"Brand":"PNY",
-"model":"XLR8-8GB",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2299",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
-},
+  {
+    "name": "Team Elite Plus Red 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/elite-plus/elite-plus-red-01-500x500.jpg",
+    "Brand": "Team",
+    "model": " Elite Plus 3200MHz",
+    "Speed": "3200MHz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL22",
+    "TDP": "1.25",
+    "price": "2500",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
-{     
-  "name": "PNY XLR8 16GB DDR4 3200MHz Desktop Gaming RAM",
-  "img": "https://www.ultratech.com.bd/image/cache/2021/12/pny-xlr8-16gb-ddr4-3200mhz-ram-1-500x500.jpg.webp",
-  "Brand":"PNY",
-  "model":"PNY XLR8 16GB",
-  "Speed": "3200Mhz",
-  "Memory":"16GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"3850",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+  {
+    "name": "TEAM T-FORCE DELTA RGB WHITE 8GB 3200MHz DDR4 Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-ddr4/delta-rgb-ddr4-01-500x500.webp",
+    "Brand": "Team",
+    "model": "T-FORCE DELTA",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3199",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
-},
+  {
+    "name": "TEAM T-Force DELTA RGB White 16GB 3200MHz DDR4 CL16 Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-16gb/delta-white-10-500x500.jpg",
+    "Brand": "Team",
+    "model": "T-Force DELTA RGB",
+    "Speed": "3200Mhz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "5370",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
 
-{     
-       
+  {
     "name": "PNY XLR8 Gaming EPIC-X RGB 8GB DDR4 3200MHz Desktop RAM",
-    "img": "https://www.ultratech.com.bd/image/cache/2021/12/PNY-XLR8-Gaming-EPIC-X-RGB-DDR4-3200MHz-Desktop-RAM-1-500x500.jpg.webp",
-    "Brand":"PNY",
-    "model":"EPIC-X-RGB",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8-gaming-epic-x/xlr8-gaming-epic-x-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "PNY XLR8 Gaming EPIC-X RGB",
+    "Speed": "3200MHz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3050",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+
+  {
+    "name": "PNY XLR8 8GB DDR4 3200MHz Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "XLR8",
     "Speed": "3200Mhz",
-    "Memory":"8GB",
-    "Memorytype":"DDR4",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2330",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+
+  {
+    "name": "PNY XLR8 16GB DDR4 3200MHz Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "PNY XLR8",
+    "Speed": "3200Mhz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3900",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.techlandbd.com/image/cache/wp/gp/techland/logo/techland-white-logo-300x48.webp",
+    "shopName": "techland"
+  },
+
+  //-------------RYANS-------------//
+
+  {
+    "name": "Adata XPG SPECTRIX D35G RGB 8GB DDR4 3200MHz Gaming Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/spectrix-d35g-rgb/spectrix-d35g-rgb-01-500x500.webp",
+    "Brand": "Adata",
+    "model": "XPG SPECTRIX D35G RGB",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3700",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "ADATA 4GB DDR3 1600 BUS",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/4gb-ddr3/4gb-ddr3-1-500x500.jpg",
+    "Brand": "Adata",
+    "model": "ADATA 4GB DDR3",
+    "Speed": "1600Mhz",
+    "Memory": "4GB",
+    "Memorybrand": "DDR3",
+    "CASLatency": "CL11",
+    "TDP": "1.2",
+    "price": "1350",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "Adata 16GB DDR4 2666MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/16gb-ddr4-2666mhz/16gb-ddr4-2666mhz-01-500x500.jpg",
+    "Brand": "Adata",
+    "model": "ADATA 16GB DDR4",
+    "Speed": "2666MHz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL19",
+    "TDP": "1.2",
+    "price": "4200",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "Corsair Vengeance LPX 8GB 3200MHz DDR4 Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/RAM/VENG_LPX_BLK_01-500x500.png",
+    "Brand": "Corsair",
+    "model": "Corsair Vengeance LPX 8GB",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2800",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "Corsair DOMINATOR PLATINUM RGB 16GB DDR5 7200MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/dominator-platinum-rgb-ddr5/dominator-platinum-rgb-ddr5-04-500x500.webp",
+    "Brand": "Corsair",
+    "model": "DOMINATOR PLATINUM RGB DDR5",
+    "Speed": "7200MHz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR5",
+    "CASLatency": "CL40",
+    "TDP": "1.45",
+    "price": "13900",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "CORSAIR VENGEANCE RGB RS 8GB DDR4 3200MHz RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/vengeance-rgb-rs/vengeance-rgb-rs-01-500x500.jpg",
+    "Brand": "Corsair",
+    "model": "VENGEANCE RGB RS",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3350",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "Team T-Force VULCAN TUF Gaming Alliance 8GB 3200MHz DDR4 Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/vulcan-tuf/vulcan-tuf-01-500x500.jpg",
+    "Brand": "Team",
+    "model": "VULCAN TUF",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2349",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "Team Elite Plus Red 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/elite-plus/elite-plus-red-01-500x500.jpg",
+    "Brand": "Team",
+    "model": " Elite Plus 3200MHz",
+    "Speed": "3200MHz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL22",
+    "TDP": "1.25",
+    "price": "2600",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "TEAM T-FORCE DELTA RGB WHITE 8GB 3200MHz DDR4 Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-ddr4/delta-rgb-ddr4-01-500x500.webp",
+    "Brand": "Team",
+    "model": "T-FORCE DELTA",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3299",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "TEAM T-Force DELTA RGB White 16GB 3200MHz DDR4 CL16 Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-16gb/delta-white-10-500x500.jpg",
+    "Brand": "Team",
+    "model": "T-Force DELTA RGB",
+    "Speed": "3200Mhz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "5399",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "PNY XLR8 Gaming EPIC-X RGB 8GB DDR4 3200MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8-gaming-epic-x/xlr8-gaming-epic-x-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "PNY XLR8 Gaming EPIC-X RGB",
+    "Speed": "3200MHz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3150",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "PNY XLR8 8GB DDR4 3200MHz Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "XLR8",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2599",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "PNY XLR8 16GB DDR4 3200MHz Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "PNY XLR8",
+    "Speed": "3200Mhz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "4070",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
+
+  {
+    "name": "Corsair Dominator Platinum RGB 8GB DDR4 3200MHz Gaming Desktop RAM",
+    "img": "https://www.ryanscomputers.com/storage/products/main/corsair-dominator-platinum-rgb-8gb-ddr4-3200mhz-11595936336.webp",
+    "Brand": "Corsair",
+    "model": "Corsair Dominator Platinum RGB",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
     "CASLatency": "CL18",
     "TDP": "1.35",
-    "price":"3099",
+    "price": "5150",
     "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.ultratech.com.bd/image/cache/catalog/website/logo/ultra-technology-header-logo-2-250x83.png.webp"
+    "Availability": "In Stock",
+    "shoplogo": "https://www.ryanscomputers.com/assets/images/ryans-logo.svg",
+    "shopName": "ryans"
+  },
 
-},
+  //-------------skyland--------------//
 
-
-
-
-
-//-------------SKYLAND--------------//    
-
-{     
-"name": "ADATA XPG GAMMIX D20 16GB DDR4 3200MHZ DESKTOP RAM",
-"img": "https://www.skyland.com.bd/image/cache/catalog/adata-xpg-gammix-d20-16gb-ddr4-3200mhz-desktop-ram-1-500x500.jpg",
-"Brand":"Adata",
-"model":"AX4U320038G16A-ST50-1",
-"Speed": "3200Mhz",
-"Memory":"16GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL20",
-"TDP": "1.35",
-"price":"6475",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-},
-
-{     
-"name": "ADATA 4GB DDR3 1600Mhz Desktop RAM",
-"img": "https://www.skyland.com.bd/image/cache/catalog/adata-4gb-ddr3-1600-bus-500x500.jpg",
-"Brand":"Adata",
-"model":"Adata DDR4-1",
-"Speed": "1600MHz",
-"Memory":"4GB",
-"Memorytype":"DDR3",
-"CASLatency": "CL11",
-"TDP": "1.35",
-"price":"1750",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-},
-
-{     
-  "name": "Adata 16GB DDR4 2666MHz Desktop RAM",
-  "img": "https://www.skyland.com.bd/image/cache/catalog/4gb-2666-500x500.jpg",
-  "Brand":"Adata",
-  "model":"Adata 16GB",
-  "Speed": "2666MHz",
-  "Memory":"16GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL19",
-  "TDP": "1.35",
-  "price":"4800",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-}, 
-
-
-
-////
-
-{     
-"name": "Corsair Vengeance LPX 8GB (1X8GB) 3200MHz DDR4 Desktop RAM (Black)",
-"img": "https://www.skyland.com.bd/image/cache/catalog/New-Project-1-5-500x500.jpg",
-"Brand":"Corsair",
-"model":"CMK8GX4M1E3200C16",
-"Speed": "3200Mhz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2475",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-},
-
-{     
-"name": "Corsair VENGEANCE RGB PRO SL 8GB (1x8GB) DDR4 3200MHz Desktop Ram (Black)",
-"img": "https://www.skyland.com.bd/image/cache/catalog/New-Project-42-500x500.jpg",
-"Brand":"Corsair",
-"model":"CMH16GX4M2E3200C16",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"3399",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-},
-
-{     
-  "name": "Corsair DOMINATOR PLATINUM RGB 16GB DDR5 5200MHz C40 RAM",
-  "img": "https://www.skyland.com.bd/image/cache/catalog/dominator-platinum-rgb-ddr5-03-500x500-2-500x500.jpg",
-  "Brand":"Corsair",
-  "model":"Corsair DOMINATOR PLATINUM RGB 16GB",
-  "Speed": "5200Mhz",
-  "Memory":"16GB",
-  "Memorytype":"DDR5",
-  "CASLatency": "CL40",
-  "TDP": "1.35",
-  "price":"24000",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
- 
-},
-
-{     
-  "name": "CORSAIR VENGEANCE RGB RS 16GB DDR4 3600MHz RAM",
-  "img": "https://www.skyland.com.bd/image/cache/catalog/New-Project-46-500x500.jpg",
-  "Brand":"Corsair",
-  "model":"CMK16GX4M1E3200C16-1-1",
-  "Speed": "3600Mhz",
-  "Memory":"16GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL18",
-  "TDP": "1.35",
-  "price":"5399",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
- 
-},
-
-
-
-////
-
-{     
-"name": "Team Delta RGB White 8GB 3600MHz DDR4 Desktop RAM",
-"img": "https://www.skyland.com.bd/image/cache/catalog/Images/Team%20Delta%20RGB%20White-500x500.jpg",
-"Brand":"Team",
-"model":"Delta RGB White",
-"Speed": "3600Mhz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL22",
-"TDP": "1.35",
-"price":"4300",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-},
-
-{     
-"name": "Team Elite Plus Red 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
-"img": "https://www.skyland.com.bd/image/cache/catalog/Team-Elite-Plus-Red-8GB-3200MHz-DDR4-Desktop-RAM-500x500.webp",
-"Brand":"Team",
-"model":" TEAM ELITE PLUS RED",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL22",
-"TDP": "1.2",
-"price":"2250",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-},
-
-{     
-  "name": "Team Elite Plus Red 16GB 3200MHz DDR4 U-DIMM Desktop RAM",
-  "img": "https://www.skyland.com.bd/image/cache/catalog/Team-Elite-Plus-Red-8GB-3200MHz-DDR4-Desktop-RAM-500x500.webp",
-  "Brand":"Team",
-  "model":"TEAM ELITE PLUS REDB",
-  "Speed": "3200Mhz",
-  "Memory":"16GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL22",
-  "TDP": "1.2",
-  "price":"3999",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-
-},
-
-
-
-////
-{     
-"name": "PNY XLR8 8GB DDR4 3200MHz Desktop Gaming RAM",
-"img": "https://www.skyland.com.bd/image/cache/catalog/2020/11/pny-xlr8-gaming-ram-features-500x500.jpg",
-"Brand":"PNY",
-"model":"PNY XLR8 8GB 3200MHz",
-"Speed": "3200MHz",
-"Memory":"8GB",
-"Memorytype":"DDR4",
-"CASLatency": "CL16",
-"TDP": "1.35",
-"price":"2249",
-"category": "memory",
-"Availability":"In Stock",
-"shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-},
-
-{     
-  "name": "PNY XLR8 8GB RGB DDR4 3200MHz White Desktop Ram",
-  "img": "https://www.skyland.com.bd/image/cache/catalog/PNY-XLR8-8GB-RGB-DDR4-3200MHz-White-Ram-500x500.jpg",
-  "Brand":"PNY",
-  "model":"PNY XLR8 8GB 3200MHz White",
-  "Speed": "3200Mhz",
-  "Memory":"8GB",
-  "Memorytype":"DDR4",
-  "CASLatency": "CL16",
-  "TDP": "1.35",
-  "price":"3499",
-  "category": "memory",
-  "Availability":"In Stock",
-  "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
-
-},
-
-{     
-       
-    "name": "Pny XLR8 Gaming 16GB DDR4 3200Mhz Desktop Ram",
-    "img": "https://www.skyland.com.bd/image/cache/catalog/2020/11/pny-xlr8-500x500.jpg",
-    "Brand":"PNY",
-    "model":"XLR8 GAMING",
+  {
+    "name": "Adata XPG SPECTRIX D35G RGB 8GB DDR4 3200MHz Gaming Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/spectrix-d35g-rgb/spectrix-d35g-rgb-01-500x500.webp",
+    "Brand": "Adata",
+    "model": "XPG SPECTRIX D35G RGB",
     "Speed": "3200Mhz",
-    "Memory":"16GB",
-    "Memorytype":"DDR4",
-    "CASLatency": "CL18",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
     "TDP": "1.35",
-    "price":"6100",
+    "price": "3400",
     "category": "memory",
-    "Availability":"In Stock",
-    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png"
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
 
-}
+  {
+    "name": "ADATA 4GB DDR3 1600 BUS",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/4gb-ddr3/4gb-ddr3-1-500x500.jpg",
+    "Brand": "Adata",
+    "model": "ADATA 4GB DDR3",
+    "Speed": "1600Mhz",
+    "Memory": "4GB",
+    "Memorybrand": "DDR3",
+    "CASLatency": "CL11",
+    "TDP": "1.2",
+    "price": "1450",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
 
-] 
+  {
+    "name": "Adata 16GB DDR4 2666MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/adata/16gb-ddr4-2666mhz/16gb-ddr4-2666mhz-01-500x500.jpg",
+    "Brand": "Adata",
+    "model": "ADATA 16GB DDR4",
+    "Speed": "2666MHz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL19",
+    "TDP": "1.2",
+    "price": "4100",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
 
+  {
+    "name": "Corsair Vengeance LPX 8GB 3200MHz DDR4 Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/RAM/VENG_LPX_BLK_01-500x500.png",
+    "Brand": "Corsair",
+    "model": "Corsair Vengeance LPX 8GB",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2650",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "Corsair DOMINATOR PLATINUM RGB 16GB DDR5 7200MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/dominator-platinum-rgb-ddr5/dominator-platinum-rgb-ddr5-04-500x500.webp",
+    "Brand": "Corsair",
+    "model": "DOMINATOR PLATINUM RGB DDR5",
+    "Speed": "7200MHz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR5",
+    "CASLatency": "CL40",
+    "TDP": "1.45",
+    "price": "13600",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "CORSAIR VENGEANCE RGB RS 8GB DDR4 3200MHz RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/cosair/vengeance-rgb-rs/vengeance-rgb-rs-01-500x500.jpg",
+    "Brand": "Corsair",
+    "model": "VENGEANCE RGB RS",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3300",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "Team T-Force VULCAN TUF Gaming Alliance 8GB 3200MHz DDR4 Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/vulcan-tuf/vulcan-tuf-01-500x500.jpg",
+    "Brand": "Team",
+    "model": "VULCAN TUF",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2749",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "Team Elite Plus Red 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/elite-plus/elite-plus-red-01-500x500.jpg",
+    "Brand": "Team",
+    "model": " Elite Plus 3200MHz",
+    "Speed": "3200MHz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL22",
+    "TDP": "1.25",
+    "price": "2500",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "TEAM T-FORCE DELTA RGB WHITE 8GB 3200MHz DDR4 Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-ddr4/delta-rgb-ddr4-01-500x500.webp",
+    "Brand": "Team",
+    "model": "T-FORCE DELTA",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3199",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "TEAM T-Force DELTA RGB White 16GB 3200MHz DDR4 CL16 Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/team/delta-rgb-16gb/delta-white-10-500x500.jpg",
+    "Brand": "Team",
+    "model": "T-Force DELTA RGB",
+    "Speed": "3200Mhz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "5300",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "PNY XLR8 Gaming EPIC-X RGB 8GB DDR4 3200MHz Desktop RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8-gaming-epic-x/xlr8-gaming-epic-x-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "PNY XLR8 Gaming EPIC-X RGB",
+    "Speed": "3200MHz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "3100",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "PNY XLR8 8GB DDR4 3200MHz Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "XLR8",
+    "Speed": "3200Mhz",
+    "Memory": "8GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "2550",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  },
+
+  {
+    "name": "PNY XLR8 16GB DDR4 3200MHz Desktop Gaming RAM",
+    "img": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
+    "Brand": "PNY",
+    "model": "PNY XLR8",
+    "Speed": "3200Mhz",
+    "Memory": "16GB",
+    "Memorybrand": "DDR4",
+    "CASLatency": "CL16",
+    "TDP": "1.35",
+    "price": "4100",
+    "category": "memory",
+    "Availability": "In Stock",
+    "shoplogo": "https://www.skyland.com.bd/image/cache/catalog/skyland-logo-200x42.png",
+    "shopName": "skyland"
+  }
+]

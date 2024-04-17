@@ -41,7 +41,11 @@ const SendMessage = () => {
   };
 
   return (
-    <div className="w-50 ml-20 mt-5 ">
+    <div className="bg-[#f4f4f3]">
+
+
+    <div className="w-50 ml-20 pt-5 mx-auto">
+      <h1 className="text-center font-bold text-xl pb-5">Shipping Update</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formBasicMobile">
           <Form.Label>
@@ -80,13 +84,16 @@ const SendMessage = () => {
             )}
           </div>
         </Form.Group>
-        <div className="d-grid gap-2 mt-4">
+        <div className="d-grid gap-2 mt-4 pb-96">
           <Button variant="info" type="submit" value="" size="">
             Continue
           </Button>
         </div>
       </Form>
     </div>
+    </div>
+
+
   );
 };
 

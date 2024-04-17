@@ -420,7 +420,7 @@ const Dashboard = () => {
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <FaCalendarWeek />
-                    <span className="text-sm font-medium mr-28">Coupons</span>
+                    <span className="text-sm font-medium mr-36">Voucher</span>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4 text-black">
@@ -429,7 +429,7 @@ const Dashboard = () => {
                         to="/dashboard/addcoupon"
                         className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Add Coupons
+                        Add Voucher
                       </NavLink>
                     </li>
 
@@ -438,14 +438,14 @@ const Dashboard = () => {
                         to="/dashboard/managecoupon"
                         className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Manage Coupons
+                        Manage Voucher
                       </NavLink>
                     </li>
                   </ul>
                 </details>
               </li>
 
-              <li>
+              {/* <li>
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2">
                     <FaCalendarWeek />
@@ -472,13 +472,13 @@ const Dashboard = () => {
                     </li>
                   </ul>
                 </details>
-              </li>
-              <li className="mt-2">
+              </li> */}
+              {/* <li className="mt-2">
                 <NavLink to="">
                   <FaCalendarAlt />
                   Manage Stock
                 </NavLink>
-              </li>
+              </li> */}
 
               <li>
                 <details className="group">
@@ -499,14 +499,14 @@ const Dashboard = () => {
                       </NavLink>
                     </li>
 
-                    <li>
+                    {/* <li>
                       <NavLink
                         to="/dashboard/shopwiseorders"
                         className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
                         Shop wise orders
                       </NavLink>
-                    </li>
+                    </li> */}
                   </ul>
                 </details>
               </li>
@@ -528,10 +528,42 @@ const Dashboard = () => {
                   <ul className="mt-2 space-y-1 px-4 text-black">
                     <li>
                       <NavLink
-                        to=""
+                        to="startech"
                         className="block rounded-lg px-2 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Product collection & delivery
+                        Star Tech
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="ultratech"
+                        className="block rounded-lg px-2 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Ultra Tech
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="ryans"
+                        className="block rounded-lg px-2 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Ryans
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="techland"
+                        className="block rounded-lg px-2 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Tech Land
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="skyland"
+                        className="block rounded-lg px-2 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
+                      >
+                        Sky Land
                       </NavLink>
                     </li>
                   </ul>
@@ -539,7 +571,7 @@ const Dashboard = () => {
               </li>
 
               <li className="py-1">
-                <NavLink to="/">
+                <NavLink to="/dashboard/adminhome">
                   <FaBook></FaBook> Sales & Revenue
                 </NavLink>
               </li>
@@ -550,8 +582,8 @@ const Dashboard = () => {
                 <details className="group">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg py-2 ">
                     <CreateNewFolderIcon />
-                    <span className="text-sm font-medium mr-20">
-                      Orders to collect
+                    <span className="text-sm font-medium mr-">
+                      Orders to collect & Deliver
                     </span>
                   </summary>
 
@@ -601,16 +633,12 @@ const Dashboard = () => {
                 </details>
               </li>
 
-              <li className="text-sm font-medium ml-1 mt-1">
-                <NavLink to="/dashboard/allusers">
-                  <FaUsers></FaUsers> Orders to deliver
-                </NavLink>
-              </li>
+             
             </>
           ) : (
             <>
               <li>
-                <NavLink to="/dashboard/userhome">
+                <NavLink to="/userProfile">
                   <FaHome></FaHome> User Home
                 </NavLink>
               </li>
@@ -657,11 +685,9 @@ const Dashboard = () => {
               <FaHome></FaHome> Home
             </NavLink>{" "}
           </li>
+         
           <li>
-            <NavLink to="/menu"> Our Menu</NavLink>
-          </li>
-          <li>
-            <NavLink to="/order/salad">Order Product</NavLink>
+            <NavLink to="/guides">The RIG Products</NavLink>
           </li>
         </ul>
         <div className="flex gap-2 ml-10 font-bold">

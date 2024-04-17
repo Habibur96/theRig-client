@@ -117,6 +117,7 @@ const OrderHistory = () => {
             ))}
           </tbody>
         </table>
+        <hr />
       </div>
     </div>
   );

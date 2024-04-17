@@ -340,6 +340,7 @@ export const router = createBrowserRouter([
         path: "mycart",
         element: <MyCart></MyCart>,
       },
+     
       {
         path: "orderHistory/:email",
         element: <OrderHistory></OrderHistory>,
@@ -557,42 +558,42 @@ export const router = createBrowserRouter([
       {
         path: "startech",
         element: (
-          <DeliveryAgentRoute>
+          <>
             <Startech></Startech>
-          </DeliveryAgentRoute>
+          </>
         ),
       },
 
       {
         path: "ultratech",
         element: (
-          <DeliveryAgentRoute>
+          <>
             <UltraTech></UltraTech>
-          </DeliveryAgentRoute>
+          </>
         ),
       },
       {
         path: "techland",
         element: (
-          <DeliveryAgentRoute>
+          <>
             <TechLand></TechLand>
-          </DeliveryAgentRoute>
+          </>
         ),
       },
       {
         path: "ryans",
         element: (
-          <DeliveryAgentRoute>
-            <Ryans></Ryans>
-          </DeliveryAgentRoute>
+          <>
+            <Ryans>DeliveryAgentRoute</Ryans>
+          </>
         ),
       },
       {
         path: "skyland",
         element: (
-          <DeliveryAgentRoute>
+          <>
             <SkyLand></SkyLand>
-          </DeliveryAgentRoute>
+          </>
         ),
       },
 
@@ -600,9 +601,9 @@ export const router = createBrowserRouter([
       {
         path: "ordersToDeliver/:id",
         element: (
-          <DeliveryAgentRoute>
+          <>
             <OrdersToDeliver></OrdersToDeliver>
-          </DeliveryAgentRoute>
+          </>
         ),
       },
       {

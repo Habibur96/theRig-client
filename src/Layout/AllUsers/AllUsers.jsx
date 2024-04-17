@@ -67,7 +67,7 @@ const AllUsers = () => {
   };
 
   return (
-    <div className=" max-w-screen-lg ml-32">
+    <div className=" max-w-screen-lg ml-32 mb-20">
       {/* <Helmet>
         <title>Bistro Boss | All users</title>
       </Helmet> */}

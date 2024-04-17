@@ -11,6 +11,7 @@ import useWishList from "../../../Hooks/useWishList";
 import MenuIcon from "@mui/icons-material/Menu";
 import theRig from "../../../assets/logo/theRIG.png";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import useDeliveryAgent from "../../../Hooks/useDeliveryAgent";
 // import { Category } from "@mui/icons-material";
 // import SearchCpu from "../../Home/Pcbuild/SearchCpu";
 // import SearchMotherboard from "../../Home/Pcbuild/SearchMotherboard";
@@ -24,6 +25,7 @@ const Navber = () => {
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
   const [isAdmin] = useAdmin();
+  const [isDeliveryAgent] = useDeliveryAgent();
 
   const navigate = useNavigate();
   const searchRef = useRef(null);
@@ -206,18 +208,22 @@ const Navber = () => {
         </div>
 
         <div className="flex ml-3 mr-60 items-center">
-          <div className="mr-4">
-            {isAdmin ? (
-              <Link to="/dashboard/adminhome">
-                <MenuIcon />
-              </Link>
-            ) : (
-              
+          <div className="flex ml-3 mr-60 items-center">
+            <div className="mr-4">
+              {isAdmin ? (
+                <Link to="/dashboard/adminhome">
+                  <MenuIcon />
+                </Link>
+              ) : isDeliveryAgent ? (
+                <Link to="/dashboard/userhome">
+                  <MenuIcon />
+                </Link>
+              ) : (
                 <Link to="/dashboard/mycart">
                   <MenuIcon />
                 </Link>
-              
-            )}
+              )}
+            </div>
           </div>
 
           {/* <div className="mr-4">

@@ -76,7 +76,7 @@ const OrdersToDeliver = () => {
               </div>
 
               <th className="whitespace-nowrap px-4 py-2 font-medium text-center text-gray-900">
-                Order Id
+                Customer Name & <br /> Order Id
               </th>
               <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                 Qty
@@ -127,7 +127,7 @@ const OrdersToDeliver = () => {
                 </td>
 
                 <td className="whitespace-nowrap text-center pl-2 pr-2 py-2 text-gray-700">
-                  {order._id}
+                  {order.name} <br /> <br /> {order._id}
                 </td>
                 <td className="whitespace-nowrap text-center text-gray-700">
                   {order.quantity}
@@ -143,7 +143,7 @@ const OrdersToDeliver = () => {
                   {order.address}
                 </td>
                 <td className="whitespace-nowrap px-2 py-2 text-center text-gray-700">
-                  {order.orderStatus}
+                  {order.orderStatus} <br />
                 </td>
 
                 <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">

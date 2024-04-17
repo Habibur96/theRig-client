@@ -35,6 +35,10 @@ const ManageProducts = () => {
     },
   });
 
+  const handleDelete = (id)=>{
+
+  }
+
   const productArray = Object.values(products).flat();
 
   const handleSearch = () => {

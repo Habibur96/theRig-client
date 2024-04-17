@@ -19,6 +19,7 @@ const Guides = () => {
   const [wishHovered, setWishHovered] = useState(false);
   const [cartHovered, setCartHovered] = useState(false);
   const [buildProducts] = useCompleteBuild();
+  // console.log(buildProducts[0]?.buildQty)
   const [axiosSecure] = useAxiosSecure();
   const [, refetch] = UseCart();
   const [, wishListRefetch] = useWishList();
@@ -120,7 +121,7 @@ const Guides = () => {
       <h1 className="text-[#ffffff] text-3xl text-center font-bold bg-[#545578] h-28 pt-4">
         Build Guides
       </h1>
-      <div className="max-w-screen-xl mx-auto grid md:grid-cols-4 gap-x-28 gap-y-8 mt-10 ">
+      <div className="max-w-screen-xl mx-auto grid md:grid-cols-4 gap-x-28 gap-y-8 mt-10 pb-10">
         {buildProducts.map((item, index) => (
           <div
             key={item._id}
@@ -129,7 +130,7 @@ const Guides = () => {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <figure className="bg-slate-800 relative">
+            <figure className=" relative">
               <img
                 className="transition-transform duration-300 transform hover:scale-150"
                 src={item.img}
@@ -191,11 +192,38 @@ const Guides = () => {
               )}
             </figure>
             {/* <p className="absolute right-0 mr-4 mt-4 px-4 bg-slate-900 text-white">
-              {item?.totalPrice} tk
-            </p> */}
-            <div className="card-body flex flex-col items-center shadow-2xl">
+              {item?.buildQty}
+            </p> 
+             */}
+            {/* <div className="card-body flex flex-col items-center shadow-2xl">
               <Link to={`/guideDetails/${item.buildName}`}>
                 <h4 className="card-title text-lg text-blue-600">
+                  {item.buildName}
+                </h4>
+              </Link>
+             
+            </div> */}
+
+              {item.buildQty <= 0 && (
+                <p className="absolute right-0 mr-1 mt-2 px-4 py-1 bg-slate-900 text-white">
+                  StockOut
+                </p>
+              )}
+            <div className="card-body flex flex-col items-center shadow-2xl">
+              <Link
+                to={`/guideDetails/${item.buildName}`}
+                className={item.buildQty <= 0 ? "disabled-link" : ""}
+                onClick={(e) => {
+                  if (item.buildQty <= 0) {
+                    e.preventDefault(); // Prevent navigation if buildQty is <= 0
+                  }
+                }}
+              >
+                <h4
+                  className={`card-title text-lg text-blue-600 ${
+                    item.buildQty <= 0 ? "disabled" : ""
+                  }`}
+                >
                   {item.buildName}
                 </h4>
               </Link>

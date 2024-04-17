@@ -121,10 +121,10 @@ const AllOrders = () => {
                 <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
                   Price
                 </th>
-                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-center">
+                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900 text-center">
                   Action
                 </th>
-                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-center">
+                <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900 text-center">
                   Send Message
                 </th>
               </tr>
@@ -172,7 +172,7 @@ const AllOrders = () => {
                     {order.orderStatus}
                   </td>
 
-                  <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                  <td className="whitespace-nowrap px-3 py-2 text-gray-700">
                     {order.price}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">

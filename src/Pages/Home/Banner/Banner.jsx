@@ -31,7 +31,7 @@ const Banner = () => {
     <div className=" bg-[#f4f4f3]">
       <div className="max-w-screen-2xl mx-auto pt-5">
         <Carousel>
-          <img src={banner1} alt="example-image-1" />
+          {/* <img src={banner1} alt="example-image-1" /> */}
           <img src={banner2} alt="example-image-2" />
           <img src={banner3} alt="example-image-2" />
           <img src={banner4} alt="example-image-2" />
@@ -96,13 +96,13 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Ready Build</h2>
-                <p className="font-semibold">
+                <Link to="guides" className="card-title">Ready Build</Link>
+                <Link to="guides" className="font-semibold">
                   PC-V C3101i Intel Core i3 10105, 8GB RAM, 250GB SSD Desktop PC
-                </p>
+                </Link>
               </div>
               <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <small className="text-muted">Last updated build</small>
               </Card.Footer>
             </div>
             <div className="card w-75 bg-base-100 shadow-xl pr-5 pl-5 pt-1">
@@ -113,14 +113,14 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Ready Build</h2>
-                <p className="font-semibold">
+                <Link to="guides" className="card-title">Ready Build</Link>
+                <Link to="guides" className="font-semibold">
                   Ryans PC-G C31012G, Intel Core i3 10105 8GB RAM, 250GB SATAIII
                   SSD Gaming Desktop PC{" "}
-                </p>
+                </Link>
               </div>
               <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <small className="text-muted">Last updated build</small>
               </Card.Footer>
             </div>
             <div className="card w-75 bg-base-100 shadow-xl pr-5 pl-5 pt-1">
@@ -131,14 +131,14 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Ready Build</h2>
-                <p className="font-semibold">
+                <Link to="guides" className="card-title">Ready Build</Link>
+                <Link to="guides" className="font-semibold">
                   PC-G C3101G Intel Core i3 10100F 8GB DDR4, 250GB SSD Heavy
                   Gaming PC
-                </p>
+                </Link>
               </div>
               <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <small className="text-muted">Last updated build</small>
               </Card.Footer>
             </div>
           </div>
@@ -178,7 +178,7 @@ const Banner = () => {
                     Macro Keys, while switching profiles via MSI Center.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="product/keyboard" className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -200,7 +200,7 @@ const Banner = () => {
                     missing or having unexpected key presses.?
                   </p>
                   <div className="flex card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="product/keyboard" className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -222,7 +222,7 @@ const Banner = () => {
                     missing or having unexpected key presses.?
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="product/keyboard" className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -246,7 +246,7 @@ const Banner = () => {
                     minima, reprehenderit iusto assumenda cum? Eos, accusamus?
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="product/gpu" className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -267,7 +267,7 @@ const Banner = () => {
                     laudantium est praesentium facilis, aspernatur perferendis.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="product/monitor" className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -288,7 +288,7 @@ const Banner = () => {
                     modi id quis vero atque!
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="product/case" className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -312,7 +312,7 @@ const Banner = () => {
                     sunt praesentium? Id sequi quis nostrum possimus vitae.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="guides" className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -335,7 +335,7 @@ const Banner = () => {
                     exercitationem ipsam unde similique cum quos necessitatibus?
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="guides"  className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -356,7 +356,7 @@ const Banner = () => {
                     a modi qui, non excepturi cum? Harum, reprehenderit!
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to="guides"  className="btn btn-primary">Buy Now</Link>
                   </div>
                 </div>
               </div>

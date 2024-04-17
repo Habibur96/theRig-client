@@ -27,10 +27,10 @@ const GuidesDetails = () => {
   const [review, reviewRefetch] = useReview();
   const [axiosSecure] = useAxiosSecure();
   const [buildProducts, combuildRefetch] = useCompleteBuild();
-  // const [] = 
+  // const [] =
   console.log(buildProducts);
   const product = buildProducts.filter((item) => item.buildName === buildName);
-  
+
   const currentBuildReview = review.filter(
     (item) => item.buildName === buildName
   );
@@ -81,7 +81,7 @@ const GuidesDetails = () => {
         productName: product[0]?.buildName,
         productImg: product[0]?.img,
         price: product[0]?.totalPrice,
-        shopName:product[0]?.shopName,
+        shopName: product[0]?.shopName,
         quantity: quantity,
       };
 
@@ -455,26 +455,28 @@ const GuidesDetails = () => {
                 </td>
               </tr>
 
-              <tr>
-                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  <img
-                    src={product[0]?.gpuImg}
-                    alt="Product Image"
-                    className="h-18 w-16"
-                  />
-                </td>
+              {product[0]?.gpuName ? (
+                <tr>
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    <img
+                      src={product[0]?.gpuImg}
+                      alt="Product Image"
+                      className="h-18 w-16"
+                    />
+                  </td>
 
-                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                  {product[0]?.gpuName}
-                </td>
-                <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
-                  {product[0]?.gpuModel}
-                </td>
+                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    {product[0]?.gpuName}
+                  </td>
+                  <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                    {product[0]?.gpuModel}
+                  </td>
 
-                <td className="whitespace-nowrap px-2 py-2 text-gray-700">
-                  {product[0]?.gpuPrice}
-                </td>
-              </tr>
+                  <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                    {product[0]?.gpuPrice}
+                  </td>
+                </tr>
+              ) : null}
 
               <tr>
                 <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">

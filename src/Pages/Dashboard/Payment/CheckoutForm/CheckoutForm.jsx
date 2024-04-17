@@ -14,6 +14,7 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import PaymentsIcon from "@mui/icons-material/Payments";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
+import toast from "react-hot-toast";
 
 const CheckoutForm = ({ email }) => {
   const {
@@ -261,15 +262,15 @@ const CheckoutForm = ({ email }) => {
           refetch();
 
           if (res.data?.insertResult?.insertedId) {
-            // toast('Pay the Payment Successfully !!!', { autoClose: 2000 })
+             toast('Thank you for payment', { autoClose: 1000 })
 
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "Thank you for payment",
-              showConfirmButton: false,
-              timer: 1500,
-            });
+            // Swal.fire({
+            //   position: "top-end",
+            //   icon: "success",
+            //   title: "Thank you for payment",
+            //   showConfirmButton: false,
+            //   timer: 1500,
+            // });
             navigate(`/dashboard/paymentHistory/${email}`);
           }
         }

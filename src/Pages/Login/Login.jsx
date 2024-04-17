@@ -100,7 +100,7 @@ const Login = () => {
         <title>TheRig | Login</title>
       </Helmet> */}
       <div className="flex gap-12  pt-5 pt-5 bg-[#f4f4f3]">
-        <img className="ml-96 pl-20" src={login} alt="" />
+        <img className="ml-80 pl-20" src={login} alt="" />
         <div className="shadow-lg p-4 mb-8 mt-4  rounded-4">
           <h2 className=" text-bold text-xl mt-5 mb-4 font-bold">
             Account Login

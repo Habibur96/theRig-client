@@ -29,7 +29,7 @@ const OrdersToDeliver = () => {
     const test = {
       api_key: import.meta.env.VITE_API_KEY,
       senderid: import.meta.env.VITE_SENDER_ID,
-      number: `${data?.phone}, 01882043618`,
+      number: `${data?.phone}, 01533424065`,
       message: `${data?.message} Your OTP is: ${otp}`,
     };
 
@@ -183,7 +183,7 @@ const OrdersToDeliver = () => {
             <Form.Control
               type="tel"
               name="phone"
-              // value={orders[0].phone}
+              value={orders[0].phone}
               {...register("phone", { required: true })}
               placeholder="Mobile"
             />

@@ -610,7 +610,7 @@ const Dashboard = () => {
                         to="/dashboard/ultratech"
                         className="block rounded-lg px-3 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Ultra
+                        Ultra Tech
                       </NavLink>
                     </li>
                     <li>

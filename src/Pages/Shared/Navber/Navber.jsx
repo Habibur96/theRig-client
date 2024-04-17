@@ -213,12 +213,30 @@ const Navber = () => {
               </Link>
             ) : (
               
-                <Link to="/dashboard/userhome">
+                <Link to="/dashboard/mycart">
                   <MenuIcon />
                 </Link>
               
             )}
           </div>
+
+          {/* <div className="mr-4">
+            {isAdmin ? (
+              <Link to="/dashboard/adminhome">
+                <MenuIcon />
+              </Link>
+            ) : (
+              <Link to="/dashboard/mycart">
+                
+              </Link>
+            )}
+            {!isAdmin && (
+              <Link to="/dashboard/userhome">
+                <MenuIcon />
+              </Link>
+            )}
+          </div> */}
+
           <Link
             to="/"
             // className="btn btn-ghost normal-case text-xl"

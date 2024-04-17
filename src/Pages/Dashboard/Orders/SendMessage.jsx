@@ -54,7 +54,7 @@ const SendMessage = () => {
           <Form.Control
             type="tel"
             name="phone"
-            // value={orders[0].phone}
+            value={orders[0].phone}
             {...register("phone", { required: true })}
             placeholder="Mobile"
           />

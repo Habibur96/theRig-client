@@ -28,7 +28,7 @@ const AllOrders = () => {
     const test = {
       api_key: import.meta.env.VITE_API_KEY,
       senderid: import.meta.env.VITE_SENDER_ID,
-      number: `${data?.phoneNumber}`,
+      number: `${data?.phone}`,
       message: `${data?.message}`,
     };
 
@@ -48,12 +48,12 @@ const AllOrders = () => {
   {
     orders.map((order, index) => {
       if (order?.orderStatus === "delivered") {
-        // const phoneNumber = order?.phone;
-        //  const phoneNumber = "01715123820";
+        const phone = order?.phone;
+       
         const message = `Cheers! Your product has been delivered successfully. Thank you for choosing The RIG.`;
 
         // Assuming onSubmit is a function that handles submitting the order details
-        //onSubmit({ phoneNumber, message }); ///ekhane phone hobe phoneNumber na ata mone raikho
+        //onSubmit({ phone, message }); ///ekhane phone hobe phoneNumber na ata mone raikho
       }
 
       // You should return JSX from the map function, but in this case, you might not need to render anything

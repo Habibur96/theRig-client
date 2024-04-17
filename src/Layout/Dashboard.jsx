@@ -114,6 +114,14 @@ const Dashboard = () => {
                           <ul className="mt-2 space-y-1 px-4 text-black ">
                             <li>
                               <NavLink
+                                to="/dashboard/createBuild"
+                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
+                              >
+                                Build Guides
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink
                                 to="/dashboard/createProducts/cpu"
                                 className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                               >
@@ -201,14 +209,6 @@ const Dashboard = () => {
                                 Ups
                               </NavLink>
                             </li>
-                            <li>
-                              <NavLink
-                                to="/dashboard/createBuild"
-                                className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
-                              >
-                                Build Guides
-                              </NavLink>
-                            </li>
                           </ul>
                         </details>
                       </li>
@@ -231,7 +231,7 @@ const Dashboard = () => {
                         to=""
                         className="block rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Shop Collect Product
+                        Change Banners
                       </NavLink>
                     </li>
 
@@ -240,7 +240,7 @@ const Dashboard = () => {
                         to=""
                         className="block rounded-lg px-4 py-2 text-sm font-medium  hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Delivery product
+                        Update News Link
                       </NavLink>
                     </li>
                   </ul>

@@ -60,7 +60,8 @@
     "slick-carousel": "^1.8.1",
     "stripe": "^14.15.0",
     "styled-components": "^6.1.1",
-    "sweetalert2": "^11.10.4"
+    "sweetalert2": "^11.10.4",
+    "victory": "^37.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

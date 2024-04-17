@@ -230,7 +230,7 @@ console.log(build[0]?.img)
       <form onSubmit={handleSubmit(onSubmit)}>
         <SectionTitle heading="Edit complete build"></SectionTitle>
 
-        <h3 className="italic text-center font-bold text-2xl text-blue-700">
+        <h3 className="italic text-center font-bold text-2xl">
           Cpu
         </h3>
         <div className="flex my-4">
@@ -295,7 +295,7 @@ console.log(build[0]?.img)
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-green-700">
+        <h3 className="italic text-center font-bold text-2xl">
           Cpu Cooler
         </h3>
         <div className="flex my-4">
@@ -360,7 +360,7 @@ console.log(build[0]?.img)
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-fuchsia-700">
+        <h3 className="italic text-center font-bold text-2xl">
           Motherboard
         </h3>
         <div className="flex my-4">
@@ -426,7 +426,7 @@ console.log(build[0]?.img)
           </div>
         </div>
 
-        <h3 className="italic text-center font-bold text-2xl text-pink-800">
+        <h3 className="italic text-center font-bold text-2xl">
           Memory
         </h3>
         <div className="flex my-4">
@@ -491,7 +491,7 @@ console.log(build[0]?.img)
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-pink-800">
+        <h3 className="italic text-center font-bold text-2xl">
           Monitor
         </h3>
         <div className="flex my-4">
@@ -556,7 +556,7 @@ console.log(build[0]?.img)
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-orange-700">
+        <h3 className="italic text-center font-bold text-2xl">
           Storage
         </h3>
         <div className="flex my-4">
@@ -621,7 +621,7 @@ console.log(build[0]?.img)
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-blue-700">
+        <h3 className="italic text-center font-bold text-2xl">
           Gpu
         </h3>
         <div className="flex my-4">
@@ -686,7 +686,7 @@ console.log(build[0]?.img)
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-teal-600">
+        <h3 className="italic text-center font-bold text-2xl">
           Case
         </h3>
         <div className="flex my-4">
@@ -752,7 +752,7 @@ console.log(build[0]?.img)
           </div>
         </div>
 
-        <h3 className="italic text-center font-bold text-2xl text-lime-500">
+        <h3 className="italic text-center font-bold text-2xl">
           Power Supply
         </h3>
         <div className="flex my-4">

@@ -156,16 +156,14 @@ const CreateBuild = () => {
       });
   };
   return (
-    <div className="max-w-screen-xl mx-auto mt-5 px-10 bg-[#B8DFD8]">
+    <div className="max-w-screen-xl mx-auto mt-5 px-10 bg-gray-200">
       <form onSubmit={handleSubmit(onSubmit)}>
         <SectionTitle
-          subHeading="What's new"
+          // subHeading="What's new"
           heading="Create complete build"
         ></SectionTitle>
 
-        <h3 className="italic text-center font-bold text-2xl text-blue-700">
-          Cpu
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Cpu</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
@@ -224,9 +222,7 @@ const CreateBuild = () => {
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-green-700">
-          Cpu Cooler
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Cpu Cooler</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
@@ -285,9 +281,7 @@ const CreateBuild = () => {
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-fuchsia-700">
-          Motherboard
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Motherboard</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
@@ -347,9 +341,7 @@ const CreateBuild = () => {
           </div>
         </div>
 
-        <h3 className="italic text-center font-bold text-2xl text-pink-800">
-          Memory
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Memory</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
@@ -408,9 +400,7 @@ const CreateBuild = () => {
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-pink-800">
-          Monitor
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Monitor</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
@@ -469,9 +459,7 @@ const CreateBuild = () => {
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-orange-700">
-          Storage
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Storage</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
@@ -530,9 +518,7 @@ const CreateBuild = () => {
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-blue-700">
-          Gpu
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Gpu</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
@@ -591,9 +577,7 @@ const CreateBuild = () => {
             />
           </div>
         </div>
-        <h3 className="italic text-center font-bold text-2xl text-teal-600">
-          Case
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Case</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">
@@ -653,9 +637,7 @@ const CreateBuild = () => {
           </div>
         </div>
 
-        <h3 className="italic text-center font-bold text-2xl text-lime-500">
-          Power Supply
-        </h3>
+        <h3 className="italic text-center font-bold text-2xl">Power Supply</h3>
         <div className="flex my-4">
           <div className="w-full mb-4">
             <label className="label">

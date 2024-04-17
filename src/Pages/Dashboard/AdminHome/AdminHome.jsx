@@ -225,6 +225,296 @@
 
 // export default AdminHome;
 
+
+
+import { useQuery } from "@tanstack/react-query";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import UseAuth from "../../../Hooks/UseAuth";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  LineChart,
+  Line,
+  AreaChart,
+  Area,
+  ScatterChart,
+  Scatter,
+  PieChart,
+  Pie,
+  ResponsiveContainer,
+  Legend,
+  RadialBarChart,
+  RadialBar,
+} from "recharts";
+
+const AdminHome = () => {
+  const { user } = UseAuth();
+  const [axiosSecure] = useAxiosSecure();
+
+// Example data
+const exampleData = {
+  users: 12,
+  products: 405,
+  orders: 16,
+  revenue: 1614083,
+};
+
+// Set example data for all charts
+const userData = [{ category: "Users", total: exampleData.users }];
+const productData = [{ category: "Products", total: exampleData.products }];
+const revenueData = [{ category: "Revenue", total: exampleData.revenue }];
+const orderData = [{ category: "Orders", total: exampleData.orders }];
+
+  // Define colors for chart elements
+  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+
+  // Define custom bar shape
+  const getPath = (x, y, width, height) => {
+    return `M${x},${y + height}C${x + width / 3},${y + height} ${
+      x + width / 2
+    },${y + height / 3}
+    ${x + width / 2}, ${y}
+    C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${
+      x + width
+    }, ${y + height}
+    Z`;
+  };
+
+  const TriangleBar = (props) => {
+    const { fill, x, y, width, height } = props;
+    return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
+  };
+
+  // Define function for rendering customized pie label
+  const RADIAN = Math.PI / 180;
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+  }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+    return (
+      <text
+        x={x}
+        y={y}
+        fill="white"
+        textAnchor={x > cx ? "start" : "end"}
+        dominantBaseline="central"
+      >
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    );
+  };
+
+  return (
+    <div className="w-full m-4">
+      <h2 className="text-3xl">Welcome, {user.displayName}</h2>
+      <div className="stats shadow">
+        {/* Revenue */}
+        <div className="stat">
+          <div className="stat-figure text-secondary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block w-8 h-8 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+          </div>
+          <div className="stat-title">Revenue</div>
+          <div className="stat-value">${exampleData.revenue}</div>
+          <div className="stat-desc">Jan 1st - Feb 1st</div>
+        </div>
+
+        {/* New Users */}
+        <div className="stat">
+          <div className="stat-figure text-secondary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block w-8 h-8 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              ></path>
+            </svg>
+          </div>
+          <div className="stat-title">New Users</div>
+          <div className="stat-value">${exampleData.users}</div>
+          <div className="stat-desc">↗︎ 400 (22%)</div>
+        </div>
+
+        {/* Menu Items */}
+        <div className="stat">
+          <div className="stat-figure text-secondary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block w-8 h-8 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              ></path>
+            </svg>
+          </div>
+          <div className="stat-title">Menu Items</div>
+          <div className="stat-value">${exampleData.products}</div>
+          <div className="stat-desc">↗︎ 400 (22%)</div>
+        </div>
+
+        {/* Orders */}
+        <div className="stat">
+          <div className="stat-figure text-secondary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block w-8 h-8 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+              ></path>
+            </svg>
+          </div>
+          <div className="stat-title">Orders</div>
+          <div className="stat-value">{exampleData.orders}</div>
+          <div className="stat-desc">↘︎ 90 (14%)</div>
+        </div>
+      </div>
+
+      <div className="flex">
+        {/* Bar Chart */}
+        <div className="w-1/2">
+          <BarChart
+            width={500}
+            height={300}
+            data={userData}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="category" />
+            <YAxis />
+            <Bar
+              dataKey="total"
+              fill="#8884d8"
+              shape={<TriangleBar />}
+              label={{ position: "top" }}
+            >
+              {userData.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={colors[index % colors.length]}
+                />
+              ))}
+            </Bar>
+          </BarChart>
+        </div>
+
+        {/* Line Chart */}
+        <div className="w-1/2">
+          <LineChart
+            width={500}
+            height={300}
+            data={productData}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="category" />
+            <YAxis />
+            <Line
+              type="monotone"
+              dataKey="total"
+              stroke="#8884d8"
+              activeDot={{ r: 8 }}
+            />
+          </LineChart>
+        </div>
+      </div>
+
+      <div className="flex">
+        {/* Area Chart */}
+        <div className="w-1/2">
+          <AreaChart
+            width={500}
+            height={300}
+            data={revenueData}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="category" />
+            <YAxis />
+            <Area type="monotone" dataKey="total" fill="#8884d8" />
+          </AreaChart>
+        </div>
+
+        {/* Scatter Chart */}
+        <div className="w-1/2">
+          <ScatterChart
+            width={500}
+            height={300}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid />
+            <XAxis dataKey="category" type="category" />
+            <YAxis dataKey="total" type="number" />
+            <Scatter name="Data" data={orderData} fill="#8884d8" />
+          </ScatterChart>
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export default AdminHome;
+
 // import { useQuery } from "@tanstack/react-query";
 // import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 // import UseAuth from "../../../Hooks/UseAuth";
@@ -325,196 +615,7 @@
 
 // export default AdminHome;
 
-import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-import UseAuth from "../../../Hooks/UseAuth";
-import {
-  BarChart,
-  Bar,
-  Cell,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  LineChart,
-  Line,
-  AreaChart,
-  Area,
-  ScatterChart,
-  Scatter,
-  PieChart,
-  Pie,
-  ResponsiveContainer,
-  Legend,
-  RadialBarChart,
-  RadialBar,
-} from "recharts";
 
-const AdminHome = () => {
-  const { user } = UseAuth();
-  const [axiosSecure] = useAxiosSecure();
 
-  // Example data
-  const exampleData = {
-    users: 12,
-    products: 405,
-    orders: 16,
-    revenue: 1614083,
-  };
 
-  // Set example data for all charts
-  const userData = [{ category: "Users", total: exampleData.users }];
-  const productData = [{ category: "Products", total: exampleData.products }];
-  const revenueData = [{ category: "Revenue", total: exampleData.revenue }];
-  const orderData = [{ category: "Orders", total: exampleData.orders }];
 
-  // Define colors for chart elements
-  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
-  // Define custom bar shape
-  const getPath = (x, y, width, height) => {
-    return `M${x},${y + height}C${x + width / 3},${y + height} ${
-      x + width / 2
-    },${y + height / 3}
-    ${x + width / 2}, ${y}
-    C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${
-      x + width
-    }, ${y + height}
-    Z`;
-  };
-
-  const TriangleBar = (props) => {
-    const { fill, x, y, width, height } = props;
-    return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
-  };
-
-  // Define function for rendering customized pie label
-  const RADIAN = Math.PI / 180;
-  const renderCustomizedLabel = ({
-    cx,
-    cy,
-    midAngle,
-    innerRadius,
-    outerRadius,
-    percent,
-  }) => {
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-    return (
-      <text
-        x={x}
-        y={y}
-        fill="white"
-        textAnchor={x > cx ? "start" : "end"}
-        dominantBaseline="central"
-      >
-        {`${(percent * 100).toFixed(0)}%`}
-      </text>
-    );
-  };
-
-  return (
-    <div className="w-full m-4">
-      <h2 className="text-3xl">Welcome, {user.displayName}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Revenue */}
-        <div className="stat bg-white p-4 shadow-md rounded-lg">
-          <div className="stat-title">Revenue</div>
-          <div className="stat-value text-4xl font-bold text-blue-500">
-            ${exampleData.revenue}
-          </div>
-          <div className="stat-desc text-gray-500">Jan 1st - Feb 1st</div>
-        </div>
-
-        {/* New Users */}
-        <div className="stat bg-white p-4 shadow-md rounded-lg">
-          <div className="stat-title">New Users</div>
-          <div className="stat-value text-4xl font-bold text-green-500">
-            {exampleData.users}
-          </div>
-          <div className="stat-desc text-gray-500">↗︎ 400 (22%)</div>
-        </div>
-
-        {/* Menu Items */}
-        <div className="stat bg-white p-4 shadow-md rounded-lg">
-          <div className="stat-title">Menu Items</div>
-          <div className="stat-value text-4xl font-bold text-yellow-500">
-            {exampleData.products}
-          </div>
-          <div className="stat-desc text-gray-500">↗︎ 400 (22%)</div>
-        </div>
-
-        {/* Orders */}
-        <div className="stat bg-white p-4 shadow-md rounded-lg">
-          <div className="stat-title">Orders</div>
-          <div className="stat-value text-4xl font-bold text-red-500">
-            {exampleData.orders}
-          </div>
-          <div className="stat-desc text-gray-500">↘︎ 90 (14%)</div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        {/* Bar Chart */}
-        <div className="bg-white p-4 shadow-md rounded-lg">
-          <BarChart
-            width={500}
-            height={300}
-            data={userData}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="category" />
-            <YAxis />
-            <Bar
-              dataKey="total"
-              fill="#8884d8"
-              shape={<TriangleBar />}
-              label={{ position: "top" }}
-            >
-              {userData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={colors[index % colors.length]}
-                />
-              ))}
-            </Bar>
-          </BarChart>
-        </div>
-
-        {/* Line Chart */}
-        <div className="bg-white p-4 shadow-md rounded-lg">
-          <LineChart
-            width={500}
-            height={300}
-            data={productData}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="category" />
-            <YAxis />
-            <Line
-              type="monotone"
-              dataKey="total"
-              stroke="#8884d8"
-              activeDot={{ r: 8 }}
-            />
-          </LineChart>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default AdminHome;

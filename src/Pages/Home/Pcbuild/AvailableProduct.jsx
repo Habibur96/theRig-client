@@ -62,7 +62,7 @@ const AvailableProduct = () => {
     from?.includes("cases") ||
     from?.includes("memoryes") ||
     from?.includes("monitors") ||
-    from?.includes("psus") 
+    from?.includes("psus");
   console.log(component);
   useEffect(() => {
     fetch(`http://localhost:3000/cpu/${collectionName}/${model}`, {
@@ -361,11 +361,11 @@ const AvailableProduct = () => {
                   Specification
                 </h1>
 
-                {component[0]?.category === "motherboard" && <CpuDetails />}
+                {component[0]?.category === "cpu" && <CpuDetails />}
                 {component[0]?.category === "monitor" && <MonitorDetails />}
 
                 {component[0]?.category === "memory" && <MemoryDetails />}
-                {component[0]?.category === "case" && <CaseDetails />}
+                {component[0]?.category === "casing" && <CaseDetails />}
                 {component[0]?.category === "keyboard" && <KeyboardDetails />}
                 {component[0]?.category === "mice" && <MiceDetails />}
                 {component[0]?.category === "cpuCooler" && <CpuCoolerDetails />}
@@ -374,7 +374,7 @@ const AvailableProduct = () => {
                 )}
                 {component[0]?.category === "psu" && <PsuDetails />}
                 {component[0]?.category === "gpu" && <GpuDetails />}
-                {component[0]?.category === "ssd" && <StorageDetails />}
+                {component[0]?.category === "storage" && <StorageDetails />}
                 {component[0]?.category === "motherboard" && (
                   <MotherboardDetails />
                 )}
@@ -387,23 +387,26 @@ const AvailableProduct = () => {
                     Description
                   </h1>
                   <h1 className="mt-5 ml-2 text-xl font-semibold text-justify">
-                    {/* {product[0]?.buildName} */} Lorem ipsum dolor, sit amet
-                    consectetur adipisicing elit. Doloremque voluptatibus quidem
-                    labore, ratione placeat exercitationem nobis harum autem
-                    dolore aspernatur molestiae, nihil, cupiditate veniam
-                    asperiores? Iure ad consequatur sapiente optio dolorum
-                    assumenda, totam vitae minus repellendus aspernatur!
-                    Eveniet, repellat aspernatur! Facere, temporibus magni ea
-                    voluptatum doloremque error cupiditate sint. Quas quod
-                    magnam, voluptas dignissimos a impedit voluptates iste.
-                    Quasi at quisquam eaque, aperiam hic culpa distinctio quo
-                    facilis, nobis reiciendis nisi ab porro suscipit, odio
-                    similique vero dolor tenetur doloribus dolore quam itaque?
-                    Consequuntur, saepe. Numquam hic quis culpa a magni. Facere
-                    atque deserunt non veritatis ipsum repudiandae esse fugit.
+                    {/* {product[0]?.buildName} */}
                   </h1>
-                  <p className="mt-3 ml-2 text-md font-semibold text-justify">
+                  <p className="mt-3 mb-5 ml-2 text-md font-semibold text-justify">
                     {/* {product[0]?.details} */}
+                    Designed for overclocking, the Athlon 3000G 3.5 GHz
+                    Dual-Core AM4 Processor from AMD has a base clock speed of
+                    3.5 GHz, two cores with four threads in an AM4 socket, 1MB
+                    of L2 cache memory, and 4MB of L3 cache memory. Having two
+                    cores allows the processor to run multiple programs
+                    simultaneously without slowing down the system, while the
+                    four threads allow a basic ordered sequence of instructions
+                    to be passed through or processed by a single CPU core. This
+                    processor also has a TDP of 35W. Graphically, the Athlon
+                    3000G uses integrated AMD Radeon Vega 3 Graphics. It is also
+                    unlocked, meaning it can be overclocked past its maximum
+                    turbo frequency. However, this is not recommended, as it
+                    will cause the processor to run much hotter. Also, the
+                    warranty does not cover damage caused by overclocking, even
+                    when overclocking is enabled via AMD hardware.(No Warranty
+                    for Fan or Cooler)
                   </p>
                 </div>
               </div>

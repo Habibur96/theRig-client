@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 // import Pages from "./Pages";
 import ScrollToTop from "react-scroll-to-top";
-// import MonitorFilter from "../Filter/MonitorFilter";
+import KeyboardFilter from "../Filter/KeyboardFilter";
 
 const Keyboard = () => {
   const [product] = UseProduct();
@@ -16,8 +16,8 @@ const Keyboard = () => {
   return (
     <div className="flex column-gap-5">
       <div className=" flex-[1]">
-        {/* <MonitorFilter></MonitorFilter> */}
-        </div>
+        <KeyboardFilter></KeyboardFilter>
+      </div>
 
       <div className="flex-[4] mr-5">
         <div className="overflow-x-auto ">

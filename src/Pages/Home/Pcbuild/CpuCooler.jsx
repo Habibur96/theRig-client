@@ -4,7 +4,8 @@ import UseProduct from "../../../Hooks/UseProduct";
 import ScrollToTop from "react-scroll-to-top";
 import { useEffect, useState } from "react";
 import LoadingSpinner from "../../Shared/LoadingSpinner";
-// import MonitorFilter from "../Filter/MonitorFilter";
+import CpuCoolerFilter from "../Filter/CpuCoolerFilter";
+
 
 const CpuCooler = () => {
   const [product] = UseProduct();
@@ -18,7 +19,7 @@ const CpuCooler = () => {
     // Simulating loading completion after 3 seconds
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 100);
 
     // Clean up timer on component unmount or when loading state changes
     return () => clearTimeout(timer);
@@ -32,7 +33,7 @@ const CpuCooler = () => {
       ) : (
         <div className="flex column-gap-5">
           <div className=" flex-[1]">
-            {/* <MonitorFilter></MonitorFilter> */}
+            <CpuCoolerFilter></CpuCoolerFilter>
           </div>
           <div className="flex-[4] mr-5">
             <div className="overflow-x-auto ">

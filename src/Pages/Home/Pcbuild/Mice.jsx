@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 // import Pages from "./Pages";
 import ScrollToTop from "react-scroll-to-top";
-// import MonitorFilter from "../Filter/MonitorFilter";
+import MiceFilter from "../Filter/MiceFilter";
 
 const Mice = () => {
   const [product] = UseProduct();
@@ -16,7 +16,7 @@ const Mice = () => {
   return (
     <div className="flex column-gap-5">
       <div className=" flex-[1]">
-        {/* <MonitorFilter></MonitorFilter> */}
+        <MiceFilter></MiceFilter>
       </div>
 
       <div className="flex-[4] mr-5">

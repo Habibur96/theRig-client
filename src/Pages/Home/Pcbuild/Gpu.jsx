@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 import Pages from "./Pages";
 import ScrollToTop from "react-scroll-to-top";
-import MonitorFilter from "../Filter/MonitorFilter";
+
 import GpuFilter from "../Filter/GpuFilter";
 
 const Gpu = () => {

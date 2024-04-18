@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import UseProduct from "../../../Hooks/UseProduct";
 // import Pages from "./Pages";
 import ScrollToTop from "react-scroll-to-top";
-// import MonitorFilter from "../Filter/MonitorFilter";
+import PsuFilter from "../Filter/PsuFilter";
 
 const Psu = () => {
   const [product] = UseProduct();
@@ -15,7 +15,9 @@ const Psu = () => {
 
   return (
     <div className="flex column-gap-5">
-      <div className=" flex-[1]">{/* <MonitorFilter></MonitorFilter> */}</div>
+      <div className=" flex-[1]">
+        <PsuFilter></PsuFilter>
+        </div>
 
       <div className="flex-[4] mr-5">
         <div className="overflow-x-auto ">

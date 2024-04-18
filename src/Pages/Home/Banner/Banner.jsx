@@ -96,7 +96,9 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <Link to="guides" className="card-title">Ready Build</Link>
+                <Link to="guides" className="card-title">
+                  Ready Build
+                </Link>
                 <Link to="guides" className="font-semibold">
                   PC-V C3101i Intel Core i3 10105, 8GB RAM, 250GB SSD Desktop PC
                 </Link>
@@ -113,7 +115,9 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <Link to="guides" className="card-title">Ready Build</Link>
+                <Link to="guides" className="card-title">
+                  Ready Build
+                </Link>
                 <Link to="guides" className="font-semibold">
                   Ryans PC-G C31012G, Intel Core i3 10105 8GB RAM, 250GB SATAIII
                   SSD Gaming Desktop PC{" "}
@@ -131,7 +135,9 @@ const Banner = () => {
                 />
               </figure>
               <div className="card-body">
-                <Link to="guides" className="card-title">Ready Build</Link>
+                <Link to="guides" className="card-title">
+                  Ready Build
+                </Link>
                 <Link to="guides" className="font-semibold">
                   PC-G C3101G Intel Core i3 10100F 8GB DDR4, 250GB SSD Heavy
                   Gaming PC
@@ -178,7 +184,9 @@ const Banner = () => {
                     Macro Keys, while switching profiles via MSI Center.
                   </p>
                   <div className="card-actions justify-end">
-                    <Link to="product/keyboard" className="btn btn-primary">Buy Now</Link>
+                    <Link to="product/keyboard" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -200,7 +208,9 @@ const Banner = () => {
                     missing or having unexpected key presses.?
                   </p>
                   <div className="flex card-actions justify-end">
-                    <Link to="product/keyboard" className="btn btn-primary">Buy Now</Link>
+                    <Link to="product/keyboard" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -222,7 +232,9 @@ const Banner = () => {
                     missing or having unexpected key presses.?
                   </p>
                   <div className="card-actions justify-end">
-                    <Link to="product/keyboard" className="btn btn-primary">Buy Now</Link>
+                    <Link to="product/keyboard" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -240,13 +252,15 @@ const Banner = () => {
                     GeForce RTX™ 4080 SUPER 16G SUPRIM X
                   </h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur aliquam fugiat nulla a molestias sed ullam illo
-                    dignissimos atque iste. Pariatur quibusdam consequuntur
-                    minima, reprehenderit iusto assumenda cum? Eos, accusamus?
+                    The MSI PRO MP223 21.45" 100Hz Full HD Business Monitor
+                    Boost your productivity at work with the 21.5-inch Full HD
+                    Monitor. Your programs, spreadsheets, and other crucial work
+                    papers may be seen with ease on its large 21.45-inch screen.
                   </p>
                   <div className="card-actions justify-end">
-                    <Link to="product/gpu" className="btn btn-primary">Buy Now</Link>
+                    <Link to="product/gpu" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -261,13 +275,16 @@ const Banner = () => {
                 <div className="card-body">
                   <h2 className="card-title">MEG 342C QD-OLED</h2>
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Porro consequuntur rem amet voluptatem eveniet numquam
-                    temporibus eum maiores praesentium? Ad fugiat sed nisi aut
-                    laudantium est praesentium facilis, aspernatur perferendis.
+                    The MSI PRO MP251 24.5" 100Hz FHD Monitor is a powerful
+                    monitor that may meet both your personal and professional
+                    demands. It has a 24.5" IPS panel with a 1920x1080 full HD
+                    resolution, which offers breathtaking clarity and color
+                    accuracy.
                   </p>
                   <div className="card-actions justify-end">
-                    <Link to="product/monitor" className="btn btn-primary">Buy Now</Link>
+                    <Link to="product/monitor" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -282,13 +299,15 @@ const Banner = () => {
                 <div className="card-body">
                   <h2 className="card-title">MPG SEKIRA 100R | Gaming Case</h2>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Dicta, esse quae. Hic ipsum nam, nesciunt blanditiis maxime
-                    deleniti? Molestiae vel est fuga. Aspernatur cumque nulla
-                    modi id quis vero atque!
+                    The Xtreme 951 Mid Tower ATX Casing is a durable and large
+                    case that can house ATX motherboards and other components.
+                    It is made of metal and plastic, with a metal windowed side
+                    panel.
                   </p>
                   <div className="card-actions justify-end">
-                    <Link to="product/case" className="btn btn-primary">Buy Now</Link>
+                    <Link to="product/case" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -306,13 +325,13 @@ const Banner = () => {
                     Aegis R 13NUD-460US Gaming Desktop
                   </h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum inventore ipsum voluptate ad minima consequatur
-                    aliquid illo, repellendus quaerat, hic accusantium, autem
-                    sunt praesentium? Id sequi quis nostrum possimus vitae.
+                    Presenting the AMD RYZEN 7 5700X MSI RTX 4060 VENTUS 2X,
+                    featuring an 8GB OC GPU, 16GB RAM, and 512GB SSD.
                   </p>
                   <div className="card-actions justify-end">
-                    <Link to="guides" className="btn btn-primary">Buy Now</Link>
+                    <Link to="guides" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -329,13 +348,14 @@ const Banner = () => {
                     AEGIS Z 7NUE-676US Gaming Desktop
                   </h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nemo quas temporibus maiores dignissimos debitis libero
-                    quisquam! Error minus facilis, esse expedita, harum tempora
-                    exercitationem ipsam unde similique cum quos necessitatibus?
+                    The AMD Ryzen 7 5700G Gigabyte B550M Motherboard 16GB RAM
+                    500GB SSD Budget PC, your ultimate solution for powerful
+                    computing at an affordable price.
                   </p>
                   <div className="card-actions justify-end">
-                    <Link to="guides"  className="btn btn-primary">Buy Now</Link>
+                    <Link to="guides" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -350,13 +370,14 @@ const Banner = () => {
                 <div className="card-body">
                   <h2 className="card-title">MSI Powered PRE BUILT</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Suscipit velit aliquid, nisi expedita rerum laborum
-                    voluptatibus dolor quaerat dicta eligendi iste consequuntur
-                    a modi qui, non excepturi cum? Harum, reprehenderit!
+                    This gaming rig is equipped with the cutting-edge AMD Ryzen
+                    5 5500 6 Core 12 Thread AM4 Processor, ensuring smooth
+                    multitasking and immersive gaming experiences.
                   </p>
                   <div className="card-actions justify-end">
-                    <Link to="guides"  className="btn btn-primary">Buy Now</Link>
+                    <Link to="guides" className="btn btn-primary">
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -234,35 +234,7 @@ const MyCart = () => {
         would like to estimate your delivery cost
       </p>{" "}
       <br />
-      <div className="flex ">
-        <div className="flex mr-12">
-          <input
-            type="text"
-            placeholder="Promo / Coupon Code"
-            className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
-          />
-
-          <button
-            className="btn btn-secondary"
-            style={{ textTransform: "capitalize" }}
-          >
-            Apply Coupon
-          </button>
-        </div>
-        <div className="flex ml-16">
-          <input
-            type="text"
-            placeholder="Enter your gift voucher code here"
-            className="input input-bordered input-secondary md:w-40 lg:w-[400px] mr-4"
-          />
-          <button
-            className="btn btn-secondary"
-            style={{ textTransform: "capitalize" }}
-          >
-            Apply Voucher
-          </button>
-        </div>
-      </div>
+      
       <div className="flex mt-5">
         <Link
           to="/"

@@ -1,4 +1,4 @@
-# React + Vite
+                        # Personal Computer Shopping Hub and Marketplace at the Rig Platform
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

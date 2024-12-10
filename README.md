@@ -16,4 +16,4 @@ A brief description of what this project does and who it's for
 
 ## Images
 
-![alt text](image.png)
+![alt text]([image.png](https://github.com/Habibur96/theRig-client/blob/main/41G2mXBaWcL.jpg))

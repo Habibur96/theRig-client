@@ -1,7 +1,7 @@
 
 ## Project Name
 
-Personal Computer Shopping Hub and Marketplace at the Rig Platform
+**Personal Computer Shopping Hub and Marketplace at the Rig Platform**
 
 ## About the Project
 
@@ -41,3 +41,12 @@ The Bangladeshi PC market is plagued by syndicates run by the big names. As a re
 
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/Home%20page.jpg)
 > **Homepage View of The Website**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/products%20list.jpg)
+> **Products Page for Non-Registered User**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/Featured%20products.jpg)
+> **Featured Products in Home Page for Non-Registered User**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/build_guides.jpg)
+> **Products from different vendors**

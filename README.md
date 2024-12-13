@@ -39,6 +39,7 @@ The Bangladeshi PC market is plagued by syndicates run by the big names. As a re
 
 ## Project View (Implementation, Development) 
 
+
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/Home%20page.jpg)
 > **Homepage View of The Website**
 
@@ -49,4 +50,26 @@ The Bangladeshi PC market is plagued by syndicates run by the big names. As a re
 > **Featured Products in Home Page for Non-Registered User**
 
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/product_from_different_vendor.jpg)
+
 > **Products from different vendors**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/build_guides.jpg)
+> **Build Guides Page for Non-Registered User**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/Extended_build_guides.jpg)
+> **Extended Build Guides Page for Non-Registered User**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/RealTime_reviews.jpg)
+> **Real Time Reviews on the product**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/price_comparison.jpg)
+> **Price Comparison of same product from different vendors**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/pc%20build.jpg)
+> **Pc build page for registered Users**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/registration.jpg)
+> **Registration Page For Non-Registered User**
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/login.jpg)
+> **Login Page For registered Users**

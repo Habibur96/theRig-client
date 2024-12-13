@@ -36,3 +36,8 @@ The Bangladeshi PC market is plagued by syndicates run by the big names. As a re
 - ImgBB(Image Hosting)
 - Mailgun.js
 - Stripe (Payment Gateway)
+
+## Project View (Implementation, Development) 
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/Home%20page.jpg)
+> Homepage View of The Website

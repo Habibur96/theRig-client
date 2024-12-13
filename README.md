@@ -39,38 +39,78 @@ The Bangladeshi PC market is plagued by syndicates run by the big names. As a re
 
 ## Project View (Implementation, Development) 
 
-
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/Home%20page.jpg)
 > **Homepage View of The Website**
+----
 
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/products%20list.jpg)
 > **Products Page for Non-Registered User**
-
+----
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/Featured%20products.jpg)
 > **Featured Products in Home Page for Non-Registered User**
-
+----
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/product_from_different_vendor.jpg)
 
 > **Products from different vendors**
-
+----
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/build_guides.jpg)
 > **Build Guides Page for Non-Registered User**
-
+----
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/Extended_build_guides.jpg)
 > **Extended Build Guides Page for Non-Registered User**
-
+----
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/RealTime_reviews.jpg)
 > **Real Time Reviews on the product**
-
+----
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/price_comparison.jpg)
 > **Price Comparison of same product from different vendors**
-
+----
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/pc%20build.jpg)
-> **Pc build page for registered users**
-
+> **Pc build page for registered Users**
+----
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/registration.jpg)
 > **Registration Page For Non-Registered User**
 ----
-                
+                                                                              
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/login.jpg)
-> **Login Page For Registered Users**
+> **Login Page For registered Users**
+----
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/shopping_cart.jpg)
+> **Shopping Cart for Registered Users**
+----
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/wishlist.jpg)
+> **Wishlist for Registered User**
+----
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/checkoutpage.jpg)
+> **Product Checkout Page**
+----
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/create%20new%20product.jpg)
+> **Create New Products for “the Rig” Website**
+----
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/voucher.jpg)
+> **Voucher Creation Page**
+----
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/voucher%20supervisation.jpg)
+> **Voucher Supervisation Page**
+----
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/all%20users.jpg)
+> **User Management Overview**
+----
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/assigning%20roles.jpg)
+> **Assigning Roles to the Users**
+----
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/order%20monitoring.jpg)
+> **Order Monitoring System**
+----
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/admin%20home.jpg)
+> **Admin Home**
+----
+
+![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/otp.jpg)
+> **Confirmation message and OTP**

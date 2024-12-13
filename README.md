@@ -7,7 +7,7 @@ Personal Computer Shopping Hub and Marketplace at the Rig Platform
 
 Introducing “the Rig”, a pioneering e-commerce platform dedicated to simplify purchasing personal computers and their components in Bangladesh. We understand the complexities users encounter when navigating the market for personal computers and components. Specially in a developing country like Bangladesh, where providing better deals to the users without any hidden condition is still not a common practice. Hence, our solution offers a unique approach, simplifying price comparisons and minimizing the financial and physical challenges associated with building custom PCs.
 At “the Rig”, users gain access to a comprehensive platform where they can effortlessly compare prices from various online and offline stores, eliminating the need for multiple tabs and exhaustive searches. Whether users seek individual components or pre-built PCs, we provide diverse options to suit every preference and budget.
-
+Keywords: Price comparison; PC components; PC market; Multiple Vendor; PC Builder; Robust Admin Panel.  
 
 ## Problem Statement
 
@@ -22,3 +22,16 @@ The Bangladeshi PC market is plagued by syndicates run by the big names. As a re
 - Secure and Trustworthy Platform
 - Personalized Component Selection
 - Ensuring Robust and Capable Admin Panel
+
+## Technologies Used
+- React JS
+- Tailwind CSS
+- Firebase 
+- Context API
+- TanStack Query
+- JWT (JSON Web Tokens) 
+- Express.js
+- MongoDB
+- ImgBB(Image Hosting)
+- Mailgun.js
+- Stripe (Payment Gateway)

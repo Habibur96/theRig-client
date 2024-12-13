@@ -71,5 +71,6 @@ The Bangladeshi PC market is plagued by syndicates run by the big names. As a re
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/registration.jpg)
 > **Registration Page For Non-Registered User**
 ----
+                
 ![](https://github.com/Habibur96/theRig-client/blob/main/src/assets/image/login.jpg)
 > **Login Page For Registered Users**
